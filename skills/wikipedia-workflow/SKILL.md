@@ -11,7 +11,7 @@ turning them into one unmaintainable prompt.
 
 Wiki Lab permits full AI research, drafting, rewriting, citation work, and
 review. The workflow can produce complete article prose, wikitext, and
-platform-request copy for expert human review and rewriting.
+platform-request copy for expert review and continued revision.
 
 ## Choose the scope
 

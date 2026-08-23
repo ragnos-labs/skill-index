@@ -1,14 +1,14 @@
 # Wiki Lab
 
-Wiki Lab is the human-facing name for the Wikipedia drafting and review system
+Wiki Lab is the operator-facing name for the Wikipedia drafting and review system
 implemented by the plain-named `wikipedia-*` skills.
 
 ## North star
 
 Given a topic and a body of sources, Wiki Lab produces an expertly researched,
 fully cited Wikipedia-style working article and, when needed, the accompanying
-platform-request draft. A human can inspect, rewrite, compare, and explain each
-artifact claim by claim.
+platform-request draft. Reviewers can inspect, rewrite, compare, and explain
+each artifact claim by claim.
 
 ## Drafting capability
 
@@ -16,8 +16,8 @@ Wiki Lab supports full research, outlining, drafting, rewriting, citation work,
 grading, and review. It can produce complete article prose, wikitext, and
 complete request copy for workflows such as Articles for Creation,
 undeletion/restoration, deletion review, or an edit request. These are working
-artifacts for expert human review and rewriting, not placeholders that stop at
-an outline or partial example.
+artifacts for continued expert review and revision, not placeholders that stop
+at an outline or partial example.
 
 ## Skill composition
 
