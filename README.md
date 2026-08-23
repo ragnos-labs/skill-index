@@ -7,6 +7,18 @@ The repository is intentionally simple to browse. Skills describe one job,
 records carry routing and lifecycle metadata, and research packets explain
 where ideas came from and why alternatives were adopted or skipped.
 
+## TLDR
+
+- Hosts expose one small `skill-index` bootstrap skill instead of placing the
+  whole library in every session.
+- The bootstrap searches compact metadata, returns at most three candidates,
+  and accepts no match when none is strong enough.
+- Before loading a selected skill, it verifies the review status and exact
+  bundle digest. Only that skill and its needed supporting files enter context.
+- New skills scale as separate bundles, records, reviews, and optional research
+  packets. Generated indexes keep discovery fast and `make check` prevents
+  those surfaces from drifting apart.
+
 ## How agents use the library
 
 Install or expose only the [`skill-index`](skills/skill-index/SKILL.md)
@@ -14,8 +26,36 @@ bootstrap skill. It searches the generated [skill index](index/skills.json),
 returns at most three compact candidates, verifies the selected bundle, and
 loads only that skill and the supporting files it references.
 
-```text
-task -> skill-index -> search -> select -> verify -> load one skill
+```mermaid
+flowchart TB
+    U["User task"] --> B["Always-loaded<br/>Skill Index"]
+    B --> I["Search compact metadata<br/>names, triggers, summaries, risk"]
+
+    I --> M{"Clear match?"}
+    M -- "No" --> N["Return no match<br/>continue without a library skill"]
+    M -- "Yes" --> C["Return up to<br/>three candidates"]
+    C --> S["Select one skill"]
+    S --> V{"Review and bundle<br/>digest valid?"}
+
+    V -- "No" --> X["Reject stale or<br/>modified bundle"]
+    V -- "Yes" --> L["Load selected<br/>SKILL.md only"]
+    L --> R["Load supporting files<br/>only when needed"]
+    R --> A["Run under the user's<br/>existing authority"]
+    A --> O["Task result"]
+
+    subgraph LIB["Audited library outside the session context"]
+        SB["Skill bundle"]
+        MR["Searchable metadata record"]
+        RP["Optional research packet"]
+        RV["Human or agent review"]
+        G["Bind digest<br/>generate index<br/>validate repository"]
+
+        SB --> RV
+        MR --> RV
+        RP -. "When external research is used" .-> RV
+        RV --> G
+        G --> I
+    end
 ```
 
 The full skill list is not placed in ordinary session context.
