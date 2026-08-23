@@ -1,4 +1,4 @@
-# Wikipedia sample review rubric
+# Wikipedia draft review rubric
 
 Score each applicable dimension from 0 to 4 and preserve the evidence behind
 the score.
@@ -9,7 +9,7 @@ the score.
 | 1 | Major defects dominate |
 | 2 | Mixed result requiring material revision |
 | 3 | Strong and usable with bounded improvement |
-| 4 | Excellent and fully supported for the sample's scope |
+| 4 | Excellent and fully supported for the draft's scope |
 
 ## Core dimensions
 
@@ -40,7 +40,7 @@ attributed. Coverage weight follows the source landscape.
 
 ### Original expression
 
-The sample is genuinely paraphrased, does not mirror source structure too
+The draft is genuinely paraphrased, does not mirror source structure too
 closely, and uses quotations only where wording matters.
 
 ### Prose quality
@@ -55,14 +55,20 @@ lists, headings, and navigation render or parse as intended.
 
 ### Learning value
 
-The sample's sources, claims, reviews, and editorial choices are inspectable
+The draft's sources, claims, reviews, and editorial choices are inspectable
 enough to teach from.
+
+### Platform-request fidelity
+
+When applicable, the request identifies the intended outcome, accurately
+describes the page or decision at issue, connects its rationale to the evidence
+and article changes, and keeps unresolved gaps visible.
 
 ## Gold result
 
-A gold sample requires scores of 4 for source support, claim fidelity, and
+A gold draft requires scores of 4 for source support, claim fidelity, and
 citation correctness, with every other applicable dimension at 3 or higher. It
 also requires no unresolved blocking finding.
 
-Non-gold samples remain useful. Report the evidence or revision that would move
+Non-gold drafts remain useful. Report the evidence or revision that would move
 each weak dimension forward.

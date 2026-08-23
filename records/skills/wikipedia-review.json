@@ -1,7 +1,6 @@
 {
   "domain": "wikipedia",
   "exclusions": [
-    "live page editing",
     "unsourced factual correction"
   ],
   "load_mode": "routable",
@@ -19,10 +18,11 @@
     "writing-foundation:wikipedia-ai-skills"
   ],
   "status": "active",
-  "summary": "Independently review Wikipedia-style drafts for sourcing, neutrality, weight, structure, and prose.",
+  "summary": "Independently review Wikipedia-style article and platform-request drafts for sourcing, fidelity, neutrality, weight, structure, and prose.",
   "triggers": [
     "review Wikipedia draft",
     "check citation support",
-    "grade encyclopedia article"
+    "grade encyclopedia article",
+    "review platform request"
   ]
 }

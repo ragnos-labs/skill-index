@@ -212,11 +212,10 @@
       ]
     },
     {
-      "bundle_digest": "sha256:e1423879aa23f0c5775f412a03bc4a915f2df642858a5f1e78f063ba1cf1ad3d",
+      "bundle_digest": "sha256:395000898b97ada4220f89ed46fd4e774fc217bda57d10049ecc898f55dafd5e",
       "domain": "wikipedia",
       "exclusions": [
-        "manufactured coverage",
-        "live page editing"
+        "manufactured coverage"
       ],
       "load_mode": "routable",
       "name": "wikipedia-research",
@@ -224,11 +223,11 @@
       "resources": [
         {
           "path": "SKILL.md",
-          "sha256": "49f6e79781b9d491991d0d2142d0118f1742bec466310a7f9d055ae20171fdcc"
+          "sha256": "5dc6b306c30082abd891db58bdfcf585a69487f6bb08309542e55a257638cdac"
         },
         {
           "path": "references/source-assessment.md",
-          "sha256": "a46851d87a072d88bfe5b581e2a1b9b0de926d235bc42fd905e11b86217256ed"
+          "sha256": "e2367d6f705c9fb03bcb431e9949d81e696b07fac740d576ad2b84a0182ab2cc"
         }
       ],
       "review": {
@@ -246,19 +245,19 @@
         "writing-foundation:wikipedia-ai-skills"
       ],
       "status": "active",
-      "summary": "Build a source landscape, claim ledger, citation metadata, and scope for Wikipedia-style samples.",
+      "summary": "Build a source landscape, claim ledger, citation metadata, and scope for Wikipedia-style articles and platform requests.",
       "triggers": [
         "Wikipedia research",
         "source landscape",
         "notability analysis",
-        "claim ledger"
+        "claim ledger",
+        "restoration evidence"
       ]
     },
     {
-      "bundle_digest": "sha256:99209a47dda226c1dff1f8edfb8aa32062019d748a1d75dd6ddfec79a1f85ae8",
+      "bundle_digest": "sha256:7e937a8b0e868e48a0fc022e1b5e2ea72b14b0096f2602e224ddaef2ec20bbc5",
       "domain": "wikipedia",
       "exclusions": [
-        "live page editing",
         "unsourced factual correction"
       ],
       "load_mode": "routable",
@@ -267,11 +266,11 @@
       "resources": [
         {
           "path": "SKILL.md",
-          "sha256": "5d7b2de7cfc7d3493e73d4d753b4542e4ed585c817e8a5aed33523d09a1bfb82"
+          "sha256": "8d257c12dda222fe9356a6aace38e155bf02a93d29a06feb84c02c7f5043d492"
         },
         {
           "path": "references/review-rubric.md",
-          "sha256": "86eba20429902181ff25a08fcd9531f64d0ed81a675a42f8b9ac3e10c1af8542"
+          "sha256": "3def37a128327788a51ab688c9feaaa88ea3e402b769521e94b9c07cbc8e9650"
         }
       ],
       "review": {
@@ -290,20 +289,20 @@
         "writing-foundation:wikipedia-ai-skills"
       ],
       "status": "active",
-      "summary": "Independently review Wikipedia-style drafts for sourcing, neutrality, weight, structure, and prose.",
+      "summary": "Independently review Wikipedia-style article and platform-request drafts for sourcing, fidelity, neutrality, weight, structure, and prose.",
       "triggers": [
         "review Wikipedia draft",
         "check citation support",
-        "grade encyclopedia article"
+        "grade encyclopedia article",
+        "review platform request"
       ]
     },
     {
-      "bundle_digest": "sha256:26725fe7a1beaa6f1bc7d02bd3fbd87386b9a52f6cece71592bf7729032a1330",
+      "bundle_digest": "sha256:c2b34f13cc8f5d259ae06fe2655a721dacf9a5cdccc79757983c35b9b32eb1db",
       "domain": "wikipedia",
       "exclusions": [
-        "live publishing",
-        "account access",
-        "direct page editing"
+        "fabricated evidence",
+        "unsupported claims presented as verified"
       ],
       "load_mode": "routable",
       "name": "wikipedia-workflow",
@@ -311,7 +310,7 @@
       "resources": [
         {
           "path": "SKILL.md",
-          "sha256": "fa05faa1c0195f200e0f33abea9da8d3d7171ff95c0fba0fe393e17bad84b192"
+          "sha256": "2d4577a0955740b3a5a9caf70e5446ca55e8a654feb1c116bd78253a869edff0"
         },
         {
           "path": "assets/claim-ledger.yaml",
@@ -331,7 +330,7 @@
         },
         {
           "path": "references/workflow.md",
-          "sha256": "83aa1f8a14a874fec8826540754a80b0130d2ce21dad5e7e6bcc34fb3d8b93b9"
+          "sha256": "2833b2c4327c6a41b48d9b8ab0154dc1b93787e058db1977d0afc4085db69a3a"
         }
       ],
       "review": {
@@ -348,18 +347,18 @@
         "writing-foundation:wikipedia-ai-skills"
       ],
       "status": "active",
-      "summary": "Coordinate research, claim mapping, drafting, citations, independent review, and revision for a private sample.",
+      "summary": "Coordinate research, claim mapping, complete article and platform-request drafting, citations, independent review, and revision.",
       "triggers": [
         "complete Wikipedia workflow",
-        "Wiki Lab sample",
-        "research to gold sample"
+        "Wiki Lab draft",
+        "research to gold draft",
+        "Wikipedia restoration packet"
       ]
     },
     {
-      "bundle_digest": "sha256:4fabe90a00512443e9c914e013d25b4bd3ff1a6505804376d321b7a10ec7944b",
+      "bundle_digest": "sha256:119c263591f089997713155b8b3828cadbbc501acf1f85a798f05a893dff0916",
       "domain": "wikipedia",
       "exclusions": [
-        "live page editing",
         "drafting without an evidence base"
       ],
       "load_mode": "routable",
@@ -368,7 +367,7 @@
       "resources": [
         {
           "path": "SKILL.md",
-          "sha256": "9a1e8d5595b18c53b499d5137e8fe22d4e76611662eafbf7c8601235a99a0354"
+          "sha256": "3becb1aa2b7acdd71f25b221d03d2828ba37d5817633f8f1eada5bec0e0948c9"
         },
         {
           "path": "references/article-structure.md",
@@ -390,11 +389,13 @@
         "writing-foundation:wikipedia-ai-skills"
       ],
       "status": "active",
-      "summary": "Draft or rewrite complete source-grounded Wikipedia-style samples from research and claim ledgers.",
+      "summary": "Draft or rewrite complete source-grounded Wikipedia-style articles, wikitext, and platform-request copy.",
       "triggers": [
-        "write Wikipedia sample",
+        "write Wikipedia article draft",
         "draft encyclopedia article",
-        "rewrite Wikipedia-style prose"
+        "rewrite Wikipedia-style prose",
+        "draft Wikipedia platform request",
+        "draft restoration request"
       ]
     }
   ]

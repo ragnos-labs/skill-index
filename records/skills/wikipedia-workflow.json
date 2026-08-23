@@ -1,9 +1,8 @@
 {
   "domain": "wikipedia",
   "exclusions": [
-    "live publishing",
-    "account access",
-    "direct page editing"
+    "fabricated evidence",
+    "unsupported claims presented as verified"
   ],
   "load_mode": "routable",
   "name": "wikipedia-workflow",
@@ -18,10 +17,11 @@
     "writing-foundation:wikipedia-ai-skills"
   ],
   "status": "active",
-  "summary": "Coordinate research, claim mapping, drafting, citations, independent review, and revision for a private sample.",
+  "summary": "Coordinate research, claim mapping, complete article and platform-request drafting, citations, independent review, and revision.",
   "triggers": [
     "complete Wikipedia workflow",
-    "Wiki Lab sample",
-    "research to gold sample"
+    "Wiki Lab draft",
+    "research to gold draft",
+    "Wikipedia restoration packet"
   ]
 }
