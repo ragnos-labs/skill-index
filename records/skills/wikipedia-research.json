@@ -1,8 +1,7 @@
 {
   "domain": "wikipedia",
   "exclusions": [
-    "manufactured coverage",
-    "live page editing"
+    "manufactured coverage"
   ],
   "load_mode": "routable",
   "name": "wikipedia-research",
@@ -18,11 +17,12 @@
     "writing-foundation:wikipedia-ai-skills"
   ],
   "status": "active",
-  "summary": "Build a source landscape, claim ledger, citation metadata, and scope for Wikipedia-style samples.",
+  "summary": "Build a source landscape, claim ledger, citation metadata, and scope for Wikipedia-style articles and platform requests.",
   "triggers": [
     "Wikipedia research",
     "source landscape",
     "notability analysis",
-    "claim ledger"
+    "claim ledger",
+    "restoration evidence"
   ]
 }

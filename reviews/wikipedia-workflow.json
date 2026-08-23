@@ -1,11 +1,11 @@
 {
-  "bundle_digest": "sha256:26725fe7a1beaa6f1bc7d02bd3fbd87386b9a52f6cece71592bf7729032a1330",
+  "bundle_digest": "sha256:c2b34f13cc8f5d259ae06fe2655a721dacf9a5cdccc79757983c35b9b32eb1db",
   "evidence": [
-    "Instructions compose independently usable research, writing, review, and cleanup skills.",
-    "The workflow stops at a private sample and excludes live publishing and account actions."
+    "Instructions compose independently usable research, writing, and review skills.",
+    "The workflow produces complete article, wikitext, and platform-request drafts backed by visible evidence and independent review."
   ],
   "limitations": [
-    "Destination publishing requires a separate future adapter and explicit authority."
+    "Draft quality remains bounded by the strength and completeness of the available evidence."
   ],
   "reviewed_at": "2026-08-23",
   "reviewer": "repository-maintainers",

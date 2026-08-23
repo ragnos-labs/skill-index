@@ -1,6 +1,6 @@
 ---
 name: wikipedia-research
-description: Research a topic for a Wikipedia-style sample article and produce a source landscape, source packet, article-scope recommendation, claim ledger, and citation metadata. Use for new samples, expansions, source audits, or notability analysis; use wikipedia-writing for prose drafting.
+description: Research a topic for a Wikipedia-style article or platform-request draft and produce a source landscape, source packet, article-scope recommendation, claim ledger, and citation metadata. Use for new drafts, expansions, source audits, restoration work, or notability analysis; use wikipedia-writing for prose drafting.
 ---
 
 # Wikipedia Research
@@ -11,14 +11,14 @@ source landscape is thin, repetitive, affiliated, disputed, or incomplete.
 
 ## Select the research job
 
-- **New sample**: map the topic, sources, likely article scope, and claims.
+- **New draft**: map the topic, sources, likely article scope, and claims.
 - **Expansion**: find evidence for missing or underdeveloped sections of an
-  existing sample or article.
+  existing draft or article.
 - **Source audit**: inspect whether existing citations support the attached
   claims and whether stronger sources exist.
 - **Notability analysis**: assess the depth, independence, diversity, and
-  persistence of coverage. This informs the sample; it does not block private
-  sample generation.
+  persistence of coverage. This informs article scope, review findings, and any
+  platform-request rationale.
 
 ## Define the topic
 
@@ -67,7 +67,8 @@ Distinguish:
 - source existence from source suitability for a particular claim.
 
 Do not recommend manufacturing coverage. A weak source landscape can still
-produce a useful teaching sample, but the packet must say what it cannot support.
+produce a complete working draft, but the packet must say what it cannot
+support.
 
 ## Create the claim ledger
 

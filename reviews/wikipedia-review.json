@@ -1,8 +1,8 @@
 {
-  "bundle_digest": "sha256:99209a47dda226c1dff1f8edfb8aa32062019d748a1d75dd6ddfec79a1f85ae8",
+  "bundle_digest": "sha256:7e937a8b0e868e48a0fc022e1b5e2ea72b14b0096f2602e224ddaef2ec20bbc5",
   "evidence": [
     "Instructions require the draft and supporting evidence set before review.",
-    "The rubric covers citation correctness, synthesis, neutrality, weight, paraphrase, structure, and prose."
+    "The review covers citation correctness, synthesis, neutrality, weight, paraphrase, structure, prose, and platform-request fidelity."
   ],
   "limitations": [
     "A review without the complete source packet must state its evidence limits."

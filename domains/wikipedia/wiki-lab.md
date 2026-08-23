@@ -1,23 +1,23 @@
 # Wiki Lab
 
-Wiki Lab is the human-facing name for the private Wikipedia-style sample system
+Wiki Lab is the human-facing name for the Wikipedia drafting and review system
 implemented by the plain-named `wikipedia-*` skills.
 
 ## North star
 
 Given a topic and a body of sources, Wiki Lab produces an expertly researched,
-fully cited, Wikipedia-style sample article that a human can inspect, learn
-from, compare, revise, and explain claim by claim.
+fully cited Wikipedia-style working article and, when needed, the accompanying
+platform-request draft. A human can inspect, rewrite, compare, and explain each
+artifact claim by claim.
 
-## Sample mode
+## Drafting capability
 
-Sample Mode permits full AI research, outlining, drafting, rewriting, citation
-work, grading, and review. Its purpose is to produce excellent private examples
-and teach the craft of source-grounded encyclopedia writing.
-
-Destination publishing rules can be selected as review material later. They do
-not block private sample generation. Live publishing, account access, direct
-editing, and submission workflows belong in separate future adapters.
+Wiki Lab supports full research, outlining, drafting, rewriting, citation work,
+grading, and review. It can produce complete article prose, wikitext, and
+complete request copy for workflows such as Articles for Creation,
+undeletion/restoration, deletion review, or an edit request. These are working
+artifacts for expert human review and rewriting, not placeholders that stop at
+an outline or partial example.
 
 ## Skill composition
 
@@ -29,13 +29,13 @@ wikipedia-research
 
 wikipedia-writing
   -> outline options
-  -> complete sample variants
-  -> citations and wikitext
+  -> complete article variants
+  -> citations, wikitext, and platform-request drafts
 
 wikipedia-review
   -> evidence review
-  -> article review
-  -> gold sample scores
+  -> article and request review
+  -> gold draft scores
 
 wikipedia-workflow
   -> coordinates the complete Wiki Lab run
@@ -44,9 +44,9 @@ wikipedia-workflow
 The general `ai-writing-review` and `writing-cleanup` skills provide a separate
 prose-quality pass without replacing evidence review.
 
-## Gold sample
+## Gold draft
 
-A gold sample has:
+A gold draft has:
 
 - a visible source landscape;
 - important claims mapped to direct support;
@@ -62,9 +62,8 @@ A gold sample has:
 
 Wiki Lab imports selected ideas from audited upstream revisions, not whole
 repositories. The initial version intentionally excludes the citation shell
-scripts, direct arbitrary-URL scanner, authentication and Toolforge code, live
-editing workflows, runtime tool interception, and generic taskgraph execution
-found in the larger upstream stack.
+scripts, direct arbitrary-URL scanner, runtime tool interception, and generic
+taskgraph execution found in the larger upstream stack.
 
-That engineering boundary protects the repository. It does not narrow what a
-private sample may research or write.
+Those implementation choices protect the repository without narrowing the
+complete prose or request copy that Wiki Lab can produce.

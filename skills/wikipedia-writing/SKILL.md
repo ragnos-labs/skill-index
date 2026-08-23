@@ -1,12 +1,13 @@
 ---
 name: wikipedia-writing
-description: Draft or rewrite complete Wikipedia-style sample articles from a source packet, claim ledger, supplied research, or an existing draft. Use for private Wiki Lab samples, teaching examples, article variants, leads, sections, and wikitext; use wikipedia-research when the evidence base is missing.
+description: Draft or rewrite complete Wikipedia-style articles and platform-request copy from a source packet, claim ledger, supplied research, or an existing draft. Use for Wiki Lab articles, variants, leads, sections, wikitext, AfC drafts, restoration or undeletion requests, deletion-review drafts, and edit requests; use wikipedia-research when the evidence base is missing.
 ---
 
 # Wikipedia Writing
 
-Write a complete encyclopedia-style sample that is neutral, source-shaped,
-readable, and inspectable. Sample Mode permits full AI drafting and rewriting.
+Write complete encyclopedia-style prose that is neutral, source-shaped,
+readable, and inspectable. Produce the full requested working artifact, not a
+placeholder or outline.
 
 ## Establish the writing contract
 
@@ -35,7 +36,7 @@ building a full article or choosing between structural options.
 5. Identify claims that need immediate inline citations or explicit
    attribution.
 
-For learning runs, produce two or three genuinely different outlines before
+For comparison runs, produce two or three genuinely different outlines before
 choosing one. Useful variants change coverage, order, density, or reader level;
 they are not synonym swaps.
 
@@ -81,6 +82,23 @@ reveals its actual proportions.
 - Do not cite a search result, AI output, or Wikipedia article as the evidence
   for a substantive claim when the underlying source is available.
 
+## Draft platform requests
+
+When requested, produce complete copy for the relevant platform process, such
+as Articles for Creation, undeletion or restoration, deletion review, or an edit
+request.
+
+- Identify the page, draft, revision, or decision at issue when that information
+  is available.
+- State the requested outcome and the strongest evidence-backed rationale.
+- Connect source quality, article changes, and resolved review findings directly
+  to the request.
+- Distinguish procedural facts from editorial judgments and unresolved gaps.
+- Do not invent prior consensus, policy language, source findings, or platform
+  history.
+- Keep the request draft separate from the article draft so each can be reviewed
+  and rewritten independently.
+
 ## Revise
 
 Run separate passes for claim fidelity, source proportion, article structure,
@@ -93,7 +111,8 @@ changing structure. Report claims removed because support was missing.
 
 ## Deliver
 
-Return the complete sample first. Then include, as relevant:
+Return the complete article first and the complete platform-request draft next
+when one was requested. Then include, as relevant:
 
 - alternate title or structure options;
 - remaining source gaps;
@@ -101,5 +120,6 @@ Return the complete sample first. Then include, as relevant:
 - citation questions; and
 - a compact explanation of the most important editorial decisions.
 
-Do not let possible future publication requirements prevent creation of a
-complete private sample.
+Do not replace requested article prose or request copy with an outline, partial
+example, or a refusal to draft merely because the artifact may later be used in
+a Wikipedia workflow.

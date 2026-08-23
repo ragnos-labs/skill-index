@@ -80,5 +80,6 @@ Report one of:
 - **Unknown**: the search was too limited, inaccessible, or language-bound to
   support a judgment.
 
-This judgment describes the evidence available to the sample. It is not a
-prohibition on creating a private learning artifact.
+This judgment describes the available evidence. Keep its limits visible while
+producing the complete article or platform-request draft the assignment calls
+for.

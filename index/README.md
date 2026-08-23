@@ -12,10 +12,10 @@ summaries and load one selected skill at a time.
 | general | [writing-cleanup](../skills/writing-cleanup/SKILL.md) | routable | active | Rewrite supplied prose to remove generic patterns while preserving facts, meaning, citations, and voice. |
 | general | [writing-review](../skills/writing-review/SKILL.md) | routable | active | Review writing for purpose, evidence, structure, clarity, voice, citations, and readiness. |
 | system | [skill-index](../skills/skill-index/SKILL.md) | bootstrap | active | Search the reviewed library and load one matching skill without preloading the full collection. |
-| wikipedia | [wikipedia-research](../skills/wikipedia-research/SKILL.md) | routable | active | Build a source landscape, claim ledger, citation metadata, and scope for Wikipedia-style samples. |
-| wikipedia | [wikipedia-review](../skills/wikipedia-review/SKILL.md) | routable | active | Independently review Wikipedia-style drafts for sourcing, neutrality, weight, structure, and prose. |
-| wikipedia | [wikipedia-workflow](../skills/wikipedia-workflow/SKILL.md) | routable | active | Coordinate research, claim mapping, drafting, citations, independent review, and revision for a private sample. |
-| wikipedia | [wikipedia-writing](../skills/wikipedia-writing/SKILL.md) | routable | active | Draft or rewrite complete source-grounded Wikipedia-style samples from research and claim ledgers. |
+| wikipedia | [wikipedia-research](../skills/wikipedia-research/SKILL.md) | routable | active | Build a source landscape, claim ledger, citation metadata, and scope for Wikipedia-style articles and platform requests. |
+| wikipedia | [wikipedia-review](../skills/wikipedia-review/SKILL.md) | routable | active | Independently review Wikipedia-style article and platform-request drafts for sourcing, fidelity, neutrality, weight, structure, and prose. |
+| wikipedia | [wikipedia-workflow](../skills/wikipedia-workflow/SKILL.md) | routable | active | Coordinate research, claim mapping, complete article and platform-request drafting, citations, independent review, and revision. |
+| wikipedia | [wikipedia-writing](../skills/wikipedia-writing/SKILL.md) | routable | active | Draft or rewrite complete source-grounded Wikipedia-style articles, wikitext, and platform-request copy. |
 
 Machine consumers should use [skills.json](skills.json), which includes
 triggers, exclusions, review state, bundle digests, and per-file SHA-256

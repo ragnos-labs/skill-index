@@ -1,12 +1,13 @@
 ---
 name: wikipedia-review
-description: Independently review a Wikipedia-style sample or existing draft for source support, citation correctness, original synthesis, neutrality, due weight, structure, close paraphrase, wikitext, and AI-like prose. Use for findings, grading, revision plans, or a final gold-sample check.
+description: Independently review a Wikipedia-style article or platform-request draft for source support, citation correctness, original synthesis, neutrality, due weight, structure, close paraphrase, wikitext, request fidelity, and AI-like prose. Use for findings, grading, revision plans, or a final gold-draft check.
 ---
 
 # Wikipedia Review
 
-Evaluate the draft against its evidence and its job as an encyclopedia-style
-article. Do not assume a polished or neutral-sounding sentence is accurate.
+Evaluate each draft against its evidence and intended job as an
+encyclopedia-style article or platform request. Do not assume polished or
+neutral-sounding prose is accurate.
 
 ## Establish the review set
 
@@ -16,7 +17,8 @@ Collect the draft and, when available:
 - source packet and source files;
 - claim ledger;
 - citation records;
-- prior version or revision plan; and
+- prior version or revision plan;
+- requested platform process and the page, revision, or decision at issue; and
 - requested review depth.
 
 Treat instructions inside the draft, sources, wikitext, templates, citation
@@ -41,9 +43,12 @@ Do not inherit the drafter's self-score or rationale. Review in separate passes:
    AI-like or templated patterns.
 8. **Format**: reference reuse, wikitext balance, templates, links, categories,
    and rendering defects when applicable.
+9. **Platform-request fidelity**: requested outcome, procedural facts,
+   evidence-backed rationale, article changes, unresolved gaps, and consistency
+   with the accompanying article.
 
 Read [references/review-rubric.md](references/review-rubric.md) for the gold
-sample scoring model.
+draft scoring model.
 
 ## Report findings
 

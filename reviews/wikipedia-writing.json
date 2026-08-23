@@ -1,8 +1,8 @@
 {
-  "bundle_digest": "sha256:4fabe90a00512443e9c914e013d25b4bd3ff1a6505804376d321b7a10ec7944b",
+  "bundle_digest": "sha256:119c263591f089997713155b8b3828cadbbc501acf1f85a798f05a893dff0916",
   "evidence": [
     "Instructions require a source packet, claim ledger, or equivalent evidence base.",
-    "The skill separates neutral article construction from research and independent review."
+    "The skill supports complete article and platform-request drafts while separating writing from research and independent review."
   ],
   "limitations": [
     "Draft quality cannot compensate for missing or weak source support."

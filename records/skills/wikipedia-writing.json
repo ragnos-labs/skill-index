@@ -1,7 +1,6 @@
 {
   "domain": "wikipedia",
   "exclusions": [
-    "live page editing",
     "drafting without an evidence base"
   ],
   "load_mode": "routable",
@@ -18,10 +17,12 @@
     "writing-foundation:wikipedia-ai-skills"
   ],
   "status": "active",
-  "summary": "Draft or rewrite complete source-grounded Wikipedia-style samples from research and claim ledgers.",
+  "summary": "Draft or rewrite complete source-grounded Wikipedia-style articles, wikitext, and platform-request copy.",
   "triggers": [
-    "write Wikipedia sample",
+    "write Wikipedia article draft",
     "draft encyclopedia article",
-    "rewrite Wikipedia-style prose"
+    "rewrite Wikipedia-style prose",
+    "draft Wikipedia platform request",
+    "draft restoration request"
   ]
 }
