@@ -169,7 +169,7 @@
       ]
     },
     {
-      "bundle_digest": "sha256:1c36523ead2aaf68ad2a66b19944fe4ed9d3e7c1c8c07718b4c3f1d2cbbc0aac",
+      "bundle_digest": "sha256:8fa7ebfd5188a82cbf3f60f343ddfad0c6a8bb763cee6e92941042b398a43211",
       "domain": "system",
       "exclusions": [
         "executing skill scripts",
@@ -182,7 +182,7 @@
       "resources": [
         {
           "path": "SKILL.md",
-          "sha256": "5e10665f817ba1b75bcfa5f61442aa3059251e949f777d9a8d206bf20817ce6e"
+          "sha256": "e2d7cc12eb71a834f65c61d4760c368df9c6611079505f877dd0b59b0ac0f8a9"
         }
       ],
       "review": {

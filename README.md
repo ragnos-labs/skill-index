@@ -60,6 +60,20 @@ flowchart TB
 
 The full skill list is not placed in ordinary session context.
 
+## Command line
+
+Expose `bin/skill-index` on `PATH` to use the library from any directory. The
+entrypoint resolves the repository from its own real path, including when the
+command itself is a symlink.
+
+```bash
+skill-index search "Clean up this draft" --limit 3
+skill-index resolve writing-cleanup
+```
+
+Host-specific installers and configuration intentionally live outside this
+repository.
+
 ## Repository shape
 
 ```text

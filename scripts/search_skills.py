@@ -67,7 +67,9 @@ def search(query: str, limit: int = 3, root: Path = ROOT) -> dict[str, Any]:
         if skill.get("status") not in {"active", "experimental"}:
             continue
         score, coverage, matched = _score(query, skill)
-        if score < 4 or coverage < 0.34:
+        if score < 4:
+            continue
+        if coverage < 0.34 and (score < 6 or len(matched) < 2):
             continue
         results.append(
             {
