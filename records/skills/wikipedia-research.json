@@ -1,0 +1,28 @@
+{
+  "domain": "wikipedia",
+  "exclusions": [
+    "manufactured coverage",
+    "live page editing"
+  ],
+  "load_mode": "routable",
+  "name": "wikipedia-research",
+  "path": "skills/wikipedia-research",
+  "review_path": "reviews/wikipedia-research.json",
+  "risk": "low",
+  "schema_version": 1,
+  "side_effects": [
+    "network access when research is requested"
+  ],
+  "source_refs": [
+    "writing-foundation:wikipedia-style",
+    "writing-foundation:wikipedia-ai-skills"
+  ],
+  "status": "active",
+  "summary": "Build a source landscape, claim ledger, citation metadata, and scope for Wikipedia-style samples.",
+  "triggers": [
+    "Wikipedia research",
+    "source landscape",
+    "notability analysis",
+    "claim ledger"
+  ]
+}

@@ -1,0 +1,15 @@
+schema_version: "1"
+topic_id: "replace-with-topic-id"
+claims:
+  - claim_id: "claim-001"
+    proposition: "replace-with-candidate-claim"
+    status: "unreviewed"
+    supporting_sources:
+      - source_id: "source-001"
+        support: "direct"
+        locator: "replace-with-page-section-or-timestamp"
+        passage: "replace-with-short-source-note"
+    contradicting_sources: []
+    uncertainty: null
+    sensitivity: "normal"
+    candidate_section: "replace-with-section"

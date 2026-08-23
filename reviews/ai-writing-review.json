@@ -1,0 +1,20 @@
+{
+  "bundle_digest": "sha256:8bcdea7331d97b1bacf4ed0ccf07ade0e97a68c273c7ed01b4ccd676bde5a5cf",
+  "evidence": [
+    "Instructions separate pattern review from authorship claims and rewriting.",
+    "Reference catalog was inspected for actionable, non-deceptive guidance."
+  ],
+  "limitations": [
+    "Writing patterns cannot prove whether a person or model authored text."
+  ],
+  "reviewed_at": "2026-08-23",
+  "reviewer": "repository-maintainers",
+  "schema_version": 1,
+  "skill": "ai-writing-review",
+  "source_refs": [
+    "writing-foundation:avoid-ai-writing",
+    "writing-foundation:blader-humanizer",
+    "writing-foundation:humanizer-pro"
+  ],
+  "status": "reviewed"
+}

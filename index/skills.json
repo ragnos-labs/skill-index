@@ -1,0 +1,401 @@
+{
+  "generated_by": "scripts/render_indexes.py",
+  "schema_version": 1,
+  "skills": [
+    {
+      "bundle_digest": "sha256:8bcdea7331d97b1bacf4ed0ccf07ade0e97a68c273c7ed01b4ccd676bde5a5cf",
+      "domain": "general",
+      "exclusions": [
+        "authorship detection",
+        "silent rewrites"
+      ],
+      "load_mode": "routable",
+      "name": "ai-writing-review",
+      "path": "skills/ai-writing-review",
+      "resources": [
+        {
+          "path": "SKILL.md",
+          "sha256": "72f145b89ff364f76cdf2f8babd7740e9762f5b8123f54dd7e51f8d54610657f"
+        },
+        {
+          "path": "references/pattern-catalog.md",
+          "sha256": "292024cb9e16a2dcffaa33fd9c53d4f2d52c2d6aafa5cff8e38a3bb86d0b2b47"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-08-23",
+        "status": "reviewed"
+      },
+      "review_path": "reviews/ai-writing-review.json",
+      "risk": "low",
+      "schema_version": 1,
+      "side_effects": [
+        "none"
+      ],
+      "source_refs": [
+        "writing-foundation:avoid-ai-writing",
+        "writing-foundation:blader-humanizer",
+        "writing-foundation:humanizer-pro"
+      ],
+      "status": "active",
+      "summary": "Find and explain AI-like prose patterns without claiming to determine who authored the text.",
+      "triggers": [
+        "review AI-like writing",
+        "grade prose patterns",
+        "explain generic writing"
+      ]
+    },
+    {
+      "bundle_digest": "sha256:9a640bcaf5fb418aa44531c58b30ad38863e494c3065489ac60c2f90c26efab0",
+      "domain": "general",
+      "exclusions": [
+        "specialist legal advice",
+        "unsupported claims"
+      ],
+      "load_mode": "routable",
+      "name": "general-writing",
+      "path": "skills/general-writing",
+      "resources": [
+        {
+          "path": "SKILL.md",
+          "sha256": "d3f098e94be41a8cc3a4d0e0cc2f5e1bb66fb75d3be3ad7601c13fa872d2f0b1"
+        },
+        {
+          "path": "references/style-principles.md",
+          "sha256": "fc8e0efdb62205ff981303ee6b92c9fa134f1f15ef7cc613219486d5fa44ba7e"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-08-23",
+        "status": "reviewed"
+      },
+      "review_path": "reviews/general-writing.json",
+      "risk": "low",
+      "schema_version": 1,
+      "side_effects": [
+        "none"
+      ],
+      "source_refs": [
+        "writing-foundation:avoid-ai-writing"
+      ],
+      "status": "active",
+      "summary": "Draft, rewrite, or adapt general-purpose prose while preserving evidence, purpose, and voice.",
+      "triggers": [
+        "draft writing",
+        "rewrite an article",
+        "adapt content",
+        "write an email"
+      ]
+    },
+    {
+      "bundle_digest": "sha256:8cf8791478d07e8ba2c602e7d313d63810bd6162e7d9885b70fcd186da73982b",
+      "domain": "general",
+      "exclusions": [
+        "inventing evidence",
+        "detector evasion"
+      ],
+      "load_mode": "routable",
+      "name": "writing-cleanup",
+      "path": "skills/writing-cleanup",
+      "resources": [
+        {
+          "path": "SKILL.md",
+          "sha256": "2d38268d60d96069ac5188376c9922f00f6fcc440a8cecaa50390821c2bfcceb"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-08-23",
+        "status": "reviewed"
+      },
+      "review_path": "reviews/writing-cleanup.json",
+      "risk": "low",
+      "schema_version": 1,
+      "side_effects": [
+        "none"
+      ],
+      "source_refs": [
+        "writing-foundation:avoid-ai-writing",
+        "writing-foundation:blader-humanizer"
+      ],
+      "status": "active",
+      "summary": "Rewrite supplied prose to remove generic patterns while preserving facts, meaning, citations, and voice.",
+      "triggers": [
+        "clean up writing",
+        "remove generic prose",
+        "make writing sound natural"
+      ]
+    },
+    {
+      "bundle_digest": "sha256:c6324dd42994d4edad7057d50c28145ffb8467d350811eb3a3482aeea3689ad5",
+      "domain": "general",
+      "exclusions": [
+        "silent rewrites",
+        "unsupported publication claims"
+      ],
+      "load_mode": "routable",
+      "name": "writing-review",
+      "path": "skills/writing-review",
+      "resources": [
+        {
+          "path": "SKILL.md",
+          "sha256": "0a315056162c93930bb04034356ebca83979b9a4c615c29705e781e73a60e3db"
+        },
+        {
+          "path": "references/review-rubric.md",
+          "sha256": "19052175a81b0f3e7f283212412d4b4896dc287089332f7e0f45dbd3c0c772f0"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-08-23",
+        "status": "reviewed"
+      },
+      "review_path": "reviews/writing-review.json",
+      "risk": "low",
+      "schema_version": 1,
+      "side_effects": [
+        "none"
+      ],
+      "source_refs": [
+        "writing-foundation:avoid-ai-writing",
+        "writing-foundation:audit-ai-writing"
+      ],
+      "status": "active",
+      "summary": "Review writing for purpose, evidence, structure, clarity, voice, citations, and readiness.",
+      "triggers": [
+        "review writing",
+        "grade a draft",
+        "editorial feedback",
+        "publication readiness"
+      ]
+    },
+    {
+      "bundle_digest": "sha256:1c36523ead2aaf68ad2a66b19944fe4ed9d3e7c1c8c07718b4c3f1d2cbbc0aac",
+      "domain": "system",
+      "exclusions": [
+        "executing skill scripts",
+        "weak matches",
+        "authority expansion"
+      ],
+      "load_mode": "bootstrap",
+      "name": "skill-index",
+      "path": "skills/skill-index",
+      "resources": [
+        {
+          "path": "SKILL.md",
+          "sha256": "5e10665f817ba1b75bcfa5f61442aa3059251e949f777d9a8d206bf20817ce6e"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-08-23",
+        "status": "reviewed"
+      },
+      "review_path": "reviews/skill-index.json",
+      "risk": "low",
+      "schema_version": 1,
+      "side_effects": [
+        "none"
+      ],
+      "source_refs": [
+        "skill-index-runtime-landscape:agent-skills-spec",
+        "skill-index-runtime-landscape:skillport",
+        "skill-index-runtime-landscape:skills-mcp",
+        "skill-index-runtime-landscape:mcp-skills-extension",
+        "skill-index-runtime-landscape:skill-provenance"
+      ],
+      "status": "active",
+      "summary": "Search the reviewed library and load one matching skill without preloading the full collection.",
+      "triggers": [
+        "find a skill",
+        "search available skills",
+        "load a hidden skill",
+        "discover task guidance"
+      ]
+    },
+    {
+      "bundle_digest": "sha256:e1423879aa23f0c5775f412a03bc4a915f2df642858a5f1e78f063ba1cf1ad3d",
+      "domain": "wikipedia",
+      "exclusions": [
+        "manufactured coverage",
+        "live page editing"
+      ],
+      "load_mode": "routable",
+      "name": "wikipedia-research",
+      "path": "skills/wikipedia-research",
+      "resources": [
+        {
+          "path": "SKILL.md",
+          "sha256": "49f6e79781b9d491991d0d2142d0118f1742bec466310a7f9d055ae20171fdcc"
+        },
+        {
+          "path": "references/source-assessment.md",
+          "sha256": "a46851d87a072d88bfe5b581e2a1b9b0de926d235bc42fd905e11b86217256ed"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-08-23",
+        "status": "reviewed"
+      },
+      "review_path": "reviews/wikipedia-research.json",
+      "risk": "low",
+      "schema_version": 1,
+      "side_effects": [
+        "network access when research is requested"
+      ],
+      "source_refs": [
+        "writing-foundation:wikipedia-style",
+        "writing-foundation:wikipedia-ai-skills"
+      ],
+      "status": "active",
+      "summary": "Build a source landscape, claim ledger, citation metadata, and scope for Wikipedia-style samples.",
+      "triggers": [
+        "Wikipedia research",
+        "source landscape",
+        "notability analysis",
+        "claim ledger"
+      ]
+    },
+    {
+      "bundle_digest": "sha256:99209a47dda226c1dff1f8edfb8aa32062019d748a1d75dd6ddfec79a1f85ae8",
+      "domain": "wikipedia",
+      "exclusions": [
+        "live page editing",
+        "unsourced factual correction"
+      ],
+      "load_mode": "routable",
+      "name": "wikipedia-review",
+      "path": "skills/wikipedia-review",
+      "resources": [
+        {
+          "path": "SKILL.md",
+          "sha256": "5d7b2de7cfc7d3493e73d4d753b4542e4ed585c817e8a5aed33523d09a1bfb82"
+        },
+        {
+          "path": "references/review-rubric.md",
+          "sha256": "86eba20429902181ff25a08fcd9531f64d0ed81a675a42f8b9ac3e10c1af8542"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-08-23",
+        "status": "reviewed"
+      },
+      "review_path": "reviews/wikipedia-review.json",
+      "risk": "low",
+      "schema_version": 1,
+      "side_effects": [
+        "none"
+      ],
+      "source_refs": [
+        "writing-foundation:humanizer-pro",
+        "writing-foundation:wikipedia-style",
+        "writing-foundation:wikipedia-ai-skills"
+      ],
+      "status": "active",
+      "summary": "Independently review Wikipedia-style drafts for sourcing, neutrality, weight, structure, and prose.",
+      "triggers": [
+        "review Wikipedia draft",
+        "check citation support",
+        "grade encyclopedia article"
+      ]
+    },
+    {
+      "bundle_digest": "sha256:26725fe7a1beaa6f1bc7d02bd3fbd87386b9a52f6cece71592bf7729032a1330",
+      "domain": "wikipedia",
+      "exclusions": [
+        "live publishing",
+        "account access",
+        "direct page editing"
+      ],
+      "load_mode": "routable",
+      "name": "wikipedia-workflow",
+      "path": "skills/wikipedia-workflow",
+      "resources": [
+        {
+          "path": "SKILL.md",
+          "sha256": "fa05faa1c0195f200e0f33abea9da8d3d7171ff95c0fba0fe393e17bad84b192"
+        },
+        {
+          "path": "assets/claim-ledger.yaml",
+          "sha256": "d5978f6fdcf480174aa77d9017abdbada9d326c923225fec6792ffedf2179368"
+        },
+        {
+          "path": "assets/review-report.md",
+          "sha256": "c4a958a5f238a28aad09ec4e1a4497936377a8f0563ebb49df8fbfabd40fae60"
+        },
+        {
+          "path": "assets/run-manifest.yaml",
+          "sha256": "3dcdd03d01038b47775b36f87c1ce07a27c25bbcce9d256f10f8e973a53062fd"
+        },
+        {
+          "path": "assets/source-packet.yaml",
+          "sha256": "859d061ee3e23f6de4f8e7e7300f7afc5b2f694d22b0244b3948768b914915a2"
+        },
+        {
+          "path": "references/workflow.md",
+          "sha256": "83aa1f8a14a874fec8826540754a80b0130d2ce21dad5e7e6bcc34fb3d8b93b9"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-08-23",
+        "status": "reviewed"
+      },
+      "review_path": "reviews/wikipedia-workflow.json",
+      "risk": "low",
+      "schema_version": 1,
+      "side_effects": [
+        "network access when research is requested"
+      ],
+      "source_refs": [
+        "writing-foundation:wikipedia-ai-skills"
+      ],
+      "status": "active",
+      "summary": "Coordinate research, claim mapping, drafting, citations, independent review, and revision for a private sample.",
+      "triggers": [
+        "complete Wikipedia workflow",
+        "Wiki Lab sample",
+        "research to gold sample"
+      ]
+    },
+    {
+      "bundle_digest": "sha256:4fabe90a00512443e9c914e013d25b4bd3ff1a6505804376d321b7a10ec7944b",
+      "domain": "wikipedia",
+      "exclusions": [
+        "live page editing",
+        "drafting without an evidence base"
+      ],
+      "load_mode": "routable",
+      "name": "wikipedia-writing",
+      "path": "skills/wikipedia-writing",
+      "resources": [
+        {
+          "path": "SKILL.md",
+          "sha256": "9a1e8d5595b18c53b499d5137e8fe22d4e76611662eafbf7c8601235a99a0354"
+        },
+        {
+          "path": "references/article-structure.md",
+          "sha256": "666a0b8acc1759fef62e663310a705c763f97538cd1638ba1f7dd0494289b582"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-08-23",
+        "status": "reviewed"
+      },
+      "review_path": "reviews/wikipedia-writing.json",
+      "risk": "low",
+      "schema_version": 1,
+      "side_effects": [
+        "none"
+      ],
+      "source_refs": [
+        "writing-foundation:wikipedia-style",
+        "writing-foundation:wikipedia-ai-skills"
+      ],
+      "status": "active",
+      "summary": "Draft or rewrite complete source-grounded Wikipedia-style samples from research and claim ledgers.",
+      "triggers": [
+        "write Wikipedia sample",
+        "draft encyclopedia article",
+        "rewrite Wikipedia-style prose"
+      ]
+    }
+  ]
+}

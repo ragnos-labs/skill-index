@@ -1,0 +1,19 @@
+{
+  "bundle_digest": "sha256:8cf8791478d07e8ba2c602e7d313d63810bd6162e7d9885b70fcd186da73982b",
+  "evidence": [
+    "Instructions identify immutable facts, citations, meaning, and commitments before rewriting.",
+    "The objective is prose quality, not detector evasion."
+  ],
+  "limitations": [
+    "A cleanup pass cannot validate unsupported source claims."
+  ],
+  "reviewed_at": "2026-08-23",
+  "reviewer": "repository-maintainers",
+  "schema_version": 1,
+  "skill": "writing-cleanup",
+  "source_refs": [
+    "writing-foundation:avoid-ai-writing",
+    "writing-foundation:blader-humanizer"
+  ],
+  "status": "reviewed"
+}

@@ -1,0 +1,27 @@
+{
+  "domain": "general",
+  "exclusions": [
+    "specialist legal advice",
+    "unsupported claims"
+  ],
+  "load_mode": "routable",
+  "name": "general-writing",
+  "path": "skills/general-writing",
+  "review_path": "reviews/general-writing.json",
+  "risk": "low",
+  "schema_version": 1,
+  "side_effects": [
+    "none"
+  ],
+  "source_refs": [
+    "writing-foundation:avoid-ai-writing"
+  ],
+  "status": "active",
+  "summary": "Draft, rewrite, or adapt general-purpose prose while preserving evidence, purpose, and voice.",
+  "triggers": [
+    "draft writing",
+    "rewrite an article",
+    "adapt content",
+    "write an email"
+  ]
+}

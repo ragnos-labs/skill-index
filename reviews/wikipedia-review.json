@@ -1,0 +1,20 @@
+{
+  "bundle_digest": "sha256:99209a47dda226c1dff1f8edfb8aa32062019d748a1d75dd6ddfec79a1f85ae8",
+  "evidence": [
+    "Instructions require the draft and supporting evidence set before review.",
+    "The rubric covers citation correctness, synthesis, neutrality, weight, paraphrase, structure, and prose."
+  ],
+  "limitations": [
+    "A review without the complete source packet must state its evidence limits."
+  ],
+  "reviewed_at": "2026-08-23",
+  "reviewer": "repository-maintainers",
+  "schema_version": 1,
+  "skill": "wikipedia-review",
+  "source_refs": [
+    "writing-foundation:humanizer-pro",
+    "writing-foundation:wikipedia-style",
+    "writing-foundation:wikipedia-ai-skills"
+  ],
+  "status": "reviewed"
+}

@@ -1,0 +1,27 @@
+{
+  "domain": "wikipedia",
+  "exclusions": [
+    "live page editing",
+    "drafting without an evidence base"
+  ],
+  "load_mode": "routable",
+  "name": "wikipedia-writing",
+  "path": "skills/wikipedia-writing",
+  "review_path": "reviews/wikipedia-writing.json",
+  "risk": "low",
+  "schema_version": 1,
+  "side_effects": [
+    "none"
+  ],
+  "source_refs": [
+    "writing-foundation:wikipedia-style",
+    "writing-foundation:wikipedia-ai-skills"
+  ],
+  "status": "active",
+  "summary": "Draft or rewrite complete source-grounded Wikipedia-style samples from research and claim ledgers.",
+  "triggers": [
+    "write Wikipedia sample",
+    "draft encyclopedia article",
+    "rewrite Wikipedia-style prose"
+  ]
+}

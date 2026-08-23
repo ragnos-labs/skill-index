@@ -1,0 +1,24 @@
+{
+  "bundle_digest": "sha256:1c36523ead2aaf68ad2a66b19944fe4ed9d3e7c1c8c07718b4c3f1d2cbbc0aac",
+  "evidence": [
+    "Frontmatter, records, search behavior, no-match behavior, path containment, and digest verification are covered by local tests.",
+    "The index returns summaries and paths only; it does not execute skill resources."
+  ],
+  "limitations": [
+    "The first release uses deterministic lexical retrieval rather than semantic embeddings.",
+    "MCP delivery is an external adapter responsibility."
+  ],
+  "reviewed_at": "2026-08-23",
+  "reviewer": "repository-maintainers",
+  "schema_version": 1,
+  "skill": "skill-index",
+  "source_refs": [
+    "skill-index-runtime-landscape:agent-skills-spec",
+    "skill-index-runtime-landscape:skillport",
+    "skill-index-runtime-landscape:skill-provenance",
+    "skill-index-runtime-landscape:skill-retrieval-mcp",
+    "skill-index-runtime-landscape:skillspector",
+    "skill-index-runtime-landscape:skillevaluator"
+  ],
+  "status": "reviewed"
+}

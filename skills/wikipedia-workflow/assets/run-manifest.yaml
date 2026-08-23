@@ -1,0 +1,20 @@
+schema_version: "1"
+run_id: "replace-with-run-id"
+created_at: "replace-with-iso-8601-time"
+mode: "sample"
+profile: "wikipedia"
+topic:
+  title: "replace-with-working-title"
+  page_type: "replace-with-page-type"
+  aliases: []
+intent:
+  job: "new-sample"
+  depth: "standard"
+  outputs:
+    - "markdown"
+inputs:
+  supplied_sources: []
+  supplied_drafts: []
+artifacts: {}
+reviews: []
+open_questions: []

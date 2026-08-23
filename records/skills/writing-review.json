@@ -1,0 +1,28 @@
+{
+  "domain": "general",
+  "exclusions": [
+    "silent rewrites",
+    "unsupported publication claims"
+  ],
+  "load_mode": "routable",
+  "name": "writing-review",
+  "path": "skills/writing-review",
+  "review_path": "reviews/writing-review.json",
+  "risk": "low",
+  "schema_version": 1,
+  "side_effects": [
+    "none"
+  ],
+  "source_refs": [
+    "writing-foundation:avoid-ai-writing",
+    "writing-foundation:audit-ai-writing"
+  ],
+  "status": "active",
+  "summary": "Review writing for purpose, evidence, structure, clarity, voice, citations, and readiness.",
+  "triggers": [
+    "review writing",
+    "grade a draft",
+    "editorial feedback",
+    "publication readiness"
+  ]
+}

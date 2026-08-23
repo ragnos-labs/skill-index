@@ -1,0 +1,18 @@
+{
+  "bundle_digest": "sha256:9a640bcaf5fb418aa44531c58b30ad38863e494c3065489ac60c2f90c26efab0",
+  "evidence": [
+    "Instructions preserve source fidelity, audience, purpose, and requested voice.",
+    "The skill routes review-only work to a separate skill."
+  ],
+  "limitations": [
+    "Specialist domains still require their own authority and evidence rules."
+  ],
+  "reviewed_at": "2026-08-23",
+  "reviewer": "repository-maintainers",
+  "schema_version": 1,
+  "skill": "general-writing",
+  "source_refs": [
+    "writing-foundation:avoid-ai-writing"
+  ],
+  "status": "reviewed"
+}

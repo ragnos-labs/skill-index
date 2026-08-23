@@ -1,0 +1,240 @@
+{
+  "adopted": [
+    "Use the open Agent Skills folder format with progressive disclosure.",
+    "Keep only the bootstrap router visible and search summaries before loading instructions.",
+    "Return no match when lexical evidence is weak instead of forcing a top result.",
+    "Bind reviewed skills to exact bundle SHA-256 digests and verify them again before resolving a path.",
+    "Use packet-scoped source IDs and compact generated indexes.",
+    "Keep future MCP transport compatible with resource discovery concepts without freezing an experimental draft."
+  ],
+  "findings": [
+    "The ecosystem is converging on search-first progressive disclosure for collections above a few dozen skills.",
+    "Existing open-source loaders solve transport and installation, but reviewed admission, decision history, and fail-closed matching remain separate concerns.",
+    "Relative ranking alone can return an irrelevant best result for an unanswerable query.",
+    "Bundle integrity and security evaluation are increasingly treated as admission gates, not discovery features.",
+    "A plain local CLI is the smallest portable baseline; MCP and host adapters can remain external."
+  ],
+  "id": "skill-index-runtime-landscape",
+  "method": "Ran seven fresh Exa searches, inspected primary repositories and specifications, pinned full revisions, compared discovery, loading, integrity, and evaluation behavior, and tested the failure assumptions against the proposed local design.",
+  "open_questions": [
+    "When the MCP skills extension is stable enough to justify a separate adapter repository.",
+    "At what library size lexical search recall should be benchmarked against a hybrid retriever.",
+    "Whether signed review attestations are needed beyond local digest binding."
+  ],
+  "queries": [
+    "open source agent skill index search load on demand context window",
+    "provider neutral Agent Skills repository MCP discovery",
+    "agent skill provenance SHA-256 bundle verification",
+    "agent skill security scanner evaluation open source",
+    "large agent skill library retrieval no match behavior",
+    "portable multi-agent skill loader AGENTS.md",
+    "skills over MCP SEP-2640"
+  ],
+  "question": "What portable architecture lets agents search hundreds of reviewed skills without bloating session context?",
+  "rejected": [
+    "Loading every skill description into every coding session.",
+    "Making one provider's directory layout or UI metadata part of the repository contract.",
+    "Automatically loading the highest-ranked result when the match is weak.",
+    "Executing scripts from the index or treating discovery as action authority.",
+    "Forking a full external runtime into this repository."
+  ],
+  "researched_at": "2026-08-23",
+  "schema_version": 1,
+  "skipped": [
+    "A vector database in the first release because it adds dependencies before lexical recall is measured.",
+    "A hosted registry because the portable Git repository and generated JSON are sufficient for the first release.",
+    "Provider adapters because they create collision-prone maintained surfaces.",
+    "Signing and transparency logs until the threat model and distribution path require them."
+  ],
+  "sources": [
+    {
+      "disposition": "adopted",
+      "findings": [
+        "Defines the portable folder format and three-stage progressive disclosure model."
+      ],
+      "id": "agent-skills-spec",
+      "inspected_paths": [
+        "README.md",
+        "docs/specification.md"
+      ],
+      "license": "Apache-2.0 and CC-BY-4.0",
+      "revision": "69ef37e9424c0a7ea9dd2293b559e43ec8176379",
+      "title": "Agent Skills specification",
+      "url": "https://github.com/agentskills/agentskills"
+    },
+    {
+      "disposition": "inspiration",
+      "findings": [
+        "Provides a mature search-first CLI and MCP runtime that can remain an optional external adapter.",
+        "Its relative result scoring informed the need for an independent no-match threshold."
+      ],
+      "id": "skillport",
+      "inspected_paths": [
+        "README.md",
+        "src/skillport_cli",
+        "packages/mcp"
+      ],
+      "license": "MIT",
+      "revision": "51334ae94919fc1c261673ffefdce9176c9094ef",
+      "title": "SkillPort",
+      "url": "https://github.com/gotalab/skillport"
+    },
+    {
+      "disposition": "inspiration",
+      "findings": [
+        "Demonstrates summary-first skill discovery for MCP-compatible clients and a lightweight startup instruction path."
+      ],
+      "id": "skills-mcp",
+      "inspected_paths": [
+        "README.md",
+        "src"
+      ],
+      "license": "not-confirmed",
+      "revision": "b8bc1933f40eae94123728cf4ca08df2860f57d9",
+      "title": "skills-mcp",
+      "url": "https://github.com/skills-mcp/skills-mcp"
+    },
+    {
+      "disposition": "inspiration",
+      "findings": [
+        "The emerging MCP approach models skills as discoverable resources and leaves host loading behavior flexible.",
+        "The work is still experimental, so this repository records alignment without depending on the transport."
+      ],
+      "id": "mcp-skills-extension",
+      "inspected_paths": [
+        "README.md",
+        "docs/approaches.md",
+        "docs/threat-model.md"
+      ],
+      "license": "not-confirmed",
+      "revision": "f1f66fa7f8c75d6094dff1fd4a5e83f058ec8692",
+      "title": "Experimental skills over MCP",
+      "url": "https://github.com/modelcontextprotocol/experimental-ext-skills"
+    },
+    {
+      "disposition": "inspiration",
+      "findings": [
+        "Uses per-file SHA-256 identity to detect drift across skill bundles and deployments."
+      ],
+      "id": "skill-provenance",
+      "inspected_paths": [
+        "README.md",
+        "SKILL.md",
+        "scripts"
+      ],
+      "license": "not-confirmed",
+      "revision": "b5d36f5a829317e2c956edfcc305fe42c49317e3",
+      "title": "skill-provenance",
+      "url": "https://github.com/snapsynapse/skill-provenance"
+    },
+    {
+      "disposition": "reviewed-not-used",
+      "findings": [
+        "Uses a search, load, then fetch-reference sequence and shows how a larger registry separates compact metadata from resources."
+      ],
+      "id": "tech-leads-registry",
+      "inspected_paths": [
+        "README.md",
+        "packages/mcp/README.md"
+      ],
+      "license": "not-confirmed",
+      "revision": "fe318be656b315d5b6f45cf7ea23946b2d0241b0",
+      "title": "Agent Skills registry",
+      "url": "https://github.com/tech-leads-club/agent-skills"
+    },
+    {
+      "disposition": "inspiration",
+      "findings": [
+        "Proposes a well-known discovery index with content digests and portable skill artifacts."
+      ],
+      "id": "discovery-rfc",
+      "inspected_paths": [
+        "README.md",
+        "schema"
+      ],
+      "license": "not-confirmed",
+      "revision": "1bd1167983fa5ac9cd47987710c525308eda1a98",
+      "title": "Agent Skills discovery RFC",
+      "url": "https://github.com/cloudflare/agent-skills-discovery-rfc"
+    },
+    {
+      "disposition": "inspiration",
+      "findings": [
+        "Confirms that summary-first retrieval saves context.",
+        "Its unanswerable-query behavior reinforced the requirement to fail closed on weak matches."
+      ],
+      "id": "skill-retrieval-mcp",
+      "inspected_paths": [
+        "README.md",
+        "dev.md",
+        "server.py"
+      ],
+      "license": "MIT",
+      "revision": "095f4217ba26afb714676ee513832c8eca1fb6f2",
+      "title": "skill-retrieval-mcp",
+      "url": "https://github.com/JayCheng113/skill-retrieval-mcp"
+    },
+    {
+      "disposition": "reviewed-not-used",
+      "findings": [
+        "Shows portable CLI installation and AGENTS.md synchronization, but still maintains host-oriented install paths."
+      ],
+      "id": "openskills",
+      "inspected_paths": [
+        "README.md",
+        "src"
+      ],
+      "license": "MIT",
+      "revision": "f6eb0488fc4f07b640237f40db3c3649f80fc01e",
+      "title": "OpenSkills",
+      "url": "https://github.com/numman-ali/openskills"
+    },
+    {
+      "disposition": "inspiration",
+      "findings": [
+        "Provides an optional static security admission gate for skill bundles."
+      ],
+      "id": "skillspector",
+      "inspected_paths": [
+        "README.md",
+        "docs"
+      ],
+      "license": "not-confirmed",
+      "revision": "698e2bf29c7d32aa8211ada677382460c01900d7",
+      "title": "SkillSpector",
+      "url": "https://github.com/NVIDIA/SkillSpector"
+    },
+    {
+      "disposition": "inspiration",
+      "findings": [
+        "Provides optional deterministic quality, overlap, and live behavior evaluation tiers for skill admission."
+      ],
+      "id": "skillevaluator",
+      "inspected_paths": [
+        "README.md",
+        "docs"
+      ],
+      "license": "not-confirmed",
+      "revision": "e70f0e3ee68bb72d8cf68178a7d4fa2052bc1433",
+      "title": "SkillEvaluator",
+      "url": "https://github.com/NVIDIA/SkillEvaluator"
+    },
+    {
+      "disposition": "adopted",
+      "findings": [
+        "A prior local router proved that one visible index skill could discover manually hidden skills.",
+        "The new design generalizes that MVP with neutral records, reviews, packets, and generated indexes."
+      ],
+      "id": "prior-local-router",
+      "inspected_paths": [
+        "skill router instructions",
+        "generated hidden skill catalog"
+      ],
+      "license": "internal-history",
+      "revision": "164b8f619afa4603081becd89272e4768ab27f7d",
+      "title": "Prior local skill router MVP",
+      "url": "local-history:skill-router-mvp"
+    }
+  ],
+  "supersedes": []
+}

@@ -1,0 +1,22 @@
+schema_version: "1"
+topic_id: "replace-with-topic-id"
+coverage_judgment: "unknown"
+coverage_notes: "replace-with-summary"
+sources:
+  - source_id: "source-001"
+    title: "replace-with-title"
+    author: "replace-with-author-or-organization"
+    publisher: "replace-with-publisher"
+    published_at: "replace-with-date"
+    preferred_url: "replace-with-url"
+    identifiers: {}
+    language: "en"
+    source_class: "replace-with-class"
+    independent: "unknown"
+    coverage_depth: "unknown"
+    duplicate_of: null
+    strengths: []
+    limitations: []
+    candidate_sections: []
+source_gaps: []
+contradictions: []

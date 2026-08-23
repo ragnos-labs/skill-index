@@ -1,0 +1,7 @@
+{
+  "display_name": "Wikipedia-style writing",
+  "documentation": "domains/wikipedia/wiki-lab.md",
+  "name": "wikipedia",
+  "schema_version": 1,
+  "status": "active"
+}

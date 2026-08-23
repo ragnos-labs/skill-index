@@ -1,0 +1,7 @@
+{
+  "display_name": "General writing",
+  "documentation": "domains/general/README.md",
+  "name": "general",
+  "schema_version": 1,
+  "status": "active"
+}

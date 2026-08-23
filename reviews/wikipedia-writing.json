@@ -1,0 +1,19 @@
+{
+  "bundle_digest": "sha256:4fabe90a00512443e9c914e013d25b4bd3ff1a6505804376d321b7a10ec7944b",
+  "evidence": [
+    "Instructions require a source packet, claim ledger, or equivalent evidence base.",
+    "The skill separates neutral article construction from research and independent review."
+  ],
+  "limitations": [
+    "Draft quality cannot compensate for missing or weak source support."
+  ],
+  "reviewed_at": "2026-08-23",
+  "reviewer": "repository-maintainers",
+  "schema_version": 1,
+  "skill": "wikipedia-writing",
+  "source_refs": [
+    "writing-foundation:wikipedia-style",
+    "writing-foundation:wikipedia-ai-skills"
+  ],
+  "status": "reviewed"
+}

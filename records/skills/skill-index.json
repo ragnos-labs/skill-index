@@ -1,0 +1,32 @@
+{
+  "domain": "system",
+  "exclusions": [
+    "executing skill scripts",
+    "weak matches",
+    "authority expansion"
+  ],
+  "load_mode": "bootstrap",
+  "name": "skill-index",
+  "path": "skills/skill-index",
+  "review_path": "reviews/skill-index.json",
+  "risk": "low",
+  "schema_version": 1,
+  "side_effects": [
+    "none"
+  ],
+  "source_refs": [
+    "skill-index-runtime-landscape:agent-skills-spec",
+    "skill-index-runtime-landscape:skillport",
+    "skill-index-runtime-landscape:skills-mcp",
+    "skill-index-runtime-landscape:mcp-skills-extension",
+    "skill-index-runtime-landscape:skill-provenance"
+  ],
+  "status": "active",
+  "summary": "Search the reviewed library and load one matching skill without preloading the full collection.",
+  "triggers": [
+    "find a skill",
+    "search available skills",
+    "load a hidden skill",
+    "discover task guidance"
+  ]
+}

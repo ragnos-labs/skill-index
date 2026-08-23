@@ -1,0 +1,27 @@
+{
+  "domain": "general",
+  "exclusions": [
+    "inventing evidence",
+    "detector evasion"
+  ],
+  "load_mode": "routable",
+  "name": "writing-cleanup",
+  "path": "skills/writing-cleanup",
+  "review_path": "reviews/writing-cleanup.json",
+  "risk": "low",
+  "schema_version": 1,
+  "side_effects": [
+    "none"
+  ],
+  "source_refs": [
+    "writing-foundation:avoid-ai-writing",
+    "writing-foundation:blader-humanizer"
+  ],
+  "status": "active",
+  "summary": "Rewrite supplied prose to remove generic patterns while preserving facts, meaning, citations, and voice.",
+  "triggers": [
+    "clean up writing",
+    "remove generic prose",
+    "make writing sound natural"
+  ]
+}

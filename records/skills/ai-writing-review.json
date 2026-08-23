@@ -1,0 +1,28 @@
+{
+  "domain": "general",
+  "exclusions": [
+    "authorship detection",
+    "silent rewrites"
+  ],
+  "load_mode": "routable",
+  "name": "ai-writing-review",
+  "path": "skills/ai-writing-review",
+  "review_path": "reviews/ai-writing-review.json",
+  "risk": "low",
+  "schema_version": 1,
+  "side_effects": [
+    "none"
+  ],
+  "source_refs": [
+    "writing-foundation:avoid-ai-writing",
+    "writing-foundation:blader-humanizer",
+    "writing-foundation:humanizer-pro"
+  ],
+  "status": "active",
+  "summary": "Find and explain AI-like prose patterns without claiming to determine who authored the text.",
+  "triggers": [
+    "review AI-like writing",
+    "grade prose patterns",
+    "explain generic writing"
+  ]
+}

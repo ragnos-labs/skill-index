@@ -1,0 +1,19 @@
+{
+  "bundle_digest": "sha256:e1423879aa23f0c5775f412a03bc4a915f2df642858a5f1e78f063ba1cf1ad3d",
+  "evidence": [
+    "Instructions separate source quality, claim support, scope, and citation metadata.",
+    "The workflow explicitly exposes thin, affiliated, repetitive, and disputed evidence."
+  ],
+  "limitations": [
+    "Research results depend on source availability and may require later refreshes."
+  ],
+  "reviewed_at": "2026-08-23",
+  "reviewer": "repository-maintainers",
+  "schema_version": 1,
+  "skill": "wikipedia-research",
+  "source_refs": [
+    "writing-foundation:wikipedia-style",
+    "writing-foundation:wikipedia-ai-skills"
+  ],
+  "status": "reviewed"
+}

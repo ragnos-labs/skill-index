@@ -1,0 +1,18 @@
+{
+  "bundle_digest": "sha256:26725fe7a1beaa6f1bc7d02bd3fbd87386b9a52f6cece71592bf7729032a1330",
+  "evidence": [
+    "Instructions compose independently usable research, writing, review, and cleanup skills.",
+    "The workflow stops at a private sample and excludes live publishing and account actions."
+  ],
+  "limitations": [
+    "Destination publishing requires a separate future adapter and explicit authority."
+  ],
+  "reviewed_at": "2026-08-23",
+  "reviewer": "repository-maintainers",
+  "schema_version": 1,
+  "skill": "wikipedia-workflow",
+  "source_refs": [
+    "writing-foundation:wikipedia-ai-skills"
+  ],
+  "status": "reviewed"
+}

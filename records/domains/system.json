@@ -1,0 +1,7 @@
+{
+  "display_name": "System",
+  "documentation": "domains/system/README.md",
+  "name": "system",
+  "schema_version": 1,
+  "status": "active"
+}

@@ -1,0 +1,19 @@
+{
+  "bundle_digest": "sha256:c6324dd42994d4edad7057d50c28145ffb8467d350811eb3a3482aeea3689ad5",
+  "evidence": [
+    "Instructions support bounded quick, full, grade, and edit-review modes.",
+    "Findings require evidence from the artifact instead of generic editorial advice."
+  ],
+  "limitations": [
+    "Publication readiness still depends on destination-specific requirements."
+  ],
+  "reviewed_at": "2026-08-23",
+  "reviewer": "repository-maintainers",
+  "schema_version": 1,
+  "skill": "writing-review",
+  "source_refs": [
+    "writing-foundation:avoid-ai-writing",
+    "writing-foundation:audit-ai-writing"
+  ],
+  "status": "reviewed"
+}
