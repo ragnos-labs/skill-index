@@ -1,7 +1,7 @@
 {
-  "bundle_digest": "sha256:1c36523ead2aaf68ad2a66b19944fe4ed9d3e7c1c8c07718b4c3f1d2cbbc0aac",
+  "bundle_digest": "sha256:8fa7ebfd5188a82cbf3f60f343ddfad0c6a8bb763cee6e92941042b398a43211",
   "evidence": [
-    "Frontmatter, records, search behavior, no-match behavior, path containment, and digest verification are covered by local tests.",
+    "Frontmatter, directory-independent CLI behavior, search behavior, no-match behavior, path containment, and digest verification are covered by local tests.",
     "The index returns summaries and paths only; it does not execute skill resources."
   ],
   "limitations": [

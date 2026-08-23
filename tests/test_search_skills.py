@@ -19,6 +19,14 @@ class SearchTests(unittest.TestCase):
         self.assertTrue(matches)
         self.assertEqual(matches[0]["name"], "writing-review")
 
+    def test_routes_expanded_agent_paraphrase(self) -> None:
+        matches = search(
+            "clean up a wordy draft sentence by removing cliches, filler, "
+            "and unnecessary emphasis"
+        )["matches"]
+        self.assertTrue(matches)
+        self.assertEqual(matches[0]["name"], "writing-cleanup")
+
     def test_routes_clear_wikipedia_research_intent(self) -> None:
         matches = search("Wikipedia source landscape and claim ledger")["matches"]
         self.assertTrue(matches)

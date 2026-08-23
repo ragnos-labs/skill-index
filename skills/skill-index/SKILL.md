@@ -17,11 +17,11 @@ When `search_skills` and `load_skill` tools are available:
 3. Choose at most one clear match. A no-match result is valid.
 4. Call `load_skill` only for that match.
 
-With a local checkout, use:
+With the `skill-index` command, use:
 
 ```bash
-python3 scripts/search_skills.py search "the task intent" --limit 3
-python3 scripts/search_skills.py resolve <skill-name>
+skill-index search "the task intent" --limit 3
+skill-index resolve <skill-name>
 ```
 
 `resolve` verifies the current bundle against the generated index before it
