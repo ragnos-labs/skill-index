@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import shutil
 import sys
 import tempfile
@@ -10,7 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from search_skills import list_skills, resolve, search  # noqa: E402
+from search_skills import list_skills, load_index, resolve, search  # noqa: E402
 
 
 class SearchTests(unittest.TestCase):
@@ -50,6 +51,52 @@ class SearchTests(unittest.TestCase):
         self.assertEqual(result["name"], "writing-review")
         self.assertRegex(result["bundle_digest"], r"^sha256:[0-9a-f]{64}$")
         self.assertTrue(Path(result["path"]).is_dir())
+
+    def test_resolve_exposes_composition_without_resolving_dependencies(self) -> None:
+        result = resolve("wikipedia-workflow")
+        self.assertEqual(
+            result["composes"],
+            [
+                "wikipedia-research",
+                "wikipedia-writing",
+                "wikipedia-review",
+                "ai-writing-review",
+            ],
+        )
+        self.assertNotIn("resources", result)
+
+    def test_schema_one_index_without_composes_resolves_as_empty(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            copied_root = Path(temporary) / "library"
+            (copied_root / "index").mkdir(parents=True)
+            (copied_root / "reviews").mkdir()
+            index = json.loads((ROOT / "index" / "skills.json").read_text())
+            skill = next(
+                item for item in index["skills"] if item["name"] == "writing-review"
+            )
+            skill.pop("composes")
+            (copied_root / "index" / "skills.json").write_text(
+                json.dumps(index), encoding="utf-8"
+            )
+            shutil.copy2(
+                ROOT / "reviews" / "writing-review.json", copied_root / "reviews"
+            )
+            shutil.copytree(
+                ROOT / "skills" / "writing-review",
+                copied_root / "skills" / "writing-review",
+            )
+            result = resolve("writing-review", copied_root)
+        self.assertEqual(result["composes"], [])
+
+    def test_unsupported_index_schema_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            copied_root = Path(temporary) / "library"
+            (copied_root / "index").mkdir(parents=True)
+            (copied_root / "index" / "skills.json").write_text(
+                json.dumps({"schema_version": 99, "skills": []}), encoding="utf-8"
+            )
+            with self.assertRaisesRegex(ValueError, "unsupported skill index schema"):
+                load_index(copied_root)
 
     def test_resolve_rejects_bundle_drift(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

@@ -1,4 +1,5 @@
 {
+  "composes": [],
   "domain": "wikipedia",
   "exclusions": [
     "drafting without an evidence base"

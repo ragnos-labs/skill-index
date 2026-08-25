@@ -1,4 +1,5 @@
 {
+  "composes": [],
   "domain": "general",
   "exclusions": [
     "authorship detection",

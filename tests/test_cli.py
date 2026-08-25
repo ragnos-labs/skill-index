@@ -71,6 +71,27 @@ class CliTests(unittest.TestCase):
         self.assertEqual(result.returncode, 2)
         self.assertIn("changed after index generation", result.stderr)
 
+    def test_unsupported_index_schema_fails_without_traceback(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            copied_root = Path(temporary) / "library"
+            shutil.copytree(ROOT / "bin", copied_root / "bin")
+            shutil.copytree(ROOT / "scripts", copied_root / "scripts")
+            (copied_root / "index").mkdir()
+            (copied_root / "index" / "skills.json").write_text(
+                json.dumps({"schema_version": 99, "skills": []}), encoding="utf-8"
+            )
+            result = subprocess.run(
+                [str(copied_root / "bin" / "skill-index"), "list"],
+                cwd=temporary,
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+
+        self.assertEqual(result.returncode, 2)
+        self.assertIn("unsupported skill index schema", result.stderr)
+        self.assertNotIn("Traceback", result.stderr)
+
 
 if __name__ == "__main__":
     unittest.main()

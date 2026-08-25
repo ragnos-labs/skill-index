@@ -18,5 +18,6 @@ summaries and load one selected skill at a time.
 | wikipedia | [wikipedia-writing](../skills/wikipedia-writing/SKILL.md) | routable | active | Draft or rewrite complete source-grounded Wikipedia-style articles, wikitext, and platform-request copy. |
 
 Machine consumers should use [skills.json](skills.json), which includes
-triggers, exclusions, review state, bundle digests, and per-file SHA-256
-values.
+triggers, exclusions, declarative composition edges, review state, bundle
+digests, and per-file SHA-256 values. Composition metadata never causes
+another skill to be loaded or executed.

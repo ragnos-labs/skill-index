@@ -100,6 +100,7 @@ def build_skill_index(root: Path = ROOT) -> dict[str, Any]:
         skill_dir = root / record["path"]
         review = load_json(root / record["review_path"])
         item = dict(record)
+        item["composes"] = list(record.get("composes", []))
         item["bundle_digest"] = bundle_digest(skill_dir)
         item["resources"] = skill_resources(skill_dir)
         item["review"] = {
@@ -112,6 +113,61 @@ def build_skill_index(root: Path = ROOT) -> dict[str, Any]:
         "schema_version": 1,
         "skills": skills,
     }
+
+
+def composition_errors(records: list[dict[str, Any]]) -> list[str]:
+    """Return deterministic validation errors for composition metadata."""
+
+    errors: list[str] = []
+    names = {
+        record.get("name")
+        for record in records
+        if isinstance(record.get("name"), str)
+    }
+    graph: dict[str, list[str]] = {}
+    for record in sorted(records, key=lambda item: str(item.get("name", ""))):
+        name = record.get("name")
+        if not isinstance(name, str):
+            continue
+        composes = record.get("composes", [])
+        if not isinstance(composes, list) or not all(
+            isinstance(item, str) and item.strip() for item in composes
+        ):
+            errors.append(f"skill {name} has invalid composes")
+            graph[name] = []
+            continue
+        if len(composes) != len(set(composes)):
+            errors.append(f"skill {name} has duplicate composes entries")
+        graph[name] = [item for item in composes if item in names and item != name]
+        for target in composes:
+            if target == name:
+                errors.append(f"skill {name} composes itself")
+            elif target not in names:
+                errors.append(f"skill {name} composes unknown skill {target}")
+
+    state: dict[str, int] = {}
+    stack: list[str] = []
+    reported: set[tuple[str, ...]] = set()
+
+    def visit(name: str) -> None:
+        state[name] = 1
+        stack.append(name)
+        for target in graph.get(name, []):
+            if state.get(target, 0) == 0:
+                visit(target)
+            elif state.get(target) == 1:
+                start = stack.index(target)
+                cycle = tuple(stack[start:] + [target])
+                if cycle not in reported:
+                    errors.append("composition cycle: " + " -> ".join(cycle))
+                    reported.add(cycle)
+        stack.pop()
+        state[name] = 2
+
+    for name in sorted(graph):
+        if state.get(name, 0) == 0:
+            visit(name)
+    return errors
 
 
 def _stem(token: str) -> str:
