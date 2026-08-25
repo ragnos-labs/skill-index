@@ -15,6 +15,8 @@ where ideas came from and why alternatives were adopted or skipped.
   and accepts no match when none is strong enough.
 - Before loading a selected skill, it verifies the review status and exact
   bundle digest. Only that skill and its needed supporting files enter context.
+- Resolution reports declared `composes` edges as metadata without loading or
+  executing the composed skills.
 - New skills scale as separate bundles, records, reviews, and optional research
   packets. Generated indexes keep discovery fast and `make check` prevents
   those surfaces from drifting apart.
@@ -74,6 +76,11 @@ skill-index resolve writing-cleanup
 Host-specific installers and configuration intentionally live outside this
 repository.
 
+The generated index uses schema version 1. `composes` is an additive field;
+schema-1 consumers may ignore it, and resolution treats it as an empty list in
+older schema-1 indexes where it is absent. Unsupported schema versions fail
+closed before search or resolution.
+
 ## Repository shape
 
 ```text
@@ -114,7 +121,8 @@ generated indexes, links, ASCII text, provider-neutral structure, and the test
 suite. It requires no secrets or hosted CI.
 
 Read [adding a skill](docs/adding-a-skill.md) and
-[research packets](docs/research-packets.md) before contributing.
+[research packets](docs/research-packets.md) before contributing. Immutable
+assembly and verification are documented in [releases](docs/releases.md).
 
 Applicable third-party notices are preserved in
 [third_party/MIT-NOTICES.md](third_party/MIT-NOTICES.md).

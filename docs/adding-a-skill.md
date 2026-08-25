@@ -20,8 +20,10 @@ review standard.
 
 3. Add `references/`, `assets/`, or `scripts/` only when the workflow needs
    progressive disclosure, reusable output material, or deterministic tooling.
-4. Add `records/skills/<skill-name>.json` with routing, lifecycle, risk, and
-   source references.
+4. Add `records/skills/<skill-name>.json` with routing, lifecycle, risk,
+   composition, and source references. Set `composes` to an ordered list of
+   known skill names or to an empty list. Composition is declarative metadata;
+   it does not load or execute another skill.
 5. Add a research packet when new external evidence changes the design. Reuse
    an existing packet source when the evidence was already reviewed.
 6. Add or update `reviews/<skill-name>.json` and review the complete bundle.

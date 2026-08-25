@@ -1,4 +1,10 @@
 {
+  "composes": [
+    "wikipedia-research",
+    "wikipedia-writing",
+    "wikipedia-review",
+    "ai-writing-review"
+  ],
   "domain": "wikipedia",
   "exclusions": [
     "fabricated evidence",

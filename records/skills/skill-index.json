@@ -1,4 +1,5 @@
 {
+  "composes": [],
   "domain": "system",
   "exclusions": [
     "executing skill scripts",

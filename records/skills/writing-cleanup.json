@@ -1,4 +1,5 @@
 {
+  "composes": [],
   "domain": "general",
   "exclusions": [
     "inventing evidence",

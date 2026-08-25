@@ -1,4 +1,5 @@
 {
+  "composes": [],
   "domain": "wikipedia",
   "exclusions": [
     "unsourced factual correction"

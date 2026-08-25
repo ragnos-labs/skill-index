@@ -4,6 +4,7 @@
   "skills": [
     {
       "bundle_digest": "sha256:8bcdea7331d97b1bacf4ed0ccf07ade0e97a68c273c7ed01b4ccd676bde5a5cf",
+      "composes": [],
       "domain": "general",
       "exclusions": [
         "authorship detection",
@@ -47,6 +48,7 @@
     },
     {
       "bundle_digest": "sha256:9a640bcaf5fb418aa44531c58b30ad38863e494c3065489ac60c2f90c26efab0",
+      "composes": [],
       "domain": "general",
       "exclusions": [
         "specialist legal advice",
@@ -89,6 +91,7 @@
     },
     {
       "bundle_digest": "sha256:8cf8791478d07e8ba2c602e7d313d63810bd6162e7d9885b70fcd186da73982b",
+      "composes": [],
       "domain": "general",
       "exclusions": [
         "inventing evidence",
@@ -127,6 +130,7 @@
     },
     {
       "bundle_digest": "sha256:c6324dd42994d4edad7057d50c28145ffb8467d350811eb3a3482aeea3689ad5",
+      "composes": [],
       "domain": "general",
       "exclusions": [
         "silent rewrites",
@@ -170,6 +174,7 @@
     },
     {
       "bundle_digest": "sha256:8fa7ebfd5188a82cbf3f60f343ddfad0c6a8bb763cee6e92941042b398a43211",
+      "composes": [],
       "domain": "system",
       "exclusions": [
         "executing skill scripts",
@@ -213,6 +218,7 @@
     },
     {
       "bundle_digest": "sha256:395000898b97ada4220f89ed46fd4e774fc217bda57d10049ecc898f55dafd5e",
+      "composes": [],
       "domain": "wikipedia",
       "exclusions": [
         "manufactured coverage"
@@ -256,6 +262,7 @@
     },
     {
       "bundle_digest": "sha256:7e937a8b0e868e48a0fc022e1b5e2ea72b14b0096f2602e224ddaef2ec20bbc5",
+      "composes": [],
       "domain": "wikipedia",
       "exclusions": [
         "unsourced factual correction"
@@ -299,6 +306,12 @@
     },
     {
       "bundle_digest": "sha256:8ef8ece40223623b439c146e17da018c8fa71573a9a7e6faebc05cc2e5821fa3",
+      "composes": [
+        "wikipedia-research",
+        "wikipedia-writing",
+        "wikipedia-review",
+        "ai-writing-review"
+      ],
       "domain": "wikipedia",
       "exclusions": [
         "fabricated evidence",
@@ -357,6 +370,7 @@
     },
     {
       "bundle_digest": "sha256:119c263591f089997713155b8b3828cadbbc501acf1f85a798f05a893dff0916",
+      "composes": [],
       "domain": "wikipedia",
       "exclusions": [
         "drafting without an evidence base"

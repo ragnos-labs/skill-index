@@ -13,6 +13,7 @@ from repository_model import (
     NAME_PATTERN,
     ROOT,
     bundle_digest,
+    composition_errors,
     load_json,
     load_packets,
     load_records,
@@ -242,6 +243,7 @@ def validate(root: Path = ROOT) -> list[str]:
         errors.append("skill folders and records differ")
     if len(skill_names) != len(set(skill_names)):
         errors.append("duplicate skill records")
+    errors.extend(composition_errors(skill_records))
     if bootstrap_count != 1:
         errors.append("exactly one bootstrap skill is required")
     if "skill-index" not in skill_names:

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import sys
 import unittest
+from copy import deepcopy
 from pathlib import Path
 
 
@@ -9,7 +10,11 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from render_indexes import expected_outputs  # noqa: E402
-from repository_model import build_skill_index, load_records  # noqa: E402
+from repository_model import (  # noqa: E402
+    build_skill_index,
+    composition_errors,
+    load_records,
+)
 from validate_repository import validate  # noqa: E402
 
 
@@ -35,6 +40,32 @@ class RepositoryTests(unittest.TestCase):
             self.assertTrue(skill["resources"])
             for resource in skill["resources"]:
                 self.assertRegex(resource["sha256"], r"^[0-9a-f]{64}$")
+
+    def test_composition_graph_is_known_and_acyclic(self) -> None:
+        records = load_records("skills", ROOT)
+        self.assertEqual(composition_errors(records), [])
+        workflow = next(
+            record for record in records if record["name"] == "wikipedia-workflow"
+        )
+        self.assertEqual(
+            workflow["composes"],
+            [
+                "wikipedia-research",
+                "wikipedia-writing",
+                "wikipedia-review",
+                "ai-writing-review",
+            ],
+        )
+
+    def test_composition_graph_rejects_unknown_self_and_cycles(self) -> None:
+        records = [
+            {"name": "alpha", "composes": ["beta", "alpha", "missing"]},
+            {"name": "beta", "composes": ["alpha"]},
+        ]
+        errors = composition_errors(deepcopy(records))
+        self.assertIn("skill alpha composes itself", errors)
+        self.assertIn("skill alpha composes unknown skill missing", errors)
+        self.assertIn("composition cycle: alpha -> beta -> alpha", errors)
 
 
 if __name__ == "__main__":

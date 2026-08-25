@@ -33,7 +33,14 @@ def load_index(root: Path = ROOT) -> dict[str, Any]:
     path = root / "index" / "skills.json"
     if not path.is_file():
         raise ValueError("generated skill index is missing; run make index")
-    return load_json(path)
+    index = load_json(path)
+    if index.get("schema_version") != 1:
+        raise ValueError(
+            f"unsupported skill index schema: {index.get('schema_version')!r}"
+        )
+    if not isinstance(index.get("skills"), list):
+        raise ValueError("skill index skills must be a list")
+    return index
 
 
 def _score(query: str, skill: dict[str, Any]) -> tuple[int, float, list[str]]:
@@ -126,6 +133,7 @@ def resolve(name: str, root: Path = ROOT) -> dict[str, Any]:
         raise ValueError(f"skill review binding is invalid: {name}")
     return {
         "bundle_digest": actual_digest,
+        "composes": skill.get("composes", []),
         "load_mode": skill["load_mode"],
         "name": name,
         "path": str(path),
