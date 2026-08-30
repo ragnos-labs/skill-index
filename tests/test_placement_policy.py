@@ -31,12 +31,15 @@ def placement_allowed(
     *,
     scope: str,
     destination: str,
-    material: str = "public",
+    material: object = "public",
     producer: str | None = None,
 ) -> bool:
     if scope not in policy["admission"]["accepted"]:
         return False
-    if material in policy["material_dispositions"]:
+    if (
+        not isinstance(material, str)
+        or material not in policy["material_allowlist"]
+    ):
         return False
 
     generated = policy["destinations"]["generated_indexes"]
@@ -99,6 +102,7 @@ class PlacementPolicyTests(unittest.TestCase):
                     "generated": ["dist/", "index/"],
                     "runtime": ["runs/"],
                 },
+                "material_allowlist": ["public"],
                 "material_dispositions": {
                     "private": {
                         "custody": "external_state",
@@ -114,6 +118,60 @@ class PlacementPolicyTests(unittest.TestCase):
                 "validation": {"command": "make check"},
             },
         )
+
+    def assert_material_rejected(self, material: object) -> None:
+        self.assertFalse(
+            placement_allowed(
+                self.policy,
+                scope="reusable_cross_repository_agent_skill",
+                destination="skills/repository-placement/",
+                material=material,
+            )
+        )
+
+    def test_public_material_allowlist_is_explicit(self) -> None:
+        self.assertEqual(self.policy["material_allowlist"], ["public"])
+        self.assertTrue(
+            placement_allowed(
+                self.policy,
+                scope="reusable_cross_repository_agent_skill",
+                destination="skills/repository-placement/",
+                material="public",
+            )
+        )
+
+    def test_unknown_material_labels_are_rejected(self) -> None:
+        for material in ("confidential", "internal", "unknown"):
+            with self.subTest(material=material):
+                self.assert_material_rejected(material)
+
+    def test_material_label_casing_drift_is_rejected(self) -> None:
+        for material in ("Public", "PUBLIC", "pUbLiC"):
+            with self.subTest(material=material):
+                self.assert_material_rejected(material)
+
+    def test_empty_material_labels_are_rejected(self) -> None:
+        for material in ("", " ", "\t"):
+            with self.subTest(material=material):
+                self.assert_material_rejected(material)
+
+    def test_non_string_material_labels_are_rejected(self) -> None:
+        for material in ([], {}, ("public",)):
+            with self.subTest(material=material):
+                self.assert_material_rejected(material)
+
+    def test_null_material_label_is_rejected(self) -> None:
+        self.assert_material_rejected(None)
+
+    def test_boolean_material_labels_are_rejected(self) -> None:
+        for material in (False, True):
+            with self.subTest(material=material):
+                self.assert_material_rejected(material)
+
+    def test_number_material_labels_are_rejected(self) -> None:
+        for material in (-1, 0, 1, 1.5):
+            with self.subTest(material=material):
+                self.assert_material_rejected(material)
 
     def test_reusable_skill_destinations_are_accepted(self) -> None:
         scope = "reusable_cross_repository_agent_skill"

@@ -44,6 +44,9 @@
       "runs/"
     ]
   },
+  "material_allowlist": [
+    "public"
+  ],
   "material_dispositions": {
     "private": {
       "custody": "external_state",
