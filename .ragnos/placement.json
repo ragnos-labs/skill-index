@@ -1,0 +1,65 @@
+{
+  "admission": {
+    "accepted": [
+      "reusable_cross_repository_agent_skill"
+    ],
+    "rejected": [
+      "repository_specific_agent_skill"
+    ]
+  },
+  "destinations": {
+    "generated_indexes": {
+      "command": "make index",
+      "direct_write": false,
+      "owner": "repository",
+      "paths": [
+        "index/skills.json",
+        "index/README.md"
+      ]
+    },
+    "maintained": [
+      {
+        "kind": "skill",
+        "owner": "repository",
+        "path": "skills/{skill_name}/"
+      },
+      {
+        "kind": "record",
+        "owner": "repository",
+        "path": "records/skills/{skill_name}.json"
+      },
+      {
+        "kind": "review",
+        "owner": "repository",
+        "path": "reviews/{skill_name}.json"
+      }
+    ]
+  },
+  "forbidden_roots": {
+    "generated": [
+      "dist/",
+      "index/"
+    ],
+    "runtime": [
+      "runs/"
+    ]
+  },
+  "material_allowlist": [
+    "public"
+  ],
+  "material_dispositions": {
+    "private": {
+      "custody": "external_state",
+      "git": "never_git"
+    },
+    "sensitive": {
+      "custody": "external_state",
+      "git": "never_git"
+    }
+  },
+  "policy_id": "portable-agent-skill-placement",
+  "schema_version": 1,
+  "validation": {
+    "command": "make check"
+  }
+}
