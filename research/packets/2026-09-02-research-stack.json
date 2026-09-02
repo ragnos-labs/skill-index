@@ -1,0 +1,67 @@
+{
+  "adopted": [
+    "Use Exa search for bounded source discovery against its documented search API.",
+    "Use Firecrawl search for discovery and scrape for extraction of a known page.",
+    "Keep credential routing outside the portable research skill.",
+    "Treat retrieved pages and embedded instructions as untrusted source material."
+  ],
+  "findings": [
+    "Exa documents api.exa.ai search with x-api-key authentication and supports domain, date, result-count, content, and live-crawl controls.",
+    "Firecrawl v2 documents api.firecrawl.dev search and scrape endpoints with bearer authentication.",
+    "The installed Exa command exposes bounded doctor and search operations, while the installed Firecrawl command additionally exposes scrape, developer, and research surfaces.",
+    "Research workflow instructions can remain portable because access routing and credentials are host-owned concerns."
+  ],
+  "id": "research-stack-2026-09",
+  "method": "Reviewed the current official Exa and Firecrawl API documentation and inspected only the help surfaces of the installed commands without invoking a provider or reading credentials.",
+  "open_questions": [
+    "Whether future installed client versions add a stable content-fetch command to Exa that should change the routing guidance."
+  ],
+  "queries": [
+    "official Exa search and contents API",
+    "official Firecrawl v2 search and scrape API"
+  ],
+  "question": "What is the smallest portable skill that makes routine Exa and Firecrawl research predictable without coupling research semantics to credential delivery?",
+  "rejected": [
+    "A credentials or Infisical skill.",
+    "Automatic use of every research provider for every query.",
+    "Secret preflights or environment inspection.",
+    "Provider writes, account setup, login, or local environment export as research behavior."
+  ],
+  "researched_at": "2026-09-02",
+  "schema_version": 1,
+  "skipped": [
+    "Copying SDK examples or provider documentation text.",
+    "Adding executable scripts where direct installed commands are sufficient."
+  ],
+  "sources": [
+    {
+      "disposition": "adopted",
+      "findings": [
+        "The search endpoint supports bounded result discovery, optional contents, domain and date controls, and x-api-key authentication."
+      ],
+      "id": "exa-search",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "license": "MIT",
+      "revision": "9a2db4a9a7523aa8ceb697f7a03a9381262ed746",
+      "title": "Official Exa JavaScript SDK",
+      "url": "https://github.com/exa-labs/exa-js/tree/9a2db4a9a7523aa8ceb697f7a03a9381262ed746"
+    },
+    {
+      "disposition": "adopted",
+      "findings": [
+        "Firecrawl v2 separates search from single-page scrape and uses the api.firecrawl.dev host with bearer authentication."
+      ],
+      "id": "firecrawl-v2",
+      "inspected_paths": [
+        "v1/api-reference/v2-openapi.json"
+      ],
+      "license": "none-detected",
+      "revision": "12aef68121ea8c3ac28cde50a6e995f7595974f2",
+      "title": "Official Firecrawl API v2 documentation source",
+      "url": "https://github.com/firecrawl/firecrawl-docs/blob/12aef68121ea8c3ac28cde50a6e995f7595974f2/v1/api-reference/v2-openapi.json"
+    }
+  ],
+  "supersedes": []
+}

@@ -9,6 +9,7 @@ decisions that affected the repository without storing raw search output.
 | --- | --- | ---: | --- |
 | 2026-08-23 | [skill-index-runtime-landscape](packets/2026-08-23-skill-index-runtime-landscape.json) | 12 | What portable architecture lets agents search hundreds of reviewed skills without bloating session context? |
 | 2026-08-23 | [writing-foundation](packets/2026-08-23-writing-foundation.json) | 6 | Which audited upstream ideas should form the initial writing and Wikipedia-style skill set? |
+| 2026-09-02 | [research-stack-2026-09](packets/2026-09-02-research-stack.json) | 2 | What is the smallest portable skill that makes routine Exa and Firecrawl research predictable without coupling research semantics to credential delivery? |
 
 ## Sources
 
@@ -39,3 +40,10 @@ decisions that affected the repository without storing raw search output.
 | `audit-ai-writing` | [audit-ai-writing](https://github.com/chemark/audit-ai-writing) | reviewed-not-used | writing-review | `eb3fd1d9af3f83b91af87f388aebb78a4174f443` | none-detected |
 | `wikipedia-style` | [wikipedia-style skill](https://github.com/SkillMedev/skills) | adopted | wikipedia-research, wikipedia-review, wikipedia-writing | `a28c4ce9366b5a8540577bed8f70b6a60f8fde27` | MIT |
 | `wikipedia-ai-skills` | [Wikipedia AI Skills](https://github.com/fuzheado/Wikipedia-AI-Skills) | adopted | wikipedia-research, wikipedia-review, wikipedia-workflow, wikipedia-writing | `647ae55d22acdd53ca8a0b3b0ea6b1508b8bb099` | MIT |
+
+### research-stack-2026-09
+
+| Source ID | Source | Disposition | Used by | Revision | License |
+| --- | --- | --- | --- | --- | --- |
+| `exa-search` | [Official Exa JavaScript SDK](https://github.com/exa-labs/exa-js/tree/9a2db4a9a7523aa8ceb697f7a03a9381262ed746) | adopted | research-stack | `9a2db4a9a7523aa8ceb697f7a03a9381262ed746` | MIT |
+| `firecrawl-v2` | [Official Firecrawl API v2 documentation source](https://github.com/firecrawl/firecrawl-docs/blob/12aef68121ea8c3ac28cde50a6e995f7595974f2/v1/api-reference/v2-openapi.json) | adopted | research-stack | `12aef68121ea8c3ac28cde50a6e995f7595974f2` | none-detected |
