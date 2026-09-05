@@ -80,3 +80,8 @@ Do not hand-edit generated files or maintain a second skill list.
 - New executable tooling needs focused tests and hostile-input coverage.
 - Validation must not require secrets, network access, or ambient writes.
 - Use conventional commits and commit only files belonging to the change.
+
+- Source delivery requires passing local validation and independent agent review
+  of the exact revision. No separate human approval is required unless the
+  user explicitly requests one. This does not waive release, installation,
+  acceptance, or effect-authority gates.
