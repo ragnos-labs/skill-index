@@ -90,6 +90,47 @@
       ]
     },
     {
+      "bundle_digest": "sha256:304e2296314fa580a61a4effd8a43a11baeacfac68af54e461a4f2f2c3c95dcc",
+      "composes": [],
+      "domain": "general",
+      "exclusions": [
+        "credential setup or secret retrieval",
+        "external writes or account changes"
+      ],
+      "load_mode": "routable",
+      "name": "research-stack",
+      "path": "skills/research-stack",
+      "resources": [
+        {
+          "path": "SKILL.md",
+          "sha256": "0ef3e500ce4772c5b13de8ff50634e5c1b7cd4dfaddffc8e6c8fbf51277e7714"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-09-02",
+        "status": "reviewed"
+      },
+      "review_path": "reviews/research-stack.json",
+      "risk": "low",
+      "schema_version": 1,
+      "side_effects": [
+        "network access when research is requested"
+      ],
+      "source_refs": [
+        "research-stack-2026-09:exa-search",
+        "research-stack-2026-09:firecrawl-v2"
+      ],
+      "status": "active",
+      "summary": "Route current web, page-extraction, developer, and literature research between installed Exa, Firecrawl, and explicitly requested native web search.",
+      "triggers": [
+        "use Exa",
+        "use Firecrawl",
+        "research stack",
+        "pressure test with research",
+        "current primary sources"
+      ]
+    },
+    {
       "bundle_digest": "sha256:8cf8791478d07e8ba2c602e7d313d63810bd6162e7d9885b70fcd186da73982b",
       "composes": [],
       "domain": "general",
