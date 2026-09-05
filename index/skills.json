@@ -183,7 +183,8 @@
         "merge it",
         "make it live",
         "ship to prod",
-        "finish and close out"
+        "finish and close out",
+        "deploy it"
       ],
       "bundle_digest": "sha256:67b22d6145900bc484f46d4b4123985551642bd6cfc3c6039d463fef2a5dc1e0",
       "composes": [],
@@ -235,7 +236,8 @@
         "merge it",
         "ship to prod",
         "make it live",
-        "finish and close out"
+        "finish and close out",
+        "deploy it"
       ]
     },
     {

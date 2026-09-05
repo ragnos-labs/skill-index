@@ -17,7 +17,8 @@
     "merge it",
     "ship to prod",
     "make it live",
-    "finish and close out"
+    "finish and close out",
+    "deploy it"
   ],
   "aliases": [
     "closeout",
@@ -25,7 +26,8 @@
     "merge it",
     "make it live",
     "ship to prod",
-    "finish and close out"
+    "finish and close out",
+    "deploy it"
   ],
   "scope_terms": [
     "software",
