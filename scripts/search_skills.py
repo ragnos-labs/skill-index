@@ -4,7 +4,9 @@
 from __future__ import annotations
 
 import argparse
+import difflib
 import json
+import re
 import sys
 from pathlib import Path
 from typing import Any
@@ -43,6 +45,10 @@ def load_index(root: Path = ROOT) -> dict[str, Any]:
     return index
 
 
+def _phrase(value: str) -> str:
+    return " ".join(re.findall(r"[a-z0-9]+", value.lower()))
+
+
 def _score(query: str, skill: dict[str, Any]) -> tuple[int, float, list[str]]:
     query_tokens = tokens(query) - STOP_WORDS
     if not query_tokens:
@@ -51,24 +57,44 @@ def _score(query: str, skill: dict[str, Any]) -> tuple[int, float, list[str]]:
     trigger_tokens = tokens(skill.get("triggers", []))
     summary_tokens = tokens(skill.get("summary", ""))
     domain_tokens = tokens(skill.get("domain", ""))
-    all_tokens = name_tokens | trigger_tokens | summary_tokens | domain_tokens
+    alias_tokens = tokens(skill.get("aliases", []))
+    all_tokens = name_tokens | trigger_tokens | summary_tokens | domain_tokens | alias_tokens
+    # Correct only long, closely matching words; never fuzzy-match names on resolve.
+    query_tokens = {
+        word if word in all_tokens or len(word) < 5 else
+        next(iter(difflib.get_close_matches(word, sorted(all_tokens), n=1, cutoff=0.86)), word)
+        for word in query_tokens
+    }
     matched = sorted(query_tokens & all_tokens)
     score = (
         5 * len(query_tokens & name_tokens)
         + 3 * len(query_tokens & trigger_tokens)
         + 2 * len(query_tokens & summary_tokens)
         + len(query_tokens & domain_tokens)
+        + 3 * len(query_tokens & alias_tokens)
     )
-    normalized_query = "-".join(query.lower().split())
-    if normalized_query == skill["name"]:
+    identities = [skill["name"], *skill.get("aliases", [])]
+    normalized_query = _phrase(query)
+    exact = normalized_query in {_phrase(value) for value in identities}
+    scope_terms = skill.get("scope_terms", [])
+    if scope_terms and not exact and not (tokens(scope_terms) & query_tokens):
+        return 0, 0.0, []
+    if exact:
         score += 100
+    elif any(f" {_phrase(value)} " in f" {normalized_query} " for value in skill.get("aliases", [])):
+        score += 16
     coverage = len(matched) / len(query_tokens)
     return score, coverage, matched
 
 
-def search(query: str, limit: int = 3, root: Path = ROOT) -> dict[str, Any]:
+def rank_skills(query: str, skills: list[dict[str, Any]], limit: int = 3) -> dict[str, Any]:
+    """Rank supplied metadata without opening bundles or executing their contents."""
+    if not isinstance(query, str) or len(query) > 4096:
+        raise ValueError("query must be at most 4096 characters")
+    if type(limit) is not int or not 1 <= limit <= 10:
+        raise ValueError("limit must be between 1 and 10")
     results: list[dict[str, Any]] = []
-    for skill in load_index(root).get("skills", []):
+    for skill in skills:
         if skill.get("load_mode") in {"bootstrap", "retired"}:
             continue
         if skill.get("status") not in {"active", "experimental"}:
@@ -88,10 +114,15 @@ def search(query: str, limit: int = 3, root: Path = ROOT) -> dict[str, Any]:
                 "score": score,
                 "status": skill["status"],
                 "summary": skill["summary"],
+                "exclusions": skill.get("exclusions", []),
             }
         )
     results.sort(key=lambda item: (-item["score"], item["name"]))
     return {"matches": results[:limit], "query": query}
+
+
+def search(query: str, limit: int = 3, root: Path = ROOT) -> dict[str, Any]:
+    return rank_skills(query, load_index(root)["skills"], limit)
 
 
 def list_skills(root: Path = ROOT) -> dict[str, Any]:

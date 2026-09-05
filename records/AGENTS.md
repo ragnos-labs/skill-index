@@ -10,6 +10,7 @@ generated indexes are projections.
 - Use `active`, `experimental`, or `deprecated` lifecycle status.
 - Use `bootstrap`, `routable`, `explicit`, or `retired` load mode.
 - State concise positive triggers and exclusions that improve routing.
+- Optional `aliases` add exact human phrases; optional `scope_terms` require domain evidence for broad queries. Exact names remain discoverable. Exclusions accompany candidates for agent judgment.
 - Reference external evidence as `<packet-id>:<source-id>`.
 - Active records require a current review receipt.
 

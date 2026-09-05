@@ -182,6 +182,9 @@ def validate(root: Path = ROOT) -> list[str]:
         for field in ("side_effects", "triggers", "exclusions", "source_refs"):
             if not _nonempty_strings(record.get(field)):
                 errors.append(f"skill {name} has invalid {field}")
+        for field in ("aliases", "scope_terms"):
+            if field in record and not _nonempty_strings(record[field]):
+                errors.append(f"skill {name} has invalid {field}")
         summary = record.get("summary")
         if not isinstance(summary, str) or len(summary) < 40 or "|" in summary or "\n" in summary:
             errors.append(f"skill {name} has invalid summary")

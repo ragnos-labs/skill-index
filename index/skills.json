@@ -129,6 +129,10 @@
       ]
     },
     {
+      "aliases": [
+        "editorial review",
+        "review prose"
+      ],
       "bundle_digest": "sha256:c6324dd42994d4edad7057d50c28145ffb8467d350811eb3a3482aeea3689ad5",
       "composes": [],
       "domain": "general",
@@ -243,6 +247,12 @@
       "review_path": "reviews/wikipedia-research.json",
       "risk": "low",
       "schema_version": 1,
+      "scope_terms": [
+        "wikipedia",
+        "encyclopedia",
+        "encyclopedic",
+        "wiki"
+      ],
       "side_effects": [
         "network access when research is requested"
       ],
@@ -287,6 +297,12 @@
       "review_path": "reviews/wikipedia-review.json",
       "risk": "low",
       "schema_version": 1,
+      "scope_terms": [
+        "wikipedia",
+        "encyclopedia",
+        "encyclopedic",
+        "wiki"
+      ],
       "side_effects": [
         "none"
       ],
@@ -353,6 +369,12 @@
       "review_path": "reviews/wikipedia-workflow.json",
       "risk": "low",
       "schema_version": 1,
+      "scope_terms": [
+        "wikipedia",
+        "encyclopedia",
+        "encyclopedic",
+        "wiki"
+      ],
       "side_effects": [
         "network access when research is requested"
       ],
@@ -395,6 +417,12 @@
       "review_path": "reviews/wikipedia-writing.json",
       "risk": "low",
       "schema_version": 1,
+      "scope_terms": [
+        "wikipedia",
+        "encyclopedia",
+        "encyclopedic",
+        "wiki"
+      ],
       "side_effects": [
         "none"
       ],

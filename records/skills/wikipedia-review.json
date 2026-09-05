@@ -25,5 +25,11 @@
     "check citation support",
     "grade encyclopedia article",
     "review platform request"
+  ],
+  "scope_terms": [
+    "wikipedia",
+    "encyclopedia",
+    "encyclopedic",
+    "wiki"
   ]
 }
