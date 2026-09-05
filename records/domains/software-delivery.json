@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "name": "software-delivery",
+  "display_name": "Software delivery",
+  "documentation": "domains/software-delivery/README.md",
+  "status": "active"
+}

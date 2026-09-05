@@ -177,6 +177,68 @@
       ]
     },
     {
+      "aliases": [
+        "closeout",
+        "ship it",
+        "merge it",
+        "make it live",
+        "ship to prod",
+        "finish and close out"
+      ],
+      "bundle_digest": "sha256:67b22d6145900bc484f46d4b4123985551642bd6cfc3c6039d463fef2a5dc1e0",
+      "composes": [],
+      "domain": "software-delivery",
+      "exclusions": [
+        "status questions",
+        "readiness reviews",
+        "planning",
+        "quoted instructions",
+        "unrelated application deployment"
+      ],
+      "load_mode": "routable",
+      "name": "close-out",
+      "path": "skills/close-out",
+      "resources": [
+        {
+          "path": "SKILL.md",
+          "sha256": "8d4b8b8801b6c5dbc11145798f16f10294c93e83e4efe06467efc9522af98a48"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-09-05",
+        "status": "reviewed"
+      },
+      "review_path": "reviews/close-out.json",
+      "risk": "high",
+      "schema_version": 1,
+      "scope_terms": [
+        "software",
+        "deployment",
+        "production",
+        "merge",
+        "cleanup",
+        "ship",
+        "live",
+        "deploy",
+        "closeout"
+      ],
+      "side_effects": [
+        "repository writes",
+        "authorized release and deployment",
+        "guarded task cleanup"
+      ],
+      "source_refs": [],
+      "status": "active",
+      "summary": "Finish a software task through verified merge and safe cleanup, including deployment and live behavior proof when shipping is requested.",
+      "triggers": [
+        "ship it",
+        "merge it",
+        "ship to prod",
+        "make it live",
+        "finish and close out"
+      ]
+    },
+    {
       "bundle_digest": "sha256:8fa7ebfd5188a82cbf3f60f343ddfad0c6a8bb763cee6e92941042b398a43211",
       "composes": [],
       "domain": "system",
