@@ -25,5 +25,11 @@
     "rewrite Wikipedia-style prose",
     "draft Wikipedia platform request",
     "draft restoration request"
+  ],
+  "scope_terms": [
+    "wikipedia",
+    "encyclopedia",
+    "encyclopedic",
+    "wiki"
   ]
 }

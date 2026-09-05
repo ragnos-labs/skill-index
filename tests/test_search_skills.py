@@ -11,10 +11,43 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from search_skills import list_skills, load_index, resolve, search  # noqa: E402
+from search_skills import list_skills, load_index, rank_skills, resolve, search  # noqa: E402
 
 
 class SearchTests(unittest.TestCase):
+    def test_documented_wiki_lab_scope_is_preserved(self) -> None:
+        self.assertEqual(search("Prepare a Wiki Lab draft")["matches"][0]["name"], "wikipedia-workflow")
+
+    def test_general_review_does_not_rank_encyclopedia_specialist(self) -> None:
+        matches = search("Review a completed onboarding guide against its intended audience and outcome with exact file and line citations")["matches"]
+        self.assertEqual(matches[0]["name"], "writing-review")
+        self.assertFalse(any(item["domain"] == "wikipedia" for item in matches))
+
+    def test_general_research_does_not_claim_wikipedia_fit(self) -> None:
+        matches = search("Research managed or self-hosted retrieval with authoritative sources and an evidence-backed recommendation")["matches"]
+        self.assertFalse(any(item["domain"] == "wikipedia" for item in matches))
+
+    def test_alias_and_minor_typo(self) -> None:
+        self.assertEqual(search("editorial review")["matches"][0]["name"], "writing-review")
+        self.assertEqual(search("review writting draft")["matches"][0]["name"], "writing-review")
+
+    def test_exact_names_remain_discoverable(self) -> None:
+        for skill in load_index()["skills"]:
+            if skill["load_mode"] == "routable":
+                self.assertEqual(search(skill["name"])["matches"][0]["name"], skill["name"])
+
+    def test_external_metadata_preserves_invocation_and_exclusions(self) -> None:
+        skill = dict(load_index()["skills"][0], name="publish-package", aliases=["publish release"], load_mode="explicit", exclusions=["credentials are not authority"])
+        result = rank_skills("publish release", [skill])["matches"][0]
+        self.assertEqual(result["load_mode"], "explicit")
+        self.assertEqual(result["exclusions"], skill["exclusions"])
+        self.assertEqual(rank_skills("publish release", [dict(skill, load_mode="retired")])["matches"], [])
+
+    def test_bounded_query_and_limit(self) -> None:
+        for query, limit in [("x" * 4097, 3), ("review", 0), ("review", True)]:
+            with self.assertRaises(ValueError):
+                rank_skills(query, [], limit)
+
     def test_routes_clear_writing_intent(self) -> None:
         matches = search("review a writing draft")["matches"]
         self.assertTrue(matches)
