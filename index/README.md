@@ -11,6 +11,7 @@ summaries and load one selected skill at a time.
 | general | [general-writing](../skills/general-writing/SKILL.md) | routable | active | Draft, rewrite, or adapt general-purpose prose while preserving evidence, purpose, and voice. |
 | general | [writing-cleanup](../skills/writing-cleanup/SKILL.md) | routable | active | Rewrite supplied prose to remove generic patterns while preserving facts, meaning, citations, and voice. |
 | general | [writing-review](../skills/writing-review/SKILL.md) | routable | active | Review writing for purpose, evidence, structure, clarity, voice, citations, and readiness. |
+| software-delivery | [close-out](../skills/close-out/SKILL.md) | routable | active | Finish a software task through verified merge and safe cleanup, including deployment and live behavior proof when shipping is requested. |
 | system | [skill-index](../skills/skill-index/SKILL.md) | bootstrap | active | Search the reviewed library and load one matching skill without preloading the full collection. |
 | wikipedia | [wikipedia-research](../skills/wikipedia-research/SKILL.md) | routable | active | Build a source landscape, claim ledger, citation metadata, and scope for Wikipedia-style articles and platform requests. |
 | wikipedia | [wikipedia-review](../skills/wikipedia-review/SKILL.md) | routable | active | Independently review Wikipedia-style article and platform-request drafts for sourcing, fidelity, neutrality, weight, structure, and prose. |

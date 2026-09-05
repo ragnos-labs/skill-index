@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "name": "close-out",
+  "path": "skills/close-out",
+  "domain": "software-delivery",
+  "summary": "Finish a software task through verified merge and safe cleanup, including deployment and live behavior proof when shipping is requested.",
+  "status": "active",
+  "load_mode": "routable",
+  "risk": "high",
+  "side_effects": [
+    "repository writes",
+    "authorized release and deployment",
+    "guarded task cleanup"
+  ],
+  "triggers": [
+    "ship it",
+    "merge it",
+    "ship to prod",
+    "make it live",
+    "finish and close out",
+    "deploy it"
+  ],
+  "aliases": [
+    "closeout",
+    "ship it",
+    "merge it",
+    "make it live",
+    "ship to prod",
+    "finish and close out",
+    "deploy it"
+  ],
+  "scope_terms": [
+    "software",
+    "deployment",
+    "production",
+    "merge",
+    "cleanup",
+    "ship",
+    "live",
+    "deploy",
+    "closeout"
+  ],
+  "exclusions": [
+    "status questions",
+    "readiness reviews",
+    "planning",
+    "quoted instructions",
+    "unrelated application deployment"
+  ],
+  "composes": [],
+  "source_refs": [],
+  "review_path": "reviews/close-out.json"
+}
