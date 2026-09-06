@@ -1,9 +1,9 @@
 ---
-name: close-out
+name: ship-it
 description: Finish a named software task through validation, exact-revision merge, safe cleanup, and deployment with live verification when the user says ship it, ship to prod, deploy it, or make it live. Use merge it for the same live endpoint; merge only or an explicit source-only instruction stops before deployment. Do not execute for status, readiness, planning, or quoted examples.
 ---
 
-# Close out
+# Ship it
 
 Carry the current named task to its requested endpoint. Reuse the owning
 project's source-delivery, release, deployment, recovery, and cleanup procedures;
