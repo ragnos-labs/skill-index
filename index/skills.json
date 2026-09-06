@@ -186,7 +186,7 @@
         "finish and close out",
         "deploy it"
       ],
-      "bundle_digest": "sha256:67b22d6145900bc484f46d4b4123985551642bd6cfc3c6039d463fef2a5dc1e0",
+      "bundle_digest": "sha256:f34b228ce5d34faff5a7e05a303ce1df6dd3fee6ced68b384c48386f66cf8675",
       "composes": [],
       "domain": "software-delivery",
       "exclusions": [
@@ -197,19 +197,19 @@
         "unrelated application deployment"
       ],
       "load_mode": "routable",
-      "name": "close-out",
-      "path": "skills/close-out",
+      "name": "ship-it",
+      "path": "skills/ship-it",
       "resources": [
         {
           "path": "SKILL.md",
-          "sha256": "8d4b8b8801b6c5dbc11145798f16f10294c93e83e4efe06467efc9522af98a48"
+          "sha256": "925bfad0049da1c6f6d44c55bf107b0a18f62082802f4672f8f1535ea85defa3"
         }
       ],
       "review": {
         "reviewed_at": "2026-09-05",
         "status": "reviewed"
       },
-      "review_path": "reviews/close-out.json",
+      "review_path": "reviews/ship-it.json",
       "risk": "high",
       "schema_version": 1,
       "scope_terms": [

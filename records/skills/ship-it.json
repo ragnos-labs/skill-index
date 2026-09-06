@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "name": "close-out",
-  "path": "skills/close-out",
+  "name": "ship-it",
+  "path": "skills/ship-it",
   "domain": "software-delivery",
   "summary": "Finish a software task through verified merge and safe cleanup, including deployment and live behavior proof when shipping is requested.",
   "status": "active",
@@ -49,5 +49,5 @@
   ],
   "composes": [],
   "source_refs": [],
-  "review_path": "reviews/close-out.json"
+  "review_path": "reviews/ship-it.json"
 }

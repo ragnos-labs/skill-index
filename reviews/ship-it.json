@@ -1,18 +1,20 @@
 {
-  "bundle_digest": "sha256:67b22d6145900bc484f46d4b4123985551642bd6cfc3c6039d463fef2a5dc1e0",
+  "bundle_digest": "sha256:f34b228ce5d34faff5a7e05a303ce1df6dd3fee6ced68b384c48386f66cf8675",
   "evidence": [
     "Independent full-bundle review and 16 bounded behavioral simulations passed after correcting polite-question action routing.",
     "Both merge it and ship it reach live verification under the requested convention; explicit source-only and environment limits prevail.",
-    "Already accepted merge and uncertain deployment results reconcile before retry; unsafe cleanup is preserved."
+    "Already accepted merge and uncertain deployment results reconcile before retry; unsafe cleanup is preserved.",
+    "Skill name changed to ship-it; completion behavior is unchanged from the reviewed close-out bundle."
   ],
   "limitations": [
     "Instruction review and simulated decisions do not prove native invocation or any live application deployment.",
-    "Actual delivery requires the owning project procedures, target binding, authorization, and runtime evidence."
+    "Actual delivery requires the owning project procedures, target binding, authorization, and runtime evidence.",
+    "The rename requires independent exact-revision review before source delivery."
   ],
   "reviewed_at": "2026-09-05",
   "reviewer": "independent-agent-review",
   "schema_version": 1,
-  "skill": "close-out",
+  "skill": "ship-it",
   "source_refs": [],
   "status": "reviewed"
 }
