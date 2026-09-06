@@ -1,6 +1,6 @@
 # Software delivery
 
-Use `close-out` to finish a named software task at its authorized source or live
+Use `ship-it` to finish a named software task at its authorized source or live
 endpoint. It composes the owning project's validation, merge, deployment, and
 cleanup procedures without maintaining a second implementation of those tools.
 
