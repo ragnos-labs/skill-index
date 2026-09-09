@@ -9,6 +9,7 @@ summaries and load one selected skill at a time.
 | --- | --- | --- | --- | --- |
 | general | [ai-writing-review](../skills/ai-writing-review/SKILL.md) | routable | active | Find and explain AI-like prose patterns without claiming to determine who authored the text. |
 | general | [general-writing](../skills/general-writing/SKILL.md) | routable | active | Draft, rewrite, or adapt general-purpose prose while preserving evidence, purpose, and voice. |
+| general | [research-stack](../skills/research-stack/SKILL.md) | routable | active | Route current web, page-extraction, developer, and literature research between installed Exa, Firecrawl, and explicitly requested native web search. |
 | general | [writing-cleanup](../skills/writing-cleanup/SKILL.md) | routable | active | Rewrite supplied prose to remove generic patterns while preserving facts, meaning, citations, and voice. |
 | general | [writing-review](../skills/writing-review/SKILL.md) | routable | active | Review writing for purpose, evidence, structure, clarity, voice, citations, and readiness. |
 | software-delivery | [ship-it](../skills/ship-it/SKILL.md) | routable | active | Finish a software task through verified merge and safe cleanup, including deployment and live behavior proof when shipping is requested. |

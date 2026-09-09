@@ -1,0 +1,20 @@
+{
+  "bundle_digest": "sha256:304e2296314fa580a61a4effd8a43a11baeacfac68af54e461a4f2f2c3c95dcc",
+  "evidence": [
+    "The skill routes Exa, Firecrawl, and explicit native web search by research job instead of invoking every provider automatically.",
+    "Credential delivery, account setup, external writes, and secret inspection remain outside the portable skill.",
+    "The workflow requires primary sources, freshness checks, untrusted-content handling, and claim-local citations."
+  ],
+  "limitations": [
+    "Provider availability, authentication, quotas, and installed command versions remain host-owned runtime concerns."
+  ],
+  "reviewed_at": "2026-09-02",
+  "reviewer": "repository-maintainers",
+  "schema_version": 1,
+  "skill": "research-stack",
+  "source_refs": [
+    "research-stack-2026-09:exa-search",
+    "research-stack-2026-09:firecrawl-v2"
+  ],
+  "status": "reviewed"
+}

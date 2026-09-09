@@ -1,0 +1,30 @@
+{
+  "composes": [],
+  "domain": "general",
+  "exclusions": [
+    "credential setup or secret retrieval",
+    "external writes or account changes"
+  ],
+  "load_mode": "routable",
+  "name": "research-stack",
+  "path": "skills/research-stack",
+  "review_path": "reviews/research-stack.json",
+  "risk": "low",
+  "schema_version": 1,
+  "side_effects": [
+    "network access when research is requested"
+  ],
+  "source_refs": [
+    "research-stack-2026-09:exa-search",
+    "research-stack-2026-09:firecrawl-v2"
+  ],
+  "status": "active",
+  "summary": "Route current web, page-extraction, developer, and literature research between installed Exa, Firecrawl, and explicitly requested native web search.",
+  "triggers": [
+    "use Exa",
+    "use Firecrawl",
+    "research stack",
+    "pressure test with research",
+    "current primary sources"
+  ]
+}
