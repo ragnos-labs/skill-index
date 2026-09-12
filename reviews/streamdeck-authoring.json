@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "skill": "streamdeck-authoring",
+  "status": "pending",
+  "bundle_digest": "",
+  "reviewer": "independent-review-pending",
+  "reviewed_at": "2026-09-12",
+  "evidence": [
+    "Synthetic tests cover compilation, preservation, installation, hostile paths, and interrupted recovery."
+  ],
+  "limitations": [
+    "macOS Stream Deck + and observed format 3.0 only.",
+    "Device completion requires separate observation."
+  ],
+  "source_refs": [
+    "streamdeck-authoring-v1:elgato-multi-actions"
+  ]
+}

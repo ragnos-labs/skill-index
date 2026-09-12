@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "streamdeck-authoring-v1",
+  "question": "How can native Stream Deck controls be authored and updated without losing manual edits?",
+  "method": "Inspected primary documentation and local version-3 profile structure; implemented independent tooling and synthetic failure tests. Documentation revision is the SHA-1 of the retrieved tool extract, not a Git commit. The ignored local run artifact retains that extract.",
+  "researched_at": "2026-09-12",
+  "queries": [
+    "Stream Deck Multi Actions delays"
+  ],
+  "findings": [
+    "Delay is not completion evidence.",
+    "Observed profiles contain reusable actions and separate page manifests."
+  ],
+  "adopted": [
+    "Native composition with delays.",
+    "Private capture, authored comparison, and journaled replacement."
+  ],
+  "rejected": [
+    "Nested macros and assuming device success from rendering."
+  ],
+  "skipped": [
+    "MCP activation and device pairing."
+  ],
+  "open_questions": [],
+  "supersedes": [],
+  "sources": [
+    {
+      "id": "elgato-multi-actions",
+      "title": "Elgato Stream Deck Multi Actions",
+      "url": "https://help.elgato.com/hc/en-us/articles/360027960912-Elgato-Stream-Deck-Multi-Actions",
+      "revision": "32634acf1b8b275649b9dfd9d7e60856826044cc",
+      "revision_kind": "retrieved-extract-sha1",
+      "license": "Documentation referenced only; no text or code copied",
+      "disposition": "inspiration",
+      "inspected_paths": [
+        "Multi Actions - Get Started",
+        "Multi Actions - Delays"
+      ],
+      "findings": [
+        "Native Multi Actions combine actions with optional millisecond delays.",
+        "Nested Multi Actions are not supported."
+      ]
+    }
+  ]
+}
