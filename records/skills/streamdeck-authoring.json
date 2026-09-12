@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "name": "streamdeck-authoring",
+  "path": "skills/streamdeck-authoring",
+  "domain": "system",
+  "summary": "Create and safely update Stream Deck buttons, dials, pages, and native Multi Actions from private recipes.",
+  "status": "active",
+  "load_mode": "routable",
+  "risk": "medium",
+  "composes": [],
+  "triggers": [
+    "create Stream Deck buttons",
+    "add a Stream Deck brightness dial",
+    "update Stream Deck profile",
+    "build a Stream Deck Multi Action"
+  ],
+  "exclusions": [
+    "device pairing",
+    "MCP activation",
+    "unrelated hardware diagnosis"
+  ],
+  "aliases": [
+    "stream deck authoring",
+    "streamdeck authoring"
+  ],
+  "scope_terms": [
+    "streamdeck",
+    "stream deck"
+  ],
+  "side_effects": [
+    "explicit local build output",
+    "authorized profile installation and restoration"
+  ],
+  "source_refs": [
+    "streamdeck-authoring-v1:elgato-multi-actions"
+  ],
+  "review_path": "reviews/streamdeck-authoring.json"
+}

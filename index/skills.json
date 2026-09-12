@@ -326,6 +326,71 @@
       ]
     },
     {
+      "aliases": [
+        "stream deck authoring",
+        "streamdeck authoring"
+      ],
+      "bundle_digest": "sha256:ebf28b6e97b5b7fa4e58e8f016259a57b877c8168e1053a4f8e57c9128add9c6",
+      "composes": [],
+      "domain": "system",
+      "exclusions": [
+        "device pairing",
+        "MCP activation",
+        "unrelated hardware diagnosis"
+      ],
+      "load_mode": "routable",
+      "name": "streamdeck-authoring",
+      "path": "skills/streamdeck-authoring",
+      "resources": [
+        {
+          "path": "SKILL.md",
+          "sha256": "c852dc5e80e9ceb15b5ca6baba79335b2e6b3bad9d17edd3296305321031126d"
+        },
+        {
+          "path": "references/recipe.md",
+          "sha256": "6c3d8403cfac7434f22f6c1b477f99f59ec6c12ba43353ba7103e945654f955d"
+        },
+        {
+          "path": "references/recovery.md",
+          "sha256": "114215f00b7b0280daa8ee553c101590024dce30e0aecaeddf1024e0eb7893b6"
+        },
+        {
+          "path": "scripts/command_runner.py",
+          "sha256": "a2bb9757176914f4fe26ef39a63da390246605cb518604c046673fed51e92f2a"
+        },
+        {
+          "path": "scripts/streamdeck.py",
+          "sha256": "210c9f3d44eb758fb7f79ab5e50fb5fe0c7a77ef66348b0a3835d1b3335a4981"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-09-12",
+        "status": "reviewed"
+      },
+      "review_path": "reviews/streamdeck-authoring.json",
+      "risk": "medium",
+      "schema_version": 1,
+      "scope_terms": [
+        "streamdeck",
+        "stream deck"
+      ],
+      "side_effects": [
+        "explicit local build output",
+        "authorized profile installation and restoration"
+      ],
+      "source_refs": [
+        "streamdeck-authoring-v1:elgato-multi-actions"
+      ],
+      "status": "active",
+      "summary": "Create and safely update Stream Deck buttons, dials, pages, and native Multi Actions from private recipes.",
+      "triggers": [
+        "create Stream Deck buttons",
+        "add a Stream Deck brightness dial",
+        "update Stream Deck profile",
+        "build a Stream Deck Multi Action"
+      ]
+    },
+    {
       "bundle_digest": "sha256:395000898b97ada4220f89ed46fd4e774fc217bda57d10049ecc898f55dafd5e",
       "composes": [],
       "domain": "wikipedia",

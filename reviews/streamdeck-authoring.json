@@ -1,0 +1,22 @@
+{
+  "bundle_digest": "sha256:ebf28b6e97b5b7fa4e58e8f016259a57b877c8168e1053a4f8e57c9128add9c6",
+  "evidence": [
+    "Independent exact-revision review found no remaining blocking findings after seven recovery and preservation corrections.",
+    "Forty-two focused tests passed, including hostile input and interrupted installation/restoration.",
+    "Independent synthetic trial added an app button and two-step macro, retained manual edits, applied, removed build output, and restored profile digest and baseline bytes exactly.",
+    "Repository validation and routing cases passed; live rendering and device acceptance remain separate."
+  ],
+  "limitations": [
+    "macOS Stream Deck + and observed format 3.0 only.",
+    "Device completion requires separate observation."
+  ],
+  "reviewed_at": "2026-09-12",
+  "reviewed_revision": "2d828a28612b40f5999d82e60498527f5c640dc4",
+  "reviewer": "independent-streamdeck-review-agent",
+  "schema_version": 1,
+  "skill": "streamdeck-authoring",
+  "source_refs": [
+    "streamdeck-authoring-v1:elgato-multi-actions"
+  ],
+  "status": "reviewed"
+}

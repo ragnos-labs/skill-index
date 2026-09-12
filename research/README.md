@@ -10,6 +10,7 @@ decisions that affected the repository without storing raw search output.
 | 2026-08-23 | [skill-index-runtime-landscape](packets/2026-08-23-skill-index-runtime-landscape.json) | 12 | What portable architecture lets agents search hundreds of reviewed skills without bloating session context? |
 | 2026-08-23 | [writing-foundation](packets/2026-08-23-writing-foundation.json) | 6 | Which audited upstream ideas should form the initial writing and Wikipedia-style skill set? |
 | 2026-09-02 | [research-stack-2026-09](packets/2026-09-02-research-stack.json) | 2 | What is the smallest portable skill that makes routine Exa and Firecrawl research predictable without coupling research semantics to credential delivery? |
+| 2026-09-12 | [streamdeck-authoring-v1](packets/2026-09-12-streamdeck-authoring-v1.json) | 1 | How can native Stream Deck controls be authored and updated without losing manual edits? |
 
 ## Sources
 
@@ -47,3 +48,9 @@ decisions that affected the repository without storing raw search output.
 | --- | --- | --- | --- | --- | --- |
 | `exa-search` | [Official Exa JavaScript SDK](https://github.com/exa-labs/exa-js/tree/9a2db4a9a7523aa8ceb697f7a03a9381262ed746) | adopted | research-stack | `9a2db4a9a7523aa8ceb697f7a03a9381262ed746` | MIT |
 | `firecrawl-v2` | [Official Firecrawl API v2 documentation source](https://github.com/firecrawl/firecrawl-docs/blob/12aef68121ea8c3ac28cde50a6e995f7595974f2/v1/api-reference/v2-openapi.json) | adopted | research-stack | `12aef68121ea8c3ac28cde50a6e995f7595974f2` | none-detected |
+
+### streamdeck-authoring-v1
+
+| Source ID | Source | Disposition | Used by | Revision | License |
+| --- | --- | --- | --- | --- | --- |
+| `elgato-multi-actions` | [Elgato Stream Deck Multi Actions](https://help.elgato.com/hc/en-us/articles/360027960912-Elgato-Stream-Deck-Multi-Actions) | inspiration | streamdeck-authoring | `32634acf1b8b275649b9dfd9d7e60856826044cc` | Documentation referenced only; no text or code copied |

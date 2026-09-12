@@ -15,6 +15,13 @@ from search_skills import list_skills, load_index, rank_skills, resolve, search 
 
 
 class SearchTests(unittest.TestCase):
+    def test_streamdeck_authoring_routes(self) -> None:
+        for query in ("add Stream Deck brightness dial", "build a Stream Deck Multi Action", "streamdeck authoring"):
+            self.assertEqual(search(query)["matches"][0]["name"], "streamdeck-authoring")
+
+    def test_unrelated_buttons_do_not_route_to_streamdeck(self) -> None:
+        self.assertFalse(any(x["name"] == "streamdeck-authoring" for x in search("create website navigation buttons")["matches"]))
+
     def test_documented_wiki_lab_scope_is_preserved(self) -> None:
         self.assertEqual(search("Prepare a Wiki Lab draft")["matches"][0]["name"], "wikipedia-workflow")
 
