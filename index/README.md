@@ -14,7 +14,7 @@ summaries and load one selected skill at a time.
 | general | [writing-review](../skills/writing-review/SKILL.md) | routable | active | Review writing for purpose, evidence, structure, clarity, voice, citations, and readiness. |
 | software-delivery | [ship-it](../skills/ship-it/SKILL.md) | routable | active | Finish a software task through verified merge and safe cleanup, including deployment and live behavior proof when shipping is requested. |
 | system | [skill-index](../skills/skill-index/SKILL.md) | bootstrap | active | Search the reviewed library and load one matching skill without preloading the full collection. |
-| system | [streamdeck-authoring](../skills/streamdeck-authoring/SKILL.md) | routable | experimental | Create and safely update Stream Deck buttons, dials, pages, and native Multi Actions from private recipes. |
+| system | [streamdeck-authoring](../skills/streamdeck-authoring/SKILL.md) | routable | active | Create and safely update Stream Deck buttons, dials, pages, and native Multi Actions from private recipes. |
 | wikipedia | [wikipedia-research](../skills/wikipedia-research/SKILL.md) | routable | active | Build a source landscape, claim ledger, citation metadata, and scope for Wikipedia-style articles and platform requests. |
 | wikipedia | [wikipedia-review](../skills/wikipedia-review/SKILL.md) | routable | active | Independently review Wikipedia-style article and platform-request drafts for sourcing, fidelity, neutrality, weight, structure, and prose. |
 | wikipedia | [wikipedia-workflow](../skills/wikipedia-workflow/SKILL.md) | routable | active | Coordinate research, claim mapping, complete article and platform-request drafting, citations, independent review, and revision. |

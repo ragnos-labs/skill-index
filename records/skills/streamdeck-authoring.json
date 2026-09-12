@@ -4,7 +4,7 @@
   "path": "skills/streamdeck-authoring",
   "domain": "system",
   "summary": "Create and safely update Stream Deck buttons, dials, pages, and native Multi Actions from private recipes.",
-  "status": "experimental",
+  "status": "active",
   "load_mode": "routable",
   "risk": "medium",
   "composes": [],

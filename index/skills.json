@@ -365,7 +365,7 @@
       ],
       "review": {
         "reviewed_at": "2026-09-12",
-        "status": "pending"
+        "status": "reviewed"
       },
       "review_path": "reviews/streamdeck-authoring.json",
       "risk": "medium",
@@ -381,7 +381,7 @@
       "source_refs": [
         "streamdeck-authoring-v1:elgato-multi-actions"
       ],
-      "status": "experimental",
+      "status": "active",
       "summary": "Create and safely update Stream Deck buttons, dials, pages, and native Multi Actions from private recipes.",
       "triggers": [
         "create Stream Deck buttons",
