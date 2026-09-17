@@ -1,7 +1,7 @@
 {
   "bundle_digest": "",
   "evidence": [
-    "Authored in the Video Studio repository and merged there through pull request 47 with 240 backend tests, 25 browser scenarios and a boundary check passing.",
+    "Authored in the Video Studio repository and merged there through pull requests 47 and 48 (main e5ffce019aef3dd2e1812fdb798ef65681e82a05) with the backend suite, 25 browser scenarios and a boundary check passing; this copy matches that revision without its evals or host metadata.",
     "The reading-time checker and loudness gate are covered by that repository's test suite, including a synthetic FFmpeg render and a fake agent turn verifying the work-directory install.",
     "The checker was run against a real 23 second launch cut and against its earlier 21 second draft; it flagged the draft's over-budget scene and nine-word outro and passed the delivered cut."
   ],
