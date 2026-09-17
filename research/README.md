@@ -11,6 +11,7 @@ decisions that affected the repository without storing raw search output.
 | 2026-08-23 | [writing-foundation](packets/2026-08-23-writing-foundation.json) | 6 | Which audited upstream ideas should form the initial writing and Wikipedia-style skill set? |
 | 2026-09-02 | [research-stack-2026-09](packets/2026-09-02-research-stack.json) | 2 | What is the smallest portable skill that makes routine Exa and Firecrawl research predictable without coupling research semantics to credential delivery? |
 | 2026-09-12 | [streamdeck-authoring-v1](packets/2026-09-12-streamdeck-authoring-v1.json) | 1 | How can native Stream Deck controls be authored and updated without losing manual edits? |
+| 2026-09-17 | [brag-launch-video-skill](packets/2026-09-17-brag-launch-video-skill.json) | 2 | Which rules in the /brag launch-video skill make its output good, and how should they be carried into Video Studio without its renderer coupling? |
 
 ## Sources
 
@@ -54,3 +55,10 @@ decisions that affected the repository without storing raw search output.
 | Source ID | Source | Disposition | Used by | Revision | License |
 | --- | --- | --- | --- | --- | --- |
 | `elgato-multi-actions` | [Elgato Stream Deck Multi Actions](https://help.elgato.com/hc/en-us/articles/360027960912-Elgato-Stream-Deck-Multi-Actions) | inspiration | streamdeck-authoring | `32634acf1b8b275649b9dfd9d7e60856826044cc` | Documentation referenced only; no text or code copied |
+
+### brag-launch-video-skill
+
+| Source ID | Source | Disposition | Used by | Revision | License |
+| --- | --- | --- | --- | --- | --- |
+| `latent-spaces-brag` | [/brag launch video skill](https://github.com/latent-spaces/brag) | adopted | video-creative-rules | `1f8d9ade17d0ad4419cca9305fbc1398a4dd5b39` | MIT |
+| `heygen-hyperframes` | [HyperFrames](https://github.com/heygen-com/hyperframes) | reviewed-not-used | video-creative-rules | `a8a9fdb0fe88d97c99d7bd30da94e64dd0a96f3d` | Apache-2.0 |

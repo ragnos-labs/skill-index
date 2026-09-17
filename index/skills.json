@@ -131,6 +131,102 @@
       ]
     },
     {
+      "aliases": [
+        "video creative rules",
+        "creative rules",
+        "reading time floor",
+        "brag rules"
+      ],
+      "bundle_digest": "sha256:f926789b379d720ef0a4e8093ee5121e440c03464c97affae8411c8e7556d666",
+      "composes": [],
+      "domain": "general",
+      "exclusions": [
+        "choosing a final or approving a preference",
+        "confirming a brief",
+        "editing footage or a timeline directly",
+        "rendering with a specific engine"
+      ],
+      "load_mode": "routable",
+      "name": "video-creative-rules",
+      "path": "skills/video-creative-rules",
+      "resources": [
+        {
+          "path": "SKILL.md",
+          "sha256": "3986170f65eab8d2314973c92f046cda7ce99e7b4b9891cf55f1c5000869bfa0"
+        },
+        {
+          "path": "references/audio-policy.md",
+          "sha256": "c707f651906be1896f27e56ebcbbae91cb51e3b3c54e49beb543d2a7b272b9c6"
+        },
+        {
+          "path": "references/beat-policy.md",
+          "sha256": "37fa0a3e14a65e809ead3793be684930ae0e590328781a2a56634ead7b2c2172"
+        },
+        {
+          "path": "references/delivery-gates.md",
+          "sha256": "ade50fd55e574db9d9696c6a2bf29066d884937fd31377273a4d9ed8b78a089f"
+        },
+        {
+          "path": "references/plan-rubric.md",
+          "sha256": "9180617a4bfc2358abb151117e7d712b578829c72ae4e2a0f4fbaf690ab5996c"
+        },
+        {
+          "path": "references/reading-time.md",
+          "sha256": "b14d6d9b524b65f13a71715789abebaa7332d83e48125889018ba66b947d0d58"
+        },
+        {
+          "path": "references/tone-presets.md",
+          "sha256": "e6f8928576d19b02c1167f594fba751ea96c2397ee292738ef0bd9a5e0d46a4f"
+        },
+        {
+          "path": "scripts/check-reading-time.mjs",
+          "sha256": "6cbff4f58bbf70b43f3260b8d5880c8be40e1ff26c61c8ed92ab860db7b79158"
+        },
+        {
+          "path": "scripts/loudness-gate.mjs",
+          "sha256": "bd87055ba1f5ece128007a3a2a6dd97ca81651002ee48ba0e969bca9deee6600"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-09-17",
+        "status": "pending"
+      },
+      "review_path": "reviews/video-creative-rules.json",
+      "risk": "low",
+      "schema_version": 1,
+      "scope_terms": [
+        "cut",
+        "launch video",
+        "loudness",
+        "on-screen",
+        "poster frame",
+        "promo",
+        "reading time",
+        "reel",
+        "render",
+        "storyboard",
+        "video"
+      ],
+      "side_effects": [
+        "local file writes in the project's working folder",
+        "local ffmpeg audio re-encode of a delivered render"
+      ],
+      "source_refs": [
+        "brag-launch-video-skill:latent-spaces-brag",
+        "brag-launch-video-skill:heygen-hyperframes"
+      ],
+      "status": "experimental",
+      "summary": "Creative rules and gates for a short video cut: plan rubric, reading-time floor with a checker, beat and audio policy, delivery gates and a tone preset per brief workflow. Owned by the Video Studio repository; this copy tracks its released skill.",
+      "triggers": [
+        "plan a launch video",
+        "storyboard a promo cut",
+        "how long should on-screen text hold in a video",
+        "beat sync the reveals in a video",
+        "normalize the loudness of a render",
+        "pick the poster frame for a video"
+      ]
+    },
+    {
       "bundle_digest": "sha256:8cf8791478d07e8ba2c602e7d313d63810bd6162e7d9885b70fcd186da73982b",
       "composes": [],
       "domain": "general",

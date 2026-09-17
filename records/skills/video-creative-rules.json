@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "name": "video-creative-rules",
+  "path": "skills/video-creative-rules",
+  "domain": "general",
+  "summary": "Creative rules and gates for a short video cut: plan rubric, reading-time floor with a checker, beat and audio policy, delivery gates and a tone preset per brief workflow. Owned by the Video Studio repository; this copy tracks its released skill.",
+  "status": "experimental",
+  "load_mode": "routable",
+  "risk": "low",
+  "composes": [],
+  "triggers": [
+    "plan a launch video",
+    "storyboard a promo cut",
+    "how long should on-screen text hold in a video",
+    "beat sync the reveals in a video",
+    "normalize the loudness of a render",
+    "pick the poster frame for a video"
+  ],
+  "exclusions": [
+    "choosing a final or approving a preference",
+    "confirming a brief",
+    "editing footage or a timeline directly",
+    "rendering with a specific engine"
+  ],
+  "aliases": [
+    "video creative rules",
+    "creative rules",
+    "reading time floor",
+    "brag rules"
+  ],
+  "scope_terms": [
+    "cut",
+    "launch video",
+    "loudness",
+    "on-screen",
+    "poster frame",
+    "promo",
+    "reading time",
+    "reel",
+    "render",
+    "storyboard",
+    "video"
+  ],
+  "side_effects": [
+    "local file writes in the project's working folder",
+    "local ffmpeg audio re-encode of a delivered render"
+  ],
+  "source_refs": [
+    "brag-launch-video-skill:latent-spaces-brag",
+    "brag-launch-video-skill:heygen-hyperframes"
+  ],
+  "review_path": "reviews/video-creative-rules.json"
+}

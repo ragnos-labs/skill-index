@@ -1,0 +1,21 @@
+{
+  "bundle_digest": "",
+  "evidence": [
+    "Authored in the Video Studio repository and merged there through pull request 47 with 240 backend tests, 25 browser scenarios and a boundary check passing.",
+    "The reading-time checker and loudness gate are covered by that repository's test suite, including a synthetic FFmpeg render and a fake agent turn verifying the work-directory install.",
+    "The checker was run against a real 23 second launch cut and against its earlier 21 second draft; it flagged the draft's over-budget scene and nine-word outro and passed the delivered cut."
+  ],
+  "limitations": [
+    "No independent full-bundle review of this catalog copy has been performed; status is experimental until one is recorded.",
+    "The scripts were validated on macOS with FFmpeg 8; other platforms are untested.",
+    "The tone presets map to Video Studio's five brief workflows and may need a preset for other brief shapes."
+  ],
+  "reviewed_at": "2026-09-17",
+  "reviewer": "pending",
+  "schema_version": 1,
+  "skill": "video-creative-rules",
+  "source_refs": [
+    "brag-launch-video-skill:latent-spaces-brag"
+  ],
+  "status": "pending"
+}
