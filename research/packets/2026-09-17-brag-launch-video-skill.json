@@ -1,0 +1,83 @@
+{
+  "adopted": [
+    "A reading-time floor per text element (0.8s for a label, 0.3s per word with a 1.2s minimum for a line), turned into a checker that emits review findings.",
+    "A nine-question plan rubric whose last question names the user flow (entry, key action, result) and biases the storyboard toward the product in use.",
+    "Beat policy: one to three strong-cue locks within 0.15s, small entrances within 0.10s, readable lines never on consecutive fast beats, locks marked in source.",
+    "Audio-reactive visuals as content not medium: no waveforms or bars; energy drives warmth, contrast and presence with small text scale swings.",
+    "Poster frame chosen at a settled beat and baked as frame 0 with an ffmpeg overlay so thumbnail grabbers show it.",
+    "A boundary statement naming which layer owns angle, copy and audio selection versus timing mechanics and render."
+  ],
+  "findings": [
+    "The skill is prose and policy over an external renderer; its engine capabilities (check gate, beat detection, font aliasing) belong to that renderer, not to the skill.",
+    "Its own gain guidance produced a render near -27 LUFS; it has no loudness target, so a delivery loudness gate was needed.",
+    "Its inspect step reads landing-page HTML and CSS and does not capture a running product, which is the weaker path for anything beyond a static site.",
+    "Its bundled music is one artist's corporate library used for every video, in tension with its own specificity law.",
+    "Its tone presets are written for joke products and do not map to production brief workflows."
+  ],
+  "id": "brag-launch-video-skill",
+  "method": "Installed the skill locally, ran it end to end on a real game repository with its renderer, audited where the wall-clock went, then read every reference file, the bundled asset analysis and the cue analyzer script before distilling the rules into a repository-owned skill with mechanical checks.",
+  "open_questions": [
+    "Whether the scene text budget ratio (85 percent) should vary by workflow.",
+    "Whether a portrait reframe needs its own floor constants once real portrait cuts are measured."
+  ],
+  "queries": [
+    "latent-spaces brag launch video skill",
+    "hyperframes beats check snapshot cli"
+  ],
+  "question": "Which rules in the /brag launch-video skill make its output good, and how should they be carried into Video Studio without its renderer coupling?",
+  "rejected": [
+    "Copying the bundled music, sound effects or their analysis files.",
+    "Depending on a specific renderer's skills or CLI inside the rules.",
+    "Reading a landing page as the source of truth when the product can be captured running.",
+    "Joke-product tone presets."
+  ],
+  "researched_at": "2026-09-17",
+  "schema_version": 1,
+  "skipped": [
+    "The optional narration path (single-provider local TTS) because narration is owned by Video Studio's own voice tooling.",
+    "The cue analyzer script because a beat detector already exists in the renderer path and the policy only needs a beat grid."
+  ],
+  "sources": [
+    {
+      "disposition": "adopted",
+      "findings": [
+        "Defines the creative laws, reading-time floor, plan rubric, beat policy, audio policy and poster technique that were reimplemented.",
+        "MIT licensed prose; no files were copied into the derived skill."
+      ],
+      "id": "latent-spaces-brag",
+      "inspected_paths": [
+        "README.md",
+        "skills/brag/SKILL.md",
+        "skills/brag/references/step-1-inspect.md",
+        "skills/brag/references/step-2-plan.md",
+        "skills/brag/references/step-3-compose.md",
+        "skills/brag/references/step-4-deliver.md",
+        "skills/brag/references/audio.md",
+        "skills/brag/references/tones.md",
+        "skills/brag/assets/sfx/sfx-analysis.md",
+        "skills/brag/scripts/analyze_music_cues.py"
+      ],
+      "license": "MIT",
+      "revision": "1f8d9ade17d0ad4419cca9305fbc1398a4dd5b39",
+      "title": "/brag launch video skill",
+      "url": "https://github.com/latent-spaces/brag"
+    },
+    {
+      "disposition": "reviewed-not-used",
+      "findings": [
+        "Owns the render-side gates the source skill relies on (lint, runtime, layout, contrast, beat detection); the derived skill states policy only and leaves engine choice to the owning project.",
+        "Inspected the skill pack shipped with the 0.8.46 release tag."
+      ],
+      "id": "heygen-hyperframes",
+      "inspected_paths": [
+        "skills/hyperframes-core/SKILL.md",
+        "skills/hyperframes-creative/references/audio-reactive.md"
+      ],
+      "license": "Apache-2.0",
+      "revision": "a8a9fdb0fe88d97c99d7bd30da94e64dd0a96f3d",
+      "title": "HyperFrames",
+      "url": "https://github.com/heygen-com/hyperframes"
+    }
+  ],
+  "supersedes": []
+}
