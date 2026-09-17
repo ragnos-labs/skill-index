@@ -1,17 +1,16 @@
 {
-  "bundle_digest": "sha256:f34b228ce5d34faff5a7e05a303ce1df6dd3fee6ced68b384c48386f66cf8675",
+  "bundle_digest": "sha256:6dd525d918184ee63efe31a2c5fb63b2f91252c479cc34041e05825f740952de",
   "evidence": [
-    "Independent full-bundle review and 16 bounded behavioral simulations passed after correcting polite-question action routing.",
-    "Both merge it and ship it reach live verification under the requested convention; explicit source-only and environment limits prevail.",
-    "Already accepted merge and uncertain deployment results reconcile before retry; unsafe cleanup is preserved.",
-    "Skill name changed to ship-it; completion behavior is unchanged from the reviewed close-out bundle."
+    "Independent review confirmed that live delivery requires an established target, retries re-bind changed routes, and source-only delivery does not imply runtime checks.",
+    "Cleanup runs only after target users, workers, and terminals release it; the owning procedure coordinates retirement and preserves ambiguous work.",
+    "Reporting keeps source, release, deployment, installation, activation, observed behavior, acceptance, and cleanup as separate states."
   ],
   "limitations": [
     "Instruction review and simulated decisions do not prove native invocation or any live application deployment.",
     "Actual delivery requires the owning project procedures, target binding, authorization, and runtime evidence.",
     "The rename requires independent exact-revision review before source delivery."
   ],
-  "reviewed_at": "2026-09-05",
+  "reviewed_at": "2026-09-17",
   "reviewer": "independent-agent-review",
   "schema_version": 1,
   "skill": "ship-it",

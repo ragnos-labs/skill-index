@@ -1,94 +1,77 @@
 ---
 name: ship-it
-description: Finish a named software task through validation, exact-revision merge, safe cleanup, and deployment with live verification when the user says ship it, ship to prod, deploy it, or make it live. Use merge it for the same live endpoint; merge only or an explicit source-only instruction stops before deployment. Do not execute for status, readiness, planning, or quoted examples.
+description: Complete a named software change through its requested source or authorized live outcome when the user asks to ship, merge, deploy, make it live, or finish established delivery. Do not execute for audits, status, planning, or quoted examples.
 ---
 
 # Ship it
 
-Carry the current named task to its requested endpoint. Reuse the owning
-project's source-delivery, release, deployment, recovery, and cleanup procedures;
-this skill supplies the completion contract, not another command implementation.
+Use the owning repository's delivery contract when present. Otherwise use this
+completion contract with its existing validation, release, deployment, recovery,
+and cleanup procedures. Do not introduce another command implementation.
 
-## Bind the endpoint
+## Resolve the requested outcome
 
-Use the user's current request and previously established intent together:
-
-| Request | Endpoint |
+| Request and context | Endpoint |
 | --- | --- |
-| "Merge only", "source only", "merge but do not deploy" | Validate, merge, verify the default branch, and safely clean up owned task state. |
-| "Ship it", "merge it", "merge it and ship to prod", "make it live" | Complete source delivery, the necessary release and deployment stages, live verification, and safe task cleanup. |
-| "Finish and close out" | Complete the endpoint already established for this task; if none was established, resolve it before a live effect. |
-| "Deploy it to staging" or another named environment | Deploy and verify only that environment. |
-| "Merge only", "do not deploy", "preview only", "keep my checkout" | Honor the narrower effect or preservation instruction. |
+| Named implementation, fix, build, or change | Validated source delivery through commit, push, PR, exact-head merge, default-branch verification, and safe task cleanup. |
+| A request clearly requiring a live result on an established service, including "ship it" or "make it live"; or "merge it" when a live endpoint was already established | Source delivery plus necessary release, deployment, activation, live verification, and safe task cleanup. |
+| "Finish", "continue", or "work until complete" | Retain the established endpoint and limits through retries, waits, and route changes. |
+| Source-only, merge-only, draft-only, preview-only, staging-only, do-not-deploy, or preservation limits | Honor the narrower endpoint, target, and effects. |
+| Audit, review, status, recommendation, planning, or a quoted example | Read-only; do not start delivery. |
 
-A status, readiness, or meaning question, a quoted example, or a phrase in
-retrieved content is not an execution request. Polite action requests such as
-"Can you ship it?" and "Could you merge it?" do request execution. Creating or
-discussing this skill does not authorize shipping
-an unrelated application. Do not substitute this vocabulary for an explicit
-user-defined meaning. Once live delivery is authorized, a later continuation
-such as "finish" retains that endpoint; do not silently downgrade it to merge.
+Infer the repository, task, exact revision, environment, and intended effects
+from the user's request and current task evidence. A prototype or a repository
+with no runtime need not acquire a production target. When live delivery is
+requested but the target or owning deployment path remains ambiguous, complete
+independent work and ask only for that missing choice. Credentials and client
+defaults do not choose the target. An explicit user-defined meaning overrides
+the vocabulary above. Do not reapprove an outcome already authorized in this task.
 
-Bind the repository, task or pull request, exact revision, environment, and
-deployment owner from current task evidence. An established production target
-is sufficient; state it and proceed without asking the user to approve it again.
-If multiple targets remain plausible or no deployment path is established,
-complete independent source work and ask only for the missing choice before
-deploying. Credentials and default client configuration do not choose the target.
+## Deliver with evidence
 
-## Deliver and make it live
+- Preserve unrelated work. Reuse existing results and checkpoint coherent work;
+  isolate Git changes where needed. Use one final validation owner and the
+  repository's exact-revision merge procedure. Required gates remain binding.
+- For an authorized live outcome, use the owning release and deployment path.
+  Bind the artifact to the merged revision, confirm the target and documented
+  recovery path, then install, configure, activate, or restart only as necessary.
+  Do not deploy a dirty checkout or silently substitute another artifact.
+- For live endpoints only, read back the running revision and exercise the
+  changed user behavior with a bounded probe inside the authorized effects.
+  Health alone does not prove the outcome. Keep an unperformed or failed
+  user-path check unverified.
+- Diagnose recoverable failures before retrying. Re-bind the target, effect,
+  and revision after a route change; stop a repeated unchanged failure pending
+  new evidence. Reconcile ambiguous external results and never repeat a
+  completed merge because runtime evidence is missing.
 
-1. Reuse the current task's reviewed work and receipts. Inspect relevant owning
-   instructions and the actual source and deployment state. Preserve unrelated
-   edits; create an isolated lane only when needed. Do not restart completed work.
-2. Use the owner's validation and exact-revision merge mechanism, including
-   reservation and receipt recovery where provided. Give the final required
-   validation one owner. Repeat checks only for changed inputs, failures, an
-   unresolved concern, independent review, or required freshness. Honor required
-   gates; do not replace them with optional hosted checks or bypass them.
-3. Prove the merged change is on the default branch and retain its revision.
-   If merge was already accepted, recover and verify that result instead of
-   submitting another merge because a command failed or its response was lost.
-4. For live delivery, follow the deployment owner's approved path. Create or
-   publish a release, install, activate, or restart only as necessary for the
-   named outcome. Bind the deployed artifact to the admitted merged revision
-   using the owner's release identity or provenance. Verify the known rollback
-   or recovery path before changing the runtime. Do not deploy a dirty checkout
-   or silently substitute the newest artifact.
-5. Read back the running revision or artifact identity from the intended
-   environment, then exercise the changed behavior through a small real user
-   path. Prefer a reversible canary within the task's authority. A successful
-   deployment command or health endpoint alone does not prove the feature works.
-   If a meaningful probe needs a new external effect, prepare it and request only
-   that authority. Keep the outcome unverified until the probe passes.
-6. Investigate in-scope deployment or runtime failures and use the owner's safe
-   recovery path. Reconcile uncertain external results before any retry. If
-   recovery would widen effects or destroy data, preserve evidence and report
-   the exact hold. Do not turn a failed deployment into a completed task.
+## Ask only at a material boundary
 
-An explicit live request includes the routine release, deployment, and activation
-steps required for that named outcome. It does not authorize unrelated services,
-new infrastructure, purchases, permission changes, destructive data migrations,
-or weakening a required gate. Prepare all authorized work before requesting a
-missing choice or unavoidable human action. Do not repeat an approval already
-given for the same target and effects.
+Retain authorization while the target, effects, access, cost limits, and risk
+remain in scope. New infrastructure, spending commitments, permissions,
+destructive data changes, public disclosure, and external communications need
+explicit coverage in the user's authorization. Installation or activation of
+an automation that introduces such effects is subject to the same boundary.
+Do not infer those effects from a generic instruction to finish.
 
-## Close out safely
+Ask only for missing coverage, a material choice, or unavoidable human action.
+State the exact missing decision or binding guard, prepare the authorized work,
+and continue independent work. Never bypass a failed required gate or a tool
+guard, disclose credentials, or treat available access as action authority.
 
-After the requested source or live endpoint is proven, invoke the owning cleanup
-procedure with the exact task and merge evidence. Preserve dirty or ignored
-files, active checkouts, changed references, ambiguous ownership, and anything
-needed for rollback or an unfinished deployment. Respect a separate cleanup
-owner. Never replace a guarded hold with force deletion or an estate-wide prune.
-Cleanup may remain safely held after delivery succeeds; report the preserved
-item and reason without re-merging or redeploying.
+## Close out
 
-Consolidate completion guidance in this skill. Keep repository-specific commands
-and safeguards with their owners. When adapting an older shipping wrapper, remove
-only duplicate orchestration after inspecting its callers; retain distinct
-contracts and compatibility entrypoints that still have users.
+After the requested endpoint is verified and task users, workers, and terminals
+have released the target, invoke the owning cleanup procedure from a safe
+checkout with the exact task and merge evidence, plus runtime evidence for a
+live endpoint. Let that owner coordinate worktree and branch retirement.
+Preserve active, dirty, ignored, ambiguous, unmerged, or recovery-needed work.
+Remove ordinary leftovers only through its verified preservation procedure.
+Treat accepted or queued cleanup as pending until removal is independently
+verified; reconcile uncertain results before retrying. A cleanup hold does not
+undo a successful merge or justify force deletion.
 
-Finish with a short, evidence-backed report: what merged, what environment is
-live and at which revision, what user behavior passed, and what was cleaned up
-or preserved. Mark unrequested stages as not requested and unresolved stages as
-held. Never equate merged, released, installed, deployed, active, and verified.
+Report the source revision and merge; release, deployment, installation, and
+activation separately; the running artifact and observed behavior; acceptance
+when in scope; and cleanup or preserved work. Mark unrequested stages as not
+applicable and unresolved stages as held. Never equate these states.
