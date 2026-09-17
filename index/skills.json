@@ -323,12 +323,13 @@
         "finish and close out",
         "deploy it"
       ],
-      "bundle_digest": "sha256:f34b228ce5d34faff5a7e05a303ce1df6dd3fee6ced68b384c48386f66cf8675",
+      "bundle_digest": "sha256:6dd525d918184ee63efe31a2c5fb63b2f91252c479cc34041e05825f740952de",
       "composes": [],
       "domain": "software-delivery",
       "exclusions": [
+        "audits",
+        "reviews",
         "status questions",
-        "readiness reviews",
         "planning",
         "quoted instructions",
         "unrelated application deployment"
@@ -339,11 +340,11 @@
       "resources": [
         {
           "path": "SKILL.md",
-          "sha256": "925bfad0049da1c6f6d44c55bf107b0a18f62082802f4672f8f1535ea85defa3"
+          "sha256": "0ad4cb7a41e51ce2415484056de06390855758710688848ea56908eb5116e9a1"
         }
       ],
       "review": {
-        "reviewed_at": "2026-09-05",
+        "reviewed_at": "2026-09-17",
         "status": "reviewed"
       },
       "review_path": "reviews/ship-it.json",
@@ -367,7 +368,7 @@
       ],
       "source_refs": [],
       "status": "active",
-      "summary": "Finish a software task through verified merge and safe cleanup, including deployment and live behavior proof when shipping is requested.",
+      "summary": "Complete a software change through verified source delivery or an authorized live outcome, then coordinate safe cleanup through its owner.",
       "triggers": [
         "ship it",
         "merge it",
