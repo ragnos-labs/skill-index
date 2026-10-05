@@ -1,17 +1,18 @@
 {
-  "bundle_digest": "sha256:e3280bb2c8b4bccd26154da8c3110b47a9a3ba43590e544c2ca2077173e8c3ec",
+  "bundle_digest": "sha256:0cd549f2087ca6bd8e904413455f6b1929b79179a4a31cf8229ef5d2875f4c9f",
   "evidence": [
-    "Independent full-bundle source review found no blocking defects and mechanically matched producer output to the reviewed bundle.",
-    "Four offline decision probes passed: expensive dataset execution/source injection and source-family overlap; failed semantic review; explicit no-save; incompatible reader and interrupted host lifecycle.",
-    "Skill frontmatter, generated indexes and repository validation passed; all 95 repository tests passed."
+    "Independent full-bundle review and Controller/global instruction candidate review found no blocking source defects.",
+    "Selective helper routing, shared budgets, no-save precedence, one save owner and missing-role fallback were reviewed against the approved local wiring scope.",
+    "Seven fresh native Codex decision cases passed after one bounded repair: direct retrieval with standing capture, transcript delegation, internal interpretation and curation, no-save, shared provider quota, unavailable helper/write route, and interrupted completion.",
+    "Generated indexes, full-bundle validation and all 95 repository tests passed."
   ],
   "limitations": [
-    "Offline decision probes do not establish actual provider access, pricing or retention compliance.",
+    "Source review does not establish provider execution, local live research-to-Cairns saving, or Hermes deployment.",
     "Native server authorization, per-stage scoped operations and compatible concurrency-safe publication must be checked per installation.",
-    "This source review does not claim a new live research-to-Cairns save or execution after host closure."
+    "Decision probes do not establish a live provider-to-Cairns save or Hermes behavior; execution after runtime closure is not promised."
   ],
   "reviewed_at": "2026-10-05",
-  "reviewer": "independent-quality-review-agent",
+  "reviewer": "independent-r2c-wiring-review-agent",
   "schema_version": 1,
   "skill": "r2c",
   "source_refs": [
