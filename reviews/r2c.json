@@ -1,0 +1,26 @@
+{
+  "bundle_digest": "sha256:e3280bb2c8b4bccd26154da8c3110b47a9a3ba43590e544c2ca2077173e8c3ec",
+  "evidence": [
+    "Independent full-bundle source review found no blocking defects and mechanically matched producer output to the reviewed bundle.",
+    "Four offline decision probes passed: expensive dataset execution/source injection and source-family overlap; failed semantic review; explicit no-save; incompatible reader and interrupted host lifecycle.",
+    "Skill frontmatter, generated indexes and repository validation passed; all 95 repository tests passed."
+  ],
+  "limitations": [
+    "Offline decision probes do not establish actual provider access, pricing or retention compliance.",
+    "Native server authorization, per-stage scoped operations and compatible concurrency-safe publication must be checked per installation.",
+    "This source review does not claim a new live research-to-Cairns save or execution after host closure."
+  ],
+  "reviewed_at": "2026-10-05",
+  "reviewer": "independent-quality-review-agent",
+  "schema_version": 1,
+  "skill": "r2c",
+  "source_refs": [
+    "r2c-2026-10-05:firecrawl-alexandria",
+    "r2c-2026-10-05:exa-tools",
+    "r2c-2026-10-05:exa-connect",
+    "r2c-2026-10-05:scrapecreators-catalogue",
+    "r2c-2026-10-05:scrapecreators-transcript",
+    "r2c-2026-10-05:cairns-portable-capture"
+  ],
+  "status": "reviewed"
+}

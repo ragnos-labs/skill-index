@@ -1,0 +1,138 @@
+{
+  "adopted": [
+    "Operation-level dynamic routing constrained by existing access, source scope, privacy and budget.",
+    "Exact originals, native IDs, dates, time locators, revisions and upstream source-family deduplication.",
+    "Private installation bindings, native scoped intake, separately authorized L2 approval and L1 publication.",
+    "Foreground research with one save worker and source-by-source independent receipt readback."
+  ],
+  "findings": [
+    "An available client can inspect new provider operations without a portable skill hardcoding every endpoint.",
+    "Source research and durable knowledge intake have different completion receipts.",
+    "One save worker receiving immutable checkpoints avoids concurrent shared manifest writes.",
+    "Provider summaries and research synthesis require explicit provenance separate from original evidence."
+  ],
+  "id": "r2c-2026-10-05",
+  "method": "Reviewed official provider documentation, inspected existing installed client help and bounded zero-credit Alexandria discovery, and inspected the current native intake contract. Public page revision fields are SHA-1 fingerprints of retrieved document bytes, explicitly not upstream Git revisions; content_sha256 records the stronger artifact hash. Original snapshots remain in private custody. No provider dataset execution was used to qualify endpoint access.",
+  "open_questions": [
+    "Which runtime client operations and publication concurrency controls are available must be verified per installation.",
+    "Unattended processing after a chat closes requires an already approved durable executor."
+  ],
+  "queries": [
+    "Firecrawl Alexandria discovery options pricing and dataset execution",
+    "Exa MCP search fetch advanced agent and Connect data sources",
+    "ScrapeCreators platform endpoint catalogue and YouTube transcript metadata",
+    "Cairns native source bundles semantic review and L1-L3 completion"
+  ],
+  "question": "How can one portable research workflow dynamically select source tools and complete authorized background Cairns L1-L3 saving without a new runtime service?",
+  "rejected": [
+    "Automatically installing tools, accepting provider terms or expanding budgets during research.",
+    "Treating successful uploads, process exit codes or dispatched workers as completed saves.",
+    "Automatically promoting research recommendations into standing facts or activating L4-L5."
+  ],
+  "researched_at": "2026-10-05",
+  "schema_version": 1,
+  "skipped": [
+    "A new executable pipeline, scheduler, provider framework or duplicated ingestion implementation.",
+    "Copying third-party documentation text or SDK source.",
+    "Executing expensive dataset tools just to confirm documented schemas."
+  ],
+  "sources": [
+    {
+      "content_sha256": "c1aeed54a66c2a6b9d66921c6ccd80e3b04539546607b4ab3bff28594c8c570c",
+      "disposition": "adopted",
+      "findings": [
+        "Alexandria requires provider/tool discovery, exact option inspection and separate execution pricing; dataset execution may exceed normal scrape limits."
+      ],
+      "id": "firecrawl-alexandria",
+      "inspected_paths": [
+        "https://docs.firecrawl.dev/features/alexandria"
+      ],
+      "license": "none-detected",
+      "revision": "82cfbd4f6761d2cb89c8d7bbc1fcb7b65ddc0d22",
+      "revision_kind": "retrieved-content-sha1",
+      "title": "Firecrawl Alexandria official documentation",
+      "url": "https://docs.firecrawl.dev/features/alexandria"
+    },
+    {
+      "content_sha256": "0788bcdee6df195674b0e0477a1d5c921976cddc03b2ead73efea9b9570b02df",
+      "disposition": "adopted",
+      "findings": [
+        "Exa tools include source search and fetching plus optional advanced and agent operations; advertised tools differ from installed client reach."
+      ],
+      "id": "exa-tools",
+      "inspected_paths": [
+        "https://exa.ai/docs/get-started/exa-mcp"
+      ],
+      "license": "none-detected",
+      "revision": "ac43df5557448b6dc3398ad8d6e1e550bab6b728",
+      "revision_kind": "retrieved-content-sha1",
+      "title": "Exa Tools official documentation",
+      "url": "https://exa.ai/docs/get-started/exa-mcp"
+    },
+    {
+      "content_sha256": "07c48524bcd85c7c54fcb33cc0752eab32ca8b61adebe283ccd1c19de71da86a",
+      "disposition": "adopted",
+      "findings": [
+        "Connect premium data-source selection is separate from ordinary search and carries additional access, source provenance and cost considerations."
+      ],
+      "id": "exa-connect",
+      "inspected_paths": [
+        "https://exa.ai/docs/agent/connect/overview"
+      ],
+      "license": "none-detected",
+      "revision": "55fa0c918779db150007dd651aaa334abbfe6c13",
+      "revision_kind": "retrieved-content-sha1",
+      "title": "Exa Connect official documentation",
+      "url": "https://exa.ai/docs/agent/connect/overview"
+    },
+    {
+      "content_sha256": "55ff9d704d410913a49fc42431085addeb9dc6b426dfabd23081aadb13276f15",
+      "disposition": "adopted",
+      "findings": [
+        "Platform-specific operations include search, profiles, posts, transcripts and comments; inspect an exact endpoint rather than assume universal tool search."
+      ],
+      "id": "scrapecreators-catalogue",
+      "inspected_paths": [
+        "https://docs.scrapecreators.com/llms.txt"
+      ],
+      "license": "none-detected",
+      "revision": "674a9d10de5aff111647008aac8ffc314433bf85",
+      "revision_kind": "retrieved-content-sha1",
+      "title": "Scrapecreators Catalogue official documentation",
+      "url": "https://docs.scrapecreators.com/llms.txt"
+    },
+    {
+      "content_sha256": "cb6716e389d5643c8e240ee0ee4b50ac4dea1112a4ea88b4027305c78da55959",
+      "disposition": "adopted",
+      "findings": [
+        "Transcript data carries language and timing metadata that should remain preserved in exact originals alongside any derived text."
+      ],
+      "id": "scrapecreators-transcript",
+      "inspected_paths": [
+        "https://docs.scrapecreators.com/v1/youtube/video/transcript/"
+      ],
+      "license": "none-detected",
+      "revision": "9251815f9c38644d26de61957c87d531a9c0ad8f",
+      "revision_kind": "retrieved-content-sha1",
+      "title": "Scrapecreators Transcript official documentation",
+      "url": "https://docs.scrapecreators.com/v1/youtube/video/transcript/"
+    },
+    {
+      "disposition": "adopted",
+      "findings": [
+        "Frozen source selection, exact originals, separate semantic review and approval, version-compatible publication and terminal acknowledgment are independent stages.",
+        "The native contract limits bundle/artifact/selection size and supports only qualified readers; transport extensibility does not prove evidence compatibility."
+      ],
+      "id": "cairns-portable-capture",
+      "inspected_paths": [
+        "docs/portable-capture.md"
+      ],
+      "license": "proprietary-no-copied-code",
+      "revision": "afbff17108c66450768e04c3e06cde0266d667ba",
+      "revision_kind": "git-commit",
+      "title": "Cairns native portable source intake contract",
+      "url": "local-history:cairns-portable-capture"
+    }
+  ],
+  "supersedes": []
+}

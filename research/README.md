@@ -12,6 +12,7 @@ decisions that affected the repository without storing raw search output.
 | 2026-09-02 | [research-stack-2026-09](packets/2026-09-02-research-stack.json) | 2 | What is the smallest portable skill that makes routine Exa and Firecrawl research predictable without coupling research semantics to credential delivery? |
 | 2026-09-12 | [streamdeck-authoring-v1](packets/2026-09-12-streamdeck-authoring-v1.json) | 1 | How can native Stream Deck controls be authored and updated without losing manual edits? |
 | 2026-09-17 | [brag-launch-video-skill](packets/2026-09-17-brag-launch-video-skill.json) | 2 | Which rules in the /brag launch-video skill make its output good, and how should they be carried into Video Studio without its renderer coupling? |
+| 2026-10-05 | [r2c-2026-10-05](packets/2026-10-05-r2c.json) | 6 | How can one portable research workflow dynamically select source tools and complete authorized background Cairns L1-L3 saving without a new runtime service? |
 
 ## Sources
 
@@ -62,3 +63,14 @@ decisions that affected the repository without storing raw search output.
 | --- | --- | --- | --- | --- | --- |
 | `latent-spaces-brag` | [/brag launch video skill](https://github.com/latent-spaces/brag) | adopted | video-creative-rules | `1f8d9ade17d0ad4419cca9305fbc1398a4dd5b39` | MIT |
 | `heygen-hyperframes` | [HyperFrames](https://github.com/heygen-com/hyperframes) | reviewed-not-used | video-creative-rules | `a8a9fdb0fe88d97c99d7bd30da94e64dd0a96f3d` | Apache-2.0 |
+
+### r2c-2026-10-05
+
+| Source ID | Source | Disposition | Used by | Revision | License |
+| --- | --- | --- | --- | --- | --- |
+| `firecrawl-alexandria` | [Firecrawl Alexandria official documentation](https://docs.firecrawl.dev/features/alexandria) | adopted | r2c | `82cfbd4f6761d2cb89c8d7bbc1fcb7b65ddc0d22` | none-detected |
+| `exa-tools` | [Exa Tools official documentation](https://exa.ai/docs/get-started/exa-mcp) | adopted | r2c | `ac43df5557448b6dc3398ad8d6e1e550bab6b728` | none-detected |
+| `exa-connect` | [Exa Connect official documentation](https://exa.ai/docs/agent/connect/overview) | adopted | r2c | `55fa0c918779db150007dd651aaa334abbfe6c13` | none-detected |
+| `scrapecreators-catalogue` | [Scrapecreators Catalogue official documentation](https://docs.scrapecreators.com/llms.txt) | adopted | r2c | `674a9d10de5aff111647008aac8ffc314433bf85` | none-detected |
+| `scrapecreators-transcript` | [Scrapecreators Transcript official documentation](https://docs.scrapecreators.com/v1/youtube/video/transcript/) | adopted | r2c | `9251815f9c38644d26de61957c87d531a9c0ad8f` | none-detected |
+| `cairns-portable-capture` | Cairns native portable source intake contract | adopted | r2c | `afbff17108c66450768e04c3e06cde0266d667ba` | proprietary-no-copied-code |
