@@ -1,0 +1,50 @@
+{
+  "aliases": [
+    "research to cairns",
+    "research-to-cairns",
+    "socials to cairns",
+    "youtube to cairns"
+  ],
+  "composes": [],
+  "domain": "general",
+  "exclusions": [
+    "explicit no-save or off-record request disables persistence",
+    "read-only request disables save worker and writes",
+    "tool installation, account setup, recurring jobs or expanded budgets",
+    "standing fact changes and L4-L5 activation"
+  ],
+  "load_mode": "routable",
+  "name": "r2c",
+  "path": "skills/r2c",
+  "review_path": "reviews/r2c.json",
+  "risk": "medium",
+  "schema_version": 1,
+  "scope_terms": [
+    "research",
+    "cairns",
+    "r2c"
+  ],
+  "side_effects": [
+    "bounded network and provider credit use within existing authorization",
+    "private original/checkpoint storage when saving is authorized",
+    "one authorized background save subagent",
+    "native scoped Cairns L3 ingest, L2 approval and L1 publication when separately permitted"
+  ],
+  "source_refs": [
+    "r2c-2026-10-05:firecrawl-alexandria",
+    "r2c-2026-10-05:exa-tools",
+    "r2c-2026-10-05:exa-connect",
+    "r2c-2026-10-05:scrapecreators-catalogue",
+    "r2c-2026-10-05:scrapecreators-transcript",
+    "r2c-2026-10-05:cairns-portable-capture"
+  ],
+  "status": "active",
+  "summary": "Research across available web and social tools while one authorized worker preserves originals and verifies Cairns L1-L3 saving.",
+  "triggers": [
+    "r2c",
+    "research to cairns",
+    "socials to cairns",
+    "research and save to Cairns",
+    "automatic Cairns research capture"
+  ]
+}
