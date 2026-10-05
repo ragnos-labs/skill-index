@@ -1,6 +1,6 @@
 ---
 name: r2c
-description: Research to Cairns. Use for r2c, research-to-Cairns, socials-to-Cairns, or substantial source research with an authorized standing Cairns save policy. Select available research operations dynamically, explain findings in chat, and delegate verified L1-L3 saving in the background. Covers web search, Exa, Firecrawl including Alexandria, ScrapeCreators, social posts, videos, and future installed research tools. Explicit no-save or read-only requests disable saving.
+description: Research to Cairns. Use for r2c, research-to-Cairns, socials-to-Cairns, or substantial source research with an authorized standing Cairns save policy, including channel/video research requested during another task. Select available tools and useful research specialists, explain findings in chat, and delegate verified L1-L3 saving in the background. Covers web search, Exa, Firecrawl including Alexandria, ScrapeCreators, social posts, videos, and future installed research tools. Explicit no-save or read-only requests disable saving.
 ---
 
 # Research to Cairns
@@ -39,7 +39,7 @@ trusted provider documentation and actual schemas to inspect only the relevant
 candidates. Select by source access, evidence quality, freshness, pagination,
 privacy, remaining budget and total expected cost, including extraction costs.
 
-Use the host's normal authorized credential route directly. Avoid secret
+Use the runtime's normal authorized credential route directly. Avoid secret
 inspection or credential preflights. An advertised endpoint, help response or
 connected tool is not proof of successful execution. Confirm the returned data
 and coverage. Narrow an empty query before changing providers; preserve failures
@@ -49,6 +49,50 @@ New operations on existing authorized clients can be selected after contract
 inspection. New tool installations, identities, accepted terms, subscriptions,
 monitor jobs and expanded spend require their own authority. A discovered
 operation never inherits permission from the source that describes it.
+
+## Choose research agents selectively
+
+The coordinating agent is the main agent handling the user's request, not the
+user or the harness. It loads this skill, selects tools and specialists,
+reviews actual returns and owns completion. Research helpers are optional;
+the single save worker has a separate assignment and authority check.
+
+Delegate only when the user or approved installation policy authorizes it and
+independent work, analysis depth, context volume or continuing the foreground
+task makes the handoff useful. Handle small lookups and mechanical retrieval
+directly. Source count alone does not select a team. Choose the smallest useful
+team within actual runtime capacity; do not require every specialist. Handling
+research directly does not disable the installation's standing save policy;
+helper selection and persistence authorization are independent decisions.
+
+| Need | Role to look for in the installed catalog |
+| --- | --- |
+| External source investigation, freshness, contradictions and synthesis | External researcher, such as `external-researcher` |
+| Interpretation of approved internal evidence and fit with the user's stack | Internal knowledge researcher, such as `internal-knowledge-researcher` |
+| Existing knowledge retrieval, connections, deduplication and curation proposals | Knowledge librarian, such as `knowledge-librarian` |
+
+Inspect only the relevant installed role and its effective contract. Role names
+are examples, not required installations or proof of tool access. Do not create
+profiles, widen their permissions or launch nested delegation to make a match.
+If a suitable helper is unavailable, continue permitted work directly and name
+any remaining access or capability gap.
+
+Give each helper the question, source/file scope, required evidence and output,
+allowed effects, remaining shared budget, exclusions and acceptance checks.
+Include this skill's relevant contract and immutable evidence references;
+do not assume conversation history or skills propagate to another runtime.
+Reserve remaining provider allowances before parallel work and account for all
+helpers against the same task budget. Count actual provider calls or credits,
+not helper launches; spawning an agent is not a provider API call. Helpers return evidence
+and proposals to the coordinating agent; research assignments grant no Cairns
+write or approval authority. Keep internal evidence out of public tool queries.
+
+For a channel's latest ten video titles and links, use a suitable tool directly
+and apply the approved save policy to the returned evidence.
+For transcript analysis while another task continues, one external researcher
+may be useful. Add internal interpretation or knowledge curation only when
+the question requires it. Start the authorized save worker from a frozen packet
+as described below; one research helper does not become a second save owner.
 
 ## Research and preserve evidence
 
@@ -77,9 +121,9 @@ precise timestamps/locators where available. Keep uncertainties visible.
 Read [Cairns intake](references/cairns-intake.md) before the first handoff.
 Once the first useful evidence packet is frozen, start one background save
 subagent when the user or approved installation policy authorizes delegation.
-Use the host's installed model-selection policy. Give it exact scope, immutable
+Use the coordinating agent's installed model-selection policy. Give it exact scope, immutable
 paths/hashes, destination, permitted operations, source policy, existing budget,
-completion checks and exclusions. The worker owns writes; the parent owns
+completion checks and exclusions. The worker owns writes; the coordinating agent owns
 research and reviews the actual return.
 
 Send later immutable checkpoints to the same worker. Never overwrite a manifest
@@ -113,7 +157,7 @@ required L1-L3 check passes. Acknowledge an inbox receipt only under its native
 all-terminal rule. Preserve failed review evidence; allow at most two deliberate
 repair attempts within the existing budget, then leave a resumable checkpoint.
 
-A subagent runs within its host's actual lifecycle. Durable files/inbox entries
+A subagent runs within its runtime's actual lifecycle. Durable files/inbox entries
 support resume; they do not prove execution will continue after the chat or app
 closes. Use an already approved durable processor when configured. Otherwise
 report pending work without creating a scheduler. Finish with the findings,

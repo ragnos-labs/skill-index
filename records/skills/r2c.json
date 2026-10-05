@@ -27,6 +27,7 @@
   "side_effects": [
     "bounded network and provider credit use within existing authorization",
     "private original/checkpoint storage when saving is authorized",
+    "bounded research subagents when existing delegation authority permits",
     "one authorized background save subagent",
     "native scoped Cairns L3 ingest, L2 approval and L1 publication when separately permitted"
   ],
@@ -39,12 +40,13 @@
     "r2c-2026-10-05:cairns-portable-capture"
   ],
   "status": "active",
-  "summary": "Research across available web and social tools while one authorized worker preserves originals and verifies Cairns L1-L3 saving.",
+  "summary": "Research across available web and social tools with selectively chosen specialists while one authorized worker preserves originals and verifies Cairns L1-L3 saving.",
   "triggers": [
     "r2c",
     "research to cairns",
     "socials to cairns",
     "research and save to Cairns",
-    "automatic Cairns research capture"
+    "automatic Cairns research capture",
+    "channel or video research during another task"
   ]
 }
