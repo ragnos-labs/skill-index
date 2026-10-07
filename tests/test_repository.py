@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import sys
+import shutil
+import tempfile
 import unittest
 from copy import deepcopy
 from pathlib import Path
@@ -21,6 +23,13 @@ from validate_repository import validate  # noqa: E402
 class RepositoryTests(unittest.TestCase):
     def test_repository_validates(self) -> None:
         self.assertEqual(validate(ROOT), [])
+
+    def test_branding_rule_still_checks_ordinary_json(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary) / "repository"
+            shutil.copytree(ROOT, root, ignore=shutil.ignore_patterns(".git", "runs", "__pycache__"))
+            (root / "ordinary.json").write_text('{"brand": "' + "rag" + "nos" + '"}\n')
+            self.assertIn("prohibited term in ordinary.json", validate(root))
 
     def test_generated_outputs_are_current(self) -> None:
         for path, expected in expected_outputs(ROOT).items():

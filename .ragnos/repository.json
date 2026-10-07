@@ -1,0 +1,16 @@
+{
+  "schema_version": "ragnos.repository-descriptor.v1",
+  "repository": "ragnos-labs/skill-index",
+  "owner": "RAGnos Labs",
+  "authority_scope": "Portable reviewed Agent Skills, routing index and research provenance; host installation stays outside this repository.",
+  "purpose": "Provider-neutral reviewed skills library and compact discovery index",
+  "lifecycle": "active",
+  "agent_entrypoints": [
+    "AGENTS.md",
+    "README.md"
+  ],
+  "aliases": [
+    "ragnos-labs/skill-index"
+  ],
+  "successor": null
+}
