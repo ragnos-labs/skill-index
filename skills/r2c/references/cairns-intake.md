@@ -36,7 +36,11 @@ Pass the worker these fields in a private handoff:
 - Question and selected source IDs/revisions, immutable file paths and hashes.
 - Approved owner/account/scope and exact destination from trusted binding.
 - Permitted L3 ingest, L2 review/approval and L1 publication operations separately.
-- Existing cost ceiling, configured model route and at most two repair attempts.
+- Existing shared cost ceiling, configured model route and finite task-wide
+  recovery plan: regeneration ceiling, spent/reserved allowance and estimated
+  full-cycle cost. Apply the same accounting across later checkpoints/resumes.
+- Native review's required scope and pass-level criteria, plus expected coverage
+  from the exact evidence primary; task relevance alone is not card adequacy.
 - Expected current revisions and append-only links to the relevant approved cards.
 - Required original-byte, semantic-review, approval and reader-readback receipts.
 - Exclusions: standing fact changes, unrelated cards, legacy runtime execution,
@@ -45,13 +49,20 @@ Pass the worker these fields in a private handoff:
 Use native operations as supported by the current installation. Verify L3
 originals against the handoff bytes. L2 must have all required summary passes,
 positive support and adequacy judgment, precise source citations and approval
-of the exact reviewed digest. A completed generation with a failed judgment
-remains review pending. Never approve it or acknowledge it as ready.
+of the exact reviewed digest. A completed generation with a terminal failed
+judgment is held, not awaiting an unperformed review. Keep native state codes
+verbatim alongside this workflow disposition. Never approve it or acknowledge it
+as ready. Verify
+whether the contract judges every saved pass or only the final card; a correct
+final card cannot erase a required failed intermediate pass.
 
 A deliberate native retry-summary binds the source, revision and exact failed
-review digest and archives the previous attempt. Replaying ingest alone does
-not erase a failed semantic review. Keep unresolved failures resumable; do not
-replace successful or approved cards through the retry path.
+review digest and archives the previous attempt. Verify its current signature,
+feedback support and resume behavior. It may regenerate the entire card and all
+required passes, not edit one citation; account for that full cost. Replaying
+ingest alone does not erase a failed semantic review. Do not replace successful
+or approved cards through the retry path. Source revision or reviewed-byte drift
+invalidates the old approval; reconcile and review the current exact digest.
 
 Publish authorized L1 source-index and standing-map links only for eligible
 approved cards. Use the current owner's concurrency/version controls and
@@ -68,6 +79,51 @@ receipt and inbox all-terminal receipt may differ if that runtime also requires
 later processing. Do not expand stages merely to acknowledge a partial result.
 
 ## Recovery and delivery
+
+Before repairs, the coordinator records one finite regeneration ceiling for
+the logical research task, covering every source, failure type, checkpoint and
+resume. Reuse any explicit task or native bound and the shared provider budget.
+Choose a justified ceiling from the affected sources, expected whole-cycle cost
+and remaining allowance; there is no automatic per-source quota. If no ceiling
+has been selected, two full regenerations for the task is the conservative
+fallback, not a native requirement or a demand for fresh user authorization.
+Never raise an explicit user/task or native ceiling through coordinator
+replanning; only its authorized owner can change it. The coordinator may replan
+that fallback within existing scope and cost limits,
+recording the new finite ceiling and rationale before another attempt. Never
+reset spent allowance on resume or fragment packets to evade a limit. Unknown
+cost is not unlimited budget; verify the cost of every paid operation before
+execution, including extraction and scoped corrections. Remaining allowance is
+not evidence of an operation's cost.
+
+Finish available initial reviews across the packet before allocating scarce
+repairs. Triage all holds and reserve allowance for independent useful sources;
+a difficult source must not consume repeated repairs while other sources await
+a first assessment. Prioritize supported, narrow remedies with a credible path
+to completion. Count a newly started regeneration, including an interrupted
+one, once; saved-pass resume and status waits are not fresh semantic attempts,
+but their actual provider calls still consume the shared budget.
+
+| Failure | Next action |
+| --- | --- |
+| Incorrect claim or missing identifying citation | Inspect exact source segments and failed passes; use a supported correction/review operation if one exists. Otherwise explain and budget whole-card regeneration with precise feedback through supported inputs. Never invent targeted editing or feedback parameters. |
+| Inadequate coverage | Compare required review scope with the exact primary and missing mechanisms. Fix extraction or supply an in-scope supported coverage strategy before retrying. A task-focused answer cannot pass a whole-document review by relabeling it. Any separately scoped derivative must be honestly identified in a new frozen selection; it does not approve the original full-source card. |
+| Missing or unsupported extraction | Recover evidence with an authorized reader, preserving a separately hashed derivative; no inferred transcript or approval of incomplete evidence. |
+| Same failure after repair | Compare failures and coverage for material progress. Do not repeat unchanged regeneration. Change an evidenced strategy within scope or route the native defect to its owner and hold that source. |
+| Contract, version or authorization failure | Reconcile the current runtime and operation contract. Denied writes remain held; never switch identity, patch internals or regenerate a card to fix authorization. |
+| Transient concurrency wait | Read the specific operation's persisted state, wait within the native/task bound and retry only after the conflicting work clears. No semantic regeneration; a timeout stays pending. |
+| Interrupted or uncertain retry | Read active attempt, saved passes, archived review and receipt before acting. Resume the same attempt through native support; never start a duplicate or archive it again blindly. |
+| Publication failure or incompatible reader | Reconcile each L1 surface and current owner content independently. Preserve L2 approval and successful publications; no L2 retry, unsafe manual rewrite or false saved status. |
+
+A retry requires the current exact failed digest, a concrete changed remedy,
+remaining allowance and native authority. On exhaustion or no progress, record
+the failure class, attempted remedies, spent/reserved budget, source revision,
+per-stage receipts and exact resume condition in permitted private custody.
+The resume condition may be a revised in-scope plan, recovered evidence, cleared
+concurrency or an owner fix; only an expanded effect/access/cost/privacy boundary
+requires new user authority. Preserve permitted original and failed-review
+evidence without retaining prohibited private data. Continue unrelated eligible
+sources through their authorized stages even while another source is held.
 
 The worker returns source-by-source states and exact receipt references. The
 parent independently compares the result to the frozen packet and reports

@@ -1,18 +1,18 @@
 {
-  "bundle_digest": "sha256:0cd549f2087ca6bd8e904413455f6b1929b79179a4a31cf8229ef5d2875f4c9f",
+  "bundle_digest": "sha256:0709d4fba9bf1e29a1c3fc1b5390d6333d24ead8294f5d2e2af79da725b5e474",
   "evidence": [
-    "Independent full-bundle review and Controller/global instruction candidate review found no blocking source defects.",
-    "Selective helper routing, shared budgets, no-save precedence, one save owner and missing-role fallback were reviewed against the approved local wiring scope.",
-    "Seven fresh native Codex decision cases passed after one bounded repair: direct retrieval with standing capture, transcript delegation, internal interpretation and curation, no-save, shared provider quota, unavailable helper/write route, and interrupted completion.",
-    "Generated indexes, full-bundle validation and all 95 repository tests passed."
+    "Independent full-bundle consequential review found no blocking defects in recovery allocation, privacy, authority, exact review binding and per-stage completion.",
+    "Bounded native-contract QA verified whole-cycle retries, saved-pass resume, pass-level support, source-level adequacy and separate current publication gates.",
+    "Fresh-session independent decisions covered all 19 synthetic cases in tests/fixtures/r2c_recovery.json. Actual-return review checked operation selection, numeric shared budgets, explicit-cap/fallback distinction, privacy overrides and per-stage status; earlier probe defects fed the bounded candidate corrections."
   ],
   "limitations": [
-    "Source review does not establish provider execution, local live research-to-Cairns saving, or Hermes deployment.",
-    "Native server authorization, per-stage scoped operations and compatible concurrency-safe publication must be checked per installation.",
-    "Decision probes do not establish a live provider-to-Cairns save or Hermes behavior; execution after runtime closure is not promised."
+    "Synthetic decision checks do not establish provider access, exact live costs, native write permission or live Cairns saving.",
+    "The portable bundle and registered host installation are distinct; installation requires separate exact-content and registry resolution verification.",
+    "Current executor/version, native contracts, concurrency-safe publication and active-reader compatibility must be verified per save task.",
+    "This skill improvement does not repair product gates, refresh installation policy, promote standing facts or establish unattended execution."
   ],
-  "reviewed_at": "2026-10-05",
-  "reviewer": "independent-r2c-wiring-review-agent",
+  "reviewed_at": "2026-10-07",
+  "reviewer": "independent-candidate-review-agent",
   "schema_version": 1,
   "skill": "r2c",
   "source_refs": [
@@ -21,7 +21,8 @@
     "r2c-2026-10-05:exa-connect",
     "r2c-2026-10-05:scrapecreators-catalogue",
     "r2c-2026-10-05:scrapecreators-transcript",
-    "r2c-2026-10-05:cairns-portable-capture"
+    "r2c-2026-10-05:cairns-portable-capture",
+    "r2c-recovery-2026-10-07:cairns-recovery-contract"
   ],
   "status": "reviewed"
 }

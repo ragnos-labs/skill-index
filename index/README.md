@@ -9,7 +9,7 @@ summaries and load one selected skill at a time.
 | --- | --- | --- | --- | --- |
 | general | [ai-writing-review](../skills/ai-writing-review/SKILL.md) | routable | active | Find and explain AI-like prose patterns without claiming to determine who authored the text. |
 | general | [general-writing](../skills/general-writing/SKILL.md) | routable | active | Draft, rewrite, or adapt general-purpose prose while preserving evidence, purpose, and voice. |
-| general | [r2c](../skills/r2c/SKILL.md) | routable | active | Research across available web and social tools with selectively chosen specialists while one authorized worker preserves originals and verifies Cairns L1-L3 saving. |
+| general | [r2c](../skills/r2c/SKILL.md) | routable | active | Research across available tools while one authorized worker verifies Cairns L1-L3 saves with diagnosed, budgeted recovery and separate per-stage status. |
 | general | [research-stack](../skills/research-stack/SKILL.md) | routable | active | Route current web, page-extraction, developer, and literature research between installed Exa, Firecrawl, and explicitly requested native web search. |
 | general | [video-creative-rules](../skills/video-creative-rules/SKILL.md) | routable | experimental | Creative rules and gates for a short video cut: plan rubric, reading-time floor with a checker, beat and audio policy, delivery gates and a tone preset per brief workflow. Owned by the Video Studio repository; this copy tracks its released skill. |
 | general | [writing-cleanup](../skills/writing-cleanup/SKILL.md) | routable | active | Rewrite supplied prose to remove generic patterns while preserving facts, meaning, citations, and voice. |

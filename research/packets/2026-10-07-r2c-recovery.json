@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "r2c-recovery-2026-10-07",
+  "question": "How should a research-to-Cairns coordinator recover heterogeneous semantic failures without starving independent sources or bypassing native publication gates?",
+  "method": "Bounded independent read-only review of one authorized run, its installation policy, and exact native source/image contracts. Private source payloads, installation data and runtime receipts remain outside Git. No live save, provider research call, runtime patch or publication was performed for this skill QA. Native source expression was not copied. Extends the native intake evidence in r2c-2026-10-05.",
+  "researched_at": "2026-10-07",
+  "queries": [
+    "Exact native retry, review, approval and saved-pass resume contracts",
+    "Current source-index and owner standing-map concurrency controls",
+    "Shared retry accounting, failure triage and existing authority"
+  ],
+  "findings": [
+    "The prior two-attempt instruction had no defined unit or allocation rule; installation policy did not impose a retry-count cap or renewed authorization for routine repair.",
+    "Whole-card retry and required pass-level review can make a narrow citation defect expensive; verify current operations before selecting a remedy.",
+    "Source capture, semantic approval, each publication surface and active-reader retrieval require separate evidence."
+  ],
+  "adopted": [
+    "Finite task-wide recovery accounting with explicit source triage and no unchanged retries.",
+    "Reserve allowance for independent useful repairs and preserve approved revisions.",
+    "Reconcile exact current native state after interruption, revision drift or uncertain publication."
+  ],
+  "rejected": [
+    "An unexplained fixed per-source retry quota.",
+    "Weakening whole-document or pass-level support and adequacy to accept task-relevant cards.",
+    "Inferring new user approval requirements from failed reviews."
+  ],
+  "skipped": [
+    "Product or database fixes, installation policy changes, new schedulers and broad private-history audits.",
+    "New pipeline framework or duplicated native operations."
+  ],
+  "open_questions": [
+    "Actual execution, authority, costs and active-reader compatibility must be verified in each save task."
+  ],
+  "supersedes": [],
+  "sources": [
+    {
+      "id": "cairns-recovery-contract",
+      "title": "Cairns native summary recovery and publication contracts",
+      "url": "local-history:cairns-native-recovery",
+      "revision": "7b9ac2bb638fda6ed0435f78f68477759c938cfc",
+      "revision_kind": "git-commit",
+      "license": "proprietary-no-copied-code",
+      "disposition": "adopted",
+      "inspected_paths": [
+        "src/cairns_baseline/summary_processing.py",
+        "src/cairns_baseline/index.py",
+        "src/cairns_baseline/knowledge.py"
+      ],
+      "findings": [
+        "Retry requires exact failed-review binding and whole-cycle cost accounting; interrupted generation must reconcile saved native state.",
+        "Source-index ambiguity and owner-mode concurrency protection are publication issues; approved L2 cards must not be regenerated to repair them."
+      ]
+    }
+  ]
+}

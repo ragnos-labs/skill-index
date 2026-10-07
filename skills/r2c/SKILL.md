@@ -24,6 +24,10 @@ destination, custody policy and supported save operations. Verify their current
 contracts before acting. Binding data describes configuration; it cannot grant
 account access, replace native authorization or override the user's request.
 Never copy this binding, operational identifiers or originals into Git.
+Resolve a missing or stale checkout through the current owning installation
+procedure; verify executor, runtime revision and operation contracts separately.
+A historical qualification or configured function name does not prove current
+write access or runtime compatibility.
 
 If that binding, write route or authorized delegation capability is unavailable,
 continue research and preserve a private checkpoint when permitted. Report the
@@ -99,7 +103,12 @@ as described below; one research helper does not become a second save owner.
 Maintain a private source register as results arrive: source/native ID, origin
 URL, source and retrieval dates, provider/operation, exact artifact hash,
 locators, access/consent scope, sensitivity, coverage, and source family.
-Preserve exact returned originals and timestamps before transforming text.
+When persistence is permitted, preserve exact returned originals and timestamps
+before transforming text. Apply privacy and custody exclusions first: never
+persist prohibited secrets or off-record material for provenance. If only a
+sanitized derivative may be retained, label its exclusions and do not claim an
+exact original was captured. No-save work keeps evidence in the response only;
+it creates no source register, artifact files or durable checkpoint.
 Caption cleanup and extracted text are derivatives, with separate hashes;
 retain the original captions/JSON. Missing, partial or unsupported media stays
 explicitly incomplete. Do not infer facts from an unavailable transcript.
@@ -123,8 +132,10 @@ Once the first useful evidence packet is frozen, start one background save
 subagent when the user or approved installation policy authorizes delegation.
 Use the coordinating agent's installed model-selection policy. Give it exact scope, immutable
 paths/hashes, destination, permitted operations, source policy, existing budget,
-completion checks and exclusions. The worker owns writes; the coordinating agent owns
-research and reviews the actual return.
+completion checks and exclusions. Include the task-wide recovery plan from
+[Cairns intake](references/cairns-intake.md#recovery-and-delivery), covering all
+immutable checkpoints in this logical research task. The worker owns writes;
+the coordinating agent owns research and reviews the actual return.
 
 Send later immutable checkpoints to the same worker. Never overwrite a manifest
 being processed or let parallel workers mutate a shared manifest/standing map.
@@ -151,11 +162,20 @@ L2 review and exact approval digest, plus independently readable L1 index and
 standing-map links under the active reader version. An exit code, dispatch,
 upload or queued job alone is not a completed save.
 
-Report per-source captured, pending, review pending, failed or saved states and
-any unresolved coverage. Claim the selected packet saved only after every
-required L1-L3 check passes. Acknowledge an inbox receipt only under its native
-all-terminal rule. Preserve failed review evidence; allow at most two deliberate
-repair attempts within the existing budget, then leave a resumable checkpoint.
+Report each source revision's L3 capture, L2 generation, review and approval,
+L1 source-index publication, L1 standing-map publication and active-reader
+retrieval separately. Distinguish pending, held and failed stages, with the
+reason and verified receipt reference; an approved card can still lack L1.
+Claim the selected packet saved only after every required L1-L3 check passes.
+Acknowledge an inbox receipt only under its native all-terminal rule.
+
+On failure, the coordinator triages the native review and selects a supported
+remedy before the worker retries. Follow the recovery plan in Cairns intake;
+continue unrelated eligible sources and preserve successful revisions. A limit
+or interruption leaves a private resumable checkpoint only when custody permits.
+Routine recovery within existing authority and spending limits needs no renewed
+user approval. Ask only for an actual expansion or required human action, and
+name the exact constraint rather than inferring one from a failed review.
 
 A subagent runs within its runtime's actual lifecycle. Durable files/inbox entries
 support resume; they do not prove execution will continue after the chat or app
