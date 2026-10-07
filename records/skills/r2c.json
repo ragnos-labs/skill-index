@@ -37,10 +37,11 @@
     "r2c-2026-10-05:exa-connect",
     "r2c-2026-10-05:scrapecreators-catalogue",
     "r2c-2026-10-05:scrapecreators-transcript",
-    "r2c-2026-10-05:cairns-portable-capture"
+    "r2c-2026-10-05:cairns-portable-capture",
+    "r2c-recovery-2026-10-07:cairns-recovery-contract"
   ],
   "status": "active",
-  "summary": "Research across available web and social tools with selectively chosen specialists while one authorized worker preserves originals and verifies Cairns L1-L3 saving.",
+  "summary": "Research across available tools while one authorized worker verifies Cairns L1-L3 saves with diagnosed, budgeted recovery and separate per-stage status.",
   "triggers": [
     "r2c",
     "research to cairns",

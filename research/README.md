@@ -13,6 +13,7 @@ decisions that affected the repository without storing raw search output.
 | 2026-09-12 | [streamdeck-authoring-v1](packets/2026-09-12-streamdeck-authoring-v1.json) | 1 | How can native Stream Deck controls be authored and updated without losing manual edits? |
 | 2026-09-17 | [brag-launch-video-skill](packets/2026-09-17-brag-launch-video-skill.json) | 2 | Which rules in the /brag launch-video skill make its output good, and how should they be carried into Video Studio without its renderer coupling? |
 | 2026-10-05 | [r2c-2026-10-05](packets/2026-10-05-r2c.json) | 6 | How can one portable research workflow dynamically select source tools and complete authorized background Cairns L1-L3 saving without a new runtime service? |
+| 2026-10-07 | [r2c-recovery-2026-10-07](packets/2026-10-07-r2c-recovery.json) | 1 | How should a research-to-Cairns coordinator recover heterogeneous semantic failures without starving independent sources or bypassing native publication gates? |
 
 ## Sources
 
@@ -74,3 +75,9 @@ decisions that affected the repository without storing raw search output.
 | `scrapecreators-catalogue` | [Scrapecreators Catalogue official documentation](https://docs.scrapecreators.com/llms.txt) | adopted | r2c | `674a9d10de5aff111647008aac8ffc314433bf85` | none-detected |
 | `scrapecreators-transcript` | [Scrapecreators Transcript official documentation](https://docs.scrapecreators.com/v1/youtube/video/transcript/) | adopted | r2c | `9251815f9c38644d26de61957c87d531a9c0ad8f` | none-detected |
 | `cairns-portable-capture` | Cairns native portable source intake contract | adopted | r2c | `afbff17108c66450768e04c3e06cde0266d667ba` | proprietary-no-copied-code |
+
+### r2c-recovery-2026-10-07
+
+| Source ID | Source | Disposition | Used by | Revision | License |
+| --- | --- | --- | --- | --- | --- |
+| `cairns-recovery-contract` | Cairns native summary recovery and publication contracts | adopted | r2c | `7b9ac2bb638fda6ed0435f78f68477759c938cfc` | proprietary-no-copied-code |
