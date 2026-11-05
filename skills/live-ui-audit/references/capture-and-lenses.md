@@ -9,12 +9,15 @@ submit, or change storage. Store its output privately beside the screenshot.
 | --- | --- | --- |
 | Controls | Count native controls and elements with interactive roles; list those without an accessible name | Controls hidden off-screen on purpose |
 | Small targets | Visible interactive elements under 24 by 24 CSS pixels; touch-first surfaces may use 44 as a stricter bar | Inline links inside running text |
-| Contrast | Text color against the first opaque ancestor background; flag below 4.5 to 1 for body text and 3 to 1 for large text | Text over images or gradients; visually hidden text |
+| Contrast | Text color against the first opaque ancestor background; flag below 4.5 to 1 for body text and 3 to 1 for large text, meaning at least 18pt (24 CSS pixels) or 14pt bold (about 18.7 CSS pixels) | Text over images or gradients; visually hidden text |
 | Duplicate ids | Id values that occur more than once | Rarely harmless; they often break labels and references |
 | Overflow | Document scroll width above viewport width; elements whose right edge passes the viewport | Intentionally scrolling carousels or tables |
 | Console and network | Errors, warnings, and failed or slow requests during the walk | Browser extension noise |
 
 Also note time to first content, long tasks, and the largest transfers.
+
+The target and contrast figures follow WCAG 2.2 success criteria 2.5.8, 2.5.5,
+and 1.4.3. The capture is a screening signal, not a conformance verdict.
 
 ## Lens questions
 

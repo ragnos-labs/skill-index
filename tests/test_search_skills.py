@@ -40,6 +40,22 @@ class SearchTests(unittest.TestCase):
             names = {item["name"] for item in search(query)["matches"]}
             self.assertFalse(names & new_skills, query)
 
+    def test_read_only_data_and_parallel_test_queries_skip_write_procedures(self) -> None:
+        write_procedures = {"live-data-rewrite", "parallel-build-sprint"}
+        for query in (
+            "research the data",
+            "research live data sources",
+            "data analysis",
+            "visualize the data",
+            "data privacy review",
+            "run checks in parallel",
+            "parallel tests",
+        ):
+            names = {item["name"] for item in search(query)["matches"]}
+            self.assertFalse(names & write_procedures, query)
+        for query in ("research the data", "research live data sources"):
+            self.assertEqual(search(query)["matches"][0]["name"], "research-stack", query)
+
     def test_documented_wiki_lab_scope_is_preserved(self) -> None:
         self.assertEqual(search("Prepare a Wiki Lab draft")["matches"][0]["name"], "wikipedia-workflow")
 

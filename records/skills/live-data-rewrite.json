@@ -31,11 +31,7 @@
     "reindex",
     "embed",
     "embedding",
-    "records",
-    "dataset",
-    "data",
-    "rows",
-    "database"
+    "records"
   ],
   "exclusions": [
     "single-record edits",

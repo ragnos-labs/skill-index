@@ -23,13 +23,16 @@ empty, loading, and error states, so the walk can be checked for completeness.
   credentials, creates accounts, or completes sign-in or verification prompts.
 - Allowed: navigate, scroll, hover, focus, open and cancel menus and dialogs,
   change view state that is not saved to the account (search text, filters,
-  sort, layout), resize the viewport, emulate the color scheme, run read-only
-  in-page scripts, and read console and network logs. When unsure whether a
-  view change is saved, treat it as a setting and leave it alone.
-- Never: sign out, change account or application settings, submit forms,
-  create, edit, delete, archive, like, save, share, invite, export, or send
-  anything, accept terms, or click a control whose effect is unclear. Close
-  dialogs with cancel or Escape.
+  sort, layout), run a search or filter that only reads data and stores
+  nothing, resize the viewport, emulate the color scheme, run read-only in-page
+  scripts, and read console and network logs. When unsure whether a view change
+  is saved, treat it as a setting and leave it alone.
+- Treat a search that saves history to the account, or that may trigger paid
+  backend calls at audit volume, as a setting: ask the user first.
+- Never: sign out, change account or application settings, submit a form that
+  creates or changes stored state, create, edit, delete, archive, like, save,
+  share, invite, export, or send anything, accept terms, or click a control
+  whose effect is unclear. Close dialogs with cancel or Escape.
 - Prefer emulating light and dark in the browser over a theme stored on the
   account. If a stored setting is the only way, ask the user.
 - If the session expires, or a surface can only be reached through a write,

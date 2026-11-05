@@ -37,11 +37,14 @@
   ],
   "exclusions": [
     "fixing the interface",
-    "form submission or other writes",
+    "submitting forms that change stored state, or other writes",
     "signing in for the user",
     "static design review without a running app"
   ],
   "composes": [],
-  "source_refs": [],
+  "source_refs": [
+    "live-ui-audit-wcag-2026-11-05:wcag22-rec",
+    "live-ui-audit-wcag-2026-11-05:wcag22-understanding-contrast-minimum"
+  ],
   "review_path": "reviews/live-ui-audit.json"
 }

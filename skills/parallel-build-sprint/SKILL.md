@@ -41,7 +41,8 @@ round, when any of these holds:
 
 Give builds in those areas two reviewers. Set a round cap at the start. Stop
 when a round keeps no high or medium finding or the cap is reached, and report
-what remains.
+what remains. If the cap is reached with any kept high or medium finding still
+unfixed, do not deploy: report those findings and let the user decide.
 
 ## 1. Scout and critique
 
@@ -79,8 +80,9 @@ delta.
 
 Split the merged diff across reviewers by lens. Independent skeptics try to
 disprove each finding from source: three for high or medium, one for low. Keep
-a finding only on a majority: two of three votes for high or medium, or the
-one vote for low. Record refuted findings with the reason.
+a high or medium finding when at least two of its three skeptics fail to
+disprove it, and a low finding when its one skeptic fails to disprove it.
+Otherwise record the finding as refuted with the refuting reasons.
 
 ## 6. Fix round
 
@@ -95,16 +97,19 @@ resolutions, and coordinator edits. Review exactly that delta.
 
 ## 8. Full suites once, then one deploy
 
-Run the full suites once on the final revision and do not repeat them on
-unchanged inputs. Limit how many full suites run at once on one machine.
-Deliver through the owning repository's delivery and release procedure, or
-`ship-it` when none exists, as one batch with a health and user-path check and
-a rollback route. Batching saves deploy effort, but live bugs stay up until
-the batch ships; deploy earlier only for an urgent live repair.
+Deploy only when no kept high or medium finding is unfixed; otherwise stop
+and ask the user. Run the full suites once on the final revision and do not
+repeat them on unchanged inputs. Limit how many full suites run at once on one
+machine. Deliver through the owning repository's delivery and release
+procedure, or `ship-it` when none exists, as one batch with a health and
+user-path check and a rollback route. Batching saves deploy effort, but live
+bugs stay up until the batch ships; deploy earlier only for an urgent live
+repair.
 
 ## Report
 
 For each build: owner, files, review result, and repairs. For the combined
-review: findings kept, refuted, and fixed. Then the final revision, suites and
-results, delivery stages reached (merged, released, deployed, verified) as
-separate states, open risks, and the items only the user can do.
+review: findings kept, refuted, and fixed, and every kept finding still
+unfixed with its severity. Then the final revision, suites and results,
+delivery stages reached (merged, released, deployed, verified) as separate
+states, open risks, and the items only the user can do.

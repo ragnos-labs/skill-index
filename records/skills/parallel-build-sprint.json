@@ -27,7 +27,6 @@
   "scope_terms": [
     "sprint",
     "builders",
-    "parallel",
     "worktrees",
     "orchestrate",
     "orchestration"

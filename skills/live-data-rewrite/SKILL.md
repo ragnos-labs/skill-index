@@ -53,7 +53,8 @@ or archive a record after every other operation on it. Use the
 An independent reviewer reads the plan, the tool, and sampled before and after
 diffs: selection scope, transformation correctness, ordering, request id
 stability, refusal paths, and retained history. Repair, regenerate, and review
-again. Record the reviewed plan digest; only that plan may be applied.
+again. Write the reviewed plan digest to a review receipt beside the plan, never
+into the plan itself; only the plan matching the receipt may be applied.
 
 ## 4. Sample
 
@@ -87,9 +88,12 @@ produce throttled failures that the system then marks as not retryable.
   each batch's background jobs drain before the next.
 - Back off with jitter on throttling; stop after a set number of consecutive
   throttled responses.
-- Record the error class per item. Once a failure is confirmed as throttling
-  rather than rejected content, retry it later with a fresh request, even when
-  the system labels it terminal.
+- Record the error class per item. A derived-state call that failed from
+  confirmed throttling, rather than rejected content, may be retried in a later
+  paced pass within the same reviewed plan, even when the system labels it
+  terminal. The retry uses the next retry generation and so a new request id;
+  record the generation in the ledger. Failed or stale record writes are never
+  retried this way.
 - Track calls, retries, and estimated cost against the budget.
 
 ## 6. Verify and reconcile
@@ -100,13 +104,14 @@ produce throttled failures that the system then marks as not retryable.
   superseded is not current; record the supersession so verification stops
   listing it.
 - Give every planned operation exactly one final state from the ledger
-  reference. Stale and failed items return to a new plan cycle, never a direct
-  write.
+  reference. Stale items and failed record writes return to a new plan cycle,
+  never a direct write; only throttled derived-state calls take the paced retry
+  above.
 
 ## Refuse or stop
 
-Refuse to apply when the plan is unreviewed, its digest or tool revision
-differs from the reviewed one, it is older than its freshness window, or the
+Refuse to apply when the plan has no review receipt, its digest or the tool
+revision differs from the receipt, it is older than its freshness window, or the
 baseline drifted beyond the stated tolerance.
 
 Stop on a sample mismatch, an error rate above the threshold, the consecutive

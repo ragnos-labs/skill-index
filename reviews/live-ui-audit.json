@@ -11,6 +11,9 @@
   "reviewer": "independent-review-pending",
   "schema_version": 1,
   "skill": "live-ui-audit",
-  "source_refs": [],
+  "source_refs": [
+    "live-ui-audit-wcag-2026-11-05:wcag22-rec",
+    "live-ui-audit-wcag-2026-11-05:wcag22-understanding-contrast-minimum"
+  ],
   "status": "pending"
 }
