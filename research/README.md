@@ -14,6 +14,7 @@ decisions that affected the repository without storing raw search output.
 | 2026-09-17 | [brag-launch-video-skill](packets/2026-09-17-brag-launch-video-skill.json) | 2 | Which rules in the /brag launch-video skill make its output good, and how should they be carried into Video Studio without its renderer coupling? |
 | 2026-10-05 | [r2c-2026-10-05](packets/2026-10-05-r2c.json) | 6 | How can one portable research workflow dynamically select source tools and complete authorized background Cairns L1-L3 saving without a new runtime service? |
 | 2026-10-07 | [r2c-recovery-2026-10-07](packets/2026-10-07-r2c-recovery.json) | 1 | How should a research-to-Cairns coordinator recover heterogeneous semantic failures without starving independent sources or bypassing native publication gates? |
+| 2026-11-05 | [live-ui-audit-wcag-2026-11-05](packets/2026-11-05-live-ui-audit-wcag.json) | 2 | Which WCAG 2.2 thresholds should a live UI audit's in-page capture use for target size and text contrast, and how is large text defined in CSS pixels? |
 
 ## Sources
 
@@ -81,3 +82,10 @@ decisions that affected the repository without storing raw search output.
 | Source ID | Source | Disposition | Used by | Revision | License |
 | --- | --- | --- | --- | --- | --- |
 | `cairns-recovery-contract` | Cairns native summary recovery and publication contracts | adopted | r2c | `7b9ac2bb638fda6ed0435f78f68477759c938cfc` | proprietary-no-copied-code |
+
+### live-ui-audit-wcag-2026-11-05
+
+| Source ID | Source | Disposition | Used by | Revision | License |
+| --- | --- | --- | --- | --- | --- |
+| `wcag22-rec` | [Web Content Accessibility Guidelines (WCAG) 2.2, W3C Recommendation 12 December 2024](https://www.w3.org/TR/2024/REC-WCAG22-20241212/) | adopted | live-ui-audit | `6ccb4edab2429d9e725dff5abb631c76fbf20afd` | W3C document use rules |
+| `wcag22-understanding-contrast-minimum` | [Understanding Success Criterion 1.4.3: Contrast (Minimum), WCAG 2.2](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) | adopted | live-ui-audit | `5b4b147739c6dbd86d38990cf8e9218bcf226084` | W3C document use rules |

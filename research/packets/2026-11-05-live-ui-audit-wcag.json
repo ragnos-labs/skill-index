@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "id": "live-ui-audit-wcag-2026-11-05",
+  "question": "Which WCAG 2.2 thresholds should a live UI audit's in-page capture use for target size and text contrast, and how is large text defined in CSS pixels?",
+  "method": "Read the dated WCAG 2.2 W3C Recommendation and the Understanding document for Success Criterion 1.4.3 over HTTPS and recorded the SHA-1 of each retrieved page. No other sources, tools, or provider calls were used. Only thresholds and definitions are recorded; no normative text was copied beyond short numeric facts.",
+  "researched_at": "2026-11-05",
+  "queries": [
+    "WCAG 2.2 Success Criterion 1.4.3 Contrast (Minimum) thresholds and large-scale text definition",
+    "WCAG 2.2 Success Criteria 2.5.8 Target Size (Minimum) and 2.5.5 Target Size (Enhanced)",
+    "Point to CSS pixel conversion for large-scale text"
+  ],
+  "findings": [
+    "SC 1.4.3 (Level AA) requires a contrast ratio of at least 4.5 to 1 for text, and at least 3 to 1 for large-scale text.",
+    "Large-scale text is at least 18 point, or 14 point bold; at 1pt = 1.333 CSS px that is about 24 CSS px, or about 18.7 CSS px when bold.",
+    "SC 2.5.8 (Level AA) requires pointer targets of at least 24 by 24 CSS pixels, with spacing, equivalent, inline, user agent control, and essential exceptions.",
+    "SC 2.5.5 (Level AAA) requires pointer targets of at least 44 by 44 CSS pixels, with equivalent, inline, user agent control, and essential exceptions."
+  ],
+  "adopted": [
+    "Flag targets under 24 by 24 CSS pixels and treat 44 by 44 as an optional stricter bar.",
+    "Flag text contrast below 4.5 to 1, or below 3 to 1 for large text, and define large text in CSS pixels in the capture table.",
+    "List inline targets as a known false positive, matching the inline exception."
+  ],
+  "rejected": [
+    "Treating the capture output as a conformance verdict; it is a screening signal that findings confirm against source and observation."
+  ],
+  "skipped": [
+    "Non-text contrast, focus appearance, and the full conformance model, which the audit lenses cover qualitatively.",
+    "Automating the spacing exception of SC 2.5.8 in the capture script."
+  ],
+  "open_questions": [],
+  "supersedes": [],
+  "sources": [
+    {
+      "id": "wcag22-rec",
+      "title": "Web Content Accessibility Guidelines (WCAG) 2.2, W3C Recommendation 12 December 2024",
+      "url": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+      "revision": "6ccb4edab2429d9e725dff5abb631c76fbf20afd",
+      "revision_kind": "retrieved-content-sha1",
+      "license": "W3C document use rules",
+      "disposition": "adopted",
+      "inspected_paths": [
+        "https://www.w3.org/TR/2024/REC-WCAG22-20241212/#contrast-minimum",
+        "https://www.w3.org/TR/2024/REC-WCAG22-20241212/#target-size-minimum",
+        "https://www.w3.org/TR/2024/REC-WCAG22-20241212/#target-size-enhanced",
+        "https://www.w3.org/TR/2024/REC-WCAG22-20241212/#dfn-large-scale"
+      ],
+      "findings": [
+        "SC 1.4.3 sets 4.5 to 1 for text and 3 to 1 for large-scale text at Level AA.",
+        "SC 2.5.8 sets 24 by 24 CSS pixels at Level AA; SC 2.5.5 sets 44 by 44 CSS pixels at Level AAA.",
+        "Large scale means at least 18 point, or 14 point bold."
+      ]
+    },
+    {
+      "id": "wcag22-understanding-contrast-minimum",
+      "title": "Understanding Success Criterion 1.4.3: Contrast (Minimum), WCAG 2.2",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+      "revision": "5b4b147739c6dbd86d38990cf8e9218bcf226084",
+      "revision_kind": "retrieved-content-sha1",
+      "license": "W3C document use rules",
+      "disposition": "adopted",
+      "inspected_paths": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html"
+      ],
+      "findings": [
+        "Point sizes follow the CSS pt unit, with 1pt = 1.333px, so 18pt is about 24 CSS px and 14pt is about 18.5 to 18.7 CSS px."
+      ]
+    }
+  ]
+}
