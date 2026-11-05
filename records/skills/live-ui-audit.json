@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "name": "live-ui-audit",
+  "path": "skills/live-ui-audit",
+  "domain": "software-delivery",
+  "summary": "Audit a running interface read-only in a browser the user signed in to, across viewports and themes, verify findings against source with skeptics, and report privately plus a repository-safe copy.",
+  "status": "experimental",
+  "load_mode": "routable",
+  "risk": "medium",
+  "side_effects": [
+    "read-only signed-in browser session",
+    "private report and screenshot files",
+    "repository-safe report copy"
+  ],
+  "triggers": [
+    "audit the live UI",
+    "live UX audit",
+    "accessibility audit of the running app",
+    "walk every screen and report UI issues",
+    "signed-in UI review",
+    "audit the app in the browser"
+  ],
+  "aliases": [
+    "live ui audit",
+    "ui audit",
+    "ux audit"
+  ],
+  "scope_terms": [
+    "ui",
+    "ux",
+    "interface",
+    "screens",
+    "accessibility",
+    "browser",
+    "visual",
+    "layout"
+  ],
+  "exclusions": [
+    "fixing the interface",
+    "form submission or other writes",
+    "signing in for the user",
+    "static design review without a running app"
+  ],
+  "composes": [],
+  "source_refs": [],
+  "review_path": "reviews/live-ui-audit.json"
+}

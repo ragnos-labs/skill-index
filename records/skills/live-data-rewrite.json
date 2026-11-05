@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "name": "live-data-rewrite",
+  "path": "skills/live-data-rewrite",
+  "domain": "software-delivery",
+  "summary": "Plan, review, sample, apply, verify, and reconcile a bulk write to live records keyed to exact revisions or derived state, with paced external calls.",
+  "status": "experimental",
+  "load_mode": "routable",
+  "risk": "high",
+  "side_effects": [
+    "authorized bulk writes to live records",
+    "paid or throttled external calls within a stated budget",
+    "private plan, ledger, and log files outside Git"
+  ],
+  "triggers": [
+    "bulk rewrite live records",
+    "backfill live data",
+    "reindex or re-embed records",
+    "apply a bulk data cleanup plan",
+    "bulk update production records",
+    "retry failed embedding jobs"
+  ],
+  "aliases": [
+    "live data rewrite",
+    "bulk data rewrite",
+    "data backfill"
+  ],
+  "scope_terms": [
+    "bulk",
+    "backfill",
+    "reindex",
+    "embed",
+    "embedding",
+    "records",
+    "dataset",
+    "data",
+    "rows",
+    "database"
+  ],
+  "exclusions": [
+    "single-record edits",
+    "read-only reports",
+    "schema migrations owned by a release procedure",
+    "permanent deletion without explicit authorization",
+    "research about data or embedding providers"
+  ],
+  "composes": [],
+  "source_refs": [],
+  "review_path": "reviews/live-data-rewrite.json"
+}

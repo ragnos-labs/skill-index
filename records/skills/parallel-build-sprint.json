@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "name": "parallel-build-sprint",
+  "path": "skills/parallel-build-sprint",
+  "domain": "software-delivery",
+  "summary": "Coordinate parallel agent builders with disjoint file ownership, per-build and skeptic-voted combined reviews, reviewed fix rounds, a final delta check, and one deploy.",
+  "status": "experimental",
+  "load_mode": "routable",
+  "risk": "high",
+  "side_effects": [
+    "repository writes in isolated worktrees",
+    "merges to an integration branch",
+    "one authorized deployment through the owning delivery procedure"
+  ],
+  "triggers": [
+    "run a parallel build sprint",
+    "split a sprint across parallel builders",
+    "orchestrate builders in separate worktrees",
+    "multi-agent build sprint",
+    "sprint with skeptic review rounds"
+  ],
+  "aliases": [
+    "parallel build sprint",
+    "build sprint",
+    "multi-agent sprint"
+  ],
+  "scope_terms": [
+    "sprint",
+    "builders",
+    "parallel",
+    "worktrees",
+    "orchestrate",
+    "orchestration"
+  ],
+  "exclusions": [
+    "single small changes",
+    "research-only work",
+    "unattended autonomy",
+    "deployment outside the owning delivery procedure"
+  ],
+  "composes": [
+    "ship-it"
+  ],
+  "source_refs": [],
+  "review_path": "reviews/parallel-build-sprint.json"
+}

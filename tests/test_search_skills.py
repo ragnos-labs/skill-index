@@ -22,6 +22,24 @@ class SearchTests(unittest.TestCase):
     def test_unrelated_buttons_do_not_route_to_streamdeck(self) -> None:
         self.assertFalse(any(x["name"] == "streamdeck-authoring" for x in search("create website navigation buttons")["matches"]))
 
+    def test_delivery_procedure_skills_route(self) -> None:
+        cases = {
+            "backfill live records and re-embed them": "live-data-rewrite",
+            "apply a bulk data cleanup plan to live records": "live-data-rewrite",
+            "run a parallel build sprint with builders in separate worktrees": "parallel-build-sprint",
+            "orchestrate a multi-agent build sprint": "parallel-build-sprint",
+            "audit the live UI in the signed-in browser": "live-ui-audit",
+            "accessibility audit of the running app": "live-ui-audit",
+        }
+        for query, expected in cases.items():
+            self.assertEqual(search(query)["matches"][0]["name"], expected, query)
+
+    def test_delivery_procedure_skills_leave_neighbors_alone(self) -> None:
+        new_skills = {"live-data-rewrite", "parallel-build-sprint", "live-ui-audit"}
+        for query in ("rewrite the intro", "clean up this draft", "deploy it", "make it live", "review a writing draft"):
+            names = {item["name"] for item in search(query)["matches"]}
+            self.assertFalse(names & new_skills, query)
+
     def test_documented_wiki_lab_scope_is_preserved(self) -> None:
         self.assertEqual(search("Prepare a Wiki Lab draft")["matches"][0]["name"], "wikipedia-workflow")
 

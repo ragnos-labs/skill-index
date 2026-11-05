@@ -1,0 +1,16 @@
+{
+  "bundle_digest": "",
+  "evidence": [
+    "Author checks only: the bundle, record, and generated indexes pass make check, and routing tests cover typical queries and neighboring skills. This is not an independent review."
+  ],
+  "limitations": [
+    "No independent full-bundle review has been recorded; the skill stays experimental and unbound until one is.",
+    "The procedure is distilled from one internal sprint and has not been exercised as a loaded skill in a fresh session."
+  ],
+  "reviewed_at": "2026-11-05",
+  "reviewer": "independent-review-pending",
+  "schema_version": 1,
+  "skill": "live-ui-audit",
+  "source_refs": [],
+  "status": "pending"
+}

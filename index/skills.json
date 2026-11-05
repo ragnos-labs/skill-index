@@ -387,6 +387,194 @@
     },
     {
       "aliases": [
+        "live data rewrite",
+        "bulk data rewrite",
+        "data backfill"
+      ],
+      "bundle_digest": "sha256:95b22727ea2c156a41fdbcfee6f3943f940516dfb06c2546642d052e5dbf069e",
+      "composes": [],
+      "domain": "software-delivery",
+      "exclusions": [
+        "single-record edits",
+        "read-only reports",
+        "schema migrations owned by a release procedure",
+        "permanent deletion without explicit authorization",
+        "research about data or embedding providers"
+      ],
+      "load_mode": "routable",
+      "name": "live-data-rewrite",
+      "path": "skills/live-data-rewrite",
+      "resources": [
+        {
+          "path": "SKILL.md",
+          "sha256": "ba316fd0af6a97379ea04ef14aab085823b82683b872931ce7d76d488ab527b6"
+        },
+        {
+          "path": "references/plan-and-ledger.md",
+          "sha256": "53cc651c542322f9e990003b4ce052be3838c6babd3fa480d824269afa32a418"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-11-05",
+        "status": "pending"
+      },
+      "review_path": "reviews/live-data-rewrite.json",
+      "risk": "high",
+      "schema_version": 1,
+      "scope_terms": [
+        "bulk",
+        "backfill",
+        "reindex",
+        "embed",
+        "embedding",
+        "records",
+        "dataset",
+        "data",
+        "rows",
+        "database"
+      ],
+      "side_effects": [
+        "authorized bulk writes to live records",
+        "paid or throttled external calls within a stated budget",
+        "private plan, ledger, and log files outside Git"
+      ],
+      "source_refs": [],
+      "status": "experimental",
+      "summary": "Plan, review, sample, apply, verify, and reconcile a bulk write to live records keyed to exact revisions or derived state, with paced external calls.",
+      "triggers": [
+        "bulk rewrite live records",
+        "backfill live data",
+        "reindex or re-embed records",
+        "apply a bulk data cleanup plan",
+        "bulk update production records",
+        "retry failed embedding jobs"
+      ]
+    },
+    {
+      "aliases": [
+        "live ui audit",
+        "ui audit",
+        "ux audit"
+      ],
+      "bundle_digest": "sha256:7eabdff837cf658fd062494e4e17f2ba6bf838f363dc099ec29ab50034a5ad2b",
+      "composes": [],
+      "domain": "software-delivery",
+      "exclusions": [
+        "fixing the interface",
+        "form submission or other writes",
+        "signing in for the user",
+        "static design review without a running app"
+      ],
+      "load_mode": "routable",
+      "name": "live-ui-audit",
+      "path": "skills/live-ui-audit",
+      "resources": [
+        {
+          "path": "SKILL.md",
+          "sha256": "65e2ba9ad68e742e0440ae97520d88dd9d8fd7c610ea87661a8e639b34ce9c9f"
+        },
+        {
+          "path": "references/capture-and-lenses.md",
+          "sha256": "bf7bd7c052fc02d6e3831dab282391afe3d94f7e457a05d07dc63ba68b34f34c"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-11-05",
+        "status": "pending"
+      },
+      "review_path": "reviews/live-ui-audit.json",
+      "risk": "medium",
+      "schema_version": 1,
+      "scope_terms": [
+        "ui",
+        "ux",
+        "interface",
+        "screens",
+        "accessibility",
+        "browser",
+        "visual",
+        "layout"
+      ],
+      "side_effects": [
+        "read-only signed-in browser session",
+        "private report and screenshot files",
+        "repository-safe report copy"
+      ],
+      "source_refs": [],
+      "status": "experimental",
+      "summary": "Audit a running interface read-only in a browser the user signed in to, across viewports and themes, verify findings against source with skeptics, and report privately plus a repository-safe copy.",
+      "triggers": [
+        "audit the live UI",
+        "live UX audit",
+        "accessibility audit of the running app",
+        "walk every screen and report UI issues",
+        "signed-in UI review",
+        "audit the app in the browser"
+      ]
+    },
+    {
+      "aliases": [
+        "parallel build sprint",
+        "build sprint",
+        "multi-agent sprint"
+      ],
+      "bundle_digest": "sha256:c813de7639a11723a427e5af6a716855ea0f35a014e6709e434227936566ef6c",
+      "composes": [
+        "ship-it"
+      ],
+      "domain": "software-delivery",
+      "exclusions": [
+        "single small changes",
+        "research-only work",
+        "unattended autonomy",
+        "deployment outside the owning delivery procedure"
+      ],
+      "load_mode": "routable",
+      "name": "parallel-build-sprint",
+      "path": "skills/parallel-build-sprint",
+      "resources": [
+        {
+          "path": "SKILL.md",
+          "sha256": "bc1486fdf07b4f23f8bc8d95ba1231d083eb4c0c4d6dddb33f364e71497f6926"
+        },
+        {
+          "path": "references/review-lenses.md",
+          "sha256": "e334a78832e7b39b3302e51a96ab31928c38c83e20514b5b6e1d278bc1af3d06"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-11-05",
+        "status": "pending"
+      },
+      "review_path": "reviews/parallel-build-sprint.json",
+      "risk": "high",
+      "schema_version": 1,
+      "scope_terms": [
+        "sprint",
+        "builders",
+        "parallel",
+        "worktrees",
+        "orchestrate",
+        "orchestration"
+      ],
+      "side_effects": [
+        "repository writes in isolated worktrees",
+        "merges to an integration branch",
+        "one authorized deployment through the owning delivery procedure"
+      ],
+      "source_refs": [],
+      "status": "experimental",
+      "summary": "Coordinate parallel agent builders with disjoint file ownership, per-build and skeptic-voted combined reviews, reviewed fix rounds, a final delta check, and one deploy.",
+      "triggers": [
+        "run a parallel build sprint",
+        "split a sprint across parallel builders",
+        "orchestrate builders in separate worktrees",
+        "multi-agent build sprint",
+        "sprint with skeptic review rounds"
+      ]
+    },
+    {
+      "aliases": [
         "closeout",
         "ship it",
         "merge it",
