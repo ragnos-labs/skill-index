@@ -48,7 +48,8 @@ work product; a reason it might be useful is not evidence.
   one-off task.
 - **Open decision** when no answer is no but at least one is open. Name the
   person who decides, what evidence would settle it, and do not create the
-  agent meanwhile.
+  agent meanwhile. The decider is the person who owns the team's roster; if
+  none is named, it is the requester's owner.
 
 Passing this check is necessary, not sufficient. A design that passes still
 needs its owner, bounded inputs and outputs, the least tools, its place in the

@@ -391,7 +391,7 @@
         "new agent necessity questions",
         "seven necessity questions"
       ],
-      "bundle_digest": "sha256:ef23ef55ce656b76a2b18654c5e7425afd45bd405ced85c9ff6626d89bf1bb5c",
+      "bundle_digest": "sha256:8feece1ff936ebbc38971f2180f61b998ad66c3b8c3e89db5490361848302f59",
       "composes": [],
       "domain": "software-delivery",
       "exclusions": [
@@ -406,7 +406,7 @@
       "resources": [
         {
           "path": "SKILL.md",
-          "sha256": "d8578bc32e996e84021f24beee5dad7114702fc42c8fb3b34469b19df54dba26"
+          "sha256": "fcfee3fabae72c933ad17edd7d9d7a49e119714b25192207faa1e4c75de006c9"
         }
       ],
       "review": {
