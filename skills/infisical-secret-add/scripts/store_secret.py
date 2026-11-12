@@ -77,24 +77,35 @@ def run(cmd):
     return subprocess.run(cmd, capture_output=True, text=True, stdin=subprocess.DEVNULL)
 
 
+class ReadError(Exception):
+    """The stored value could not be read; its existence is unknown."""
+
+
 def read_back(args):
-    """Return the stored value, or None when the name is absent or unreadable.
+    """Return the stored value, or None only when the CLI reports the name absent.
 
     The CLI exits 0 for a missing name and reports the value as NOT_FOUND, so
-    JSON output is parsed rather than trusting the exit code or plain text.
+    JSON output is parsed. Any other failure raises ReadError: absence is never
+    inferred from an error, so an unreadable secret is never overwritten.
     """
     r = run([args.cli, "secrets", "get", args.name, "--output", "json", "--silent"]
             + RAW_READ + common(args))
     if r.returncode != 0:
-        return None
+        raise ReadError(classify(r.stderr))
     try:
         rows = json.loads(r.stdout)
     except ValueError:
-        return None
-    for row in rows if isinstance(rows, list) else []:
+        raise ReadError("unreadable CLI output")
+    if not isinstance(rows, list):
+        raise ReadError("unexpected CLI output")
+    for row in rows:
         if isinstance(row, dict) and row.get("secretKey") == args.name:
             value = row.get("secretValue")
-            return None if value == NOT_FOUND or not isinstance(value, str) else value
+            if value == NOT_FOUND:
+                return None
+            if not isinstance(value, str):
+                raise ReadError("unexpected CLI output")
+            return value
     return None
 
 
@@ -126,7 +137,11 @@ def main(argv=None):
     if run([args.cli, "user", "get", "token", "--domain", args.domain]).returncode != 0:
         fail(f"not signed in; run: {args.cli} login --domain {args.domain}")
 
-    if read_back(args) is not None and not args.overwrite:
+    try:
+        existing = read_back(args)
+    except ReadError as e:
+        fail(f"could not check whether {args.name} exists, so nothing was stored: {e}")
+    if existing is not None and not args.overwrite:
         fail(f"{args.name} already has a value at {args.env}:{args.path}; "
              "rerun with --overwrite to replace it")
 
@@ -146,7 +161,11 @@ def main(argv=None):
     if r.returncode != 0:
         fail(f"store failed: {classify(r.stderr)}")
 
-    if read_back(args) != value:
+    try:
+        stored = read_back(args)
+    except ReadError:
+        stored = None
+    if stored != value:
         fail("read-back mismatch; the stored value differs or could not be read")
     print(f"verified: {args.name} stored at {args.env}:{args.path}")
     return 0

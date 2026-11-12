@@ -27,6 +27,8 @@ if os.environ.get("FAKE_BAD_PROJECT") and "--projectId" in args:
     print("Project with ID 'x' not found during bot lookup.", file=sys.stderr); sys.exit(1)
 key = lambda name: opt("--env") + ":" + opt("--path") + ":" + name
 if args[:2] == ["secrets", "get"]:
+    if os.environ.get("FAKE_READ_FAIL"):
+        print("403 forbidden", file=sys.stderr); sys.exit(1)
     assert "--output" in args and opt("--output") == "json"
     value = data.get("secrets", {}).get(key(args[2]), "*not found*")
     print(json.dumps([{"secretKey": args[2], "secretValue": value}])); sys.exit(0)
@@ -163,6 +165,14 @@ class AddTests(unittest.TestCase):
         self.assertNotEqual(code, 0)
         self.assertNotIn(VALUE[3:12], out)
         self.assert_not_exposed(VALUE, out)
+
+    def test_read_error_never_overwrites(self):
+        self.assertEqual(self.run_add()[0], 0)
+        code, out = self.run_add("replacement", FAKE_READ_FAIL="1")
+        self.assertNotEqual(code, 0)
+        self.assertIn("nothing was stored", out)
+        self.assertNotIn("Paste the value", out)
+        self.assertEqual(self.stored(), VALUE)
 
     def test_read_back_mismatch_fails(self):
         code, out = self.run_add(FAKE_CORRUPT="1")

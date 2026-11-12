@@ -696,7 +696,7 @@
         "store infisical secret",
         "add infisical key"
       ],
-      "bundle_digest": "sha256:a589472c5e109a34d85c7175a8f2c95b0da504327c18aeb27a4ebb7a5a6feaf7",
+      "bundle_digest": "sha256:ae107f7b336d3492465f1b4bc7b6ceeda182faac2380689e08aa8df213326b46",
       "composes": [],
       "domain": "system",
       "exclusions": [
@@ -714,7 +714,7 @@
         },
         {
           "path": "scripts/store_secret.py",
-          "sha256": "44f48eda72bfc9b8ce73eef65221f23f8f46943a9e7f14b37c41ad91b8e33fb9"
+          "sha256": "c9ab1d60d06ed6cc9601c3058fd6e507961f257dd85ec983e2afd762430d3ec0"
         }
       ],
       "review": {
