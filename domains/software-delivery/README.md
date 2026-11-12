@@ -11,6 +11,9 @@ and merge, then hands the single batch to the owning delivery procedure or
 sprint. `live-data-rewrite` governs bulk writes to live records, whether run
 alone or as one step of a sprint.
 
+Before a new agent joins a team, `agent-necessity-check` asks whether the agent
+is needed at all; it makes no change and hands any build to the owning procedure.
+
 The [generated skill index](../../index/README.md) owns the skill inventory.
 Completion requires exact source evidence, live behavior proof when requested,
 and an explicit result for cleanup, including anything safely preserved.

@@ -387,6 +387,60 @@
     },
     {
       "aliases": [
+        "agent necessity check",
+        "new agent necessity questions",
+        "seven necessity questions"
+      ],
+      "bundle_digest": "sha256:ef23ef55ce656b76a2b18654c5e7425afd45bd405ced85c9ff6626d89bf1bb5c",
+      "composes": [],
+      "domain": "software-delivery",
+      "exclusions": [
+        "designing a whole agent team",
+        "building or configuring an agent",
+        "reviewing an existing agent's output",
+        "hiring people"
+      ],
+      "load_mode": "routable",
+      "name": "agent-necessity-check",
+      "path": "skills/agent-necessity-check",
+      "resources": [
+        {
+          "path": "SKILL.md",
+          "sha256": "d8578bc32e996e84021f24beee5dad7114702fc42c8fb3b34469b19df54dba26"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-11-12",
+        "status": "pending"
+      },
+      "review_path": "reviews/agent-necessity-check.json",
+      "risk": "low",
+      "schema_version": 1,
+      "scope_terms": [
+        "agent",
+        "seat",
+        "role",
+        "hire",
+        "roster",
+        "necessity"
+      ],
+      "side_effects": [],
+      "source_refs": [
+        "agent-necessity-check-2026-11-12:fleet-team-designer-role-core"
+      ],
+      "status": "experimental",
+      "summary": "Ask seven necessity questions before adding a new agent or seat to an agent team, and return add, do not add, or an open decision with evidence.",
+      "triggers": [
+        "add a new agent to the team",
+        "should we hire a new agent",
+        "propose a new agent seat",
+        "do we need another agent",
+        "staff a new agent role",
+        "check whether a new agent is needed"
+      ]
+    },
+    {
+      "aliases": [
         "live data rewrite",
         "bulk data rewrite",
         "data backfill"
