@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "agent-necessity-check-2026-11-12",
+  "question": "Which questions should a coordinator answer before adding a new agent to an agent team, so that duplicate or one-off agents are not created?",
+  "method": "Read the captured role core of an internal team-design agent at a pinned commit, and checked that the same seven questions appear unchanged in the two earlier revisions of that role recorded in its lock. Restated the questions in new words; no role text was copied. No web search or provider calls were used.",
+  "researched_at": "2026-11-12",
+  "queries": [
+    "necessity questions applied before adding an agent role",
+    "decision rule when a necessity question fails"
+  ],
+  "findings": [
+    "The role applied seven necessity questions before any other design check: recurring work, own judgment, own knowledge, a named work product, no existing owner, measurable quality, and a condition for retiring or changing the role.",
+    "A failed question meant no new role or an open decision for a person.",
+    "Implementation checks (owner, bounded inputs and outputs, least tools, handoff placement, evaluation and escalation, dependencies) came after necessity and did not replace it.",
+    "The role's newer upstream revision replaced the explicit questions with a registry match; the questions themselves were stable in the earlier revisions."
+  ],
+  "adopted": [
+    "The seven questions as a standalone check any coordinator can load before adding an agent.",
+    "All seven yes to add; any no means do not add and route the work elsewhere; otherwise an open decision with a named decider.",
+    "Evidence per answer, and the closest existing agent named every time."
+  ],
+  "rejected": [
+    "Designing the whole team, writing role contracts, or building the agent inside this skill; those are separate jobs with their own authority."
+  ],
+  "skipped": [
+    "Interview scripts, document templates, and teaching material from the source role."
+  ],
+  "open_questions": [],
+  "supersedes": [],
+  "sources": [
+    {
+      "id": "fleet-team-designer-role-core",
+      "title": "Captured role core of the fleet team-design agent",
+      "url": "local-history:fleet-team-designer-role-core",
+      "revision": "648ec55ccb17f01c6dd66c7e610e0152e6129f76",
+      "revision_kind": "git-commit",
+      "license": "proprietary-no-copied-code",
+      "disposition": "inspiration",
+      "inspected_paths": [
+        "instructions/roles/team-designer/role.md",
+        "instructions/roles/team-designer/upstream.json"
+      ],
+      "findings": [
+        "The method section lists the seven necessity questions and says a failed test means no hire or an open decision.",
+        "Implementation checks follow necessity and do not replace it."
+      ]
+    }
+  ]
+}

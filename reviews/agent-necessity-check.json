@@ -1,0 +1,18 @@
+{
+  "bundle_digest": "",
+  "evidence": [
+    "Author checks only: the bundle, record, and generated indexes pass make check, and routing tests cover typical queries and neighboring skills. This is not an independent review."
+  ],
+  "limitations": [
+    "No independent full-bundle review has been recorded; the skill stays experimental and unbound until one is.",
+    "The questions come from one internal team-design role that was parked on 2026-11-12; the skill has not been exercised as a loaded skill in a fresh session."
+  ],
+  "reviewed_at": "2026-11-12",
+  "reviewer": "independent-review-pending",
+  "schema_version": 1,
+  "skill": "agent-necessity-check",
+  "source_refs": [
+    "agent-necessity-check-2026-11-12:fleet-team-designer-role-core"
+  ],
+  "status": "pending"
+}

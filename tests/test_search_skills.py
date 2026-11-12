@@ -56,6 +56,13 @@ class SearchTests(unittest.TestCase):
         for query in ("research the data", "research live data sources"):
             self.assertEqual(search(query)["matches"][0]["name"], "research-stack", query)
 
+    def test_agent_necessity_check_routes_and_leaves_neighbors_alone(self) -> None:
+        for query in ("should we add a new agent to the team", "do we need another agent", "agent necessity check"):
+            self.assertEqual(search(query)["matches"][0]["name"], "agent-necessity-check", query)
+        for query in ("review this draft", "deploy it", "research the data", "hire a person for sales"):
+            names = {item["name"] for item in search(query)["matches"]}
+            self.assertNotIn("agent-necessity-check", names, query)
+
     def test_documented_wiki_lab_scope_is_preserved(self) -> None:
         self.assertEqual(search("Prepare a Wiki Lab draft")["matches"][0]["name"], "wikipedia-workflow")
 
