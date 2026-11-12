@@ -16,6 +16,7 @@ decisions that affected the repository without storing raw search output.
 | 2026-10-07 | [r2c-recovery-2026-10-07](packets/2026-10-07-r2c-recovery.json) | 1 | How should a research-to-Cairns coordinator recover heterogeneous semantic failures without starving independent sources or bypassing native publication gates? |
 | 2026-11-05 | [live-ui-audit-wcag-2026-11-05](packets/2026-11-05-live-ui-audit-wcag.json) | 2 | Which WCAG 2.2 thresholds should a live UI audit's in-page capture use for target size and text contrast, and how is large text defined in CSS pixels? |
 | 2026-11-12 | [agent-necessity-check-2026-11-12](packets/2026-11-12-agent-necessity-check.json) | 1 | Which questions should a coordinator answer before adding a new agent to an agent team, so that duplicate or one-off agents are not created? |
+| 2026-11-12 | [design-kit-providers-2026-11-12](packets/2026-11-12-design-kit-providers.json) | 5 | How does a design agent reach Mobbin, DesignMD, the 21st.dev CLI, and the v0 API, what does each cost, and which calls are writes? |
 
 ## Sources
 
@@ -96,3 +97,13 @@ decisions that affected the repository without storing raw search output.
 | Source ID | Source | Disposition | Used by | Revision | License |
 | --- | --- | --- | --- | --- | --- |
 | `fleet-team-designer-role-core` | Captured role core of the fleet team-design agent | inspiration | agent-necessity-check | `648ec55ccb17f01c6dd66c7e610e0152e6129f76` | proprietary-no-copied-code |
+
+### design-kit-providers-2026-11-12
+
+| Source ID | Source | Disposition | Used by | Revision | License |
+| --- | --- | --- | --- | --- | --- |
+| `v0-platform-api-overview` | [v0 API overview, v0 Docs](https://v0.app/docs/api/v1) | adopted | design-kit | `da0a181c9203737e32e5dba25bc1dc8d8633cb7a` | vendor documentation, facts only |
+| `mobbin-plugin-1-5-0` | [Mobbin agent plugin 1.5.0 manifest and MCP tool schemas](https://github.com/mobbin/skills) | adopted | design-kit | `9821fc7defb67baf59b71b6ce507b07a1d750086` | MIT |
+| `designmd-trial-evaluation` | Local DesignMD trial evaluation notes | inspiration | design-kit | `6e12596adf8ea455336b6fc0e48554d7bbf7657a` | proprietary-no-copied-code |
+| `21st-cli-skill` | Installed 21st CLI usage skill | inspiration | design-kit | `59dfd1fe1716804220d00ebd56e46857ef31cb8b` | proprietary-no-copied-code |
+| `local-design-tool-inventory` | Local inventory of configured design tools and gateway endpoints | inspiration | design-kit | `e0200f7f340a248e6cc49244876abcbbed9acad8` | proprietary-no-copied-code |

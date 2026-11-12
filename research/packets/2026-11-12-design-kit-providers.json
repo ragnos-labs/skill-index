@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "id": "design-kit-providers-2026-11-12",
+  "question": "How does a design agent reach Mobbin, DesignMD, the 21st.dev CLI, and the v0 API, what does each cost, and which calls are writes?",
+  "method": "Read the installed Mobbin plugin manifest and its live MCP tool schemas, the installed 21st CLI skill, the local DesignMD trial evaluation notes, and the v0 Platform API overview page. No provider content calls were made; only tool listings, local files, and one public documentation page were read. Only facts needed for routing, access, cost, and write boundaries are recorded.",
+  "researched_at": "2026-11-12",
+  "queries": [
+    "v0 Platform API base URL, key variable, SDK, chat and deployment endpoints",
+    "Mobbin MCP read and write tools and their parameters",
+    "DesignMD MCP endpoint, credential variable, tools, and observed weaknesses",
+    "21st CLI free, quota, and AI-credit commands"
+  ],
+  "findings": [
+    "Mobbin MCP exposes search_screens, search_flows, and search_sections for iOS and web, plus collection read and write tools; results carry a citable mobbin_url and an image_url that expires after 30 days.",
+    "DesignMD is a remote MCP at designmd.co/api/mcp with a bearer token; list_categories is a free access check and plan_build can pick a candidate that conflicts with the brief.",
+    "21st CLI search, theme, logo, whoami, and usage are free; get and add use a daily code quota; generate needs separate AI access.",
+    "v0 Platform API is at api.v0.dev with V0_API_KEY and the v0-sdk package; chats create returns files and a web URL; deployments create publishes.",
+    "Optional design sources found locally: Brand.dev through a tool gateway, a Figma MCP, and a front-end checklist MCP."
+  ],
+  "adopted": [
+    "Route by question: references, system, components, generated draft.",
+    "One free authenticated call per provider as the access check.",
+    "Treat collection saves, publishing, and v0 deployments as writes needing the user's request."
+  ],
+  "rejected": [
+    "Treating a present key as proof of access.",
+    "Using v0 output or a retrieved system as final without porting to the project's tokens and checking accessibility."
+  ],
+  "skipped": [
+    "Provider pricing tiers and exact quotas, which change and are checked at call time.",
+    "Third-party v0 MCP wrappers; the first-party Platform API is enough."
+  ],
+  "open_questions": [
+    "DesignMD plan quota and rate limits are not exposed by its content tools."
+  ],
+  "supersedes": [],
+  "sources": [
+    {
+      "id": "v0-platform-api-overview",
+      "title": "v0 API overview, v0 Docs",
+      "url": "https://v0.app/docs/api/v1",
+      "revision": "da0a181c9203737e32e5dba25bc1dc8d8633cb7a",
+      "revision_kind": "retrieved-content-sha1",
+      "license": "vendor documentation, facts only",
+      "disposition": "adopted",
+      "inspected_paths": [
+        "https://v0.app/docs/api/v1"
+      ],
+      "findings": [
+        "Base URL api.v0.dev, key V0_API_KEY, SDK v0-sdk.",
+        "POST /v1/chats creates a chat; POST /v1/deployments publishes a deployment."
+      ]
+    },
+    {
+      "id": "mobbin-plugin-1-5-0",
+      "title": "Mobbin agent plugin 1.5.0 manifest and MCP tool schemas",
+      "url": "https://github.com/mobbin/skills",
+      "revision": "9821fc7defb67baf59b71b6ce507b07a1d750086",
+      "revision_kind": "retrieved-content-sha1",
+      "license": "MIT",
+      "disposition": "adopted",
+      "inspected_paths": [
+        "plugin.json",
+        "MCP tools/list: search_screens, search_flows, search_sections"
+      ],
+      "findings": [
+        "Platforms are ios and web; one screen or journey per query; pass a consistent task_intent and output_destination.",
+        "Cite mobbin_url; download image_url when keeping images because image URLs expire after 30 days."
+      ]
+    },
+    {
+      "id": "designmd-trial-evaluation",
+      "title": "Local DesignMD trial evaluation notes",
+      "url": "local-history:designmd-trial-evaluation",
+      "revision": "6e12596adf8ea455336b6fc0e48554d7bbf7657a",
+      "revision_kind": "retrieved-content-sha1",
+      "license": "proprietary-no-copied-code",
+      "disposition": "inspiration",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "findings": [
+        "Tools used: list_categories, search_designs, get_design, plan_build, get_block, get_skill.",
+        "Most useful for tokens, type hierarchy, spacing, and components; plan_build needs review against the brief."
+      ]
+    },
+    {
+      "id": "21st-cli-skill",
+      "title": "Installed 21st CLI usage skill",
+      "url": "local-history:21st-cli-use",
+      "revision": "59dfd1fe1716804220d00ebd56e46857ef31cb8b",
+      "revision_kind": "retrieved-content-sha1",
+      "license": "proprietary-no-copied-code",
+      "disposition": "inspiration",
+      "inspected_paths": [
+        "SKILL.md"
+      ],
+      "findings": [
+        "Search, theme, logo, whoami, and usage are free; get and add draw on a daily quota; generate needs AI access.",
+        "Full template archives are not retrievable from the CLI."
+      ]
+    },
+    {
+      "id": "local-design-tool-inventory",
+      "title": "Local inventory of configured design tools and gateway endpoints",
+      "url": "local-history:design-tool-inventory-2026-11-12",
+      "revision": "e0200f7f340a248e6cc49244876abcbbed9acad8",
+      "revision_kind": "retrieved-content-sha1",
+      "license": "proprietary-no-copied-code",
+      "disposition": "inspiration",
+      "inspected_paths": [
+        "host MCP configuration",
+        "tool gateway catalog search: brand, design, image"
+      ],
+      "findings": [
+        "Brand.dev style guide, fonts, and simplified brand endpoints are reachable through the tool gateway.",
+        "Figma and a front-end checklist MCP are connected; v0 is reached through a client wrapper that injects V0_API_KEY."
+      ]
+    }
+  ]
+}

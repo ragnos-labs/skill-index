@@ -1,0 +1,22 @@
+{
+  "bundle_digest": "",
+  "evidence": [
+    "Author checks only: the bundle, record, and generated indexes pass make check. This is not an independent review."
+  ],
+  "limitations": [
+    "No independent full-bundle review has been recorded; the skill stays experimental and unbound until one is.",
+    "v0 access was not exercised with a live key in this change."
+  ],
+  "reviewed_at": "2026-11-12",
+  "reviewer": "independent-review-pending",
+  "schema_version": 1,
+  "skill": "design-kit",
+  "source_refs": [
+    "design-kit-providers-2026-11-12:v0-platform-api-overview",
+    "design-kit-providers-2026-11-12:mobbin-plugin-1-5-0",
+    "design-kit-providers-2026-11-12:designmd-trial-evaluation",
+    "design-kit-providers-2026-11-12:21st-cli-skill",
+    "design-kit-providers-2026-11-12:local-design-tool-inventory"
+  ],
+  "status": "pending"
+}
