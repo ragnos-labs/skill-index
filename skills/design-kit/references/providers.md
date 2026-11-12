@@ -28,8 +28,18 @@ guessing.
   `DESIGNMD_API_KEY`. Resolve the name the host's MCP config actually reads
   before reporting the key missing.
 - Free access check: `list_categories`.
-- Content tools: `search_designs`, `get_design`, `plan_build`, `get_block`,
-  `get_skill`.
+- Find: `search_designs`, `compare_designs`, `get_design`,
+  `get_full_system`, `search_blocks`, `list_blocks`, `recommend_blocks`,
+  `get_block`, `search_patterns`, `get_pattern`, `search_experiences`,
+  `get_experience`, `list_motion_systems`, `get_motion`.
+- Plan: `plan_build`, `get_skill`, `get_prompt_pack`,
+  `get_experience_prompt`.
+- Export to code: `generate_css_variables`, `generate_tailwind_config`,
+  `generate_shadcn_theme`. Prefer these over hand-copying tokens.
+- Check: `certify_conformance` grades a build against a chosen system.
+- Writes: `install_block`, `install_experience`, and
+  `record_design_decision` change the project or the account. Use them
+  only when the user asked.
 - Strong for inspectable tokens, type hierarchy, spacing, components, and
   rationale. `plan_build` can choose a candidate that conflicts with the
   brief or add unrequested blocks; review its pick and fall back to a

@@ -63,7 +63,9 @@ link. Save to a Mobbin collection only when the user asked for one.
 
 When the product has no system, or the brief needs a new surface, use
 `search_designs` or `plan_build` for a candidate system and `get_design`,
-`get_block`, or `get_skill` for the specifics. Check every suggestion against
+`get_block`, or `get_skill` for the specifics. Export the chosen system
+with `generate_css_variables`, `generate_tailwind_config`, or
+`generate_shadcn_theme` instead of retyping tokens. Check every suggestion against
 the brief: `plan_build` can pick a candidate that conflicts with it, so
 pivot to a targeted `search_designs` when it misses. Retrieved systems are
 suggestions, not accessibility authority; verify contrast and target size
