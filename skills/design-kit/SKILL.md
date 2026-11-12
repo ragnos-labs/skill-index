@@ -57,7 +57,8 @@ screen or journey per query and add the kind of app; leave out style words.
 Look at the returned images, not just the metadata. Pull 3 to 8 references
 that solve the same user task, not just the same look. For each, note the
 pattern worth taking and what differs from the brief, and cite its Mobbin
-link. Save to a Mobbin collection only when the user asked for one.
+link without its tracking parameters. Save to a Mobbin collection only when
+the user asked for one.
 
 ## 4. Set the system (DesignMD)
 
@@ -65,7 +66,11 @@ When the product has no system, or the brief needs a new surface, use
 `search_designs` or `plan_build` for a candidate system and `get_design`,
 `get_block`, or `get_skill` for the specifics. Export the chosen system
 with `generate_css_variables`, `generate_tailwind_config`, or
-`generate_shadcn_theme` instead of retyping tokens. Check every suggestion against
+`generate_shadcn_theme` instead of retyping tokens. Read an export before
+using it: one can fail for a design that search just returned, or come back
+with text and background set to the same color; fall back to `get_design`.
+A look is tokens plus motion, so pick a motion system from
+`list_motion_systems` when the surface animates. Check every suggestion against
 the brief: `plan_build` can pick a candidate that conflicts with it, so
 pivot to a targeted `search_designs` when it misses. Retrieved systems are
 suggestions, not accessibility authority; verify contrast and target size
@@ -104,6 +109,27 @@ Figma, push the result to their file only when they asked. Report:
   block, 21st item IDs, v0 chat ID);
 - metered calls made and anything unavailable;
 - open choices for the user.
+
+## When the user asks for several directions
+
+A request for options, skins, or looks is a request for difference, and the
+steps above converge on one answer. So:
+
+- Name the axes first: density, type voice, color temperature, navigation
+  model (queue, grid, timeline, conversation, document, one item at a time),
+  and who the surface is for. Each direction must differ from the others on
+  at least two axes. A new palette on the same layout is not a direction.
+- Change the layout when the feel calls for it. Do not carry the first
+  design's structure into the others.
+- Give each direction one line per source: the shipped screens that prove
+  the layout works (Mobbin), a candidate system to export from (DesignMD),
+  and components that already do the hard interaction (21st).
+- Present ideas before building, name what each breaks in the product's
+  existing rules, and recommend which to mock up. Build each chosen
+  direction as its own file from the same real data so they compare fairly.
+- When a direction is accepted, keep it as a skin: the token file, the rules
+  of the look in words, and what a build must map onto the host project's
+  own tokens and motion rules before any of it ships.
 
 ## Rules
 

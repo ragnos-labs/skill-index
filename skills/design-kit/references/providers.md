@@ -40,12 +40,32 @@ guessing.
 - Writes: `install_block`, `install_experience`, and
   `record_design_decision` change the project or the account. Use them
   only when the user asked.
+- `search_designs` matches loosely: a phrase with no matching tag returns
+  unrelated well-known systems. Query with the tag words the results show
+  (for example editorial, terminal, luxury, playful, minimal) and check the
+  tags of each hit before treating it as a fit.
+- Not every slug that search returns can be exported, and an export can be
+  unusable (text and background the same color). Read the output; use
+  `get_design` when an export fails.
+- `search_patterns` returns general component patterns and is weak on
+  intent queries; search by the pattern's own name (timeline, calendar
+  view, chat interface, card grid). `search_experiences` returns
+  marketing-page templates, not app surfaces. `list_motion_systems` lists
+  named motion systems to pair with a token set.
 - Strong for inspectable tokens, type hierarchy, spacing, components, and
   rationale. `plan_build` can choose a candidate that conflicts with the
   brief or add unrequested blocks; review its pick and fall back to a
   targeted `search_designs`.
 - Plan quota and rate limits are not exposed by the content tools. Do not
   assume unlimited access from a successful call.
+- A host can report the server as connected while the current session has
+  no Mobbin tools. Judge access by the session's own tool list. When the
+  tools are absent, ask the user to authorize the server in this session,
+  or, where the host offers a headless agent run that has the connection,
+  run the searches there with only the three search tools allowed and read
+  back the result.
+- Returned links carry tracking parameters. Drop the query string when
+  citing.
 
 ## 21st.dev (CLI)
 
@@ -58,6 +78,9 @@ guessing.
 - Daily quota: `21st get <id>` and `21st add <user>/<slug>` retrieve code.
 - Separate AI access and credits: `21st generate`, `iterate`, `take`. Check
   `21st usage --json` first; do not retry after `ai_subscription_required`.
+- Component search takes descriptive phrases well. Theme search matches
+  single words against theme names; a multi-word theme query can return
+  nothing, so search one word at a time.
 - Use `--type component`, `--type theme`, or `--type template`, and `--json`
   for machine output. Full template archives are not available from the CLI;
   use the author's linked source when one exists.

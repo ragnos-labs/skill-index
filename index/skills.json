@@ -445,7 +445,7 @@
         "ui design kit",
         "design sources"
       ],
-      "bundle_digest": "sha256:47c789a1fb749ffe7c44e852097ed281c8decdfec7c6eb51d67acd43e10755f5",
+      "bundle_digest": "sha256:9f2669833097d5cb0c8d6eb761743d507bebbb143976a1d53fe3a27f726a903c",
       "composes": [],
       "domain": "software-delivery",
       "exclusions": [
@@ -459,11 +459,11 @@
       "resources": [
         {
           "path": "SKILL.md",
-          "sha256": "ea90bc6ad33cf4226a85d4ceea8abd8d6e090637a8dc6466135a749535659ed6"
+          "sha256": "2df181d05e06517a1fec9b08277935aa29b4f7cb06b573fed3aecfa3460258f5"
         },
         {
           "path": "references/providers.md",
-          "sha256": "008a3abcaa2c1439e0bd0a0a2bc185931378adf7a0ef250611a6b885c88ead9d"
+          "sha256": "cc425399510e9f049f596278882cb8026d3acb3ae152da605e92a6bdb5d98cb4"
         }
       ],
       "review": {
@@ -495,7 +495,8 @@
         "design-kit-providers-2026-11-12:mobbin-plugin-1-5-0",
         "design-kit-providers-2026-11-12:designmd-trial-evaluation",
         "design-kit-providers-2026-11-12:21st-cli-skill",
-        "design-kit-providers-2026-11-12:local-design-tool-inventory"
+        "design-kit-providers-2026-11-12:local-design-tool-inventory",
+        "design-kit-directions-trial-2026-11-12:directions-trial-notes"
       ],
       "status": "experimental",
       "summary": "Route UI design work across Mobbin references, DesignMD design systems, 21st.dev components, and v0 generated drafts, with an access check, a cost rule, and a per-decision source record.",
@@ -507,7 +508,9 @@
         "mobbin references",
         "use 21st and v0",
         "pick a design system for this app",
-        "generate a UI draft with v0"
+        "generate a UI draft with v0",
+        "design directions",
+        "skin options"
       ]
     },
     {

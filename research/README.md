@@ -16,6 +16,7 @@ decisions that affected the repository without storing raw search output.
 | 2026-10-07 | [r2c-recovery-2026-10-07](packets/2026-10-07-r2c-recovery.json) | 1 | How should a research-to-Cairns coordinator recover heterogeneous semantic failures without starving independent sources or bypassing native publication gates? |
 | 2026-11-05 | [live-ui-audit-wcag-2026-11-05](packets/2026-11-05-live-ui-audit-wcag.json) | 2 | Which WCAG 2.2 thresholds should a live UI audit's in-page capture use for target size and text contrast, and how is large text defined in CSS pixels? |
 | 2026-11-12 | [agent-necessity-check-2026-11-12](packets/2026-11-12-agent-necessity-check.json) | 1 | Which questions should a coordinator answer before adding a new agent to an agent team, so that duplicate or one-off agents are not created? |
+| 2026-11-12 | [design-kit-directions-trial-2026-11-12](packets/2026-11-12-design-kit-directions-trial.json) | 1 | What does the design kit lack when it is used to propose several distinct skins and layouts for one surface, and which provider behaviors did that use expose? |
 | 2026-11-12 | [design-kit-providers-2026-11-12](packets/2026-11-12-design-kit-providers.json) | 5 | How does a design agent reach Mobbin, DesignMD, the 21st.dev CLI, and the v0 API, what does each cost, and which calls are writes? |
 
 ## Sources
@@ -97,6 +98,12 @@ decisions that affected the repository without storing raw search output.
 | Source ID | Source | Disposition | Used by | Revision | License |
 | --- | --- | --- | --- | --- | --- |
 | `fleet-team-designer-role-core` | Captured role core of the fleet team-design agent | inspiration | agent-necessity-check | `648ec55ccb17f01c6dd66c7e610e0152e6129f76` | proprietary-no-copied-code |
+
+### design-kit-directions-trial-2026-11-12
+
+| Source ID | Source | Disposition | Used by | Revision | License |
+| --- | --- | --- | --- | --- | --- |
+| `directions-trial-notes` | Local notes from a design-kit trial on several directions | inspiration | design-kit | `d582ac458ee4acd3ad467f3fa4b3f5f444715e17` | proprietary-no-copied-code |
 
 ### design-kit-providers-2026-11-12
 

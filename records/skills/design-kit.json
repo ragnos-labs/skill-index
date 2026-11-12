@@ -20,7 +20,9 @@
     "mobbin references",
     "use 21st and v0",
     "pick a design system for this app",
-    "generate a UI draft with v0"
+    "generate a UI draft with v0",
+    "design directions",
+    "skin options"
   ],
   "aliases": [
     "design kit",
@@ -50,7 +52,8 @@
     "design-kit-providers-2026-11-12:mobbin-plugin-1-5-0",
     "design-kit-providers-2026-11-12:designmd-trial-evaluation",
     "design-kit-providers-2026-11-12:21st-cli-skill",
-    "design-kit-providers-2026-11-12:local-design-tool-inventory"
+    "design-kit-providers-2026-11-12:local-design-tool-inventory",
+    "design-kit-directions-trial-2026-11-12:directions-trial-notes"
   ],
   "review_path": "reviews/design-kit.json"
 }
