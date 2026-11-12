@@ -691,6 +691,59 @@
       ]
     },
     {
+      "aliases": [
+        "infisical secret intake",
+        "store infisical secret",
+        "add infisical key"
+      ],
+      "bundle_digest": "sha256:c32884a0d4ec923e9740e6b24fc6e084cb186130b262396ccd40b82101e927c0",
+      "composes": [],
+      "domain": "system",
+      "exclusions": [
+        "reading or exporting secrets",
+        "machine identity rotation",
+        "bulk secret migration"
+      ],
+      "load_mode": "routable",
+      "name": "infisical-secret-intake",
+      "path": "skills/infisical-secret-intake",
+      "resources": [
+        {
+          "path": "SKILL.md",
+          "sha256": "f0a1b43eab4aacfcb9fed98cd5a4509a5166a69c5ea0fd6abe88728a48190bc7"
+        },
+        {
+          "path": "scripts/store_secret.py",
+          "sha256": "bda9941b1992dac0ad09135c328eae3e89deb436f03a183c476bd67910cbd86b"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-11-12",
+        "status": "reviewed"
+      },
+      "review_path": "reviews/infisical-secret-intake.json",
+      "risk": "medium",
+      "schema_version": 1,
+      "scope_terms": [
+        "infisical",
+        "secret",
+        "api key"
+      ],
+      "side_effects": [
+        "writes one named secret to the chosen Infisical project, environment and folder",
+        "replaces an existing value only with explicit --overwrite"
+      ],
+      "source_refs": [],
+      "status": "active",
+      "summary": "Store one new secret in an Infisical project from a hidden terminal prompt, then verify it by in-memory read-back without exposing the value.",
+      "triggers": [
+        "add this API key to Infisical",
+        "store a new key in Infisical",
+        "save a secret to Infisical without pasting it in chat",
+        "get the terminal ready so I can paste the key"
+      ]
+    },
+    {
       "bundle_digest": "sha256:8fa7ebfd5188a82cbf3f60f343ddfad0c6a8bb763cee6e92941042b398a43211",
       "composes": [],
       "domain": "system",
