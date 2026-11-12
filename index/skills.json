@@ -692,11 +692,11 @@
     },
     {
       "aliases": [
-        "infisical secret intake",
+        "infisical secret add",
         "store infisical secret",
         "add infisical key"
       ],
-      "bundle_digest": "sha256:c32884a0d4ec923e9740e6b24fc6e084cb186130b262396ccd40b82101e927c0",
+      "bundle_digest": "sha256:a589472c5e109a34d85c7175a8f2c95b0da504327c18aeb27a4ebb7a5a6feaf7",
       "composes": [],
       "domain": "system",
       "exclusions": [
@@ -705,23 +705,23 @@
         "bulk secret migration"
       ],
       "load_mode": "routable",
-      "name": "infisical-secret-intake",
-      "path": "skills/infisical-secret-intake",
+      "name": "infisical-secret-add",
+      "path": "skills/infisical-secret-add",
       "resources": [
         {
           "path": "SKILL.md",
-          "sha256": "f0a1b43eab4aacfcb9fed98cd5a4509a5166a69c5ea0fd6abe88728a48190bc7"
+          "sha256": "8e19097bc95f705875ea7b9422a3b7404b16ca2350bdd591d1b7ba8822fc755b"
         },
         {
           "path": "scripts/store_secret.py",
-          "sha256": "bda9941b1992dac0ad09135c328eae3e89deb436f03a183c476bd67910cbd86b"
+          "sha256": "44f48eda72bfc9b8ce73eef65221f23f8f46943a9e7f14b37c41ad91b8e33fb9"
         }
       ],
       "review": {
         "reviewed_at": "2026-11-12",
         "status": "reviewed"
       },
-      "review_path": "reviews/infisical-secret-intake.json",
+      "review_path": "reviews/infisical-secret-add.json",
       "risk": "medium",
       "schema_version": 1,
       "scope_terms": [
