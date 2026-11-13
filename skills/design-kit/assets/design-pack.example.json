@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "kit": {
+    "name": "design-kit",
+    "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000001",
+    "files_read": [
+      "SKILL.md",
+      "references/project-record.md",
+      "references/brand-sources.md",
+      "references/production.md",
+      "references/agent-cms.md"
+    ]
+  },
+  "brand": {
+    "name": "Example Brand",
+    "origin": "skill",
+    "skill": "example-brand-design",
+    "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000002",
+    "files_read": [
+      "SKILL.md",
+      "BRAND-SPEC.md",
+      "tokens/colors.css"
+    ]
+  },
+  "deliverable": {
+    "kind": "cms_asset",
+    "format": "PNG",
+    "sizes": [
+      "1080x1350"
+    ]
+  },
+  "direction": {
+    "audience": "Operations leads at mid-size companies",
+    "action": "Register for the workshop",
+    "premise": "One oversized number on a dark ground, the date set in the brand mono face beneath it",
+    "success_conditions": [
+      "Headline readable at phone size in under two seconds",
+      "Only brand tokens for color and type"
+    ],
+    "record": "DESIGN.md"
+  },
+  "exact_copy": [
+    "Example Workshop",
+    "Thursday, 10 AM"
+  ],
+  "fixed_requirements": [
+    "Logo unchanged",
+    "No prices"
+  ],
+  "resources": [
+    {
+      "source": "cms",
+      "id": "reference-12",
+      "revision": "3",
+      "retrieved": "2026-01-15",
+      "use": "visual_reference",
+      "inspected": true,
+      "decision": "Use its single-number hierarchy; leave out its gradient"
+    },
+    {
+      "source": "brand-library",
+      "id": "Asset 101",
+      "use": "brand_asset",
+      "inspected": true,
+      "decision": "Place the logo lockup unchanged at the lower edge; file opened from the brand assets folder",
+      "terms": "Brand owner's asset; unchanged"
+    }
+  ],
+  "allowed_effects": [
+    "Upload one output round to the assigned CMS project"
+  ],
+  "review_criteria": [
+    "Independent critic compares the render with reference-12 and the brand tokens",
+    "Contrast at least 4.5:1 for body text"
+  ],
+  "cms": {
+    "project": "example-project",
+    "brand_record": "project brand values and learned corrections",
+    "output_round": "round-1"
+  }
+}

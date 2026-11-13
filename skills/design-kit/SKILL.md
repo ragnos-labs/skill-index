@@ -17,15 +17,15 @@ after production does not count.
 
 | When | Read |
 | --- | --- |
-| Every job | This file, [project-record.md](references/project-record.md), and in [production.md](references/production.md) the opening, "Establish a coherent direction", "Inspect components and style assets" before adopting retrieved code, the medium's section and "Review and repair" |
-| Critic or reviewer | "Produce and review" below and "Review and repair" in [production.md](references/production.md) |
+| Every job | This file, [project-record.md](references/project-record.md), [brand-sources.md](references/brand-sources.md) and the brand's own design skill when one resolves, and in [production.md](references/production.md) the opening, "Establish a coherent direction", "Inspect components and style assets" before adopting retrieved code, the medium's section and "Review and repair" |
+| Critic or reviewer | "Produce and review" below, "Review and repair" in [production.md](references/production.md), and the brand sources the pack names |
 | Before the first call to a provider | That provider's section in [providers.md](references/providers.md) |
 | The project already depends on a UI SDK (an interface component library with its own skill or package docs), or opts into one | [ui-sdk.md](references/ui-sdk.md) |
 | The deliverable is a CMS asset | [agent-cms.md](references/agent-cms.md) and the CMS's own composition method |
 | Changing or qualifying this skill | [evaluation.md](references/evaluation.md) |
 
-State the read list and the kit digest your skill index returned at the top of
-the design pack or return. A Director hands over a pack only with that list. A
+State the read list, the kit digest your skill index returned and the brand
+sources at the top of the design pack or return. A Director hands over a pack only with that list. A
 maker or builder that receives a pack without the kit digest and read list, or
 whose own resolved digest differs, reports that and holds production until the
 Director reconciles it. Two cases are not a hold: a small edit with no Director,
@@ -58,7 +58,9 @@ ask only for a missing decision that materially changes the work. Keep each
 client and its assets in its assigned context.
 
 The project's own brand specification, tokens and approved assets outrank any
-outside reference or general design-system export. Look for them first.
+outside reference or general design-system export. Resolve them first, through
+the brand's own design skill when the skill index has one; see
+[brand-sources.md](references/brand-sources.md).
 
 For CMS work, read the scoped project, learned corrections, brand, references,
 and attributed feedback through the CMS's own skill. Read client knowledge only

@@ -445,7 +445,7 @@
         "ui design kit",
         "design sources"
       ],
-      "bundle_digest": "sha256:e1836b0c9d99517a8c5a1609de0caaedce783e835ed71ba7e8ab40d799fe28b2",
+      "bundle_digest": "sha256:3a5914d7230b75406dd006ff8d2a96aefc1e9270542bdf8153782c3042bb0980",
       "composes": [],
       "domain": "software-delivery",
       "exclusions": [
@@ -459,11 +459,23 @@
       "resources": [
         {
           "path": "SKILL.md",
-          "sha256": "56ccf2e1a05b315599c2a44a46e9b34a0c1bcfd7d4681ddfc272223c0245ca23"
+          "sha256": "a1cd5be57877eaccf956c709f9f992bbde9b00791e06d7a5d9ae96b4b0849f84"
+        },
+        {
+          "path": "assets/design-pack.example.json",
+          "sha256": "8e7899be7b3f868fa9a697577cee32c36cd7aaac9db1084f2a8e8ab1758b12fb"
         },
         {
           "path": "references/agent-cms.md",
-          "sha256": "807c87c7dee479c91827c9a586c88c28e8b50c3b493cdc440724dbbdf1ed6b12"
+          "sha256": "23ebaa94ab3d663fbf421a8ca9d5914f014edfb9462137c8fe3a31eedd9fd9a5"
+        },
+        {
+          "path": "references/brand-sources.md",
+          "sha256": "540c7595f5a0ea14d3272d647d5827bbe1922387ea20f1b5783f1ab0b97882ff"
+        },
+        {
+          "path": "references/design-pack.schema.json",
+          "sha256": "265788bab52e53b153f3a7dcefceebf6b4ade55e7bd460374d106c054e0dbbc4"
         },
         {
           "path": "references/evaluation.md",
@@ -475,7 +487,7 @@
         },
         {
           "path": "references/project-record.md",
-          "sha256": "443f3efa0c1a01abe410dfaab76141d34f1eec756925c1f3072197944cbd63b2"
+          "sha256": "28f9bc06758d0565cdc43188ed0a23c16799a49e034c8c011f1b04ebd70628d2"
         },
         {
           "path": "references/providers.md",
@@ -487,7 +499,11 @@
         },
         {
           "path": "references/workflow.md",
-          "sha256": "32b5d2b4f7bbc3c5aa09562a41980ad1cbb37a79d50ec65415541f158153ca18"
+          "sha256": "b0f6e30bf489ccc22fd2b32416b924e85b870e2ccef8ac035a71ef12cc50aef6"
+        },
+        {
+          "path": "scripts/design_pack.py",
+          "sha256": "16ec116eb5c510396779ee3ff3e1b8208ac9fcb4edbaba1d432dcfa7467395f1"
         }
       ],
       "review": {
@@ -517,7 +533,8 @@
         "image generation through the host's own image skill",
         "project file changes when installing components or writing a design record",
         "CMS output rounds only within an assigned CMS delivery",
-        "provider writes only on request (Mobbin collections)"
+        "provider writes only on request (Mobbin collections)",
+        "design_pack.py reads one pack file or standard input and prints results; it writes nothing"
       ],
       "source_refs": [
         "design-kit-providers-2026-11-12:mobbin-plugin-1-5-0",
@@ -528,7 +545,7 @@
         "design-kit-team-evaluation-2026-11-13:evaluation-notes"
       ],
       "status": "experimental",
-      "summary": "Single entry point for design work: route a Creative Director, maker or builder and visual critic across project assets, CMS references, Mobbin, DesignMD and 21st.dev, with required reads, a design pack handoff bound to the kit digest, rendered review and a source-to-output record.",
+      "summary": "Single entry point for design work: route a Creative Director, maker or builder and visual critic across the brand's own design skill, project assets, CMS references, Mobbin, DesignMD and 21st.dev, with required reads, a schema-checked design pack bound to the kit and brand digests, rendered review and a source-to-output record.",
       "triggers": [
         "design kit",
         "design this screen",

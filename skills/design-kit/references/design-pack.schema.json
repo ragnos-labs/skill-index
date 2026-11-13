@@ -1,0 +1,285 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Design Kit design pack",
+  "description": "The machine-readable start of a design pack: what the producer must read and what informed the design. Prose direction and review findings stay in the project design record.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "kit",
+    "brand",
+    "deliverable",
+    "direction",
+    "resources",
+    "review_criteria"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "kit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "digest",
+        "files_read"
+      ],
+      "properties": {
+        "name": {
+          "const": "design-kit"
+        },
+        "digest": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "no_digest_reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "files_read": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Host-local resolved kit path; paths may differ across hosts."
+        }
+      }
+    },
+    "brand": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "origin",
+        "files_read"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "origin": {
+          "enum": [
+            "skill",
+            "repository",
+            "project",
+            "cms",
+            "none"
+          ]
+        },
+        "skill": {
+          "type": "string",
+          "minLength": 1
+        },
+        "digest": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "no_digest_reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "repository": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "files_read": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "deliverable": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "format"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "website",
+            "product_ui",
+            "component",
+            "static_graphic",
+            "cms_asset",
+            "other"
+          ]
+        },
+        "format": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sizes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "direction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "audience",
+        "action",
+        "premise"
+      ],
+      "properties": {
+        "audience": {
+          "type": "string",
+          "minLength": 1
+        },
+        "action": {
+          "type": "string",
+          "minLength": 1
+        },
+        "premise": {
+          "type": "string",
+          "minLength": 1
+        },
+        "success_conditions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "record": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "exact_copy": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "fixed_requirements": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "resources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source",
+          "id",
+          "use",
+          "inspected",
+          "decision"
+        ],
+        "properties": {
+          "source": {
+            "type": "string",
+            "minLength": 1
+          },
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "revision": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": "string",
+            "minLength": 1
+          },
+          "retrieved": {
+            "type": "string",
+            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+          },
+          "use": {
+            "enum": [
+              "brand_asset",
+              "client_asset",
+              "code_reuse",
+              "token_export",
+              "visual_reference"
+            ]
+          },
+          "inspected": {
+            "type": "boolean",
+            "description": "True only when whoever wrote the entry opened the pixels, preview, code or file itself."
+          },
+          "decision": {
+            "type": "string",
+            "minLength": 1
+          },
+          "terms": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "allowed_effects": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "review_criteria": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "cms": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "project",
+        "brand_record"
+      ],
+      "properties": {
+        "project": {
+          "type": "string",
+          "minLength": 1
+        },
+        "brand_record": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The CMS client brand values and learned corrections read; they outrank the brand block on brand matters."
+        },
+        "output_round": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "description": "CMS references are resources with source cms; they are not repeated here."
+    }
+  }
+}

@@ -14,10 +14,12 @@ The Director passes the design pack defined in
 host-local resolved kit path.
 
 Visual Maker resolves the same registered bundle on its own host and reads the
-same required files before its first render. Verify the digest against the
+same required files, plus the brand sources the pack names, before its first
+render. Verify the digest against the
 pack; paths may differ across hosts, so record the mapping rather than
 requiring an identical absolute path. The entry file's hold rule applies to a
-missing or differing digest. Maker applies the chosen
+missing or differing kit digest, and the same applies to the brand skill's
+digest when the pack names one. Maker applies the chosen
 direction and may fetch an exact admitted resource named in its pack; it
 does not start a second reference search, import a collection, change the brand,
 write campaign copy or select its own winner. Return editable source, renders,
