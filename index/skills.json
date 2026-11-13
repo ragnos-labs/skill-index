@@ -441,6 +441,77 @@
     },
     {
       "aliases": [
+        "design kit",
+        "ui design kit",
+        "design sources"
+      ],
+      "bundle_digest": "sha256:47c789a1fb749ffe7c44e852097ed281c8decdfec7c6eb51d67acd43e10755f5",
+      "composes": [],
+      "domain": "software-delivery",
+      "exclusions": [
+        "live ui audit of a running app",
+        "brand, image, or video generation",
+        "publishing or deploying without the user's request"
+      ],
+      "load_mode": "routable",
+      "name": "design-kit",
+      "path": "skills/design-kit",
+      "resources": [
+        {
+          "path": "SKILL.md",
+          "sha256": "ea90bc6ad33cf4226a85d4ceea8abd8d6e090637a8dc6466135a749535659ed6"
+        },
+        {
+          "path": "references/providers.md",
+          "sha256": "008a3abcaa2c1439e0bd0a0a2bc185931378adf7a0ef250611a6b885c88ead9d"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-11-12",
+        "status": "pending"
+      },
+      "review_path": "reviews/design-kit.json",
+      "risk": "medium",
+      "schema_version": 1,
+      "scope_terms": [
+        "design",
+        "ui",
+        "screen",
+        "flow",
+        "component",
+        "mobbin",
+        "designmd",
+        "21st",
+        "v0",
+        "references"
+      ],
+      "side_effects": [
+        "metered provider calls (21st code retrieval, DesignMD reads, v0 generations)",
+        "project file changes when installing components",
+        "provider writes only on request (Mobbin collections, v0 deployments)"
+      ],
+      "source_refs": [
+        "design-kit-providers-2026-11-12:v0-platform-api-overview",
+        "design-kit-providers-2026-11-12:mobbin-plugin-1-5-0",
+        "design-kit-providers-2026-11-12:designmd-trial-evaluation",
+        "design-kit-providers-2026-11-12:21st-cli-skill",
+        "design-kit-providers-2026-11-12:local-design-tool-inventory"
+      ],
+      "status": "experimental",
+      "summary": "Route UI design work across Mobbin references, DesignMD design systems, 21st.dev components, and v0 generated drafts, with an access check, a cost rule, and a per-decision source record.",
+      "triggers": [
+        "design kit",
+        "design this screen",
+        "redesign this page",
+        "find UI references",
+        "mobbin references",
+        "use 21st and v0",
+        "pick a design system for this app",
+        "generate a UI draft with v0"
+      ]
+    },
+    {
+      "aliases": [
         "live data rewrite",
         "bulk data rewrite",
         "data backfill"
