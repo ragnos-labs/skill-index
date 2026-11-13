@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "design-kit-directions-trial-2026-11-12",
+  "question": "What does the design kit lack when it is used to propose several distinct skins and layouts for one surface, and which provider behaviors did that use expose?",
+  "method": "Used the skill on one real brief that asked for several bold, different directions for a review surface. Made read-only calls only: DesignMD list_categories, search_designs, generate_css_variables, search_patterns, search_experiences and list_motion_systems; 21st search for components and themes; seven Mobbin search_screens calls. Recorded only behaviors that change how an agent should use the skill. No client material is recorded.",
+  "researched_at": "2026-11-12",
+  "queries": [
+    "DesignMD search_designs by feel words, then generate_css_variables for eight returned slugs",
+    "DesignMD search_patterns and search_experiences by intent, list_motion_systems",
+    "21st search by phrase for components and for themes",
+    "Mobbin search_screens for approval queues, batch review, story viewers, rundowns, chat cards and proofing grids"
+  ],
+  "findings": [
+    "The skill's steps converge on one system and one layout; nothing tells an agent how to produce directions that differ.",
+    "generate_css_variables returned no design for three of eight slugs that search_designs had just returned, and one export set foreground equal to background.",
+    "search_designs returned unrelated well-known systems for a phrase with no matching tag; tag words worked.",
+    "search_patterns answered an intent query with unrelated patterns but found patterns by their own names; search_experiences returned marketing templates.",
+    "21st theme search returned nothing for three multi-word queries and results for single words; component search by phrase returned close matches.",
+    "A host listed the Mobbin server as connected while the working session had no Mobbin tools; a separate headless run with the connection returned results.",
+    "Mobbin result links carried tracking parameters."
+  ],
+  "adopted": [
+    "A section for requests that ask for several directions: name axes, differ on at least two, vary layout, one line of evidence per source, ideas before builds, keep an accepted direction as a skin.",
+    "Read a DesignMD export before use and fall back to get_design.",
+    "Provider notes on DesignMD search, patterns, experiences and motion, 21st theme search, Mobbin session access and link hygiene."
+  ],
+  "rejected": [
+    "A fixed list of named styles in the skill; directions should come from the brief and the axes."
+  ],
+  "skipped": [
+    "v0 was not used in this trial.",
+    "DesignMD compare_designs, blocks and certify_conformance were not exercised."
+  ],
+  "open_questions": [
+    "Whether DesignMD export gaps are per plan or per design."
+  ],
+  "supersedes": [],
+  "sources": [
+    {
+      "id": "directions-trial-notes",
+      "title": "Local notes from a design-kit trial on several directions",
+      "url": "local-history:design-kit-directions-trial",
+      "revision": "d582ac458ee4acd3ad467f3fa4b3f5f444715e17",
+      "revision_kind": "retrieved-content-sha1",
+      "license": "proprietary-no-copied-code",
+      "disposition": "inspiration",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "findings": [
+        "Seven directions were produced only after choosing axes by hand; the skill gave no guidance for that.",
+        "Provider behaviors listed in this packet were each observed once on 2026-11-12."
+      ]
+    }
+  ]
+}
