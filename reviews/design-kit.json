@@ -1,9 +1,10 @@
 {
-  "bundle_digest": "sha256:3a5914d7230b75406dd006ff8d2a96aefc1e9270542bdf8153782c3042bb0980",
+  "bundle_digest": "sha256:31708177a4f2f4ea6d71386eb7cdf09a636d6fc62b9ff688f280145c636153a1",
   "evidence": [
     "Two independent read-only agent reviews of the full bundle and record on 2026-11-13. The first returned twelve findings and the second six; all were applied except the items listed under limitations.",
     "Brand sources and the design pack schema and checker (2026-11-13): an independent read-only review returned thirteen findings, all applied; an independent re-review confirmed eleven resolved and raised five more, all applied with tests.",
-    "The bundle, record, packet and generated indexes pass make check, including 17 design pack checker tests with hostile inputs."
+    "The bundle, record, packet and generated indexes pass make check, including 17 design pack checker tests with hostile inputs.",
+    "Client-material rule changed on the owner's decision of 2026-11-13 (assigned work may send client marketing material to relevant providers, generative included, without separate permission); author check and make check only."
   ],
   "limitations": [
     "The five fixes from the brand-sources re-review were checked by the author and the tests only.",

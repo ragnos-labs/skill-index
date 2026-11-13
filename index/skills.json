@@ -445,7 +445,7 @@
         "ui design kit",
         "design sources"
       ],
-      "bundle_digest": "sha256:3a5914d7230b75406dd006ff8d2a96aefc1e9270542bdf8153782c3042bb0980",
+      "bundle_digest": "sha256:31708177a4f2f4ea6d71386eb7cdf09a636d6fc62b9ff688f280145c636153a1",
       "composes": [],
       "domain": "software-delivery",
       "exclusions": [
@@ -459,7 +459,7 @@
       "resources": [
         {
           "path": "SKILL.md",
-          "sha256": "a1cd5be57877eaccf956c709f9f992bbde9b00791e06d7a5d9ae96b4b0849f84"
+          "sha256": "1aa7589ef33024b0d31df92951e1d8da98bbb2bf07d11173dc4fc80b0f7c1e39"
         },
         {
           "path": "assets/design-pack.example.json",
@@ -529,7 +529,7 @@
       ],
       "side_effects": [
         "metered provider calls (21st code retrieval, DesignMD reads, brand lookups)",
-        "search text sent to third-party providers; client material only when the assignment covers it",
+        "search text sent to third-party providers; client marketing material to relevant providers, generative included, for assigned work",
         "image generation through the host's own image skill",
         "project file changes when installing components or writing a design record",
         "CMS output rounds only within an assigned CMS delivery",

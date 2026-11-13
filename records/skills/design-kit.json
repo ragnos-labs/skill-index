@@ -9,7 +9,7 @@
   "risk": "medium",
   "side_effects": [
     "metered provider calls (21st code retrieval, DesignMD reads, brand lookups)",
-    "search text sent to third-party providers; client material only when the assignment covers it",
+    "search text sent to third-party providers; client marketing material to relevant providers, generative included, for assigned work",
     "image generation through the host's own image skill",
     "project file changes when installing components or writing a design record",
     "CMS output rounds only within an assigned CMS delivery",
