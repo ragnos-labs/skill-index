@@ -18,6 +18,7 @@ decisions that affected the repository without storing raw search output.
 | 2026-11-12 | [agent-necessity-check-2026-11-12](packets/2026-11-12-agent-necessity-check.json) | 1 | Which questions should a coordinator answer before adding a new agent to an agent team, so that duplicate or one-off agents are not created? |
 | 2026-11-12 | [design-kit-directions-trial-2026-11-12](packets/2026-11-12-design-kit-directions-trial.json) | 1 | What does the design kit lack when it is used to propose several distinct skins and layouts for one surface, and which provider behaviors did that use expose? |
 | 2026-11-12 | [design-kit-providers-2026-11-12](packets/2026-11-12-design-kit-providers.json) | 5 | How does a design agent reach Mobbin, DesignMD, the 21st.dev CLI, and the v0 API, what does each cost, and which calls are writes? |
+| 2026-11-13 | [design-kit-team-evaluation-2026-11-13](packets/2026-11-13-design-kit-team-evaluation.json) | 1 | What did four local evaluation runs and one read-only audit show about using the design kit as one entry point for a Director, maker or builder and critic team, and what must change before the complete kit is published? |
 
 ## Sources
 
@@ -109,8 +110,14 @@ decisions that affected the repository without storing raw search output.
 
 | Source ID | Source | Disposition | Used by | Revision | License |
 | --- | --- | --- | --- | --- | --- |
-| `v0-platform-api-overview` | [v0 API overview, v0 Docs](https://v0.app/docs/api/v1) | adopted | design-kit | `da0a181c9203737e32e5dba25bc1dc8d8633cb7a` | vendor documentation, facts only |
+| `v0-platform-api-overview` | [v0 API overview, v0 Docs](https://v0.app/docs/api/v1) | adopted | - | `da0a181c9203737e32e5dba25bc1dc8d8633cb7a` | vendor documentation, facts only |
 | `mobbin-plugin-1-5-0` | [Mobbin agent plugin 1.5.0 manifest and MCP tool schemas](https://github.com/mobbin/skills) | adopted | design-kit | `9821fc7defb67baf59b71b6ce507b07a1d750086` | MIT |
 | `designmd-trial-evaluation` | Local DesignMD trial evaluation notes | inspiration | design-kit | `6e12596adf8ea455336b6fc0e48554d7bbf7657a` | proprietary-no-copied-code |
 | `21st-cli-skill` | Installed 21st CLI usage skill | inspiration | design-kit | `59dfd1fe1716804220d00ebd56e46857ef31cb8b` | proprietary-no-copied-code |
 | `local-design-tool-inventory` | Local inventory of configured design tools and gateway endpoints | inspiration | design-kit | `e0200f7f340a248e6cc49244876abcbbed9acad8` | proprietary-no-copied-code |
+
+### design-kit-team-evaluation-2026-11-13
+
+| Source ID | Source | Disposition | Used by | Revision | License |
+| --- | --- | --- | --- | --- | --- |
+| `evaluation-notes` | Local evaluation records and audit notes for the design kit team workflow | inspiration | design-kit | `7bbadfe4419d7ecd8afb6767259f89b71f148b55` | proprietary-no-copied-code |

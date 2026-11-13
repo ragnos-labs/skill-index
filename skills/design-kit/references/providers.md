@@ -1,10 +1,10 @@
 # Design kit providers
 
-Facts gathered on 2026-11-12 from tool listings, local notes, and one
-trial run; v0 was not exercised, and notes marked "seen" were observed
-once. Provider surfaces change; when a call fails
-with an unknown tool or option, list the provider's tools again before
-guessing.
+Provider operations below were collected on 2026-11-12; selected routes were
+tested again on 2026-11-13. Dated observations are evidence, not permanent
+availability or pricing guarantees. Inspect the executing host's current schema
+before using a tool. An unknown option ends that invocation approach; rediscover
+the supported interface rather than guessing.
 
 ## Mobbin (MCP)
 
@@ -16,21 +16,33 @@ guessing.
   `list_collections`, `get_collection_contents`.
 - Write tools: `create_collection`, `save_content`, `add_comment`. Use only
   when the user asked to save or comment.
-- Pass the same `task_intent`, `output_destination`, and `output_tool` on
-  every call in one task. `output_destination` is `code` when the results
-  feed implementation, `design_tool` for a canvas, `doc` for a spec.
+- Keep `task_intent` and `output_destination` consistent for the task.
+  `output_destination` is `code` for implementation, `design_tool` for a canvas,
+  or `doc` for a spec. `output_tool`, when supported, identifies an actual
+  product/tool; do not duplicate the destination value there. Inspect the schema.
 - Cite each reference by its `mobbin_url`. Download from `image_url` when an
-  image must be kept; image URLs expire after 30 days. If a result carries an
+  image must be kept under its permitted use; media URLs may expire. If a result carries an
   `ai_usage_notice`, show its text to the user unchanged.
 - Seen once on 2026-11-12: a host reported the server as connected while
   the working session had no Mobbin tools. Judge access by the session's
-  own tool list. When the tools are absent, ask the user to authorize the
-  server in this session. Where the host offers a headless agent run that
-  already holds the connection, that is an alternative only with the
-  user's approval: run the searches there with only the three search tools
-  allowed and read back the result.
-- Seen on 2026-11-12: returned links carried tracking parameters. Drop the
-  query string when citing.
+  own tool list. When tools are absent, discover the existing same-account
+  route before asking for setup. A supported headless host that already holds
+  the connection can perform searches within the assignment's existing effects
+  and account scope. Allow only the needed reads and read back the result. Ask
+  for a real human login/account action only when the supported route needs it.
+- Seen on 2026-11-12: returned links carried tracking parameters. Remove those
+  parameters when citing, preserving any query required to identify the resource.
+- Seen on 2026-11-13: one host exposed native Mobbin tools and another did not.
+  When handing a search to the host that has them, scope the handoff to the
+  required reads, retain exact tool output, and inspect the returned images.
+  Avoid large results that truncate URLs or `ai_usage_notice`; a truncated
+  result is incomplete.
+- A follow-up with `limit: 1` returned complete metadata and a retrievable image.
+  Start small; larger default image responses can exceed the host's output limit.
+  For headless tasks, admit the search required by the medium (`search_screens`,
+  `search_flows`, or `search_sections`) in that run's tool permissions. A runner
+  allowing only screens cannot perform a sections search. Respect an actual
+  refusal; distinguish runner/tool scope from provider authentication.
 
 ## DesignMD (MCP)
 
@@ -71,10 +83,21 @@ guessing.
   targeted `search_designs`.
 - Plan quota and rate limits are not exposed by the content tools. Do not
   assume unlimited access from a successful call.
+- Seen on 2026-11-13: a host without native DesignMD tools still reached the
+  account through its documented credential route; categories, search, detail,
+  and CSS export succeeded. Native tool absence in one session does not mean
+  account access is missing. Use the executor's documented credential route,
+  not pasted keys or a new integration. A 429 on a light read is a rate limit:
+  record it once and continue without retry loops.
+- Seen on 2026-11-13: one system's CSS export was mechanically valid but replaced specified serif
+  typography and square geometry with generic fonts and rounded corners.
+  Compare exports to the detailed system and brief, not only valid CSS syntax.
 
 ## 21st.dev (CLI)
 
-- Access: `21st` (`npx @21st-dev/cli`). Credential is a login session
+- When the host installs a 21st CLI skill or wrapper, load and use it rather
+  than `npx`; a wrapper may preserve search filters across package updates.
+- Access: `21st` (`@21st-dev/cli`). Credential is a login session
   (`21st login`) or an API key in `API_KEY_21ST` or `TWENTYFIRST_TOKEN`.
   When a working login session exists, prefer it and leave those variables
   unset so a stale key does not override it.
@@ -91,36 +114,38 @@ guessing.
   use the author's linked source when one exists.
 - Hosts may provide deeper 21st skills for building, exploring, reviewing,
   and publishing UI; prefer those when present for single-provider work.
+- Seen on 2026-11-13: search worked; usage reported paid retrieval access and
+  `aiGenerationEnabled: false`. That is not permission
+  to enable generation. Inspect the current result rather than assuming limits.
+- Search with `--type theme`, then `21st theme <id>` retrieves actual CSS.
+  `21st get <id>` retrieves component code; it does not require installing it.
+  Inspect source, dependencies, preview, and reuse terms before adaptation.
 
-## v0 (API)
+## Existing project and optional sources
 
-- Access: v0 Platform API at `https://api.v0.dev`, key in `V0_API_KEY`,
-  TypeScript SDK `v0-sdk`.
-- Create: `POST /v1/chats` (SDK `v0.chats.create`) with the prompt; the
-  response carries the chat ID, a web URL, and generated files. Continue a
-  revision in the same chat rather than creating a new one.
-- `POST /v1/deployments` (SDK `v0.deployments.create`) publishes a live
-  deployment. It is a publish: only on the user's explicit yes.
-- Chats can attach custom MCP servers (`v0.mcpServers.create`). Do not
-  attach a server that carries the user's credentials unless asked.
-- v0 also offers an OpenAI-compatible model endpoint for code generation;
-  prefer the Platform API when you need files and a shareable chat.
-- Hosts may wrap the key in a client command that injects it at run time;
-  use that wrapper when present instead of exporting the key.
-- Every generation is metered. Batch the brief into one well-formed prompt
-  instead of many small ones.
-
-## Optional sources
-
+- Agent CMS: start with `get_library_context`, bind the assigned workspace, and
+  use project/learned/brand/reference reads through its skill. Load the actual
+  preview bytes before describing visual qualities. Hosted generation may not be
+  configured; the context read says so. Use the local maker and upload only for
+  an authorized CMS delivery.
+- Image generation: use the selected host's image skill for raster assets.
+  Each host must discover its own included route; do not assume parity or
+  silently switch to separately paid generation.
+- Static editing: prefer the existing project renderer. Editable HTML/CSS or
+  SVG plus actual PNG renders are suitable for code-led stills. Do not upgrade
+  software silently.
+- Browser review: use the project's existing tests/browser tooling. Each
+  executor verifies its own browser runtime. Inspect screenshots and test interactions separately.
 - Brand.dev: style guide, fonts, simplified brand (logos and colors), and
   page screenshots for a domain. Often reached through a tool gateway; search
   the gateway catalog for `brand.styleguide`, `brand.fonts`, and
   `brand.retrieve-simplified`, inspect the endpoint, then call it. Each call
   is metered.
-- Figma MCP: read a file's design context and variables, or write a design
-  into a file. Writing to a user's file is a change to their work; do it only
-  on request and in the file they named.
-- Front-end checklist MCP: static review of changed code and an audit of a
-  public URL. Treat a clean result as no provable issue, not a pass.
-- Image, icon, and illustration generators (for example Recraft or
-  Ideogram) are out of scope for this skill; use an image or brand skill.
+- Additional image/icon/illustration providers use their own skills and budgets.
+  Standalone image generation is routed to the image skill; imagery used inside
+  a Design Kit deliverable remains part of the design workflow.
+
+## Not included
+
+v0 generation, Figma, and front-end checklist servers are not part of this kit.
+Use one only when the host has a verified working route and the task asks for it.

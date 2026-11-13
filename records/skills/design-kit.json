@@ -3,14 +3,17 @@
   "name": "design-kit",
   "path": "skills/design-kit",
   "domain": "software-delivery",
-  "summary": "Route UI design work across Mobbin references, DesignMD design systems, 21st.dev components, and v0 generated drafts, with an access check, a cost rule, and a per-decision source record.",
+  "summary": "Single entry point for design work: route a Creative Director, maker or builder and visual critic across project assets, CMS references, Mobbin, DesignMD and 21st.dev, with required reads, a design pack handoff bound to the kit digest, rendered review and a source-to-output record.",
   "status": "experimental",
   "load_mode": "routable",
   "risk": "medium",
   "side_effects": [
-    "metered provider calls (21st code retrieval, DesignMD reads, v0 generations)",
-    "project file changes when installing components",
-    "provider writes only on request (Mobbin collections, v0 deployments)"
+    "metered provider calls (21st code retrieval, DesignMD reads, brand lookups)",
+    "search text sent to third-party providers; client material only when the assignment covers it",
+    "image generation through the host's own image skill",
+    "project file changes when installing components or writing a design record",
+    "CMS output rounds only within an assigned CMS delivery",
+    "provider writes only on request (Mobbin collections)"
   ],
   "triggers": [
     "design kit",
@@ -18,11 +21,12 @@
     "redesign this page",
     "find UI references",
     "mobbin references",
-    "use 21st and v0",
     "pick a design system for this app",
-    "generate a UI draft with v0",
     "design directions",
-    "skin options"
+    "skin options",
+    "static marketing graphic",
+    "campaign graphic",
+    "design kit creative director"
   ],
   "aliases": [
     "design kit",
@@ -35,25 +39,27 @@
     "screen",
     "flow",
     "component",
+    "graphic",
     "mobbin",
     "designmd",
     "21st",
-    "v0",
-    "references"
+    "references",
+    "creative director",
+    "visual review"
   ],
   "exclusions": [
     "live ui audit of a running app",
-    "brand, image, or video generation",
-    "publishing or deploying without the user's request"
+    "standalone image generation, motion or video",
+    "publishing, scheduling or deploying"
   ],
   "composes": [],
   "source_refs": [
-    "design-kit-providers-2026-11-12:v0-platform-api-overview",
     "design-kit-providers-2026-11-12:mobbin-plugin-1-5-0",
     "design-kit-providers-2026-11-12:designmd-trial-evaluation",
     "design-kit-providers-2026-11-12:21st-cli-skill",
     "design-kit-providers-2026-11-12:local-design-tool-inventory",
-    "design-kit-directions-trial-2026-11-12:directions-trial-notes"
+    "design-kit-directions-trial-2026-11-12:directions-trial-notes",
+    "design-kit-team-evaluation-2026-11-13:evaluation-notes"
   ],
   "review_path": "reviews/design-kit.json"
 }

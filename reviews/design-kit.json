@@ -1,23 +1,26 @@
 {
-  "bundle_digest": "",
+  "bundle_digest": "sha256:e1836b0c9d99517a8c5a1609de0caaedce783e835ed71ba7e8ab40d799fe28b2",
   "evidence": [
-    "Author checks only: the bundle, record, and generated indexes pass make check. This is not an independent review."
+    "Two independent read-only agent reviews of the full bundle and record on 2026-11-13. The first returned twelve findings and the second six; all were applied except the items listed under limitations.",
+    "The bundle, record, packet and generated indexes pass make check."
   ],
   "limitations": [
-    "No independent full-bundle review has been recorded; the skill stays experimental and unbound until one is.",
-    "v0 access was not exercised with a live key in this change."
+    "The last six fixes were applied after the second review and were checked by the author only.",
+    "The required-reads rule has not been rerun on an uncorrected first pass; evaluation runs so far used synthetic briefs and needed host correction.",
+    "No run shows the kit on real client work; the skill stays experimental.",
+    "The required reads are instructions; nothing in the bundle enforces them."
   ],
-  "reviewed_at": "2026-11-12",
-  "reviewer": "independent-review-pending",
+  "reviewed_at": "2026-11-13",
+  "reviewer": "independent-agent-review",
   "schema_version": 1,
   "skill": "design-kit",
   "source_refs": [
-    "design-kit-providers-2026-11-12:v0-platform-api-overview",
     "design-kit-providers-2026-11-12:mobbin-plugin-1-5-0",
     "design-kit-providers-2026-11-12:designmd-trial-evaluation",
     "design-kit-providers-2026-11-12:21st-cli-skill",
     "design-kit-providers-2026-11-12:local-design-tool-inventory",
-    "design-kit-directions-trial-2026-11-12:directions-trial-notes"
+    "design-kit-directions-trial-2026-11-12:directions-trial-notes",
+    "design-kit-team-evaluation-2026-11-13:evaluation-notes"
   ],
-  "status": "pending"
+  "status": "reviewed"
 }
