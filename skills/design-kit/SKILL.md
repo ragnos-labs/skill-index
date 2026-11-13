@@ -11,7 +11,7 @@ habit, and record which source shaped each decision.
 | Question | Source | Cost |
 | --- | --- | --- |
 | How do shipped apps solve this screen or flow? | Mobbin MCP | Subscription; reads are free to call |
-| What tokens, type scale, spacing, and blocks fit this product? | DesignMD MCP | Plan quota; reads count |
+| What tokens, type scale, spacing, and blocks fit this product? | DesignMD MCP | Plan quota, not shown by the tools; the category list is a free check |
 | Is there an existing component, theme, or logo to start from? | 21st.dev CLI | Search free; code retrieval has a daily quota; AI generation is separate |
 | Can a model draft the whole screen as code to react to? | v0 API | Metered per generation |
 
@@ -126,7 +126,9 @@ steps above converge on one answer. So:
   and components that already do the hard interaction (21st).
 - Present ideas before building, name what each breaks in the product's
   existing rules, and recommend which to mock up. Build each chosen
-  direction as its own file from the same real data so they compare fairly.
+  direction as its own file from the same data so they compare fairly. The
+  client-context rule below still holds: do not send a client's copy or
+  assets to a generator to do it.
 - When a direction is accepted, keep it as a skin: the token file, the rules
   of the look in words, and what a build must map onto the host project's
   own tokens and motion rules before any of it ships.

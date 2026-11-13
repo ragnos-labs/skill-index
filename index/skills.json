@@ -445,7 +445,7 @@
         "ui design kit",
         "design sources"
       ],
-      "bundle_digest": "sha256:9f2669833097d5cb0c8d6eb761743d507bebbb143976a1d53fe3a27f726a903c",
+      "bundle_digest": "sha256:17b1825a19f71077f710bf0938a4a9346518296982519b1f1a8e354733cb083d",
       "composes": [],
       "domain": "software-delivery",
       "exclusions": [
@@ -459,11 +459,11 @@
       "resources": [
         {
           "path": "SKILL.md",
-          "sha256": "2df181d05e06517a1fec9b08277935aa29b4f7cb06b573fed3aecfa3460258f5"
+          "sha256": "82d308b54296de3d91c375c535ec3f40d1f98026dc8516abd82969df639876fe"
         },
         {
           "path": "references/providers.md",
-          "sha256": "cc425399510e9f049f596278882cb8026d3acb3ae152da605e92a6bdb5d98cb4"
+          "sha256": "b00c5c02c7ae4eb99cb1b49b12aab3c565a164438b7f0376e5fe0f78fa456ec2"
         }
       ],
       "review": {
