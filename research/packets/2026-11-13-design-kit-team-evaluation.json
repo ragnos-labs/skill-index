@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "id": "design-kit-team-evaluation-2026-11-13",
+  "question": "What did four local evaluation runs and one read-only audit show about using the design kit as one entry point for a Director, maker or builder and critic team, and what must change before the complete kit is published?",
+  "method": "Four evaluation runs on synthetic briefs on 2026-11-13 across two local agent hosts: a React operations screen and campaign graphics with live DesignMD, Mobbin and 21st retrieval; a UI SDK build from saved retrievals; six offline Director routing cases; and a CMS Director to Visual Maker still production. A read-only audit the same day compared the unpublished local bundle with the published two-file skill, checked each named provider route, and read the run records. No client material is recorded.",
+  "researched_at": "2026-11-13",
+  "queries": [
+    "Local evaluation run records and friction logs for the design kit",
+    "Diff of the local bundle against the published skill",
+    "Launcher and configuration check for each provider the skill names"
+  ],
+  "findings": [
+    "In the CMS run the maker read three required kit files only after production and on host request, and the Director proposed a crop before inspecting pixels; reads were instructed as relevant, not listed.",
+    "Three files each defined the design pack differently and only one required the kit digest.",
+    "The v0 launcher on the evaluation host called itself and v0 was never exercised in any run; Figma and front-end checklist servers were configured on neither host.",
+    "The local bundle carried one operator's defaults, an absolute path and host-specific observations stated as general fact.",
+    "Independent reviewers rated every first pass as needing revision and repairs improved them; all briefs were synthetic, so no run shows quality on real work.",
+    "A light DesignMD read returned a 429 during the audit.",
+    "The complete bundle removed concrete contrast and target-size numbers the published version had."
+  ],
+  "adopted": [
+    "A required-reads table in the entry file, a read list and kit digest at the top of every design pack, and a producer hold when either is missing or differs.",
+    "One design pack definition in the project record, referenced by the UI SDK and CMS references.",
+    "Director, maker or builder and critic roles, UI SDK, CMS, production, project record and evaluation references from the local bundle.",
+    "A required-reads check in the evaluation reference.",
+    "Contrast and pointer target numbers restored; a rule against colored edge bars.",
+    "Client material goes to a provider only when the assignment covers it and never to a generative provider by default, keeping the published version's limit."
+  ],
+  "rejected": [
+    "Keeping v0, Figma and front-end checklist routes that no host could run.",
+    "Operator names, host names, absolute paths and unexplained role codenames in the portable bundle."
+  ],
+  "skipped": [
+    "A hook or script that enforces reads; the portable skill stays instructions only and hosts may add their own check.",
+    "Motion and video."
+  ],
+  "open_questions": [
+    "Whether the required-reads table holds on an uncorrected first pass; not yet rerun."
+  ],
+  "supersedes": [],
+  "sources": [
+    {
+      "id": "evaluation-notes",
+      "title": "Local evaluation records and audit notes for the design kit team workflow",
+      "url": "local-history:design-kit-team-evaluation",
+      "revision": "7bbadfe4419d7ecd8afb6767259f89b71f148b55",
+      "revision_kind": "retrieved-content-sha1",
+      "license": "proprietary-no-copied-code",
+      "disposition": "inspiration",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "findings": [
+        "A maker read required kit files only after production in one run.",
+        "The v0 launcher recursed and no run exercised v0."
+      ]
+    }
+  ]
+}
