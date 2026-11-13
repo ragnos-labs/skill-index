@@ -7,10 +7,11 @@ flowchart TD
   U["Ask for Design Kit"] --> S
   subgraph KIT["Design Kit, one skill"]
     S["Scope, audience, deliverable and existing project"] --> R["Select one route and load relevant helpers"]
+    BR["Brand's own design skill<br/>Spec, tokens, components<br/>Approved library assets by ID"] --> M
     RES["Shared resources<br/>Project assets, scoped CMS references<br/>Mobbin, DesignMD, 21st"] --> M["Inspect actual sources<br/>Choose direction, map sources to output"]
     SDK["UI SDK for interface work<br/>Version-matched components<br/>Keyboard, focus and agent controls"] --> M
     CMS["CMS methods when assigned<br/>Brand, learned corrections, client scope<br/>Exact revisions, authorized output rounds"] --> M
-    M --> P["Design pack<br/>Kit digest, tokens, assets, copy<br/>Layouts, states, acceptance checks"]
+    M --> P["Design pack<br/>Kit digest, brand sources, assets, copy<br/>Layouts, states, acceptance checks"]
     Q["Quality methods<br/>Actual renders, behavior checks<br/>Independent critique, focused repair"]
     R --> M
   end

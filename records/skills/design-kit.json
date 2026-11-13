@@ -3,7 +3,7 @@
   "name": "design-kit",
   "path": "skills/design-kit",
   "domain": "software-delivery",
-  "summary": "Single entry point for design work: route a Creative Director, maker or builder and visual critic across project assets, CMS references, Mobbin, DesignMD and 21st.dev, with required reads, a design pack handoff bound to the kit digest, rendered review and a source-to-output record.",
+  "summary": "Single entry point for design work: route a Creative Director, maker or builder and visual critic across the brand's own design skill, project assets, CMS references, Mobbin, DesignMD and 21st.dev, with required reads, a schema-checked design pack bound to the kit and brand digests, rendered review and a source-to-output record.",
   "status": "experimental",
   "load_mode": "routable",
   "risk": "medium",
@@ -13,7 +13,8 @@
     "image generation through the host's own image skill",
     "project file changes when installing components or writing a design record",
     "CMS output rounds only within an assigned CMS delivery",
-    "provider writes only on request (Mobbin collections)"
+    "provider writes only on request (Mobbin collections)",
+    "design_pack.py reads one pack file or standard input and prints results; it writes nothing"
   ],
   "triggers": [
     "design kit",

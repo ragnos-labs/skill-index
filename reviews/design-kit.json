@@ -1,14 +1,15 @@
 {
-  "bundle_digest": "sha256:e1836b0c9d99517a8c5a1609de0caaedce783e835ed71ba7e8ab40d799fe28b2",
+  "bundle_digest": "sha256:3a5914d7230b75406dd006ff8d2a96aefc1e9270542bdf8153782c3042bb0980",
   "evidence": [
     "Two independent read-only agent reviews of the full bundle and record on 2026-11-13. The first returned twelve findings and the second six; all were applied except the items listed under limitations.",
-    "The bundle, record, packet and generated indexes pass make check."
+    "Brand sources and the design pack schema and checker (2026-11-13): an independent read-only review returned thirteen findings, all applied; an independent re-review confirmed eleven resolved and raised five more, all applied with tests.",
+    "The bundle, record, packet and generated indexes pass make check, including 17 design pack checker tests with hostile inputs."
   ],
   "limitations": [
-    "The last six fixes were applied after the second review and were checked by the author only.",
+    "The five fixes from the brand-sources re-review were checked by the author and the tests only.",
     "The required-reads rule has not been rerun on an uncorrected first pass; evaluation runs so far used synthetic briefs and needed host correction.",
     "No run shows the kit on real client work; the skill stays experimental.",
-    "The required reads are instructions; nothing in the bundle enforces them."
+    "The required reads are instructions; design_pack.py checks a pack only when a host runs it, and nothing forces it to."
   ],
   "reviewed_at": "2026-11-13",
   "reviewer": "independent-agent-review",

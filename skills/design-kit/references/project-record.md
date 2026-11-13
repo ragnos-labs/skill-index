@@ -11,6 +11,7 @@ this record plus the actual tokens, assets, and components the producer can
 open, and it starts with:
 
 - kit name, the digest the skill index returned, and the list of kit files read;
+- the brand and its sources, resolved as in [brand-sources.md](brand-sources.md);
 - the direction below, exact copy, dimensions or viewports, and fixed requirements;
 - each admitted resource with its ID or revision and the decision it supports;
 - allowed effects, reuse limits, and the review criteria.
@@ -18,9 +19,28 @@ open, and it starts with:
 A CMS pack adds the project, admitted reference revisions and permitted output
 round. Named provider resources do not replace real files or pixels.
 
-Provide actionable visual guidance and source-to-output decisions, not metadata
-alone. Identify the chosen behavior primitives and implementation ownership
-when [UI SDK integration](ui-sdk.md) applies.
+Write this start of the pack as `design-pack.json` beside the design record,
+following [design-pack.schema.json](design-pack.schema.json); copy
+[the synthetic example](../assets/design-pack.example.json) as a starting point.
+A pack sent as a message can be checked from standard input with `-`. Where
+the host can run Python, the Director checks it before handing over and the
+producer checks it before the first render with its own resolved digests:
+
+```text
+python3 <kit>/scripts/design_pack.py check design-pack.json --kit-digest <kit digest> [--brand-digest <brand skill digest>]
+python3 <kit>/scripts/design_pack.py summary design-pack.json
+```
+
+Pass `--brand-digest` when the brand's origin is `skill`. Any `check` failure
+goes back to the Director with the printed reasons; a differing kit or brand
+digest is a hold. A CMS pack names the CMS brand record it read; it outranks
+the brand block on brand matters. `summary` answers "what informed this
+design". The pack's `resources` are what the Director admitted at handoff,
+including CMS references; the record's "Sources and assets" table below adds
+what the output actually used. `inspected` means whoever wrote the entry opened
+the pixels, preview, code or file itself. The prose direction, review findings
+and repairs stay in the design record. Keep a client's pack in that client's
+private storage when it names private material.
 
 ## Direction
 
