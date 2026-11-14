@@ -3,7 +3,7 @@
   "name": "design-kit",
   "path": "skills/design-kit",
   "domain": "software-delivery",
-  "summary": "Single entry point for design work: route a Creative Director, maker or builder and visual critic across the brand's own design skill, project assets, CMS references, Mobbin, DesignMD and 21st.dev, with required reads, a schema-checked design pack bound to the kit and brand digests, rendered review and a source-to-output record.",
+  "summary": "Single entry point for design work: route a Creative Director, maker or builder and visual critic across the brand's own design skill, project assets, CMS references, Mobbin, DesignMD and 21st.dev, with required reads, a schema-checked design pack bound to the kit and brand digests, medium routes from websites and carousels to directed video, documents and copy, one job workflow, rendered review and a source-to-output record.",
   "status": "experimental",
   "load_mode": "routable",
   "risk": "medium",
@@ -27,7 +27,11 @@
     "skin options",
     "static marketing graphic",
     "campaign graphic",
-    "design kit creative director"
+    "design kit creative director",
+    "carousel",
+    "landing page design",
+    "brand kit",
+    "brand record"
   ],
   "aliases": [
     "design kit",
@@ -50,7 +54,7 @@
   ],
   "exclusions": [
     "live ui audit of a running app",
-    "standalone image generation, motion or video",
+    "standalone image generation; producing video itself (the kit directs it)",
     "publishing, scheduling or deploying"
   ],
   "composes": [],
