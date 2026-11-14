@@ -1,0 +1,20 @@
+{
+  "bundle_digest": "sha256:48caafeede41eda4cf76b1752c41127fd6a46ce7309cbca5cf1fff81f5faa888",
+  "evidence": [
+    "Written from the verified hand procedure used on a production server on 2026-11-14 (volumes and release folders archived, restored and checksum-verified) and the scheduled job that automates it, whose tests run a real local restic repository.",
+    "Independent review agent, round 1: requested changes on stopped-container handling, pre-removal safeguards, the password custody method, stream exit codes, racing the scheduled job, policy-sourced limits, purge re-checks and removal by repo:tag, and the restore path; all fixed.",
+    "Round 2: found the pre-removal reference re-check covered folders only and an ambiguous step reference; both fixed, with four wording nits.",
+    "Round 3: the reviewer confirmed every fix and approved this bundle."
+  ],
+  "limitations": [
+    "Exact paths, the lock file and the email path come from the installation's operations document; the skill does not name them.",
+    "The reference scan is text matching over named files; an item referenced only from an unscanned location is kept only if a process, symlink or mount touches it."
+  ],
+  "reviewed_at": "2026-11-14",
+  "reviewed_revision": "working tree of branch claude/vps-cold-data-archive-20261114 before its first commit",
+  "reviewer": "independent-review-agent",
+  "schema_version": 1,
+  "skill": "vps-cold-data-archive",
+  "source_refs": [],
+  "status": "reviewed"
+}
