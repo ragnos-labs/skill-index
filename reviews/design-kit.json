@@ -1,5 +1,5 @@
 {
-  "bundle_digest": "sha256:5c2fb86dcec40b3aec2f239dbd7dc510469619278c3cb3af667ffb6bbf60bd00",
+  "bundle_digest": "sha256:023b92594f71d84b749e93298f552bca45bcf3d116df2db86e482ef7459b6c29",
   "evidence": [
     "Two independent read-only agent reviews of the full bundle and record on 2026-11-13. The first returned twelve findings and the second six; all were applied except the items listed under limitations.",
     "Brand sources and the design pack schema and checker (2026-11-13): an independent read-only review returned thirteen findings, all applied; an independent re-review confirmed eleven resolved and raised five more, all applied with tests.",
@@ -7,7 +7,8 @@
     "Client-material rule changed on the owner's decision of 2026-11-13 (assigned work may send client marketing material to relevant providers, generative included, without separate permission); author check and make check only.",
     "Pack schema 2, the claims and learned-record rules, the two-round repair limit and the verdict rule (2026-11-13): an independent read-only review of the exact revision returned seven findings, all applied with tests.",
     "Medium routes, the job workflow, the brand record template and the three probes (2026-11-13): an independent read-only review of the exact revision returned ten findings and three craft additions, all applied.",
-    "Fresh-session probes on two hosts (2026-11-13): Director pack and producer hold passed; the critic probe showed two critics grading the same defect differently, which this revision resolves with one grading rule. Author check and make check only for this revision."
+    "Fresh-session probes on two hosts (2026-11-13): Director pack and producer hold passed; the critic probe showed two critics grading the same defect differently, which this revision resolves with one grading rule. Author check and make check only for this revision.",
+    "Two end-to-end proof runs (2026-11-13 to 2026-11-14) led to three wording changes: taste preferences go in review_criteria, not fixed_requirements; producer notes stay out of the design record and the critic looks before reading them; a producer confirms it can render before starting. An independent read-only review of the change on 2026-11-14 returned eight findings; five were applied and three optional ones were left."
   ],
   "limitations": [
     "The five fixes from the brand-sources re-review were checked by the author and the tests only.",
@@ -17,7 +18,7 @@
     "The seven fixes from the schema 2 review were checked by the author and the tests only.",
     "The medium routes, workflow and probes have not been run on a host; the fixes from their review were checked by the author and make check only."
   ],
-  "reviewed_at": "2026-11-13",
+  "reviewed_at": "2026-11-14",
   "reviewer": "independent-agent-review",
   "schema_version": 1,
   "skill": "design-kit",
