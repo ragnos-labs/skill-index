@@ -1,5 +1,5 @@
 {
-  "bundle_digest": "sha256:0560965dd95ec4704485f23db783c409990229f00c7bcb087bbd445391a651d0",
+  "bundle_digest": "sha256:f009e38b724e682f1a2d5f8a13484b634703b5db36ab73ad0c275e4b23cabe04",
   "evidence": [
     "Two independent read-only agent reviews of the full bundle and record on 2026-11-13. The first returned twelve findings and the second six; all were applied except the items listed under limitations.",
     "Brand sources and the design pack schema and checker (2026-11-13): an independent read-only review returned thirteen findings, all applied; an independent re-review confirmed eleven resolved and raised five more, all applied with tests.",

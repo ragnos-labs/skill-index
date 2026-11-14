@@ -1,6 +1,6 @@
 ---
 name: design-kit
-description: "Single entry point for design work: design resources, Creative Director and maker/builder routing, UI SDK interface behavior, scoped CMS production and visual review. Use for websites, product UI, components and static marketing graphics. Loads the relevant helper guidance internally; callers only need to ask for Design Kit. Excludes publishing, scheduling, standalone motion graphics and video."
+description: "Single entry point for design work: design resources, Creative Director and maker/builder routing, UI SDK interface behavior, scoped CMS production and visual review. Use for websites, landing pages, product UI, components, static marketing graphics, carousels and brand kits, and to direct video, motion, documents and copy that another method produces. Loads the relevant helper guidance internally; callers only need to ask for Design Kit. Excludes publishing, scheduling and producing video itself."
 ---
 
 # Design Kit
@@ -18,6 +18,8 @@ after production does not count.
 | When | Read |
 | --- | --- |
 | Every job | This file, [project-record.md](references/project-record.md), [brand-sources.md](references/brand-sources.md) and the brand's own design skill when one resolves, and in [production.md](references/production.md) the opening, "Establish a coherent direction", "Inspect components and style assets" before adopting retrieved code, the medium's section and "Review and repair" |
+| A carousel, landing page, video, motion graphic, document, brand kit, copy or a campaign of several | The medium's section in [mediums.md](references/mediums.md) |
+| Running a whole job from request to recommendation | [workflow.md](references/workflow.md) |
 | Critic or reviewer | "Produce and review" below, "Review and repair" in [production.md](references/production.md), and the brand sources the pack names |
 | Before the first call to a provider | That provider's section in [providers.md](references/providers.md) |
 | The project already depends on a UI SDK (an interface component library with its own skill or package docs), or opts into one | [ui-sdk.md](references/ui-sdk.md) |
@@ -48,6 +50,11 @@ design, and the CMS Director for native CMS assets. Never run both on the same
 deliverable. Substantial work goes Director, then maker/builder, then an
 independent visual critic where the host offers one. A small edit goes straight
 to the existing producer with a proportionate visual check.
+
+Route by medium with [mediums.md](references/mediums.md). The kit directs
+every medium there; where another method produces it (video, documents, copy),
+the Director still writes the direction and the pack and hands them to that
+method instead of refusing the job.
 
 ## Start with the actual assignment
 

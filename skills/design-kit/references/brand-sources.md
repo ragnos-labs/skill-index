@@ -31,6 +31,29 @@ brand skill or project brand files; then this kit's defaults; then outside
 references. A brand skill adds the owner's tokens, components and assets; it
 does not override what the CMS records for that client.
 
+## Brand from an existing site
+
+When a client or prospect has live pages and no brand record, make the record
+from what exists before choosing a direction. Do not record brand `none` while
+real pages are available.
+
+1. Capture the home page and two other representative pages at desktop and
+   phone widths, and collect the logo files the site serves.
+2. Read the actual styles: colours with their roles, type families, weights
+   and sizes, spacing, corner and border habits, image treatment and motion.
+   Record computed values, not guesses from a screenshot.
+3. Note what the owner or the assignment says they like and what they want
+   changed. A liked existing identity is a fixed requirement, not a starting
+   point to replace.
+4. Fill [the brand record template](../assets/brand-record.template.md),
+   marking each entry observed with the page it came from. Mark anything you
+   add as proposed.
+5. Keep the record with the client's project and name it in the pack's
+   `brand` block with origin `project`.
+
+The same record, once a person confirms it, is the brand kit the client can
+be handed.
+
 ## Approved asset libraries
 
 A brand skill or project may name an approved asset library with a read-only

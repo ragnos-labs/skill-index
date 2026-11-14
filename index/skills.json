@@ -445,12 +445,12 @@
         "ui design kit",
         "design sources"
       ],
-      "bundle_digest": "sha256:0560965dd95ec4704485f23db783c409990229f00c7bcb087bbd445391a651d0",
+      "bundle_digest": "sha256:f009e38b724e682f1a2d5f8a13484b634703b5db36ab73ad0c275e4b23cabe04",
       "composes": [],
       "domain": "software-delivery",
       "exclusions": [
         "live ui audit of a running app",
-        "standalone image generation, motion or video",
+        "standalone image generation; producing video itself (the kit directs it)",
         "publishing, scheduling or deploying"
       ],
       "load_mode": "routable",
@@ -459,7 +459,11 @@
       "resources": [
         {
           "path": "SKILL.md",
-          "sha256": "bf6b09cd2fb6989635a10a795e79a3d0a004e94a9386071664a5e15fe2eacac2"
+          "sha256": "a3fa60ec02691fec117a656ff8a3d05c756d6a759b890941c8e78e4ec8593883"
+        },
+        {
+          "path": "assets/brand-record.template.md",
+          "sha256": "95a5929bb5c7befe70c468142d887a6c94a293b83541f8930f953801d56d95eb"
         },
         {
           "path": "assets/design-pack.example.json",
@@ -471,7 +475,7 @@
         },
         {
           "path": "references/brand-sources.md",
-          "sha256": "540c7595f5a0ea14d3272d647d5827bbe1922387ea20f1b5783f1ab0b97882ff"
+          "sha256": "043f38502cf1f8ba2d43d391860f20be6c53fb8f96013b3337e252354062df65"
         },
         {
           "path": "references/design-pack.schema.json",
@@ -479,7 +483,11 @@
         },
         {
           "path": "references/evaluation.md",
-          "sha256": "a598b8f23bf2b429a847e502baa8df466f0dcbc1bae91b6aff3ef7c22359c13b"
+          "sha256": "692ec1c35dde72ae6c185e6de9ecfc78fb2ccfe5b90fb99f658c8ef7ed868945"
+        },
+        {
+          "path": "references/mediums.md",
+          "sha256": "64f14302acc4101b29aa64b0500c1416587437b7f7136418b5138d3110c7985e"
         },
         {
           "path": "references/production.md",
@@ -499,7 +507,7 @@
         },
         {
           "path": "references/workflow.md",
-          "sha256": "b0f6e30bf489ccc22fd2b32416b924e85b870e2ccef8ac035a71ef12cc50aef6"
+          "sha256": "5d7992ef6def28db16a59dab010766881e0603767cb080e40bff18236efea217"
         },
         {
           "path": "scripts/design_pack.py",
@@ -545,7 +553,7 @@
         "design-kit-team-evaluation-2026-11-13:evaluation-notes"
       ],
       "status": "experimental",
-      "summary": "Single entry point for design work: route a Creative Director, maker or builder and visual critic across the brand's own design skill, project assets, CMS references, Mobbin, DesignMD and 21st.dev, with required reads, a schema-checked design pack bound to the kit and brand digests, rendered review and a source-to-output record.",
+      "summary": "Single entry point for design work: route a Creative Director, maker or builder and visual critic across the brand's own design skill, project assets, CMS references, Mobbin, DesignMD and 21st.dev, with required reads, a schema-checked design pack bound to the kit and brand digests, medium routes from websites and carousels to directed video, documents and copy, one job workflow, rendered review and a source-to-output record.",
       "triggers": [
         "design kit",
         "design this screen",
@@ -557,7 +565,11 @@
         "skin options",
         "static marketing graphic",
         "campaign graphic",
-        "design kit creative director"
+        "design kit creative director",
+        "carousel",
+        "landing page design",
+        "brand kit",
+        "brand record"
       ]
     },
     {
