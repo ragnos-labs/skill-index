@@ -176,7 +176,7 @@ class DesignPackTests(unittest.TestCase):
         code, out, _ = run("summary", self.write(pack))
         self.assertIn("Claims: 2; draft only, 2 open", out)
         code, out, _ = run("check", self.write(EXAMPLE), "--final", "--kit-digest", DIGEST, "--brand-digest", BRAND)
-        self.assertEqual((code, out.strip()), (0, "pack ok"))
+        self.assertEqual((code, out.strip()), (0, "pack ok; all claims marked verified; not an approval for outside use"))
 
     def test_version_two_requires_direction_standard_and_claims(self):
         for path, fragment in ((("direction", "first_read"), "pack.direction.first_read: required"),

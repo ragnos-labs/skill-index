@@ -24,8 +24,8 @@ and why; a search result alone is not source inspection or code reuse. Provider
 availability and asset suitability are not guaranteed.
 
 The Creative Director supplies one concise direction and a design pack, as
-defined in [project-record.md](project-record.md), to the builder. Extend the
-project's `DESIGN.md` or existing record. Identify SDK behavior boundaries and
+defined in [project-record.md](project-record.md), to the builder. The
+Director extends the project's `DESIGN.md` or existing record before handoff. Identify SDK behavior boundaries and
 unresolved gaps. Web/UI work does not create CMS records or posts, and shared
 method guidance grants no CMS write authority to the local role.
 

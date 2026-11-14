@@ -7,8 +7,9 @@ check PACK [--kit-digest DIGEST] [--brand-digest DIGEST] [--final]
     differing kit or brand digest is a hold. Any failure goes back to the
     Director with the reasons printed. PACK may be - for standard input.
     A pack with an unverified claim or a missing release is draft only:
-    it passes with a note, and fails with --final, which a producer passes
-    before output leaves draft.
+    it passes with a note, and fails with --final, which is passed
+    before output leaves draft. Passing --final means the claims are
+    checked, not that the work is approved for outside use.
     Exit 0 when the pack is usable, 1 when it is not, 2 on a usage error.
 
 summary PACK
@@ -236,6 +237,8 @@ def main(argv=None):
         held = draft_only(pack)
         if held:
             notes.append(f"draft only: {len(held)} claim check(s) open")
+        if args.final:
+            notes.append("all claims marked verified; not an approval for outside use")
         print("pack ok" + ("; " + "; ".join(notes) if notes else ""))
     return 0
 

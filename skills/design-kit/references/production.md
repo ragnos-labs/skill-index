@@ -123,9 +123,10 @@ Test both themes only when the product supports them.
 For substantial work, use a fresh independent reviewer when authorized and
 available. Supply the
 fixed brief, source pixels, and actual output before producer self-assessment.
-The critic opens the renders and writes what it notices first before opening
-any producer-written text: `PRODUCTION-NOTES.md`, the producer's return or the
-record's repair table. Then it compares that with the pack's `first_read`.
+The critic's order: the renders and what it notices first; then the pack and
+the design record as the Director wrote them, comparing what it noticed with
+the pack's `first_read`; producer-written files (`PRODUCTION-NOTES.md`, the producer's
+return) last.
 Use the visual critic for creative judgment. One reviewer is enough unless a
 named specialty materially helps. Small revisions can use a separate self-review pass, labeled
 accurately. Review-only assignments never edit artifacts.

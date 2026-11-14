@@ -1,5 +1,5 @@
 {
-  "bundle_digest": "sha256:8cd9bc5bf12c1b998d6639cb180dda13208749f2db040582c3201551af02a003",
+  "bundle_digest": "sha256:d94f485252060db1ae69fda80114994738625b7dd0112405cb1f74a418490ba1",
   "evidence": [
     "Two independent read-only agent reviews of the full bundle and record on 2026-11-13. The first returned twelve findings and the second six; all were applied except the items listed under limitations.",
     "Brand sources and the design pack schema and checker (2026-11-13): an independent read-only review returned thirteen findings, all applied; an independent re-review confirmed eleven resolved and raised five more, all applied with tests.",
@@ -9,7 +9,8 @@
     "Medium routes, the job workflow, the brand record template and the three probes (2026-11-13): an independent read-only review of the exact revision returned ten findings and three craft additions, all applied.",
     "Fresh-session probes on two hosts (2026-11-13): Director pack and producer hold passed; the critic probe showed two critics grading the same defect differently, which this revision resolves with one grading rule. Author check and make check only for this revision.",
     "Two end-to-end proof runs (2026-11-13 to 2026-11-14) led to three wording changes: taste preferences go in review_criteria, not fixed_requirements; producer notes stay out of the design record and the critic looks before reading them; a producer confirms it can render before starting. An independent read-only review of the change on 2026-11-14 returned eight findings; five were applied and three optional ones were left.",
-    "Reruns (2026-11-14) led to two wording changes: the critic probe no longer names its planted defects, which now live in a file outside the kit; an incomplete site capture proceeds only as an internal draft. An independent read-only review of the change on 2026-11-14 returned six findings; five were applied in whole or in part and one was left."
+    "Reruns (2026-11-14) led to two wording changes: the critic probe no longer names its planted defects, which now live in a file outside the kit; an incomplete site capture proceeds only as an internal draft. An independent read-only review of the change on 2026-11-14 returned six findings; five were applied in whole or in part and one was left.",
+    "Real runs (2026-11-14) led to three changes: the design record is frozen for the round and producer sections move to the production notes, with a fixed reading order for the critic; one rule for who may set a claim verified, and --final says it is not an approval; a copy work order lists what it must carry. An independent read-only review on 2026-11-14 returned twelve findings; eleven were applied and one (a stale schema description) was left because the schema was out of scope; a second independent read returned five more, all applied and checked by the author and make check only."
   ],
   "limitations": [
     "The five fixes from the brand-sources re-review were checked by the author and the tests only.",

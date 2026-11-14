@@ -4,10 +4,13 @@ Extend the existing record. Otherwise create `DESIGN.md` with the owning project
 for public/synthetic decisions; keep private inputs and restricted captures in
 its approved private storage. Never save credentials or signed URLs in Git.
 
-Producer notes, self-observations and rationale written during production go
-in `PRODUCTION-NOTES.md` or the producer's return, never in `DESIGN.md` or the
-brand record. The record's source and repair tables hold facts only: what was
-used, what changed, what was observed.
+The Director writes the design record before production, and it is frozen for
+the round. What the producer records during or after production (sources as
+used, repairs, observations, rationale) goes in `PRODUCTION-NOTES.md` or the
+producer's return, never in `DESIGN.md` or the brand record. After the
+critic's verdict the Director folds the facts the critic confirmed into the
+design record. On a small edit with no Director, the producer leaves
+`DESIGN.md` unchanged and writes `PRODUCTION-NOTES.md` or its return.
 
 ## Design pack
 
@@ -32,6 +35,18 @@ rejections, goes in `review_criteria`. A broken fixed requirement is a
 blocking finding, so a preference written there fails the work instead of
 steering it.
 
+A role sets a claim's `verified` to true only when it checked the claim
+against the named source in this run, and it says how in the claim's `source`
+text: which file or capture, and what it compared. A claim about the built
+output (for example "no remote requests") is set verified by the Director
+after the verdict, only from evidence the critic or a tool produced in this
+round, named in `source`. A quote, testimonial, statistic or offer term whose
+source the role cannot open itself (a person's word, or a recording it does
+not have) stays `verified: false` until a person confirms. No role decides `release`: it is `on_file` only when a
+person or the client's release record says so, `not_required` only for a
+statistic or factual claim that quotes or names no person, and `missing`
+otherwise.
+
 A CMS pack adds the project, admitted reference revisions, permitted output
 round and the learned record it read with its digest or revision (or why the
 CMS returned none); a pack whose learned record was not read is a hold. Any
@@ -52,18 +67,19 @@ python3 <kit>/scripts/design_pack.py summary design-pack.json
 
 Pass `--brand-digest` when the brand's origin is `skill`. Pass `--final` before
 output leaves draft: it fails while any claim is unverified or any release is
-missing, or a quote or testimonial has no release on file. Without it such a
-pack passes as draft only. Packs written to schema version 1 are rejected:
+missing, or a quote or testimonial has no release on file. Passing `--final`
+means the claims are checked, not that the work is approved for outside use.
+Without it such a pack passes as draft only. Packs written to schema version 1 are rejected:
 add `first_read`, `rejected_alternative`, `claims` and, for CMS work,
 `cms.learned`, and set `schema_version` to 2. Any `check` failure
 goes back to the Director with the printed reasons; a differing kit or brand
 digest is a hold. A CMS pack names the CMS brand record it read; it outranks
 the brand block on brand matters. `summary` answers "what informed this
 design". The pack's `resources` are what the Director admitted at handoff,
-including CMS references; the record's "Sources and assets" table below adds
-what the output actually used. `inspected` means whoever wrote the entry opened
-the pixels, preview, code or file itself. The prose direction, review findings
-and repairs stay in the design record. Keep a client's pack in that client's
+including CMS references; the "Sources and assets" table under "Production
+notes" below adds what the output actually used. `inspected` means whoever wrote the entry opened
+the pixels, preview, code or file itself. The prose direction stays in the
+design record; review findings and repairs join it after the verdict. Keep a client's pack in that client's
 private storage when it names private material.
 
 ## Direction
@@ -74,7 +90,13 @@ private storage when it names private material.
 - Retained project conventions and deliberate changes.
 - Requested alternatives and tradeoffs, without invented human selection.
 
-## Sources and assets
+## Production notes
+
+The producer fills its sources, repairs and delivery facts in
+`PRODUCTION-NOTES.md` or its return. Critic findings stay in the critic's
+return until the Director folds them in.
+
+### Sources and assets
 
 | Source and ID/revision or URL | Retrieved and inspected | Decision/adaptation | Output file/component | Reuse terms or limit |
 | --- | --- | --- | --- | --- |
@@ -85,7 +107,7 @@ required font/icon/source attribution. Remove tracking parameters when safe,
 not query parameters required to identify the resource. Keep useful resource
 copies in existing project structure, subject to their permitted use.
 
-## Meaningful review and repairs
+### Meaningful review and repairs
 
 | Output revision/state | Finding/location | Repair | Before/after evidence | Observed result |
 | --- | --- | --- | --- | --- |
@@ -94,7 +116,7 @@ Separate visual judgment, technical checks, and content fidelity. Identify
 independent review versus self-review. Keep unresolved findings explicit and
 reuse passed checks on unchanged inputs.
 
-## Delivery
+### Delivery
 
 Link runnable/editable source, exports/dimensions, required assets, run/render
 commands, and the strongest preview. Report actual provider coverage, known
