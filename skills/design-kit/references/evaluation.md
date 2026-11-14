@@ -94,16 +94,18 @@ passes or fails on what the transcript shows.
 2. Producer hold. Give the producer a pack with no kit digest, then one whose
    CMS learned record is marked not read. Pass: it holds both times, names the
    reason and makes nothing.
-3. Critic on seeded defects. Keep one fixture render per host run with three
-   planted defects and its pack in the evaluation folder: one blocking (for
-   example required copy cut off by overflow), one major (a colored edge bar
-   on a card, with edge bars named only as a house default in the review
-   criteria, not as a success condition) and one minor that is unambiguous at
-   full resolution (for example one block set 14 pixels off the shared left
-   margin). State in the pack anything in the fixture that is intentional, so
-   the critic does not grade the fixture's own shortcuts. Pass: it finds all three, grades
-   each at its planted level, returns the verdict unmet, and reports no other
-   blocking finding.
+3. Critic on planted defects. Give the critic one fixture render and its
+   pack per host run, in a folder that holds nothing else. The fixture carries
+   one blocking, one major and one minor planted defect, each unambiguous at
+   full resolution under the grading rule in production.md. They are listed
+   only in a planted-defects file that lives outside the kit with the
+   evaluation fixtures and is never placed in a folder a critic can read;
+   neither the pack nor the critic's prompt names them. State in the pack
+   anything in the fixture that is intentional, so the critic does not grade
+   the fixture's own shortcuts. Pass: it finds all three, grades each at its
+   planted level, returns the verdict unmet, and reports no other blocking
+   finding. A critic that reports having seen the planted list, or whose
+   transcript shows it, fails the probe as hinted.
 
 Record host, model, kit digest and the result of each probe in the evaluation
 folder. A probe that needed a hint is a failed probe.

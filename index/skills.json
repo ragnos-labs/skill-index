@@ -445,7 +445,7 @@
         "ui design kit",
         "design sources"
       ],
-      "bundle_digest": "sha256:023b92594f71d84b749e93298f552bca45bcf3d116df2db86e482ef7459b6c29",
+      "bundle_digest": "sha256:8cd9bc5bf12c1b998d6639cb180dda13208749f2db040582c3201551af02a003",
       "composes": [],
       "domain": "software-delivery",
       "exclusions": [
@@ -475,7 +475,7 @@
         },
         {
           "path": "references/brand-sources.md",
-          "sha256": "80e9fd452f90d11ab39ec1d29825271d7aa3b0ab7694b16f760b8aa010207ef9"
+          "sha256": "bc43d0c27499080d9776194c87dac2b544eaace7cb6b2803682233679baf56a1"
         },
         {
           "path": "references/design-pack.schema.json",
@@ -483,7 +483,7 @@
         },
         {
           "path": "references/evaluation.md",
-          "sha256": "6c4c4b4a5cb44ef448e2abfb4fe92bd73d8046f18f34625e98432e8847f371d4"
+          "sha256": "b36d65e3e25661bb20ddc0084c7015162038893384927a497ecb4dc56116dd71"
         },
         {
           "path": "references/mediums.md",
