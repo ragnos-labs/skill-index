@@ -120,9 +120,19 @@ Use the visual critic for creative judgment. One reviewer is enough unless a
 named specialty materially helps. Small revisions can use a separate self-review pass, labeled
 accurately. Review-only assignments never edit artifacts.
 
-Locate consequential weaknesses and their audience impact. Grade each finding
-blocking (the target is unmet or the deliverable cannot be used), major (a
-visible weakness the audience will notice) or minor (polish). The verdict
+Locate consequential weaknesses and their audience impact. Grade each finding by
+this rule, the same on every host and role:
+
+- Blocking: it breaks exact copy, a fixed requirement, a stated success
+  condition or a recorded standing correction, or it leaves the deliverable
+  unusable.
+- Major: it breaks a house default or a review criterion that the pack does
+  not state as a requirement, or it visibly weakens the first read, the
+  hierarchy or brand fidelity in a way the audience will notice.
+- Minor: polish that does not change what the viewer understands or does,
+  such as a small misalignment or one uneven gap.
+
+Report minor findings too; they do not change the verdict. The verdict
 follows the findings: unmet with any blocking finding, needs revision with any
 major finding, strong with neither. Check the output against the pack's
 `first_read` and the client's recorded keep and avoid decisions where the pack

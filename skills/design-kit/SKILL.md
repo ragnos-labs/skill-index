@@ -135,8 +135,10 @@ limit applies on every host and role. Preserve
 enforced account, permission, rights, and tool constraints. Do not add routine
 user approvals.
 
-A critic's verdict follows its findings: any blocking finding is unmet, any
-major finding is needs revision, and strong means neither remains.
+A critic grades each finding blocking, major or minor by the rule in "Review
+and repair" in [production.md](references/production.md), and its verdict
+follows the findings: any blocking finding is unmet, any major finding is
+needs revision, and strong means neither remains.
 
 For ambitious website work, load the host's website-design skill when one is
 installed. For CMS still-production or independent review, load the matching
