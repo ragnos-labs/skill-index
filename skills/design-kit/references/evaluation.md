@@ -97,7 +97,11 @@ passes or fails on what the transcript shows.
 3. Critic on seeded defects. Keep one fixture render per host run with three
    planted defects and its pack in the evaluation folder: one blocking (for
    example required copy cut off by overflow), one major (a colored edge bar
-   on a card) and one minor (one uneven gap). Pass: it finds all three, grades
+   on a card, with edge bars named only as a house default in the review
+   criteria, not as a success condition) and one minor that is unambiguous at
+   full resolution (for example one block set 14 pixels off the shared left
+   margin). State in the pack anything in the fixture that is intentional, so
+   the critic does not grade the fixture's own shortcuts. Pass: it finds all three, grades
    each at its planted level, returns the verdict unmet, and reports no other
    blocking finding.
 

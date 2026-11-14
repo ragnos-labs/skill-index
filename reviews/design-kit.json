@@ -1,12 +1,13 @@
 {
-  "bundle_digest": "sha256:f9d41081c02032fc1f310b4742ec06d6fd8717c2daac27b77b9b2279c298d2b9",
+  "bundle_digest": "sha256:5c2fb86dcec40b3aec2f239dbd7dc510469619278c3cb3af667ffb6bbf60bd00",
   "evidence": [
     "Two independent read-only agent reviews of the full bundle and record on 2026-11-13. The first returned twelve findings and the second six; all were applied except the items listed under limitations.",
     "Brand sources and the design pack schema and checker (2026-11-13): an independent read-only review returned thirteen findings, all applied; an independent re-review confirmed eleven resolved and raised five more, all applied with tests.",
     "The bundle, record, packet and generated indexes pass make check, including 23 design pack checker tests with hostile inputs.",
     "Client-material rule changed on the owner's decision of 2026-11-13 (assigned work may send client marketing material to relevant providers, generative included, without separate permission); author check and make check only.",
     "Pack schema 2, the claims and learned-record rules, the two-round repair limit and the verdict rule (2026-11-13): an independent read-only review of the exact revision returned seven findings, all applied with tests.",
-    "Medium routes, the job workflow, the brand record template and the three probes (2026-11-13): an independent read-only review of the exact revision returned ten findings and three craft additions, all applied."
+    "Medium routes, the job workflow, the brand record template and the three probes (2026-11-13): an independent read-only review of the exact revision returned ten findings and three craft additions, all applied.",
+    "Fresh-session probes on two hosts (2026-11-13): Director pack and producer hold passed; the critic probe showed two critics grading the same defect differently, which this revision resolves with one grading rule. Author check and make check only for this revision."
   ],
   "limitations": [
     "The five fixes from the brand-sources re-review were checked by the author and the tests only.",

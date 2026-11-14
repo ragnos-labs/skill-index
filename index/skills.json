@@ -445,7 +445,7 @@
         "ui design kit",
         "design sources"
       ],
-      "bundle_digest": "sha256:f9d41081c02032fc1f310b4742ec06d6fd8717c2daac27b77b9b2279c298d2b9",
+      "bundle_digest": "sha256:5c2fb86dcec40b3aec2f239dbd7dc510469619278c3cb3af667ffb6bbf60bd00",
       "composes": [],
       "domain": "software-delivery",
       "exclusions": [
@@ -459,7 +459,7 @@
       "resources": [
         {
           "path": "SKILL.md",
-          "sha256": "a3fa60ec02691fec117a656ff8a3d05c756d6a759b890941c8e78e4ec8593883"
+          "sha256": "fb58db4aa459bd71e1ba8aeb399587d2d68ea47ff2ffcfc58748864f90aa92d2"
         },
         {
           "path": "assets/brand-record.template.md",
@@ -483,7 +483,7 @@
         },
         {
           "path": "references/evaluation.md",
-          "sha256": "3fde3f813c196bd5a3bfa0972b5232ab4d4bcee95d273824afe2d008db2ce3eb"
+          "sha256": "6c4c4b4a5cb44ef448e2abfb4fe92bd73d8046f18f34625e98432e8847f371d4"
         },
         {
           "path": "references/mediums.md",
@@ -491,7 +491,7 @@
         },
         {
           "path": "references/production.md",
-          "sha256": "0e7582f496b5782d5f7b28263a4440663d318833c93eabe6bb1e5764c8856815"
+          "sha256": "107c1820f222c7f57cc71667601929223c313e24f74cdbb7bfa3ba7b153132a8"
         },
         {
           "path": "references/project-record.md",
