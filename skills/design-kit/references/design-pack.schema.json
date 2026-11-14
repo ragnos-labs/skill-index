@@ -373,6 +373,10 @@
               "type": "string",
               "minLength": 1,
               "description": "The revision or digest the CMS returned for the learned record."
+            },
+            "no_digest_reason": {
+              "type": "string",
+              "minLength": 1
             }
           }
         }

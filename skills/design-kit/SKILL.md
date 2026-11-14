@@ -123,7 +123,8 @@ never opened is not a completed visual review.
 Repair while significant defects remain, for two repair rounds at most. After
 the second round, stop, keep the strongest output and report the unmet target
 and the decision it needs; a direction problem goes back to the Director, not
-into a third round. This limit applies on every host and role. Preserve
+into a third round, and the Director's one reframe counts as a round. This
+limit applies on every host and role. Preserve
 enforced account, permission, rights, and tool constraints. Do not add routine
 user approvals.
 

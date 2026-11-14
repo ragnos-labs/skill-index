@@ -193,7 +193,6 @@ class DesignPackTests(unittest.TestCase):
         self.assertIn("pack.schema_version: must be 2", self.errors(pack))
         pack = copy.deepcopy(EXAMPLE)
         pack["deliverable"]["kind"] = "carousel"
-        del pack["cms"]
         self.assertEqual(self.errors(pack), [])
 
     def test_cms_pack_holds_until_learned_record_is_read(self):
@@ -201,8 +200,62 @@ class DesignPackTests(unittest.TestCase):
         pack["cms"]["learned"] = {"read": False}
         self.assertEqual(self.errors(pack),
                          ["pack.cms.learned.read: hold until the client's learned corrections are read"])
+        for learned in ({"read": True}, {"read": True, "digest": "r7", "no_digest_reason": "none returned"}):
+            pack["cms"]["learned"] = learned
+            self.assertEqual(self.errors(pack), ["pack.cms.learned: give a digest or no_digest_reason, exactly one"])
+        pack["cms"]["learned"] = {"read": True, "no_digest_reason": "the CMS returned no revision"}
+        self.assertEqual(self.errors(pack), [])
+        code, out, _ = run("summary", self.write(pack))
+        self.assertIn("CMS learned record: read, no digest: the CMS returned no revision", out)
         del pack["cms"]["learned"]
         self.assertIn("pack.cms.learned: required", self.errors(pack))
+
+    def test_cms_block_is_required_whenever_cms_sources_are_used(self):
+        pack = copy.deepcopy(EXAMPLE)
+        pack["deliverable"]["kind"] = "carousel"
+        del pack["cms"]
+        self.assertTrue(any(e.startswith("pack.cms: required") for e in self.errors(pack)))
+        pack["resources"] = [r for r in pack["resources"] if r["source"] != "cms"]
+        self.assertEqual(self.errors(pack), [])
+        pack["brand"] = {"name": "Example Brand", "origin": "cms", "files_read": ["client brand record"]}
+        self.assertTrue(any(e.startswith("pack.cms: required") for e in self.errors(pack)))
+
+    def test_quote_needs_a_release_on_file_before_final(self):
+        pack = copy.deepcopy(EXAMPLE)
+        pack["claims"] = [{"text": "It changed how we work", "kind": "quote", "source": "Episode 3, 12:40",
+                           "verified": True, "release": "not_required"}]
+        code, _, err = run("check", self.write(pack), "--final")
+        self.assertEqual(code, 1)
+        self.assertIn("pack.claims[0]: a quote needs a release on file; draft only", err)
+        pack["claims"][0]["release"] = "on_file"
+        self.assertEqual(run("check", self.write(pack), "--final")[0], 0)
+
+    def test_new_fields_reject_hostile_shapes_cleanly(self):
+        cases = (
+            (("claims",), "yes", "pack.claims"),
+            (("claims",), [{"text": "a", "kind": "quote", "source": "s", "verified": "true", "release": "on_file"}],
+             "claims[0].verified"),
+            (("claims",), [{"text": "a", "kind": "quote", "source": "s", "verified": 1, "release": "on_file"}],
+             "claims[0].verified"),
+            (("claims",), [{"text": "a", "kind": "rumour", "source": "s", "verified": True, "release": "on_file"}],
+             "claims[0].kind"),
+            (("claims",), [{"text": "a", "kind": "quote", "source": "s", "verified": True, "release": "on_file",
+                            "extra\u001b[2J": 1}], "unknown field"),
+            (("cms", "learned"), None, "pack.cms.learned"),
+            (("cms", "learned"), {"read": "yes"}, "pack.cms.learned.read"),
+            (("direction", "rejected_alternative"), "none", "pack.direction.rejected_alternative"),
+            (("direction", "rejected_alternative"), {"what": "x"}, "rejected_alternative.why: required"),
+        )
+        for path, value, fragment in cases:
+            pack = copy.deepcopy(EXAMPLE)
+            target = pack
+            for key in path[:-1]:
+                target = target[key]
+            target[path[-1]] = value
+            code, out, err = run("check", self.write(pack), "--final")
+            self.assertEqual((code, out), (1, ""), fragment)
+            self.assertIn(fragment, err)
+            self.assertNotIn("\x1b", err)
 
     def test_cms_pack_names_its_brand_record(self):
         pack = copy.deepcopy(EXAMPLE)

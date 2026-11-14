@@ -134,7 +134,8 @@ result for improvement and regression.
 Continue productive repair while significant defects remain within authority
 and resources, for two repair rounds at most. Numeric thresholds and human
 review stages are not default gates in this kit. If the first repair fails,
-change approach for the second. After the second round, or when required
+change approach for the second. A reframe by the Director counts as one of
+the two rounds; it does not restart the count. After the second round, or when required
 input/access is missing, preserve the strongest
 artifact and state the exact unmet target and next action. Do not lower the
 target silently or claim human acceptance.

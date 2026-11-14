@@ -20,8 +20,10 @@ open, and it starts with:
 - allowed effects, reuse limits, and the review criteria.
 
 A CMS pack adds the project, admitted reference revisions, permitted output
-round and the learned record it read; a pack whose learned record was not read
-is a hold. Named provider resources do not replace real files or pixels.
+round and the learned record it read with its digest or revision (or why the
+CMS returned none); a pack whose learned record was not read is a hold. Any
+pack that uses a CMS brand record or CMS resource carries the `cms` block,
+whatever its deliverable kind. Named provider resources do not replace real files or pixels.
 
 Write this start of the pack as `design-pack.json` beside the design record,
 following [design-pack.schema.json](design-pack.schema.json); copy
@@ -37,7 +39,10 @@ python3 <kit>/scripts/design_pack.py summary design-pack.json
 
 Pass `--brand-digest` when the brand's origin is `skill`. Pass `--final` before
 output leaves draft: it fails while any claim is unverified or any release is
-missing. Without it such a pack passes as draft only. Any `check` failure
+missing, or a quote or testimonial has no release on file. Without it such a
+pack passes as draft only. Packs written to schema version 1 are rejected:
+add `first_read`, `rejected_alternative`, `claims` and, for CMS work,
+`cms.learned`, and set `schema_version` to 2. Any `check` failure
 goes back to the Director with the printed reasons; a differing kit or brand
 digest is a hold. A CMS pack names the CMS brand record it read; it outranks
 the brand block on brand matters. `summary` answers "what informed this

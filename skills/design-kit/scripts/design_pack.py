@@ -106,10 +106,15 @@ def rules(pack):
     if (kit["digest"] is None) == ("no_digest_reason" not in kit):
         errors.append("pack.kit: give a digest or no_digest_reason, exactly one")
     errors.extend(brand_rules(pack["brand"]))
-    if pack["deliverable"]["kind"] == "cms_asset" and "cms" not in pack:
-        errors.append("pack.cms: required for a cms_asset")
-    if "cms" in pack and not pack["cms"]["learned"]["read"]:
-        errors.append("pack.cms.learned.read: hold until the client's learned corrections are read")
+    from_cms = pack["brand"]["origin"] == "cms" or any(item["source"] == "cms" for item in pack["resources"])
+    if (pack["deliverable"]["kind"] == "cms_asset" or from_cms) and "cms" not in pack:
+        errors.append("pack.cms: required for a cms_asset and for any pack that uses a CMS brand or resource")
+    if "cms" in pack:
+        learned = pack["cms"]["learned"]
+        if not learned["read"]:
+            errors.append("pack.cms.learned.read: hold until the client's learned corrections are read")
+        elif ("digest" in learned) == ("no_digest_reason" in learned):
+            errors.append("pack.cms.learned: give a digest or no_digest_reason, exactly one")
     return errors
 
 
@@ -121,6 +126,8 @@ def draft_only(pack):
             reasons.append(f"pack.claims[{index}]: not verified against its source")
         if claim["release"] == "missing":
             reasons.append(f"pack.claims[{index}]: release missing")
+        elif claim["kind"] in ("quote", "testimonial") and claim["release"] != "on_file":
+            reasons.append(f"pack.claims[{index}]: a {claim['kind']} needs a release on file")
     return reasons
 
 
@@ -178,6 +185,10 @@ def summary(pack):
         cms = pack["cms"]
         lines.append(f"CMS project: {cms['project']}" + (f", round {cms['output_round']}" if "output_round" in cms else ""))
         lines.append(f"CMS brand record (outranks the brand above): {cms['brand_record']}")
+        learned = cms["learned"]
+        lines.append("CMS learned record: " + (
+            f"read, {learned.get('digest') or 'no digest: ' + str(learned.get('no_digest_reason'))}"
+            if learned["read"] else "not read"))
     held = draft_only(pack)
     lines.append(f"Claims: {len(pack['claims'])}" + (f"; draft only, {len(held)} open" if held else ""))
     if not pack["resources"]:

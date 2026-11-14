@@ -1,16 +1,18 @@
 {
-  "bundle_digest": "sha256:82cc2a122083d5df96d118f55d69b5ad61dce84d390b316469c6a7ddfffb4941",
+  "bundle_digest": "sha256:0560965dd95ec4704485f23db783c409990229f00c7bcb087bbd445391a651d0",
   "evidence": [
     "Two independent read-only agent reviews of the full bundle and record on 2026-11-13. The first returned twelve findings and the second six; all were applied except the items listed under limitations.",
     "Brand sources and the design pack schema and checker (2026-11-13): an independent read-only review returned thirteen findings, all applied; an independent re-review confirmed eleven resolved and raised five more, all applied with tests.",
-    "The bundle, record, packet and generated indexes pass make check, including 17 design pack checker tests with hostile inputs.",
-    "Client-material rule changed on the owner's decision of 2026-11-13 (assigned work may send client marketing material to relevant providers, generative included, without separate permission); author check and make check only."
+    "The bundle, record, packet and generated indexes pass make check, including 23 design pack checker tests with hostile inputs.",
+    "Client-material rule changed on the owner's decision of 2026-11-13 (assigned work may send client marketing material to relevant providers, generative included, without separate permission); author check and make check only.",
+    "Pack schema 2, the claims and learned-record rules, the two-round repair limit and the verdict rule (2026-11-13): an independent read-only review of the exact revision returned seven findings, all applied with tests."
   ],
   "limitations": [
     "The five fixes from the brand-sources re-review were checked by the author and the tests only.",
     "The required-reads rule has not been rerun on an uncorrected first pass; evaluation runs so far used synthetic briefs and needed host correction.",
     "No run shows the kit on real client work; the skill stays experimental.",
-    "The required reads are instructions; design_pack.py checks a pack only when a host runs it, and nothing forces it to."
+    "The required reads are instructions; design_pack.py checks a pack only when a host runs it, and nothing forces it to.",
+    "The seven fixes from the schema 2 review were checked by the author and the tests only."
   ],
   "reviewed_at": "2026-11-13",
   "reviewer": "independent-agent-review",
