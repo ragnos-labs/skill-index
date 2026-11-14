@@ -4,6 +4,11 @@ Extend the existing record. Otherwise create `DESIGN.md` with the owning project
 for public/synthetic decisions; keep private inputs and restricted captures in
 its approved private storage. Never save credentials or signed URLs in Git.
 
+Producer notes, self-observations and rationale written during production go
+in `PRODUCTION-NOTES.md` or the producer's return, never in `DESIGN.md` or the
+brand record. The record's source and repair tables hold facts only: what was
+used, what changed, what was observed.
+
 ## Design pack
 
 The design pack is the one handoff from Director to maker or builder. It is
@@ -18,6 +23,14 @@ open, and it starts with:
   its source, whether it was verified against that source, and its release;
 - each admitted resource with its ID or revision and the decision it supports;
 - allowed effects, reuse limits, and the review criteria.
+
+`fixed_requirements` holds only true constraints (legal, factual, format,
+accessibility, or a rule in the brand's own specification or one a person
+confirmed) and standing corrections a person confirmed. A client's or
+operator's taste preference, and anything inferred from past keeps and
+rejections, goes in `review_criteria`. A broken fixed requirement is a
+blocking finding, so a preference written there fails the work instead of
+steering it.
 
 A CMS pack adds the project, admitted reference revisions, permitted output
 round and the learned record it read with its digest or revision (or why the

@@ -445,7 +445,7 @@
         "ui design kit",
         "design sources"
       ],
-      "bundle_digest": "sha256:5c2fb86dcec40b3aec2f239dbd7dc510469619278c3cb3af667ffb6bbf60bd00",
+      "bundle_digest": "sha256:023b92594f71d84b749e93298f552bca45bcf3d116df2db86e482ef7459b6c29",
       "composes": [],
       "domain": "software-delivery",
       "exclusions": [
@@ -459,7 +459,7 @@
       "resources": [
         {
           "path": "SKILL.md",
-          "sha256": "fb58db4aa459bd71e1ba8aeb399587d2d68ea47ff2ffcfc58748864f90aa92d2"
+          "sha256": "94e1072e27e85af1778d9072cbfab292a58e3da56544d1126d9433b9fa61c225"
         },
         {
           "path": "assets/brand-record.template.md",
@@ -491,11 +491,11 @@
         },
         {
           "path": "references/production.md",
-          "sha256": "107c1820f222c7f57cc71667601929223c313e24f74cdbb7bfa3ba7b153132a8"
+          "sha256": "7ac9d4864371cf6f3aa893882c5a773b8b4846983f25df559ce4d76401a5b5a3"
         },
         {
           "path": "references/project-record.md",
-          "sha256": "9646ba8a1a4802bf7b448f7c5c0e07be768a30623da4f023ed7561506f333ccf"
+          "sha256": "0d5ea9dc9a5b9e1a67b0303e242fe38714d9387b7d60b83ad3d8c141f6947115"
         },
         {
           "path": "references/providers.md",
@@ -515,7 +515,7 @@
         }
       ],
       "review": {
-        "reviewed_at": "2026-11-13",
+        "reviewed_at": "2026-11-14",
         "status": "reviewed"
       },
       "review_path": "reviews/design-kit.json",

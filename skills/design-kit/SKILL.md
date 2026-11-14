@@ -82,7 +82,9 @@ directing, not only at review.
 
 Build **one researched direction by default**; make several only when asked.
 Preserve the established direction for a focused revision. Separate fixed
-requirements from changeable design choices. Express the visual idea through
+requirements from changeable design choices. A taste preference is a review
+criterion, never a fixed requirement; see "Design pack" in
+[project-record.md](references/project-record.md). Express the visual idea through
 hierarchy, typography, grid, spacing, imagery, color roles, density, and useful
 motion, not adjectives alone.
 
