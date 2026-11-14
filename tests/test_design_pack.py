@@ -161,6 +161,49 @@ class DesignPackTests(unittest.TestCase):
         self.assertEqual(code, 0)
         self.assertIn("Caf\u00e9 Co", out)
 
+    def test_unverified_claim_or_missing_release_is_draft_only(self):
+        pack = copy.deepcopy(EXAMPLE)
+        pack["claims"].append({"text": "It changed how we work", "kind": "quote", "source": "Episode 3, 12:40",
+                               "verified": False, "release": "missing"})
+        self.assertEqual(self.errors(pack, DIGEST), [])
+        code, out, _ = run("check", self.write(pack), "--kit-digest", DIGEST, "--brand-digest", BRAND)
+        self.assertEqual(code, 0)
+        self.assertIn("draft only: 2 claim check(s) open", out)
+        code, out, err = run("check", self.write(pack), "--final")
+        self.assertEqual((code, out), (1, ""))
+        self.assertIn("pack.claims[1]: not verified against its source; draft only", err)
+        self.assertIn("pack.claims[1]: release missing; draft only", err)
+        code, out, _ = run("summary", self.write(pack))
+        self.assertIn("Claims: 2; draft only, 2 open", out)
+        code, out, _ = run("check", self.write(EXAMPLE), "--final", "--kit-digest", DIGEST, "--brand-digest", BRAND)
+        self.assertEqual((code, out.strip()), (0, "pack ok"))
+
+    def test_version_two_requires_direction_standard_and_claims(self):
+        for path, fragment in ((("direction", "first_read"), "pack.direction.first_read: required"),
+                               (("direction", "rejected_alternative"), "pack.direction.rejected_alternative: required"),
+                               (("claims",), "pack.claims: required")):
+            pack = copy.deepcopy(EXAMPLE)
+            target = pack
+            for key in path[:-1]:
+                target = target[key]
+            del target[path[-1]]
+            self.assertIn(fragment, self.errors(pack))
+        pack = copy.deepcopy(EXAMPLE)
+        pack["schema_version"] = 1
+        self.assertIn("pack.schema_version: must be 2", self.errors(pack))
+        pack = copy.deepcopy(EXAMPLE)
+        pack["deliverable"]["kind"] = "carousel"
+        del pack["cms"]
+        self.assertEqual(self.errors(pack), [])
+
+    def test_cms_pack_holds_until_learned_record_is_read(self):
+        pack = copy.deepcopy(EXAMPLE)
+        pack["cms"]["learned"] = {"read": False}
+        self.assertEqual(self.errors(pack),
+                         ["pack.cms.learned.read: hold until the client's learned corrections are read"])
+        del pack["cms"]["learned"]
+        self.assertIn("pack.cms.learned: required", self.errors(pack))
+
     def test_cms_pack_names_its_brand_record(self):
         pack = copy.deepcopy(EXAMPLE)
         del pack["cms"]["brand_record"]

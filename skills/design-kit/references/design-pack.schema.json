@@ -10,12 +10,13 @@
     "brand",
     "deliverable",
     "direction",
+    "claims",
     "resources",
     "review_criteria"
   ],
   "properties": {
     "schema_version": {
-      "const": 1
+      "const": 2
     },
     "kit": {
       "type": "object",
@@ -117,10 +118,17 @@
         "kind": {
           "enum": [
             "website",
+            "landing_page",
             "product_ui",
             "component",
             "static_graphic",
+            "carousel",
             "cms_asset",
+            "video",
+            "motion_graphic",
+            "document",
+            "brand_kit",
+            "copy",
             "other"
           ]
         },
@@ -143,7 +151,9 @@
       "required": [
         "audience",
         "action",
-        "premise"
+        "premise",
+        "first_read",
+        "rejected_alternative"
       ],
       "properties": {
         "audience": {
@@ -168,6 +178,30 @@
         "record": {
           "type": "string",
           "minLength": 1
+        },
+        "first_read": {
+          "type": "string",
+          "minLength": 1,
+          "description": "What the viewer notices first."
+        },
+        "rejected_alternative": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "what",
+            "why"
+          ],
+          "properties": {
+            "what": {
+              "type": "string",
+              "minLength": 1
+            },
+            "why": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "description": "One direction considered and set aside, with the reason."
         }
       }
     },
@@ -183,6 +217,51 @@
       "items": {
         "type": "string",
         "minLength": 1
+      }
+    },
+    "claims": {
+      "type": "array",
+      "description": "Every quote, testimonial, statistic or factual claim in the copy. An unverified claim or a missing release makes the pack draft only.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "text",
+          "kind",
+          "source",
+          "verified",
+          "release"
+        ],
+        "properties": {
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "quote",
+              "testimonial",
+              "statistic",
+              "factual_claim"
+            ]
+          },
+          "source": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Where the wording or fact was checked: recording and timestamp, document, or record."
+          },
+          "verified": {
+            "type": "boolean",
+            "description": "True only when the wording or fact was checked against the source itself."
+          },
+          "release": {
+            "enum": [
+              "on_file",
+              "not_required",
+              "missing"
+            ]
+          }
+        }
       }
     },
     "resources": {
@@ -262,7 +341,8 @@
       "additionalProperties": false,
       "required": [
         "project",
-        "brand_record"
+        "brand_record",
+        "learned"
       ],
       "properties": {
         "project": {
@@ -277,6 +357,24 @@
         "output_round": {
           "type": "string",
           "minLength": 1
+        },
+        "learned": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "read"
+          ],
+          "properties": {
+            "read": {
+              "type": "boolean",
+              "description": "True only when the client's learned corrections were read before direction."
+            },
+            "digest": {
+              "type": "string",
+              "minLength": 1,
+              "description": "The revision or digest the CMS returned for the learned record."
+            }
+          }
         }
       },
       "description": "CMS references are resources with source cms; they are not repeated here."

@@ -445,7 +445,7 @@
         "ui design kit",
         "design sources"
       ],
-      "bundle_digest": "sha256:31708177a4f2f4ea6d71386eb7cdf09a636d6fc62b9ff688f280145c636153a1",
+      "bundle_digest": "sha256:82cc2a122083d5df96d118f55d69b5ad61dce84d390b316469c6a7ddfffb4941",
       "composes": [],
       "domain": "software-delivery",
       "exclusions": [
@@ -459,11 +459,11 @@
       "resources": [
         {
           "path": "SKILL.md",
-          "sha256": "1aa7589ef33024b0d31df92951e1d8da98bbb2bf07d11173dc4fc80b0f7c1e39"
+          "sha256": "5248dfdef16102098041e5767d8c0beb834a67669a6560ed17e27feee75d0522"
         },
         {
           "path": "assets/design-pack.example.json",
-          "sha256": "8e7899be7b3f868fa9a697577cee32c36cd7aaac9db1084f2a8e8ab1758b12fb"
+          "sha256": "2ddea3d3cb5b443914d5f69bb750213a7d0b40786d392f55b8422711227384e3"
         },
         {
           "path": "references/agent-cms.md",
@@ -475,7 +475,7 @@
         },
         {
           "path": "references/design-pack.schema.json",
-          "sha256": "265788bab52e53b153f3a7dcefceebf6b4ade55e7bd460374d106c054e0dbbc4"
+          "sha256": "8b669292caca54142d24410c7c22b626fca267310634c18d28857eb928e71f55"
         },
         {
           "path": "references/evaluation.md",
@@ -483,11 +483,11 @@
         },
         {
           "path": "references/production.md",
-          "sha256": "87cde9d52345225319b5679a89fb55b393df3d70f63caad7f39ca8bfe156b7b4"
+          "sha256": "06ef9ae614793c9a06af5be49c72818d520a1921f0db6cffc8d47600e8457d36"
         },
         {
           "path": "references/project-record.md",
-          "sha256": "28f9bc06758d0565cdc43188ed0a23c16799a49e034c8c011f1b04ebd70628d2"
+          "sha256": "51fce0728981ade34bac48428789802c3835b79030bf82b4eb60ac37635b7821"
         },
         {
           "path": "references/providers.md",
@@ -503,7 +503,7 @@
         },
         {
           "path": "scripts/design_pack.py",
-          "sha256": "16ec116eb5c510396779ee3ff3e1b8208ac9fcb4edbaba1d432dcfa7467395f1"
+          "sha256": "c9cd816ce0baaee527433ca56df4d000f38820255614a5cd71343e493e86d67a"
         }
       ],
       "review": {
