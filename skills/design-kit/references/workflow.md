@@ -44,7 +44,7 @@ person decides.
 | 1. Intake | The host that received the request | One job record: the ask in the person's words, the client, the deliverables and their kinds, the destination and what the job may change |
 | 2. Brief and brand | Director | The brief, the resolved brand record, and for CMS work the learned record read |
 | 3. Direction | Director | A checked design pack per deliverable kind |
-| 4. Production | The producer for the medium in [mediums.md](mediums.md) | Editable source, renders, the source-to-output record, defects seen |
+| 4. Production | The producer for the medium in [mediums.md](mediums.md) | Editable source, renders, and `PRODUCTION-NOTES.md` or its return (sources as used, defects seen) |
 | 5. Critique | Critic | Graded findings and a verdict on the actual output |
 | 6. Repair | The same producer | Changed output with before and after; two rounds at most |
 | 7. Recommendation | Director | One recommendation with reasons, visual and copy together, and the list of decisions that belong to a person |

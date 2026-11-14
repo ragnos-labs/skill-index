@@ -445,7 +445,7 @@
         "ui design kit",
         "design sources"
       ],
-      "bundle_digest": "sha256:8cd9bc5bf12c1b998d6639cb180dda13208749f2db040582c3201551af02a003",
+      "bundle_digest": "sha256:d94f485252060db1ae69fda80114994738625b7dd0112405cb1f74a418490ba1",
       "composes": [],
       "domain": "software-delivery",
       "exclusions": [
@@ -459,7 +459,7 @@
       "resources": [
         {
           "path": "SKILL.md",
-          "sha256": "94e1072e27e85af1778d9072cbfab292a58e3da56544d1126d9433b9fa61c225"
+          "sha256": "2a0a08261c674a24a60d734b3ac0db01c0632f52956aef90e5e509320f3e3597"
         },
         {
           "path": "assets/brand-record.template.md",
@@ -467,7 +467,7 @@
         },
         {
           "path": "assets/design-pack.example.json",
-          "sha256": "2ddea3d3cb5b443914d5f69bb750213a7d0b40786d392f55b8422711227384e3"
+          "sha256": "08d6e61a23d1885dc3f7be9850999dab2bcb21420c045c040f1bf015d1498eb2"
         },
         {
           "path": "references/agent-cms.md",
@@ -487,15 +487,15 @@
         },
         {
           "path": "references/mediums.md",
-          "sha256": "ddd1c2d7d248d094292535a25ace33dd4b2773ebee1de9987b14aa8c4899c353"
+          "sha256": "de29ccc13f577d09f9f63cc0502db360b1e6e61bf73de782a72fc24ec7c6cbb9"
         },
         {
           "path": "references/production.md",
-          "sha256": "7ac9d4864371cf6f3aa893882c5a773b8b4846983f25df559ce4d76401a5b5a3"
+          "sha256": "0d37c73d6433130514d7d871677a4def60258e1947e7c1f2873ebc18789c7597"
         },
         {
           "path": "references/project-record.md",
-          "sha256": "0d5ea9dc9a5b9e1a67b0303e242fe38714d9387b7d60b83ad3d8c141f6947115"
+          "sha256": "91350222dbbae28bcdd7e500ef4682070a9330fe725858364e791c16b03bb8e8"
         },
         {
           "path": "references/providers.md",
@@ -503,15 +503,15 @@
         },
         {
           "path": "references/ui-sdk.md",
-          "sha256": "5b8e7e5f876c44b80d68644cb8d4dacedad1915c90aaae0e6aa6a42fa53ca9f6"
+          "sha256": "1b26f1ee1eccc3efe85c41d82ee7e1eced00a61eaeca700d90d08970c5b67f26"
         },
         {
           "path": "references/workflow.md",
-          "sha256": "91ce27be7ac6cfcb20ecdb7889db3af15cf1e1ff4ecc42fff51b7502cf485e57"
+          "sha256": "6d7dacceb298195445955318fd6f51f8ed4f777f60ed009816b49891b5ce2ec4"
         },
         {
           "path": "scripts/design_pack.py",
-          "sha256": "fb51193c5c0d5763f8aea3aadafe75cb5c0073e09a7ef5d39d85ac118b19f616"
+          "sha256": "b89cbb0177c2ee6c1408f219d4579ac958a250503c157eaa7ac74de832fbf3ea"
         }
       ],
       "review": {

@@ -148,7 +148,7 @@ CMS workflow.
 
 ## Keep and deliver useful work
 
-Extend the owner's existing design record using
+The Director extends the owner's existing design record using
 [project-record.md](references/project-record.md). Keep reusable tokens,
 components, editable assets, required resource copies, and evidence with the
 owner. Keep restricted reference captures out of public exports.

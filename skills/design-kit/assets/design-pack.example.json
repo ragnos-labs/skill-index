@@ -56,7 +56,7 @@
     {
       "text": "Thursday, 10 AM",
       "kind": "factual_claim",
-      "source": "Workshop record, schedule field",
+      "source": "Workshop record, schedule field; compared the date and time text",
       "verified": true,
       "release": "not_required"
     }

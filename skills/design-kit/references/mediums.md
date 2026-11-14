@@ -105,8 +105,12 @@ files as supplied, the two proofs and short reuse instructions.
 
 When the assignment supplies exact copy, use it unchanged. Otherwise the kit
 does not write final copy: route it to the host's marketing copy role or copy
-skill with the brief, the audience, the offer and the client's own source
-material. A design-only assignment is not expanded into post copy. Draft copy returns with a `claims` entry for every quote,
-testimonial, statistic and factual claim. Copy and visual are recommended
+skill with a copy work order. It carries the audience, the one idea, each
+component with its length limit, the source material paths, the client's
+recorded decisions or that none exist, and the repair round number. The copy
+role holds when the audience or the one idea is missing; it does not assume
+them. A design-only assignment is not expanded into post copy. Draft copy
+returns with a `claims` entry for every quote, testimonial, statistic and
+factual claim. Copy and visual are recommended
 together. Placeholder words may test a layout, but a visual built around them
 is not ready for the critic or for a recommendation.
