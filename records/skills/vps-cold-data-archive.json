@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "name": "vps-cold-data-archive",
+  "path": "skills/vps-cold-data-archive",
+  "domain": "system",
+  "summary": "Archive cold server data to a write-only restic repository in B2 with full verification, remove local copies only with the owner's yes, restore on request, and act on cold data archive reports and purge batches.",
+  "status": "active",
+  "load_mode": "routable",
+  "risk": "high",
+  "composes": [],
+  "triggers": [
+    "move old data off the VPS to B2",
+    "archive this unused Docker volume",
+    "archive old release folders and free disk space",
+    "yes to purge batch",
+    "handle the cold data archive report",
+    "the disk is filling up, move cold data to the archive",
+    "restore a volume from the cold archive"
+  ],
+  "exclusions": [
+    "live databases or volumes attached to any container",
+    "deleting or forgetting archived snapshots",
+    "general disk cleanup without an owner's yes"
+  ],
+  "aliases": [
+    "cold data archive",
+    "vps cold storage",
+    "purge batch"
+  ],
+  "scope_terms": [
+    "restic",
+    "b2",
+    "cold archive",
+    "docker volume",
+    "disk space"
+  ],
+  "side_effects": [
+    "writes restic snapshots to the archive repository",
+    "removes a verified local volume or folder only with a recorded owner yes or policy pre-approval",
+    "removes images or build cache only for an approved purge batch"
+  ],
+  "source_refs": [],
+  "review_path": "reviews/vps-cold-data-archive.json"
+}

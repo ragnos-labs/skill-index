@@ -986,6 +986,61 @@
       ]
     },
     {
+      "aliases": [
+        "cold data archive",
+        "vps cold storage",
+        "purge batch"
+      ],
+      "bundle_digest": "sha256:48caafeede41eda4cf76b1752c41127fd6a46ce7309cbca5cf1fff81f5faa888",
+      "composes": [],
+      "domain": "system",
+      "exclusions": [
+        "live databases or volumes attached to any container",
+        "deleting or forgetting archived snapshots",
+        "general disk cleanup without an owner's yes"
+      ],
+      "load_mode": "routable",
+      "name": "vps-cold-data-archive",
+      "path": "skills/vps-cold-data-archive",
+      "resources": [
+        {
+          "path": "SKILL.md",
+          "sha256": "265f22ce8d60adfbe52352f2c688ef3cba7836a469c3d29e0520e9aa777d1583"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-11-14",
+        "status": "reviewed"
+      },
+      "review_path": "reviews/vps-cold-data-archive.json",
+      "risk": "high",
+      "schema_version": 1,
+      "scope_terms": [
+        "restic",
+        "b2",
+        "cold archive",
+        "docker volume",
+        "disk space"
+      ],
+      "side_effects": [
+        "writes restic snapshots to the archive repository",
+        "removes a verified local volume or folder only with a recorded owner yes or policy pre-approval",
+        "removes images or build cache only for an approved purge batch"
+      ],
+      "source_refs": [],
+      "status": "active",
+      "summary": "Archive cold server data to a write-only restic repository in B2 with full verification, remove local copies only with the owner's yes, restore on request, and act on cold data archive reports and purge batches.",
+      "triggers": [
+        "move old data off the VPS to B2",
+        "archive this unused Docker volume",
+        "archive old release folders and free disk space",
+        "yes to purge batch",
+        "handle the cold data archive report",
+        "the disk is filling up, move cold data to the archive",
+        "restore a volume from the cold archive"
+      ]
+    },
+    {
       "bundle_digest": "sha256:395000898b97ada4220f89ed46fd4e774fc217bda57d10049ecc898f55dafd5e",
       "composes": [],
       "domain": "wikipedia",
