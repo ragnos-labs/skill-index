@@ -40,7 +40,10 @@ from what exists before choosing a direction. Do not record brand `none` while
 real pages are available.
 
 1. Capture the home page and two other representative pages at desktop and
-   phone widths, and collect the logo files the site serves.
+   phone widths, and collect the logo files the site serves. The capture
+   is complete when those pages, the logo files and the styles read in step 2
+   are in hand; a single value no tool can measure does not make it
+   incomplete.
 2. Read the actual styles with the host's browser automation: colors with
    their roles, type families, weights and sizes, spacing, corner and border
    habits, image treatment and motion. Record computed values, not guesses
@@ -53,6 +56,14 @@ real pages are available.
    add as proposed.
 5. Keep the record with the client's project and name it in the pack's
    `brand` block with origin `project`.
+
+When the capture is incomplete (for example HTML with no stylesheet, fonts,
+logo files or page pixels) and cannot be completed within the job's access,
+record what is observed, mark every missing value unknown in the brand
+record, or proposed where the draft needs a stand-in, and proceed only for an
+internal draft, saying so in the pack
+and the recommendation. Work meant to be shown outside or to stand as the
+client's brand holds until the capture is complete.
 
 The same record, once a person confirms it, is the brand kit the client can
 be handed.
