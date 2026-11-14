@@ -67,6 +67,12 @@ and attributed feedback through the CMS's own skill. Read client knowledge only
 inside the scope the CMS returns. Agent proposals are not human decisions.
 Other projects use their local sources without an invented CMS dependency.
 
+A direction states its premise, what the viewer notices first, one alternative
+that was considered and set aside with the reason, and a named reference or
+brand source for each material decision. A direction that could describe any
+brand is not finished. Apply the defaults under "Scope and resource rules" when
+directing, not only at review.
+
 Build **one researched direction by default**; make several only when asked.
 Preserve the established direction for a focused revision. Separate fixed
 requirements from changeable design choices. Express the visual idea through
@@ -114,10 +120,16 @@ separately. Repair consequential defects and inspect equivalent before/after
 states. A working build can still miss the visual target. A screenshot that was
 never opened is not a completed visual review.
 
-Repair while significant defects remain and repairs are productive. There is no
-fixed round count or numeric-score gate here; a host role that sets its own
-repair limit keeps it. Preserve enforced account, permission, rights, and tool
-constraints. Do not add routine user approvals.
+Repair while significant defects remain, for two repair rounds at most. After
+the second round, stop, keep the strongest output and report the unmet target
+and the decision it needs; a direction problem goes back to the Director, not
+into a third round, and the Director's one reframe counts as a round. This
+limit applies on every host and role. Preserve
+enforced account, permission, rights, and tool constraints. Do not add routine
+user approvals.
+
+A critic's verdict follows its findings: any blocking finding is unmet, any
+major finding is needs revision, and strong means neither remains.
 
 For ambitious website work, load the host's website-design skill when one is
 installed. For CMS still-production or independent review, load the matching
@@ -156,6 +168,9 @@ acceptance; source delivery is distinct from deployment or publication.
   hosted generation, or retry quota/permission refusals to complete a checklist.
   Reconcile uncertain external outcomes before retrying writes.
 - Keep font and icon families consistent. Preserve exact client copy and logos.
-  Do not invent testimonials or product claims.
+  Do not invent testimonials, quotes, personal details or product claims. List
+  every quote, testimonial, statistic and factual claim in the pack's `claims`
+  with its source. Wording not checked against its source, or a quote without
+  a release on file, keeps the work draft only.
 - Defaults a project's own design record may override: no decorative diagonal
   arrows; no colored edge bars or notches on cards, selected rows, tabs or quotes.

@@ -12,12 +12,18 @@ open, and it starts with:
 
 - kit name, the digest the skill index returned, and the list of kit files read;
 - the brand and its sources, resolved as in [brand-sources.md](brand-sources.md);
-- the direction below, exact copy, dimensions or viewports, and fixed requirements;
+- the direction below with what the viewer notices first and one rejected
+  alternative, exact copy, dimensions or viewports, and fixed requirements;
+- every quote, testimonial, statistic and factual claim in the copy, each with
+  its source, whether it was verified against that source, and its release;
 - each admitted resource with its ID or revision and the decision it supports;
 - allowed effects, reuse limits, and the review criteria.
 
-A CMS pack adds the project, admitted reference revisions and permitted output
-round. Named provider resources do not replace real files or pixels.
+A CMS pack adds the project, admitted reference revisions, permitted output
+round and the learned record it read with its digest or revision (or why the
+CMS returned none); a pack whose learned record was not read is a hold. Any
+pack that uses a CMS brand record or CMS resource carries the `cms` block,
+whatever its deliverable kind. Named provider resources do not replace real files or pixels.
 
 Write this start of the pack as `design-pack.json` beside the design record,
 following [design-pack.schema.json](design-pack.schema.json); copy
@@ -31,7 +37,12 @@ python3 <kit>/scripts/design_pack.py check design-pack.json --kit-digest <kit di
 python3 <kit>/scripts/design_pack.py summary design-pack.json
 ```
 
-Pass `--brand-digest` when the brand's origin is `skill`. Any `check` failure
+Pass `--brand-digest` when the brand's origin is `skill`. Pass `--final` before
+output leaves draft: it fails while any claim is unverified or any release is
+missing, or a quote or testimonial has no release on file. Without it such a
+pack passes as draft only. Packs written to schema version 1 are rejected:
+add `first_read`, `rejected_alternative`, `claims` and, for CMS work,
+`cms.learned`, and set `schema_version` to 2. Any `check` failure
 goes back to the Director with the printed reasons; a differing kit or brand
 digest is a hold. A CMS pack names the CMS brand record it read; it outranks
 the brand block on brand matters. `summary` answers "what informed this

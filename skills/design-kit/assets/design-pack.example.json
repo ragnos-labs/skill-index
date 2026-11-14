@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "kit": {
     "name": "design-kit",
     "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000001",
@@ -37,7 +37,12 @@
       "Headline readable at phone size in under two seconds",
       "Only brand tokens for color and type"
     ],
-    "record": "DESIGN.md"
+    "record": "DESIGN.md",
+    "first_read": "The number, then the date",
+    "rejected_alternative": {
+      "what": "A photo-led layout with the headline over the image",
+      "why": "The supplied photos are too busy to hold a headline at phone size"
+    }
   },
   "exact_copy": [
     "Example Workshop",
@@ -46,6 +51,15 @@
   "fixed_requirements": [
     "Logo unchanged",
     "No prices"
+  ],
+  "claims": [
+    {
+      "text": "Thursday, 10 AM",
+      "kind": "factual_claim",
+      "source": "Workshop record, schedule field",
+      "verified": true,
+      "release": "not_required"
+    }
   ],
   "resources": [
     {
@@ -76,6 +90,10 @@
   "cms": {
     "project": "example-project",
     "brand_record": "project brand values and learned corrections",
-    "output_round": "round-1"
+    "output_round": "round-1",
+    "learned": {
+      "read": true,
+      "digest": "learned-rev-7"
+    }
   }
 }

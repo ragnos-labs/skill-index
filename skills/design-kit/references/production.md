@@ -120,16 +120,23 @@ Use the visual critic for creative judgment. One reviewer is enough unless a
 named specialty materially helps. Small revisions can use a separate self-review pass, labeled
 accurately. Review-only assignments never edit artifacts.
 
-Locate consequential weaknesses and their audience impact. Qualitative verdicts
-are unmet, needs revision, or strong against the selected target. Scores cannot
+Locate consequential weaknesses and their audience impact. Grade each finding
+blocking (the target is unmet or the deliverable cannot be used), major (a
+visible weakness the audience will notice) or minor (polish). The verdict
+follows the findings: unmet with any blocking finding, needs revision with any
+major finding, strong with neither. Check the output against the pack's
+`first_read` and the client's recorded keep and avoid decisions where the pack
+names them. Scores cannot
 conceal an inadequate primary asset. Preserve strong elements, repair the
 responsible decision, render matching content/viewport/state, and inspect the
 result for improvement and regression.
 
 Continue productive repair while significant defects remain within authority
-and resources. Fixed round counts, numeric thresholds, and human review stages
-are not default gates in this kit; a host role's own repair limit still applies. If repeated repairs fail, change approach. When useful
-options are exhausted or required input/access is missing, preserve the strongest
+and resources, for two repair rounds at most. Numeric thresholds and human
+review stages are not default gates in this kit. If the first repair fails,
+change approach for the second. A reframe by the Director counts as one of
+the two rounds; it does not restart the count. After the second round, or when required
+input/access is missing, preserve the strongest
 artifact and state the exact unmet target and next action. Do not lower the
 target silently or claim human acceptance.
 

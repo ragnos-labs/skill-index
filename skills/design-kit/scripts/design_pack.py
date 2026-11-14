@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 """Check a Design Kit design pack and summarize what informed the design.
 
-check PACK [--kit-digest DIGEST] [--brand-digest DIGEST]
+check PACK [--kit-digest DIGEST] [--brand-digest DIGEST] [--final]
     Validate PACK against references/design-pack.schema.json and the pack
     rules. A producer passes the digests its own skill index resolved; a
     differing kit or brand digest is a hold. Any failure goes back to the
     Director with the reasons printed. PACK may be - for standard input.
+    A pack with an unverified claim or a missing release is draft only:
+    it passes with a note, and fails with --final, which a producer passes
+    before output leaves draft.
     Exit 0 when the pack is usable, 1 when it is not, 2 on a usage error.
 
 summary PACK
@@ -103,9 +106,29 @@ def rules(pack):
     if (kit["digest"] is None) == ("no_digest_reason" not in kit):
         errors.append("pack.kit: give a digest or no_digest_reason, exactly one")
     errors.extend(brand_rules(pack["brand"]))
-    if pack["deliverable"]["kind"] == "cms_asset" and "cms" not in pack:
-        errors.append("pack.cms: required for a cms_asset")
+    from_cms = pack["brand"]["origin"] == "cms" or any(item["source"] == "cms" for item in pack["resources"])
+    if (pack["deliverable"]["kind"] == "cms_asset" or from_cms) and "cms" not in pack:
+        errors.append("pack.cms: required for a cms_asset and for any pack that uses a CMS brand or resource")
+    if "cms" in pack:
+        learned = pack["cms"]["learned"]
+        if not learned["read"]:
+            errors.append("pack.cms.learned.read: hold until the client's learned corrections are read")
+        elif ("digest" in learned) == ("no_digest_reason" in learned):
+            errors.append("pack.cms.learned: give a digest or no_digest_reason, exactly one")
     return errors
+
+
+def draft_only(pack):
+    """Claims that keep the pack draft only: unverified wording or a missing release."""
+    reasons = []
+    for index, claim in enumerate(pack["claims"]):
+        if not claim["verified"]:
+            reasons.append(f"pack.claims[{index}]: not verified against its source")
+        if claim["release"] == "missing":
+            reasons.append(f"pack.claims[{index}]: release missing")
+        elif claim["kind"] in ("quote", "testimonial") and claim["release"] != "on_file":
+            reasons.append(f"pack.claims[{index}]: a {claim['kind']} needs a release on file")
+    return reasons
 
 
 def load(path):
@@ -130,10 +153,12 @@ def load(path):
         raise ValueError(f"{safe(path)}: not valid UTF-8 JSON ({exc.__class__.__name__})") from None
 
 
-def check(pack, schema, kit_digest=None, brand_digest=None):
+def check(pack, schema, kit_digest=None, brand_digest=None, final=False):
     errors = validate(pack, schema) or rules(pack)
     if errors:
         return errors
+    if final:
+        errors.extend(reason + "; draft only" for reason in draft_only(pack))
     if kit_digest is not None and pack["kit"]["digest"] is not None and kit_digest != pack["kit"]["digest"]:
         errors.append("pack.kit.digest: differs from the producer's resolved kit; hold until the Director reconciles it")
     if brand_digest is not None and pack["brand"].get("digest") not in (None, brand_digest):
@@ -160,6 +185,12 @@ def summary(pack):
         cms = pack["cms"]
         lines.append(f"CMS project: {cms['project']}" + (f", round {cms['output_round']}" if "output_round" in cms else ""))
         lines.append(f"CMS brand record (outranks the brand above): {cms['brand_record']}")
+        learned = cms["learned"]
+        lines.append("CMS learned record: " + (
+            f"read, {learned.get('digest') or 'no digest: ' + str(learned.get('no_digest_reason'))}"
+            if learned["read"] else "not read"))
+    held = draft_only(pack)
+    lines.append(f"Claims: {len(pack['claims'])}" + (f"; draft only, {len(held)} open" if held else ""))
     if not pack["resources"]:
         lines.append("Resources: none")
     for item in pack["resources"]:
@@ -176,6 +207,7 @@ def main(argv=None):
     check_parser.add_argument("pack")
     check_parser.add_argument("--kit-digest")
     check_parser.add_argument("--brand-digest")
+    check_parser.add_argument("--final", action="store_true")
     summary_parser = commands.add_parser("summary")
     summary_parser.add_argument("pack")
     args = parser.parse_args(argv)
@@ -185,7 +217,8 @@ def main(argv=None):
     except ValueError as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 1
-    errors = check(pack, schema, getattr(args, "kit_digest", None), getattr(args, "brand_digest", None))
+    errors = check(pack, schema, getattr(args, "kit_digest", None), getattr(args, "brand_digest", None),
+                   getattr(args, "final", False))
     if errors:
         for error in errors[:MAX_ERRORS]:
             print(error, file=sys.stderr)
@@ -200,6 +233,9 @@ def main(argv=None):
             notes.append("kit digest not compared (pass --kit-digest as the producer)")
         if args.brand_digest is None and "digest" in pack["brand"]:
             notes.append("brand digest not compared (pass --brand-digest as the producer)")
+        held = draft_only(pack)
+        if held:
+            notes.append(f"draft only: {len(held)} claim check(s) open")
         print("pack ok" + ("; " + "; ".join(notes) if notes else ""))
     return 0
 
