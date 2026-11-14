@@ -1,8 +1,11 @@
 # Brand record: <brand name>
 
-Status of each entry: confirmed (a person approved it), observed (taken from
-the owner's existing material, with its source) or proposed (new, awaiting a
-person). Do not leave an entry unmarked.
+Status of each entry: confirmed (a person approved it; name and date go under
+Decisions), observed (taken from the owner's existing material, with its
+source), proposed (new, awaiting a person) or unknown (say where you looked).
+End every bullet and table row with its status. Write unknown rather than a
+plausible guess: an invented audience, clear space, licence or motion rule is
+worse than a gap.
 
 ## Source of truth
 
@@ -21,15 +24,15 @@ person). Do not leave an entry unmarked.
 | File | Use | Clear space and minimum size | Status |
 | --- | --- | --- | --- |
 
-Never redraw, recolour or regenerate a logo. List only files that exist.
+Never redraw, recolor or regenerate a logo. List only files that exist.
 
-## Colour
+## Color
 
-| Role | Value | Where it is used | Contrast pair | Status and source |
+| Role | Value | Where it is used | Paired color and measured contrast ratio | Status and source |
 | --- | --- | --- | --- | --- |
 
 Roles, not swatches: ground, text, primary action, accent, quiet surface,
-state colours. One accent unless the owner's material shows more.
+state colors. One accent unless the owner's material shows more.
 
 ## Type
 

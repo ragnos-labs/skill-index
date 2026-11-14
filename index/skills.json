@@ -445,7 +445,7 @@
         "ui design kit",
         "design sources"
       ],
-      "bundle_digest": "sha256:f009e38b724e682f1a2d5f8a13484b634703b5db36ab73ad0c275e4b23cabe04",
+      "bundle_digest": "sha256:f9d41081c02032fc1f310b4742ec06d6fd8717c2daac27b77b9b2279c298d2b9",
       "composes": [],
       "domain": "software-delivery",
       "exclusions": [
@@ -463,7 +463,7 @@
         },
         {
           "path": "assets/brand-record.template.md",
-          "sha256": "95a5929bb5c7befe70c468142d887a6c94a293b83541f8930f953801d56d95eb"
+          "sha256": "1ecef01043c2e2830acb972aae4f71076ebda4494096541670c9a19bfc43d276"
         },
         {
           "path": "assets/design-pack.example.json",
@@ -475,7 +475,7 @@
         },
         {
           "path": "references/brand-sources.md",
-          "sha256": "043f38502cf1f8ba2d43d391860f20be6c53fb8f96013b3337e252354062df65"
+          "sha256": "80e9fd452f90d11ab39ec1d29825271d7aa3b0ab7694b16f760b8aa010207ef9"
         },
         {
           "path": "references/design-pack.schema.json",
@@ -483,11 +483,11 @@
         },
         {
           "path": "references/evaluation.md",
-          "sha256": "692ec1c35dde72ae6c185e6de9ecfc78fb2ccfe5b90fb99f658c8ef7ed868945"
+          "sha256": "3fde3f813c196bd5a3bfa0972b5232ab4d4bcee95d273824afe2d008db2ce3eb"
         },
         {
           "path": "references/mediums.md",
-          "sha256": "64f14302acc4101b29aa64b0500c1416587437b7f7136418b5138d3110c7985e"
+          "sha256": "ddd1c2d7d248d094292535a25ace33dd4b2773ebee1de9987b14aa8c4899c353"
         },
         {
           "path": "references/production.md",
@@ -507,7 +507,7 @@
         },
         {
           "path": "references/workflow.md",
-          "sha256": "5d7992ef6def28db16a59dab010766881e0603767cb080e40bff18236efea217"
+          "sha256": "91ce27be7ac6cfcb20ecdb7889db3af15cf1e1ff4ecc42fff51b7502cf485e57"
         },
         {
           "path": "scripts/design_pack.py",

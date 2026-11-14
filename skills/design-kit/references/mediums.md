@@ -1,7 +1,7 @@
 # Mediums and routes
 
-The kit directs every medium below. It produces websites, product UI,
-components, static graphics and carousels itself. For the others the Director
+The kit directs every medium below. It produces websites, landing pages,
+product UI, components, static graphics, carousels and brand kits itself. For the others the Director
 still writes the direction and the design pack, and production goes to the
 method that owns that medium on the host. "Report the gap" is the answer only
 when the host has no such method; name the missing method once and continue the
@@ -18,17 +18,22 @@ parts that do not depend on it.
 | `copy` | The host's marketing copy role or copy skill; "Copy" below | Claims checked against sources |
 
 A campaign is several deliverables under one direction. Write one pack per
-deliverable kind and share the brief, brand block and direction across them.
+deliverable kind, named for its kind (`design-pack.carousel.json`,
+`design-pack.video.json`), and share the brief, brand block and direction
+across them.
 Review the set together as well as each piece: one voice, one type system,
 one image treatment.
 
 ## Landing pages
 
 A landing page has one audience, one offer and one action. Before layout, the
-pack states the offer in one sentence, the objection the page must answer and
-the proof available. Copy comes from the copy route below, not from the
-builder. Review adds: the action is visible without scrolling at 390 pixels,
-every claim on the page is in `claims`, and the form or link works.
+direction in the design record (the file the pack's `direction.record` names)
+states the offer in one sentence, the objection the page must answer and the
+proof available. When the assignment supplies exact copy, use it; otherwise
+copy comes from the copy route below, not from the builder. Review adds: the
+action is visible without scrolling at 390 by 844 pixels, every claim on the
+page is in `claims`, and the form or link works with synthetic data and sends
+nothing.
 
 ## Carousel
 
@@ -38,34 +43,40 @@ A carousel is one argument in a fixed number of frames, not several posters.
    last slide's action. Each slide carries one idea and the fewest words that
    carry it.
 2. Fix the system on the cover: grid, type roles, image treatment and where a
-   page marker or continuation cue sits. Later slides vary content inside that
-   system; they do not introduce a new layout without a reason.
+   page marker or continuation cue sits. Then define two or three slide types
+   inside that system (for example statement, evidence, action) and assign one
+   to each slide, so the set has rhythm without becoming unrelated posters.
 3. The cover must stand alone in a feed at phone size. The second slide must
    reward the swipe.
-4. Keep text inside the platform's safe area and away from interface overlays.
+4. State the platform, aspect ratio and safe-area insets in the direction, and
+   keep text inside them and away from interface overlays.
 5. Export every slide at the pack's size with ordered file names, and keep one
    editable source for the set.
 
-Review reads the slides in order at phone size, then each at full resolution.
-A finding names the slide number.
+Review looks at all slides side by side as a contact sheet for system and
+rhythm, reads them in order at phone size, then inspects each at full
+resolution. A finding names the slide number.
 
 ## Video and motion
 
 The kit writes the direction; the host's video method owns timelines, renders
 and audio. Do not build a video by hand inside this kit.
 
-The pack states the format and length, the first two seconds (what holds a
-viewer with the sound off), the beat list with the words on screen for each
-beat, the type and colour roles from the brand record, the motion character
-(how things enter, hold and leave, and how fast), captions and their safe
-area, the audio source, and the end card. Footage, quotes and music are
-`client_asset` or `brand_asset` resources with their rights; every spoken or
-on-screen quote is in `claims`.
+The direction in the design record (the file the pack's `direction.record`
+names) states the platform, aspect ratio, length and safe-area insets, the
+first two seconds (what holds a viewer with the sound off), the beat list
+with a duration and the words on screen for each beat, the type and color
+roles from the brand record, the motion character (how things enter, hold and
+leave, and how fast), captions, the audio source, and the end card. Footage,
+quotes and music are `client_asset` or `brand_asset` resources in the pack
+with their rights in `terms`; every spoken or on-screen quote is in `claims`.
 
 Hand the pack to the video method with the brand record. Ask for a still of
 the hardest frame before the full render. Review samples frames across the
-whole length, checks reading time for every text beat, watches once with sound
-and once without, and checks the first frame as a thumbnail. Follow the video
+whole length and checks the first frame as a thumbnail. Each text beat stays
+on screen at least as long as reading it aloud once, plus half a second.
+Confirm audio through the video method's own check, or report audio as not
+reviewed; never claim to have heard a render. Follow the video
 method's own review and loudness rules where it has them.
 
 ## Documents and decks
@@ -86,13 +97,16 @@ existing site" in [brand-sources.md](brand-sources.md); propose new values
 only for named gaps and mark each one proposed until a person confirms it.
 Prove the record on two real surfaces of different kinds (for example one page
 section and one graphic) before delivery. A delivered kit includes the record,
-the token file, the logo files as supplied, the two proofs and short reuse
-instructions.
+a token file (the record's color, type and shape values in the format the
+owner's projects import, such as CSS custom properties or JSON), the logo
+files as supplied, the two proofs and short reuse instructions.
 
 ## Copy
 
-The kit never writes final copy. Route copy to the host's marketing copy role
-or copy skill with the brief, the audience, the offer and the client's own
-source material. Draft copy returns with a `claims` entry for every quote,
+When the assignment supplies exact copy, use it unchanged. Otherwise the kit
+does not write final copy: route it to the host's marketing copy role or copy
+skill with the brief, the audience, the offer and the client's own source
+material. A design-only assignment is not expanded into post copy. Draft copy returns with a `claims` entry for every quote,
 testimonial, statistic and factual claim. Copy and visual are recommended
-together; a visual built around placeholder words is not ready for review.
+together. Placeholder words may test a layout, but a visual built around them
+is not ready for the critic or for a recommendation.

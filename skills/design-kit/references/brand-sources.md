@@ -21,9 +21,11 @@ Do this before choosing the direction or making the first render.
 4. If the index has no match, look in the working project for a design
    record, a brand specification, token files, a component catalog or
    registry, preview pages and an assets folder. Use what exists.
-5. If neither exists, record the brand as `none` and proceed from the
-   assignment's supplied assets. Do not invent brand values or borrow another
-   brand's.
+5. If neither exists and the owner has live pages, make the record from
+   them as in "Brand from an existing site" below. Only when there is no
+   brand skill, no project record and no existing material, record the brand
+   as `none` and proceed from the assignment's supplied assets. Do not invent
+   brand values or borrow another brand's.
 
 Order of authority on brand matters, highest first: the CMS client record
 (brand values, learned corrections, client scope) for a CMS asset; then the
@@ -39,9 +41,10 @@ real pages are available.
 
 1. Capture the home page and two other representative pages at desktop and
    phone widths, and collect the logo files the site serves.
-2. Read the actual styles: colours with their roles, type families, weights
-   and sizes, spacing, corner and border habits, image treatment and motion.
-   Record computed values, not guesses from a screenshot.
+2. Read the actual styles with the host's browser automation: colors with
+   their roles, type families, weights and sizes, spacing, corner and border
+   habits, image treatment and motion. Record computed values, not guesses
+   from a screenshot; where no tool can measure a value, mark it unknown.
 3. Note what the owner or the assignment says they like and what they want
    changed. A liked existing identity is a fixed requirement, not a starting
    point to replace.

@@ -1,6 +1,8 @@
 # How Design Kit works
 
-The entry file states the rules; this diagram shows the flow. The producer is the maker or builder.
+The entry file states the rules. This diagram shows the production slice for
+local and CMS work, where the producer is the maker or builder; the table
+below it covers the whole job, including mediums another method produces.
 
 ```mermaid
 flowchart TD
@@ -34,7 +36,8 @@ Provider retrieval is targeted, not a required checklist. CMS account effects, p
 
 Every creative job follows this order on every host. A person does not carry
 results between stages; the role finishing a stage hands the next role its
-work order.
+work order. Agent work ends at stage 7. Stages 8 and 9 happen only when a
+person decides.
 
 | Stage | Owner | Leaves behind |
 | --- | --- | --- |
@@ -52,12 +55,16 @@ Rules that hold at every stage:
 
 - Stages 3, 4 and 5 are three different roles on substantial work. A small
   edit may skip to stage 4 with a proportionate check.
-- The pack is the only handoff into production and into critique. A producer
-  or critic that receives anything else asks for the pack.
+- The pack is the only handoff into production and into critique, except a
+  small edit with no Director. A producer or critic that receives anything
+  else on substantial work asks for the pack.
 - The Director assembles stage 7 even when the critic's verdict is strong.
   Nobody else recommends, and no agent decides.
-- Stage 8 is the only sign-off. An agent's review, a passing check and a
-  finished render are not acceptance.
-- Stage 9 is part of the job. A job whose decisions were not recorded is not
-  finished, because the next job starts from the same mistakes.
+- Stage 8 is the only sign-off, and it is not a gate the agents wait on: the
+  Director returns the recommendation and stops. An agent's review, a passing
+  check and a finished render are not acceptance.
+- At stage 9 record only decisions a person actually made, through the host's
+  outcome record. Never record a decision on a person's behalf. Where the host
+  has no outcome record, list the person's decisions in the return so the
+  next job can be given them.
 - Publishing and scheduling are separate jobs with their own authority.

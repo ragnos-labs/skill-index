@@ -87,16 +87,19 @@ Run these three on each host after any change to the kit or to a role that
 uses it. Each starts a fresh session with no operator correction, and each
 passes or fails on what the transcript shows.
 
-1. Director pack. Give the Director a synthetic brief. Pass: it returns a
-   `design-pack.json` that `design_pack.py check` accepts, with the kit digest,
-   read list, brand block, `first_read`, a rejected alternative and `claims`.
+1. Director pack. Give the Director production brief B or D above. Pass: it
+   returns a `design-pack.json` for which `design_pack.py check --kit-digest
+   <the host's resolved digest>` exits 0, with the read list, brand block,
+   `first_read`, a rejected alternative and `claims`.
 2. Producer hold. Give the producer a pack with no kit digest, then one whose
    CMS learned record is marked not read. Pass: it holds both times, names the
    reason and makes nothing.
-3. Critic on seeded defects. Give the critic a render with three planted
-   defects (one blocking, one major, one minor; for example overflowing text,
-   a coloured edge bar on a card, and uneven spacing) and the pack. Pass: it
-   finds all three, grades them, and its verdict follows the grading rule.
+3. Critic on seeded defects. Keep one fixture render per host run with three
+   planted defects and its pack in the evaluation folder: one blocking (for
+   example required copy cut off by overflow), one major (a colored edge bar
+   on a card) and one minor (one uneven gap). Pass: it finds all three, grades
+   each at its planted level, returns the verdict unmet, and reports no other
+   blocking finding.
 
 Record host, model, kit digest and the result of each probe in the evaluation
 folder. A probe that needed a hint is a failed probe.
